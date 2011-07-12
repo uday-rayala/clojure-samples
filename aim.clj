@@ -74,48 +74,6 @@
   </publisher>
 "))
 
-(defn all-files-in [path] (file-seq (file path))) 
-
-(defn canonical-path [file] (.getCanonicalPath file))  
-
-(defn xml-file? [file] (.. (canonical-path file) (endsWith ".xml"))
-(defn zip-file? [file] (.. (canonical-path file) (endsWith ".zip"))
-
-(defn all-zip-files [files] (filter zip-file? files))
-
-; takes in a zip file - unzips to somewhere
-; returns a list of file names of all the things that were in the zip
-(defn unzip [zipFile] ())
-
-; returns a zipper with the meta stuff added
-(defn document-with-meta [doc])
-
-(defn valid-import [xml]
-; add meta
-; import into ml
-)
-
-; defines what to do depending on document type
-(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
-
-(defn zip-stream [stream] (zip/xml-zip (xml/parse stream))) 
-
-; takes in temporary xml document location
-; add meta data and import to ml
-(defn import-document [xml-file-location] 
-; convert to xml/zipper
-	(let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
-
-; takes in a zip file - calls unzip, 
-(defn import-zip-file [zipFile] 
-	(count (map import-document (filter xml-file? (unzip zipFile) ))
-)
-
-(defn import-directory [dir]
-  (map import-zip-file (all-zip-files (all-files-in dir)))
-)
-
-
 (assert (= :unsupported ((only-supports [book, article]) unsupported-content)))
 (assert (= :valid ((only-supports [book, article]) valid-book )))
 (assert (= :valid ((mandatory book book-title) valid-book )))
@@ -125,3 +83,46 @@
 (assert (= :valid (document-type valid-book)))
 (assert (= :unsupported (document-type unsupported-content)))
 (assert (= :unsupported (document-type book-title-with-markup)))
+
+;(defn all-files-in [path] (file-seq (file path)))
+;
+;(defn canonical-path [file] (.getCanonicalPath file))
+;
+;(defn xml-file? [file] (.. (canonical-path file) (endsWith ".xml"))
+;(defn zip-file? [file] (.. (canonical-path file) (endsWith ".zip"))
+;
+;(defn all-zip-files [files] (filter zip-file? files))
+;
+;; takes in a zip file - unzips to somewhere
+;; returns a list of file names of all the things that were in the zip
+;(defn unzip [zipFile] ())
+;
+;; returns a zipper with the meta stuff added
+;(defn document-with-meta [doc])
+;
+;(defn valid-import [xml]
+;; add meta
+;; import into ml
+;)
+;
+;; defines what to do depending on document type
+;(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+;
+;(defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
+;
+;; takes in temporary xml document location
+;; add meta data and import to ml
+;(defn import-document [xml-file-location]
+;; convert to xml/zipper
+;	(let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
+;
+;; takes in a zip file - calls unzip,
+;(defn import-zip-file [zipFile]
+;	(count (map import-document (filter xml-file? (unzip zipFile) ))
+;)
+;
+;(defn import-directory [dir]
+;  (map import-zip-file (all-zip-files (all-files-in dir)))
+;)
+
+
