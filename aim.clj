@@ -2,6 +2,7 @@
   (:require   [clojure.zip :as zip]
               [clojure.xml :as xml]
               [clojure.contrib.zip-filter :as zf]
+              [clojure.contrib.duck-streams :as duck]
   ))
 
 (defn parse-str [s] (zip/xml-zip (xml/parse (new org.xml.sax.InputSource (new java.io.StringReader s)))))
@@ -35,6 +36,41 @@
 (defn is-valid [types] (let [value (some #{:invalid, :unsupported} types)] (if value value :valid)))
 
 (defn document-type [xml] (is-valid (map (fn [criteria] (criteria xml)) all-criteria)))
+
+(defn map-zip-entries [zip-file-path func] (with-open [zip (new java.util.zip.ZipFile zip-file-path)] (doall (map (partial func zip) (enumeration-seq (.entries zip))))))
+
+(defn create-file [input-stream output-file] (do (duck/copy input-stream output-file) (.getCanonicalPath output-file)))
+
+(defn create-new-dir [dir-path]
+  (let [dir (new java.io.File dir-path)]
+    (do
+      (if (.exists dir)
+      (doto dir (.delete) (.mkdirs))
+      (doto dir (.mkdirs)))
+      (.getCanonicalPath dir)
+    )
+  )
+)
+
+(defn extract-all-files [new-location]
+  (fn [zip-file entry]
+    (let [new-file-location (new java.io.File new-location (.getName entry))]
+      (if (.isDirectory entry)
+      (do (.mkdirs new-file-location) (.getCanonicalPath new-file-location))
+      (create-file (.getInputStream zip-file entry) new-file-location))
+    )
+  )
+)
+
+(defn unzip [zip-file-path extract-dir] (map-zip-entries zip-file-path (extract-all-files (create-new-dir extract-dir))))
+
+(assert (= ["/private/tmp/aim/doc1.xml",
+            "/private/tmp/aim/doc2.xml",
+            "/private/tmp/aim/doc3.xml",
+            "/private/tmp/aim/nest",
+            "/private/tmp/aim/nest/doc4.xml"] (unzip "test-xml.zip" "/private/tmp/aim")))
+
+(assert (= ["doc1.xml", "doc2.xml", "doc3.xml", "nest/", "nest/doc4.xml"] (map-zip-entries "test-xml.zip" #(.getName %2))))
 
 (assert (= :valid (is-valid [])))
 (assert (= :valid (is-valid [:valid, :valid])))
