@@ -43,14 +43,12 @@
 
 (defn create-file [input-stream output-file] (do (duck/copy input-stream output-file) (.getCanonicalPath output-file)))
 
-(defn create-new-dir [dir-path]
-  (let [dir (new java.io.File dir-path)]
-    (do
+(defn create-new-dir [dir]
+  (do
       (if (.exists dir)
       (doto dir (.delete) (.mkdirs))
       (doto dir (.mkdirs)))
       (.getCanonicalPath dir)
-    )
   )
 )
 
@@ -58,13 +56,13 @@
   (fn [zip-file entry]
     (let [new-file-location (new java.io.File new-location (.getName entry))]
       (if (.isDirectory entry)
-      (do (.mkdirs new-file-location) (.getCanonicalPath new-file-location))
+      (create-new-dir new-file-location)
       (create-file (.getInputStream zip-file entry) new-file-location))
     )
   )
 )
 
-(defn unzip [zip-file-path extract-dir] (map-zip-entries zip-file-path (extract-all-files (create-new-dir extract-dir))))
+(defn unzip [zip-file-path extract-dir] (map-zip-entries zip-file-path (extract-all-files (create-new-dir (new java.io.File extract-dir)))))
 
 (assert (= ["/private/tmp/aim/doc1.xml",
             "/private/tmp/aim/doc2.xml",
@@ -122,42 +120,58 @@
 (assert (= :unsupported (document-type unsupported-content)))
 (assert (= :unsupported (document-type book-title-with-markup)))
 
+(defn xml-file? [file-path] (.endsWith file-path ".xml"))
 
-(defn is-article? [xml] (seq (xml1-> xml zf/descendants :Article)))
-
-(defn build-meta [doc]
-  (if (is-article? doc)
-    {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ArticleDOI text)]}
-                          {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ArticleTitle text)]}
-                          {:tag :ContentType :content ["Article"]}]}
-    {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ChapterDOI text)]}
-                          {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ChapterTitle text)]}
-                          {:tag :ContentType :content ["Chapter"]}]}))
-
-(defn document-with-meta [doc] (zip/root (zip/insert-child doc (build-meta doc))))
-
-(defn valid-import [doc] (lxml/emit (document-with-meta doc)))
-
-(defn invalid-import [doc]  (println "invalid my friend"))
-
-(defn unsupported-import [doc]  (println "unsupported baby"))
-
-(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
 (defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
-(defn get-action-for [doc] (->> doc document-type actions))
+(defn import-document [xml-file-path] (document-type (zip-stream xml-file-path)))
 
-(defn import-document [xml-file-location]
-  (let [doc (zip-stream (io/file xml-file-location))]
-  ((get-action-for doc) doc )))
+(defn import-zip-file [zipFile working-dir]
+	(let [xml-files (filter xml-file? (unzip zipFile working-dir))] (interleave xml-files (map import-document xml-files)))
+)
 
-(defn canonical-path [file] (.getCanonicalPath file))
+(assert (= [
+  "/private/tmp/aim/book-no-title.xml" :invalid,
+  "/private/tmp/aim/book-with-markup.xml" :unsupported,
+  "/private/tmp/aim/unsupported-document.xml" :unsupported,
+  "/private/tmp/aim/valid-book.xml" :valid,
+  ] (import-zip-file "small-xml.zip" "/private/tmp/aim")))
 
-(defn xml-file? [file] (.. (canonical-path file) (endsWith ".zip")))
-
-(defn import-zip-file [zipFile]                                                                                                                                                                                                              (count (map import-document (filter xml-file? (unzip zipFile) ))))
-
-
-(defn import-directory [dir]                                                                                                                                                                                                                 (map import-zip-file (all-zip-files (all-files-in dir))))
+;(defn all-files-in [path] (file-seq (file path)))
+;
+;(defn canonical-path [file] (.getCanonicalPath file))
+;
+;(defn xml-file? [file] (.. (canonical-path file) (endsWith ".xml"))
+;(defn zip-file? [file] (.. (canonical-path file) (endsWith ".zip"))
+;
+;(defn all-zip-files [files] (filter zip-file? files))
+;
+;; takes in a zip file - unzips to somewhere
+;; returns a list of file names of all the things that were in the zip
+;(defn unzip [zipFile] ())
+;
+;; returns a zipper with the meta stuff added
+;(defn document-with-meta [doc])
+;
+;(defn valid-import [xml]
+;; add meta
+;; import into ml
+;)
+;
+;; defines what to do depending on document type
+;(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+;
+;(defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
+;
+;; takes in temporary xml document location
+;; add meta data and import to ml
+;(defn import-document [xml-file-location]
+;; convert to xml/zipper
+;	(let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
+;
+;
+;(defn import-directory [dir]
+;  (map import-zip-file (all-zip-files (all-files-in dir)))
+;)
 
 (defn -main [& args]
   (import-zip-file "/Users/mneedham/github/clojure-samples/test-xml.zip"))
