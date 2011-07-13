@@ -2,6 +2,8 @@
   (:require   [clojure.zip :as zip]
               [clojure.xml :as xml]
               [clojure.contrib.zip-filter :as zf]
+			  [clojure.java.io :as io]
+			  [clojure.contrib.lazy-xml :as lxml]
               [clojure.contrib.duck-streams :as duck]
   ))
 
@@ -120,6 +122,7 @@
 (assert (= :unsupported (document-type unsupported-content)))
 (assert (= :unsupported (document-type book-title-with-markup)))
 
+
 (defn is-article? [xml] (seq (xml1-> xml zf/descendants :Article)))
 
 (defn build-meta [doc]
@@ -129,27 +132,27 @@
                           {:tag :ContentType :content ["Article"]}]}
     {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ChapterDOI text)]}
                           {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ChapterTitle text)]}
-                          {:tag :ContentType :content ["Chapter"]}x]})) 
+                          {:tag :ContentType :content ["Chapter"]}]}))
 
 (defn document-with-meta [doc] (zip/root (zip/insert-child doc (build-meta doc))))
 
-(defn valid-import [doc]
-  (lxml/emit (document-with-meta doc)))
+(defn valid-import [doc] (lxml/emit (document-with-meta doc)))
 
-(defn invalid-import [doc]
-  (println "invalid my friend"))
+(defn invalid-import [doc]  (println "invalid my friend"))
 
-(defn unsupported-import [doc]
-  (println "unsupported baby"))
+(defn unsupported-import [doc]  (println "unsupported baby"))
 
 (def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
 (defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
 (defn get-action-for [doc] (->> doc document-type actions))
 
 (defn import-document [xml-file-location]
-  (let [doc (zip-stream (file xml-file-location))]
-    ((get-action-for doc) doc )))
+  (let [doc (zip-stream (io/file xml-file-location))]
+  ((get-action-for doc) doc )))
 
+(defn import-zip-file [zipFile]                                                                                                                                                                                                              (count (map import-document (filter xml-file? (unzip zipFile) )))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+(defn import-directory [dir]                                                                                                                                                                                                                 (map import-zip-file (all-zip-files (all-files-in dir))))
 
-;(defn import-zip-file [zipFile]                                                                                                                                                                                                            ;       (count (map import-document (filter xml-file? (unzip zipFile) ))                                                                                                                                                                    ;)                                                                                                                                                                                                                                          ;                                                                                                                                                                                                                                           
-;(defn import-directory [dir]                                                                                                                                                                                                               ;  (map import-zip-file (all-zip-files (all-files-in dir)))                                                                                                                                                                                 ;)  
+(defn -main [& args]
+  (import-zip-file "/Users/mneedham/github/clojure-samples/test-xml.zip"))
