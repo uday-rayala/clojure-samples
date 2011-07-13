@@ -115,7 +115,7 @@
                           {:tag :ContentType :content ["Article"]}]}
     {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ChapterDOI text)]}
                           {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ChapterTitle text)]}
-                          {:tag :ContentType :content ["Chapter"]}]})) 
+                          {:tag :ContentType :content ["Chapter"]}x]})) 
 
 (defn document-with-meta [doc] (zip/root (zip/insert-child doc (build-meta doc))))
 
@@ -123,22 +123,26 @@
   (lxml/emit (document-with-meta doc)))
 
 (defn invalid-import [doc]
-  (println doc))
+  (println "invalid my friend"))
 
 (defn unsupported-import [doc]
-  (println doc))
+  (println "unsupported baby"))
 
-(def actions
-  {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
-
+(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+;(def actions (zipmap [:valid :invalid :unsupported] [valid-import invalid-import unsupported-import]))
 
 ;
 (defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
 ;
 ;; takes in temporary xml document location
 ;; add meta data and import to ml
+
+;(defn get-action-for [doc] (actions (document-type doc)))
+(defn get-action-for [doc] (->> doc document-type actions))
+
 (defn import-document [xml-file-location]
-  (let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
+  (let [doc (zip-stream (file xml-file-location))]
+    ((get-action-for doc) doc )))
 ;
 ;; takes in a zip file - calls unzip,
 ;(defn import-zip-file [zipFile]
