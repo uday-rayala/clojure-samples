@@ -150,8 +150,13 @@
   (let [doc (zip-stream (io/file xml-file-location))]
   ((get-action-for doc) doc )))
 
-(defn import-zip-file [zipFile]                                                                                                                                                                                                              (count (map import-document (filter xml-file? (unzip zipFile) )))
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+(defn canonical-path [file] (.getCanonicalPath file))
+
+(defn xml-file? [file] (.. (canonical-path file) (endsWith ".zip")))
+
+(defn import-zip-file [zipFile]                                                                                                                                                                                                              (count (map import-document (filter xml-file? (unzip zipFile) ))))
+
+
 (defn import-directory [dir]                                                                                                                                                                                                                 (map import-zip-file (all-zip-files (all-files-in dir))))
 
 (defn -main [& args]
