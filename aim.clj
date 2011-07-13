@@ -11,8 +11,8 @@
 (def book-title [:book :title])
 
 (defn locate [xml, locator] (apply xml-> xml locator))
-(defn children [xml, locator] (locate xml (concat locator [zf/children])))
-(defn children-count [xml, locator] (count (children xml locator)))
+(defn children2 [xml, locator] (locate xml (concat locator [zf/children])))
+(defn children-count [xml, locator] (count (children2 xml locator)))
 
 (defn exists? [xml, locator] (not-empty (locate xml locator)))
 (defn not-exists? [xml, locator] (not (exists? xml locator)))
@@ -106,15 +106,39 @@
 ;)
 ;
 ;; defines what to do depending on document type
-;(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+(defn is-article? [xml] (seq (xml1-> xml zf/descendants :Article)))
+
+(defn build-meta [doc]
+  (if (is-article? doc)
+    {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ArticleDOI text)]}
+                          {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ArticleTitle text)]}
+                          {:tag :ContentType :content ["Article"]}]}
+    {:tag :meta :content [{:tag :Id :content [(xml1-> doc zf/descendants :ChapterDOI text)]}
+                          {:tag :ItemTitle :content [(xml1-> doc zf/descendants :ChapterTitle text)]}
+                          {:tag :ContentType :content ["Chapter"]}]})) 
+
+(defn document-with-meta [doc] (zip/root (zip/insert-child doc (build-meta doc))))
+
+(defn valid-import [doc]
+  (lxml/emit (document-with-meta doc)))
+
+(defn invalid-import [doc]
+  (println doc))
+
+(defn unsupported-import [doc]
+  (println doc))
+
+(def actions
+  {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+
+
 ;
-;(defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
+(defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
 ;
 ;; takes in temporary xml document location
 ;; add meta data and import to ml
-;(defn import-document [xml-file-location]
-;; convert to xml/zipper
-;	(let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
+(defn import-document [xml-file-location]
+  (let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
 ;
 ;; takes in a zip file - calls unzip,
 ;(defn import-zip-file [zipFile]
