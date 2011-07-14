@@ -168,4 +168,4 @@
 ;)
 
 (defn -main [& args]
-  (import-zip-file "/Users/rudayaku/Projects/clojure-samples/src/aim/small-xml.zip", "/private/tmp/aim"))
+  (import-zip-file "small-xml.zip", "/private/tmp/aim"))
