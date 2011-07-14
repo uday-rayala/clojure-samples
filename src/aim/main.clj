@@ -39,28 +39,26 @@
 
 (defn document-type [xml] (is-valid (map (fn [criteria] (criteria xml)) all-criteria)))
 
-(defn map-zip-entries [zip-file-path func] (with-open [zip (new java.util.zip.ZipFile zip-file-path)] (doall (map (partial func zip) (enumeration-seq (.entries zip))))))
+(defn map-zip-entries [zip-file-path func]
+  (with-open [zip (new java.util.zip.ZipFile zip-file-path)]
+    (doall (map (partial func zip) (enumeration-seq (.entries zip))))))
 
-(defn create-file [input-stream output-file] (do (duck/copy input-stream output-file) (.getCanonicalPath output-file)))
+(defn create-file [input-stream output-file]
+  (do (duck/copy input-stream output-file) (.getCanonicalPath output-file)))
 
 (defn create-new-dir [dir]
   (do
       (if (.exists dir)
       (doto dir (.delete) (.mkdirs))
       (doto dir (.mkdirs)))
-      (.getCanonicalPath dir)
-  )
-)
+      (.getCanonicalPath dir)))
 
 (defn extract-all-files [new-location]
   (fn [zip-file entry]
     (let [new-file-location (new java.io.File new-location (.getName entry))]
       (if (.isDirectory entry)
-      (create-new-dir new-file-location)
-      (create-file (.getInputStream zip-file entry) new-file-location))
-    )
-  )
-)
+        (create-new-dir new-file-location)
+        (create-file (.getInputStream zip-file entry) new-file-location)))))
 
 (defn unzip [zip-file-path extract-dir] (map-zip-entries zip-file-path (extract-all-files (create-new-dir (new java.io.File extract-dir)))))
 
@@ -123,18 +121,29 @@
 (defn xml-file? [file-path] (.endsWith file-path ".xml"))
 
 (defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
-(defn import-document [xml-file-path] (document-type (zip-stream xml-file-path)))
+
+; adds meta and into ml and returns { :file ... :type :valid }
+(defn valid-import [xml file-name]
+  (do (println "valid") :valid))
+
+(defn invalid-import [xml file-name] (do (println "invalid") :invalid))
+(defn unsupported-import [xml file-name] (do (println "unsupported") :unsupported))
+(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+
+(defn import-document [xml-file-path]
+  (let [doc (zip-stream xml-file-path)]
+   ((actions (document-type doc)) doc xml-file-path)))
 
 (defn import-zip-file [zipFile working-dir]
   (let [xml-files (filter xml-file? (unzip zipFile working-dir))]
-    (interleave xml-files (map import-document xml-files))))
+    (map (fn [file type] (zipmap [:file :type] [file type])) xml-files (map import-document xml-files))))
 
-(assert (= [
-  "/private/tmp/aim/book-no-title.xml" :invalid,
-  "/private/tmp/aim/book-with-markup.xml" :unsupported,
-  "/private/tmp/aim/unsupported-document.xml" :unsupported,
-  "/private/tmp/aim/valid-book.xml" :valid,
-  ] (import-zip-file "small-xml.zip" "/private/tmp/aim")))
+;(assert (= [
+ ;           {:file "/private/tmp/aim/book-no-title.xml" :type :invalid},
+  ;          {:file "/private/tmp/aim/book-with-markup.xml" :type :unsupported},
+   ;         {:file "/private/tmp/aim/unsupported-document.xml" :type :unsupported},
+    ;        {:file "/private/tmp/aim/valid-book.xml" :type :valid},
+     ;       ] (import-zip-file "small-xml.zip" "/private/tmp/aim")))
 
 ;(defn all-files-in [path] (file-seq (file path)))
 ;
@@ -147,15 +156,7 @@
 ;
 ;; returns a zipper with the meta stuff added
 ;(defn document-with-meta [doc])
-;
-(defn valid-import [xml]
-  (println "valid"))
 
-(defn invalid-import [xml] (println "invalid"))
-(defn unsupported-import [xml] (println "unsupported"))
-;
-;; defines what to do depending on document type
-(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
 
 ;; takes in temporary xml document location
 ;; add meta data and import to ml
