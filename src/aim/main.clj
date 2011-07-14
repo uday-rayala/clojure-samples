@@ -126,8 +126,8 @@
 (defn import-document [xml-file-path] (document-type (zip-stream xml-file-path)))
 
 (defn import-zip-file [zipFile working-dir]
-	(let [xml-files (filter xml-file? (unzip zipFile working-dir))] (interleave xml-files (map import-document xml-files)))
-)
+  (let [xml-files (filter xml-file? (unzip zipFile working-dir))]
+    (interleave xml-files (map import-document xml-files))))
 
 (assert (= [
   "/private/tmp/aim/book-no-title.xml" :invalid,
@@ -148,13 +148,14 @@
 ;; returns a zipper with the meta stuff added
 ;(defn document-with-meta [doc])
 ;
-;(defn valid-import [xml]
-;; add meta
-;; import into ml
-;)
+(defn valid-import [xml]
+  (println "valid"))
+
+(defn invalid-import [xml] (println "invalid"))
+(defn unsupported-import [xml] (println "unsupported"))
 ;
 ;; defines what to do depending on document type
-;(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
+(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
 
 ;; takes in temporary xml document location
 ;; add meta data and import to ml
