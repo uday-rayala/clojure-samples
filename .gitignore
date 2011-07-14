@@ -2,3 +2,6 @@
 *.ipr
 *.iws
 classes
+aim-0.1.0-standalone.jar
+aim-0.1.0.jar
+lib
