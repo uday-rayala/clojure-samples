@@ -1,4 +1,4 @@
-(ns aim.main (:use clojure.contrib.zip-filter.xml)
+(ns aim.main (:gen-class) (:use clojure.contrib.zip-filter.xml)
   (:require   [clojure.zip :as zip]
               [clojure.xml :as xml]
               [clojure.contrib.zip-filter :as zf]
