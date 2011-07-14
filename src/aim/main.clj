@@ -145,10 +145,6 @@
 ;
 ;(defn all-zip-files [files] (filter zip-file? files))
 ;
-;; takes in a zip file - unzips to somewhere
-;; returns a list of file names of all the things that were in the zip
-;(defn unzip [zipFile] ())
-;
 ;; returns a zipper with the meta stuff added
 ;(defn document-with-meta [doc])
 ;
@@ -159,9 +155,7 @@
 ;
 ;; defines what to do depending on document type
 ;(def actions {:valid valid-import :invalid invalid-import :unsupported unsupported-import})
-;
-;(defn zip-stream [stream] (zip/xml-zip (xml/parse stream)))
-;
+
 ;; takes in temporary xml document location
 ;; add meta data and import to ml
 ;(defn import-document [xml-file-location]
@@ -174,4 +168,4 @@
 ;)
 
 (defn -main [& args]
-  (import-zip-file "/Users/mneedham/github/clojure-samples/test-xml.zip"))
+  (import-zip-file "/Users/rudayaku/Projects/clojure-samples/src/aim/small-xml.zip", "/private/tmp/aim"))
