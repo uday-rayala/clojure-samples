@@ -45,5 +45,5 @@
 ;    (println (all-words))
 ;    (println (unused-words-starting "m" (core-lines)))
 ;    (println (pair-counts))
-    (run-jetty main-routes {:port 9090})
+    (run-jetty main-routes {:port 9876})
   ))
