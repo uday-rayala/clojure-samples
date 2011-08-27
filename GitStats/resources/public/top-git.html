@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://visapi-gadgets.googlecode.com/svn/trunk/termcloud/tc.css"/>
+    <script type="text/javascript" src="http://visapi-gadgets.googlecode.com/svn/trunk/termcloud/tc.js"></script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="/top-git.js"></script>
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(getDataAndDrawChart);
+    </script>
+  </head>
+
+  <body>
+      <div id="tcdiv" style="width:400px"></div>
+      <div id="chart_div"></div>
+      <div id="pair_chart_div"></div>
+  </body>
+</html>

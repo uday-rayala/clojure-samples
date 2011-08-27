@@ -1,0 +1,5 @@
+ [
+    { "name" : "Uday", "score" : 100},
+    { "name" : "Mark", "score" : 200},
+    { "name" : "Pat", "score" : 300}
+ ]

@@ -1,0 +1,332 @@
+2011-08-26 Charles/Suzuki #650 removed A++ markup in publication title meta info
+2011-08-26 eevert "mushtaq/mark: adding meta verticals into the journal"
+2011-08-26 mushtaq/mark: adding meta verticals into the journal
+2011-08-26 Alex/Jose - #611 added fix for broken authors facet on QA dataset
+2011-08-26 Alex/Jose #611 swap operators order to deal with non printable characters.
+2011-08-26 Alex/Jose #611 - stripping 'non-printable' characters from the author names
+2011-08-25 Uday/Alex #611 More logging with doi and authornames
+2011-08-25 Uday/Alex #611 Added log message to check what is happeneing in QA machine
+2011-08-24 Mushtaq: Cleaned up Dependencies trait
+2011-08-24 Uday/Alex #597 Changed the xml structure of vertical information in meta data
+2011-08-24 Mushtaq/Alinoor modified deployment directory to /opt/casper/aim
+2011-08-24 Liz/Jose #windowfixing check folders exist before delete them.
+2011-08-24 Alex/Uday #611 - fixed a defect where authors with empty names were being added to the metadata - these have been removed from the metadata (but not the document) so they can no longer be faceted
+2011-08-23 suzuki/mushtaq/mark: #623 -> adding verticals meta data during ingestion
+2011-08-19 Rob #509 add rule to check VolumeID is an integer
+2011-08-19 pat: fixing tidy_up method so that it cleans all bar the latest 5 releases after deployment.
+2011-08-19 Rob/Mark #509 add volume info to journal xml
+2011-08-19 rob/mark #509 adding volumes dynamically on article ingestion
+2011-08-19 Charles/Pat #532 added support for book titles and book series titles.
+2011-08-19 Rob/Mark #509 added volume to journal xml
+2011-08-19 mark: forgot to add these test fixes
+2011-08-19 rob/mark #509 creating a stub journal entry for journal articles
+2011-08-19 Charles #532 marking documents invalid if they contain A++ in the author names
+2011-08-18 pat/charles: #532 removing 'no bibliography heading' rules because bibliography heading is not used in core.
+2011-08-18 pat/charles: #532 removing 'no markup in bibliography heading' rules because bibliography heading is not used in core.
+2011-08-18 pat/charles: #532 fixing invalid tests.
+2011-08-18 pat/charles: #532 relaxed rules around rejecting a++ markup because the functionality to deal with a++ markup has been implemented in core.
+2011-08-18 Charles/Mark #532 relaxed DDS import rules to allow markup in references/bibliographies
+2011-08-18 pat: removed old sbt artifact.
+2011-08-18 Alinoor/Mushtaq #575 AIM prepends DOI onto all FileRef attributes of ImageObjects
+2011-08-17 pat/charles: upping log level from debug to info.
+2011-08-17 Chris/Mark #509 Added functional test to check for journal insertion and started code in ImportManager (commented out)
+2011-08-17 Rob/Suzuki #629 set document quality based on content type
+2011-08-17 pat/charles #532: Relaxing rules for Book|Journal Abstract Heading (See core commit 334c8fe); and a bit of rule reshuffling.
+2011-08-17 pat/charles #532 mark up in journal title marked as invalid
+2011-08-17 pat/charles #532 mark up in some elements set to invalid
+2011-08-17 pat/charles: #532 documents with markup in DOIs are invalid (as per A++ DTD) - not unsupported.
+2011-08-16 Uday Fixing build
+2011-08-16 pat/charles: #532 added a++ support for book sub titles; also removed journal subtitle rule because we're not displaying them anywhere in core. See core commit 2024ff5.
+2011-08-16 Alinoor/Jose #575 AIM preserves paths of images in manifest
+2011-08-16 Alinoor/Jose #575 AIM preserves paths of images in manifest
+2011-08-16 Rob/Chris #339 updated import to check object type in manifest
+2011-08-16 Alinoor/Jose #575 renamed PDFHelper to FileHelper
+2011-08-16 Alinoor/Jose #575 Images folder under content.
+2011-08-16 Alinoor/Jose #575 Valid document which lacks images invalidates document.
+2011-08-16 Rob/Chris #339 added support for books in series. removed rule that blocks all books
+2011-08-16 Alinoor/Jose #575 - fix broken build
+2011-08-16 Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+2011-08-16 Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+2011-08-16 Charles/Pat #532 reverting DDS rules back so Aplusplus is only supported in abstract para
+2011-08-15 Mushtaq: trying to unbreak the build
+2011-08-15 Charles/Mushtaq: #532 Allow ingestion of documents with markup in BookSubTitle
+2011-08-15 pat: tidyied up / added logging; removed time class because it's not thread-safe; moved parallelisation from inner to outer loop.
+2011-08-15 Alinoor/Jose #575 - removed most of the validation rules for MediaObject and InlineMediaObject
+2011-08-15 Rob/Chris removed log message
+2011-08-15 Rob/Chris #339 added book pdf validation
+2011-08-15 Mushtaq: #609 Fixing the log spurious log message "Manifest file is empty"
+2011-08-13 pat: recursing down into input directory and following symlinks. (tripped over dot in extension in earlier commit.)
+2011-08-13 pat: simplifying classpath (printf doesn't work on macs...)
+2011-08-13 Revert "pat: recursing down into input directory and following symlinks."
+2011-08-13 pat: recursing down into input directory and following symlinks.
+2011-08-12 pat: removing unused file.
+2011-08-12 Ken/Mushtaq #609 Story finished
+2011-08-12 Ken/Mushtaq #609 added manifest file name and DOI to error messages
+2011-08-12 Marc/Charles #532 updating validation rules after merge - reverting some additions
+2011-08-12 Charles/Marc #532 rollback markup rules and ignoring tests in preparation for push of a++ support in core
+2011-08-11 Ken/Mushtaq #609 Wrapping up the story
+2011-08-11 Ken/Mushtaq #609 refactored DeliveryManager class
+2011-08-11 Ken/Mushtaq #609 Added integration test for UnzippedFiles trait
+2011-08-11 Ken/Mushtaq #609 added logging when manifest and associated zip file don't match
+2011-08-11 Alinoor/Michael #380 adding starting with rule for inline equations
+2011-08-11 Mushtaq: cleanup of tests for Manifest and DeliveriesValidator
+2011-08-10 Mushtaq: optimizing nested for loop to get delivery list. given that there are 20K zips and 20K manifests in perf env, the nested loop would be very inefficient
+2011-08-10 Merge branch 'master' of slgblogr0037:aim
+2011-08-10 Suzuki/Michael/Mushtaq compelete story #547
+2011-08-10 pat/mushtaq: no longer deleting zips in workspace; no longer failing if corrupt zip file; no longer unzipping in parallel (number of threads exploded on perf).
+2011-08-10 pat, mushtaq: pointing perf to 1m dds delivery.
+2011-08-10 pat/mushtaq: giving aim a bit more heap space.
+2011-08-10 pat/alex: remove ml step, because it never got executed and it's in core (supposedly).
+2011-08-10 Merge branch 'master' of slgblogr0037.springer-sbm.com:aim
+2011-08-10 Charles/Rob #339 ignored test failing build
+2011-08-10 alinoor/mark #380 fixing the title ingestion rules
+2011-08-10 Rob/Charles #339 made books invalid temporarily until core supports them
+2011-08-10 Rob/Charles #339 import book xml
+2011-08-10 Charles/Rob #339 support books in ingestion
+2011-08-10 Suzuki/Michael small naming refactor of app to aPlusPlus
+2011-08-10 Michael/Suzuki dev task to clean forests in xml db
+2011-08-09 Chris/Mushtaq #608 Fixing the build
+2011-08-09 Chris/Mushtaq #608 Finished story
+2011-08-09 Chris/Mushtaq: #608 XML files are now gettting loaded via manifest. We also have access to PDF files via the manifest. Remaining bit is to load the PDF. Created the new test data which is a pair of manifest and zip files
+2011-08-09 Chris/Mushtaq: #608 Only zips with corresponding manifest will get digested. capfile will download manifest during deploy
+2011-08-08 Ken/Pat #612 deploy and run AIM on MarkLogic node and pick up zip files from /aim_transfers folder
+2011-08-08 charles/mark: #380 - update ingestion to reject (Inline)MediaObject only if it's not inside (Inline)Equation
+2011-08-08 Ken/Alinoor #612 updated capistrano script to ingest into PERF environment
+2011-08-08 pat/michael: fixing whitespace issue around author names.
+2011-08-07 Mushtaq: cleaned up code for git push with minor changes
+2011-08-07 Mushtaq: fixing merge issues
+2011-08-07 Mike/Mushtaq #608 Work in progress
+2011-08-07 Mushtaq: Minor changes to CasperDocument class
+2011-08-07 Mushtaq: Refactoring of CasperDocument class and related changes
+2011-08-05 Uday Changed web server url
+2011-08-05 Mike/Mushtaq: #607 Changed the input directory back to where it was for qa invironment
+2011-08-05 Mike/Mushtaq #607 Modified QA properties to ingest 13GB of data in new format
+2011-08-05 Mike/Mushtaq #607 Copy multiple zip files to the input directory using wget
+2011-08-05 Mike/Mushtaq: #607 Rectifying the forest name in app.dev.properties. All this time we were deleting from Documents db and inserting into CasperDocuments db!
+2011-08-04 Liz/Alinoor #532 - refactoring tests to be more specific in thier asserts
+2011-08-04 Alinoor #532 - refactoring test
+2011-08-04 Alinoor #532 - updated valid chapter to include valid markup
+2011-08-04 Liz/Alinoor #532 - fixed failing test
+2011-08-03 Alinoor #532 updated tests to check for only certain types of markup
+2011-08-03 Alinoor #532 updated tests to check for only certain types of markup
+2011-08-03 Alinoor/Duncan #532 update validation rules to support some markup
+2011-08-03 Alinoor/Duncan #532 refactoring validation rules
+2011-08-03 Uday/Alex #94 Added a zip file with search releavece documents in dev environment
+2011-08-03 Uday/Mushtaq: Allow parallel unzip when more than one zip file is present in the source directory. required separating cleaning and unzipping tasks.
+2011-08-02 Mushtaq/Ken: Fixed ignored tests. Based on feedback from Mark and Uday, rolled back reordering of rules as it is a functional change and not just refactoring
+2011-08-02 Merge branch 'master' of segblogr0065:aim
+2011-08-01 pat: explicitely adding resource directory to coverage config.
+2011-08-01 pat: getting rid of jetty targets, which were inadvertently checked in.
+2011-08-01 pat: cleaning up build file
+2011-08-01 Merge branch 'master' of segblogr0065:aim
+2011-08-01 Mushtaq: enabled a commented test and removed comments from fully qualified path for journal article
+2011-08-01 Merge branch 'master' of segblogr0065:aim
+2011-08-01 Mark/Mushtaq fully qualified paths for book chapter
+2011-08-01 separate rules for journal articles and book chapters, rearranged the rules after analyzing the logs
+2011-07-30 pat: added scct coverage plugin.
+2011-07-30 pat: upgraded to sbt 0.10.1 so that we can use scct coverage plugin.
+2011-07-29 mark/mushtaq now par works with adapter for local dtds
+2011-07-29 mushtaq/mark: bringing in the fully qualified paths for articles
+2011-07-29 mushtaq/mark: some reason par is hanging so will take it out for the minute
+2011-07-29 Mark/Mushtaq Local dtd resolution
+2011-07-29 Mark/Mushtaq made file iterations parallel
+2011-07-29 mark: changed this url to fix some other problem locally. Will put it back for the moment
+2011-07-29 Mark/Mushtaq fixing build by correcting classpath
+2011-07-29 Mark/Mushtaq removed performance related code
+2011-07-29 Mark/Mushtaq aim build with scala 2.9
+2011-07-28 scala 2.9
+2011-07-28 mushtaq/mark: putting the dtds locally so we can replicate what happens on qa
+2011-07-27 liz/mark: let's try it on QA with dtd on
+2011-07-27 mark: spelt that name wrong
+2011-07-27 liz/mark: putting in some more logging to profile qa ingestion
+2011-07-27 Uday: Adding command to download dds_articles to dev env
+2011-07-27 Ken/Mushtaq #100 added functional test for setting meta:Date tags
+2011-07-27 Uday/Micheal #environment added task to create directories for dds_articles in dev
+2011-07-27 Ken/Mushtaq #100 replaced multiple mockPDFHelpers with a single def
+2011-07-27 Uday/Micheal #495 added rules to invalidate documents with non-integers in month and year fields
+2011-07-27 Ken/Mushtaq #100 removed duplicate year xpaths
+2011-07-27 Ken/Mushtaq #100 removing mark's silliness
+2011-07-27 Ken/Mushtaq #100 adds date metatag for articles
+2011-07-27 Uday / Michael #495 : Change validation to require Year element for articles.
+2011-07-26 uday/mark: putting dtd back on to see if it goes faster
+2011-07-26 alex/mark - putting in some extra logging to try and see why it's running so slow
+2011-07-26 Alex/Mark - #devops - trimming white space on Subject facets to avoid overlapping facet items
+2011-07-25 Alinoor - singleton SAX Parser
+2011-07-25 uday/mark: turning off the dtd validation for ingestion
+2011-07-22 Uday/Alinoor #560 Removed spaces from the elements in metadata
+2011-07-22 Uday/Alinoor - replacing log4j with logback
+2011-07-22 Uday/Alinoor - split tests into integration and functional
+2011-07-22 Alex #admin - added timer to aim build
+2011-07-21 Ken #154 changed marklogic qa url so that it points to senldogo0425 instead of localhost since we move AIM to senldogo0424
+2011-07-21 Alinoor/Ken #154 - in QA AIM now runs on senldogo0424
+2011-07-21 Ken, Alinoor #154 AIM prepares content directory on file system before ingesting documents
+2011-07-21 Ken/Alinoor #154 - set content dir property for dev
+2011-07-20 Uday Rob #Build Fixing dev build as it needs the scala libs
+2011-07-20 Uday Moving to sbt 0.10.0 !!!
+2011-07-20 Charles,Chris #458 tidy up
+2011-07-20 Charles,Chris #458 fiexd rule for checking for the existance of elements a given xpath
+2011-07-19 pat, suzuki, alex, uday, michael: changed dev server ip.
+2011-07-19 pat, suzuki: updating forest name
+2011-07-19 Ken, Rob #154 adjusted config properties so that pdfs can be written to the file system
+2011-07-19 Ken, Rob #154 removes PDF validation
+2011-07-19 Ken, Rob #154 merged test data
+2011-07-19 liz/mark: need to delete stuff in this forest
+2011-07-19 Merge branch 'master' of segblogr0065:aim
+2011-07-19 Mark/Liz: Updating the port for xdbc aim
+2011-07-19 Uday/Alex/Charles #Commenting Ignoring and commenting some rules which will be fixed later by Charles/Chris
+2011-07-19 Chris,Charles #458 Refactored contains elements rule
+2011-07-18 Charles/Alex #458 added rules for elements not supported in chapter and article abstract
+2011-07-18 Ken Uday #342 modified xpaths for volume Id and issue ID
+2011-07-18 Uday Ken Refactored to use xpaths
+2011-07-18 Ken Uday #342 Changed chapter xpath and made boot title and journal title optional
+2011-07-18 Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured - refactored to move the dds XML resources into the functional test area
+2011-07-18 Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured
+2011-07-18 charles, Alex #458 movded file and ignored delivery_articles
+2011-07-15 Rob/Uday #154 added content directory property and method to copy PDFs
+2011-07-15 Rob/Uday #154 added pdf size to meta:Info
+2011-07-15 Uday: Changing the tostring of not rule
+2011-07-14 Uday: Pulling Mustaque's changes - Made document matcher return a status instead of the Document
+2011-07-14 Uday Moving Mustaque's changes from github
+2011-07-14 Merge branch 'master' of segblogr0065:aim
+2011-07-14 Ken/Alex - #admin - fixed the aim small import script after some files were moved
+2011-07-14 Ken/Alex - #admin - fixed the aim small import script after some files were moved
+2011-07-14 Alex, Ken #113 appends author name metadata for chapters
+2011-07-14 Alex, Ken #113 appends author name metadata for articles
+2011-07-14 Ken/Alex - updated step 01 to document the changed module script locations
+2011-07-12 Ken, Rob #524 moved shell scripts to ops/deploy
+2011-07-12 pat: changing working directory to drive with more space
+2011-07-11 pat, jeremy: changing input and working dirs.
+2011-07-11 Alex/Uday - #admintask bigger test set for development added
+2011-07-11 Alex / Uday #112 - Added code to AIM (and tests) to add Publication title metadata to book chapters and journal articles
+2011-07-08 Alex/Alinoor #110 tests for primary subject type
+2011-07-07 Alinoor #110 subjects for chapters
+2011-07-07 Alinoor #110 subjects for article
+2011-07-07 Duncan/Alinoor - removed unecessary xqy files
+2011-07-07 alinoor - removing unecessary java files and organised IDEA file
+2011-07-06 Uday/Suzuki: #240 Added ingestion rules for handling bibilography
+2011-07-06 Uday/Suzuki #240 added ingestion test and rules
+2011-07-05 Uday: Fixed script by handling first argument
+2011-07-05 Uday Fixing cap file
+2011-07-05 Uday Fixing cap file on cruise
+2011-07-05 Uday: Moved from core project checked in by mistake
+2011-07-05 Uday/Harinee: Changed log file location
+2011-07-05 Uday: Modified ingestion summary shell script
+2011-07-05 Uday: added cap target to download artifacts
+2011-07-05 Harinee #315 Adding functional test for validating only articles and chapters are supported
+2011-07-05 Harinee #315 Adding functional tests for Unsupported Articles (for DOI, Author given anme, subtitle and volume ID)
+2011-07-05 Harinee #315 Adding functional tests for Unsupported Chapter (for authorname, chapter title, Chapter DOI)
+2011-07-05 Harinee #315 Adding functional test for Unsupported Chapter (for Series Title)
+2011-07-05 Harinee Refactored tests for unique tests for xpaths in DocumentMatcherTest. Also added a test for invalid Volume number for Book Chapter
+2011-07-04 Uday/Mark: changing dev box ip address
+2011-07-04 Uday: Create working directory if doesnot exists
+2011-07-04 Merge branch 'master' of segblogr0065:aim
+2011-07-04 Harinee Adding functional test for Unsupported Article (with Markup in Abstract Heading)
+2011-07-04 Uday/Alinoor: Added summary csv file script
+2011-07-04 Merge branch 'master' of segblogr0065:aim
+2011-07-04 Uday/Alinoor - script to package up unsupported and invalid documents from ingestion
+2011-07-01 pat: removing unused folder
+2011-07-01 Merge branch 'master' of segblogr0065:aim
+2011-07-01 Uday/Alex: #315 some more refactoring
+2011-06-30 Uday: #315 Added more meaningful messages to the loggers
+2011-06-30 Uday: #351 Added document name to the log messages
+2011-06-30 Uday/Alex: #315 Added more validation rules for unsupported book tags
+2011-06-30 Uday/Alex #315 More validation rules
+2011-06-30 Uday/Alex: #315 Added rule to check for markup
+2011-06-30 Uday/Alex: #315 Added more validation rules for article xml
+2011-06-30 Uday/Alex: #315 Added validation rules for invalid chapter/article contents
+2011-06-30 Uday/Alex: #351 Added validation for no book chapter doi
+2011-06-30 Uday: #315 Loggers showing more information about what rule failed
+2011-06-30 Uday Added rule to check if author names exists
+2011-06-30 Uday: #315 Refactored to make rules more readable
+2011-06-29 Uday: Refacorting of rules
+2011-06-29 Uday: Refactored to remove chained rulesets instead have a list of rulesets
+2011-06-29 Uday/Suzuki: #315 Added chapter title rule validation
+2011-06-29 duncan/alex task for non-admin user: fix cp in script for dev box
+2011-06-29 alex/duncan non-admin user task: adding the read permission to AIM content ingestion and stuff to allow AIM build to run locally
+2011-06-29 Uday/Suzuki #315 Added rules framework
+2011-06-29 Uday/Alinoor: functional test for invalid document and Introduced the concept of importable documents. Need to add more validation rules
+2011-06-28 Merge branch 'master' of segblogr0065:aim
+2011-06-28 Alinoor/Uday : Added qa properties to capfile
+2011-06-28 Alinoor/Uday Added aim qa properties
+2011-06-27 mark screwed up the imports
+2011-06-27 uday/pat/mark: try/catch around the import so we can see it actually import some stuff
+2011-06-27 uday/mark: doi being put in the wrong place in the document
+2011-06-24 Merge branch 'master' of segblogr0065:aim
+2011-06-24 Uday/Mark reverting meta data namespace to meta from facet
+2011-06-24 Uday/Mark Added facet namespace to metadata
+2011-06-24 Merge branch 'master' of segblogr0065:aim
+2011-06-24 Uday: Finxing dev server url
+2011-06-24 Uday/Mark Made MarkLogicClientTest more robust and updated import script for ci
+2011-06-24 Uday/Mark inlined clean script in tests
+2011-06-24 Uday/Mark: gonna try it with a different variable name - maybe it's a reserved name?
+2011-06-24 Uday/Mark Added build label to zip files
+2011-06-24 Uday/Mark: using Alex's magic forest document deleting script so we don't take out the modules that we need
+2011-06-24 Uday/Mark: put some logging around the creation of modules
+2011-06-24 Uday/Mark: put some logging around the creation of modules
+2011-06-24 Uday/Mark Changing dev properties for running aim
+2011-06-23 Uday/Mark #471 added dev properties
+2011-06-23 Uday/Mark #471 Added capability to load different properties in different environments
+2011-06-23 Uday/Mark: introducing the property loader #471
+2011-06-23 Uday/Mark: had the classpath incorrect #471
+2011-06-23 Uday/Mark: deploy the aim modules first #417
+2011-06-23 Uday/MarK: #471 - call the existing xdbc server with our aim modules sb
+2011-06-23 Uday/Mark #471 fixing capfile
+2011-06-23 Uday/Mark #471 changed port
+2011-06-23 Uday/Mark #471 added script to upload xquery to Mark logic
+2011-06-23 uday/Mark: #471 => port 9999
+2011-06-23 Uday/Mark #471 adding jar dependecies to zip file
+2011-06-23 Uday/Mark #471 added lib dependencies to zip file
+2011-06-23 uday/mark: deploy to /opt/casper
+2011-06-23 Uday/Mark renamed cap target
+2011-06-23 Uday/Mark #471 made ci to run zip task
+2011-06-23 Uday/Mark #471 added target to create zip file
+2011-06-23 uday/mark: #471 => filling in cap file
+2011-06-23 Merge branch 'master' of segblogr0065:aim
+2011-06-23 uday/mark - empty capfile to get us started
+2011-06-23 uday/mark: adding meta data assertion to the end to end test
+2011-06-23 Uday/Mark #471 Added metadata to the content xml
+2011-06-23 Uday/Alinoor #471 refactoring
+2011-06-23 Uday/Alinoor #471 functional test for MarkLogicClient cleanDb function
+2011-06-23 Uday/Alinoor #471 refactored tests
+2011-06-22 Uday : #471 Some more refactoring
+2011-06-22 Uday : #471 Some more refactoring
+2011-06-22 Uday : #471 Some more refactoring
+2011-06-22 Uday/Alinoor #471 Some more cleanup
+2011-06-22 Uday/Alinoor #471 refactoring code
+2011-06-22 Uday/Alinoor #471 removed unecessary code
+2011-06-22 Uday/Alinoor #471 introduced new ML client
+2011-06-22 Uday/Alinoor #471 recatored code
+2011-06-22 Alinoor/Uday #471 Cleaning up of articles before ingesting them
+2011-06-21 Uday/Alinoor #471 functional test content ingestion on an empty database
+2011-06-20 Duncan/Alinoor #471 refactored code
+2011-06-20 Duncan/Alinoor #471 refactored code
+2011-06-20 Duncan/Alinoor #471 All XmlUtilityTest unit tests
+2011-06-20 Duncan/Alinoor #471 All ManifestInformation unit tests
+2011-06-20 Duncan/Alinoor #471 fixed unit tests
+2011-06-20 Duncan/Alinoor - #471 put functional tests into standard dir
+2011-06-20 duncan/alinoor #471 rename properties tags
+2011-06-20 alinoor/duncan #471 dont move delivery files
+2011-06-20 alinoor/duncan #471 put the zip file back..
+2011-06-20 alinoor/duncan #471 refactor properties files
+2011-06-17 Alinoor/Duncan #471 zip file got deleted
+2011-06-17 Alinoor/Duncan #471 test port fix
+2011-06-17 Duncan/Alinoor #471 modified AIM marklogic db name
+2011-06-17 Duncan/Alinoor #471 modified AIM marklogic db url
+2011-06-17 Duncan/Alinoor #471 - modified marklogic db url to temporarily point to working database
+2011-06-17 Duncan/Alinoor #471 - added mkdir to script to ensure directories AIM needs are there
+2011-06-17 Duncan/Alinoor #471 - modified article import manager test to output details of script failure
+2011-06-17 pat, duncan: #471 adding default build file
+2011-06-17 Duncan/Alinoor #471 some .gitignoring
+2011-06-17 Duncan/Charles #471 added small_delivery.zip
+2011-06-17 Duncan/Charles #471 replacing sort
+2011-06-16 Duncan/Charles #471 First Functional test passing
+2011-06-16 Duncan/Charles #471 First Functional test passing
+2011-06-15 Charles/Duncan #471 initial commit, test for AIM import script
+2011-06-09 Better also add the build and dist directories...
+2011-06-09 added .gitignore so that the workspace.xml is not added again
+2011-06-09 removed workspace.xml
+2011-06-09 Added tools/ant so the project can be built
+2011-06-09 Added initial AIM files from SVN.
+2011-06-03 rob: adding files
+2011-06-03 rob: adding files
+2011-06-03 rob: new aim repo

@@ -145,14 +145,6 @@
     ;        {:file "/private/tmp/aim/valid-book.xml" :type :valid},
      ;       ] (import-zip-file "small-xml.zip" "/private/tmp/aim")))
 
-;(defn all-files-in [path] (file-seq (file path)))
-;
-;(defn canonical-path [file] (.getCanonicalPath file))
-;
-;(defn xml-file? [file] (.. (canonical-path file) (endsWith ".xml"))
-;(defn zip-file? [file] (.. (canonical-path file) (endsWith ".zip"))
-;
-;(defn all-zip-files [files] (filter zip-file? files))
 ;
 ;; returns a zipper with the meta stuff added
 ;(defn document-with-meta [doc])
@@ -165,9 +157,15 @@
 ;	(let [xml (xml/xml-> (zip-stream (file xml-file-location))] ((actions (document-type xml)) xml)))
 ;
 ;
-;(defn import-directory [dir]
-;  (map import-zip-file (all-zip-files (all-files-in dir)))
-;)
+
+(defn zip-file? [file] (.. (.getCanonicalPath file) (endsWith ".zip")))
+
+(defn all-files-in [path] (file-seq (new java.io.File path)))
+(defn all-zip-files [files] (filter zip-file? files))
+
+(defn import-directory [dir]
+  (map (partial import-zip-file "/tmp/aim") (all-zip-files (all-files-in dir)))
+)
 
 (defn -main [& args]
   (import-zip-file "small-xml.zip", "/private/tmp/aim"))
