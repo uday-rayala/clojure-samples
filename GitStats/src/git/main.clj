@@ -15,24 +15,27 @@
 (defn core-lines [] (read-lines "core-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
 
-(defn object-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
+(defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
+(defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
 
-(defn casper-maps [casper-pairs] (object-maps casper-pairs :name :core))
-(defn aim-maps [aim-pairs] (object-maps aim-pairs :name :aim))
-(defn top-git-json [casper-pairs aim-pairs] (json-str (map #(merge %1 %2) (casper-maps casper-pairs) (aim-maps aim-pairs))))
-(defn top-git [] (top-git-json (top-counts (core-lines)) (top-counts (aim-lines))))
+(defn casper-maps [] (count-maps (top-counts (core-lines)) :name :core))
+(defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 
-(defn all-words-json [pairs] (json-str (object-maps pairs :word :count)))
+(defn top-git-json [caspers aims] (json-str (sort-by :core (merge-count-maps caspers aims :name))))
+
+(defn top-git [] (top-git-json (casper-maps) (aim-maps)))
+
+(defn all-words-json [pairs] (json-str (count-maps pairs :word :count)))
 (defn all-words [] (all-words-json (top-unused-words (core-lines))))
 
 (defn form-name [names] (reduce (fn ([] "None") ([x y] (str x "-" y))) names))
 (defn pair-frequencies [] (frequencies (concat (pair-names (core-lines)) (pair-names (aim-lines)))))
 (defn pair-name-count [] (map (fn [line] [(form-name (first line)) (last line)]) (pair-frequencies)))
-(defn pair-counts [] (json-str (object-maps (pair-name-count) :pair :count)))
+(defn pair-counts [] (json-str (count-maps (pair-name-count) :pair :count)))
 
 
 (defroutes main-routes
-  (GET "/" [] "<h1>Hello World</h1>")
+  (GET "/" [] "<a href=\"/top-git.html\">Click here for stats</a>")
   (GET "/top-git.json" [] (top-git))
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
