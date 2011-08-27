@@ -12,8 +12,8 @@
 (use '[clojure.string :only (join)])
 
 
-(defn core-lines [] (read-lines "/Users/rudayaku/Projects/clojure-samples/GitStats/core-commits.txt"))
-(defn aim-lines [] (read-lines "/Users/rudayaku/Projects/clojure-samples/GitStats/aim-commits.txt"))
+(defn core-lines [] (read-lines "core-commits.txt"))
+(defn aim-lines [] (read-lines "aim-commits.txt"))
 
 (defn object-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 
