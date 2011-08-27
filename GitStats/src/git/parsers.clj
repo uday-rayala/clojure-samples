@@ -3,19 +3,15 @@
   (:require [git.people :as people])
 )
 
-(def stop-words #{"a", "an", "the", "so", "no", "to", "of", "for", "and", "in", "master", "branch", "on", "from", "it", "is", "with", "up", "into", "that"})
-
 (defn is-pair? [collection] (= 2 (count collection)))
 (defn total-count [set-collection key] (count (filter #(% key) set-collection)))
 (defn frequencies-in-set-collection [set-collection keys]
   (map vector keys (map (partial total-count set-collection) keys)))
 
-(defn get-words [commit] (set (remove stop-words (re-seq #"[a-zA-Z]+(?=[^a-zA-z]?)" (.toLowerCase commit)))))
-(defn commiters [commit] (let [words (get-words commit)] (people/get-person-names words)))
-(defn unused-words [commit] (difference (get-words commit) (people/people-all-names)))
+(defn unused-words [commit] (difference (people/get-words commit) (people/people-all-names)))
 
 (defn top-counts [commits]
-  (let [commiters-collection (map commiters commits)]
+  (let [commiters-collection (map people/commiters commits)]
     (frequencies-in-set-collection commiters-collection (people/people-names))))
 
 (defn all-unused-words [commits]
@@ -24,7 +20,7 @@
       (frequencies-in-set-collection unused-words-collection unused-words))))
 
 
-(defn pair-names [commits] (filter is-pair? (map commiters commits)))
+(defn pair-names [commits] (filter is-pair? (map people/commiters commits)))
 
 (defn top-unused-words [commits]
   (take 50 (sort-by last #(compare %2 %1) (all-unused-words commits))))

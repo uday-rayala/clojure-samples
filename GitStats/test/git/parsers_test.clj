@@ -2,12 +2,6 @@
   (:use [clojure.test] [git.parsers])
 )
 
-(deftest test-parsing-names
-  (is (= #{"uday", "mark"} (commiters "Uday/Mark Some marklogic commit")))
-  (is (= #{"uday", "mark"} (commiters "uday/Mark Some commit")))
-  (is (= #{"uday", "micheal"} (commiters "uday/Mike Some commit")))
-)
-
 (deftest test-unused-words
   (is (= #{"some", "marklogic", "commit"} (unused-words "Uday/Mark Some marklogic commit")))
 )

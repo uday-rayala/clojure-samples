@@ -1,4 +1,4 @@
-(ns git.people
+(ns casper-gource.people
   (:use [clojure.set]))
 
 (def people
