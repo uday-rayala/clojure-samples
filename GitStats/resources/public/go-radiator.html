@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://visapi-gadgets.googlecode.com/svn/trunk/termcloud/tc.css"/>
+    <script type="text/javascript" src="http://visapi-gadgets.googlecode.com/svn/trunk/termcloud/tc.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript" src="/top-git.js"></script>
+    <script type="text/javascript" src="/go-radiator.js"></script>
+    <script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
+
+    <script type="text/javascript">
+//        google.load("visualization", "1", {packages:["corechart"]});
+//        google.setOnLoadCallback(getDataAndDrawChart);
+        $(document).ready(function() {
+            all_build_statues('#go-radiator', '#go-notifications-wall');
+        });
+    </script>
+  </head>
+
+  <body>
+      <div id="go-radiator" style=""></div>
+      <div id="go-notifications-wall"></div>
+      <!--<div id="all-stats">-->
+          <!--<div id="tcdiv" style="width:400px"></div>-->
+          <!--<div id="chart_div"></div>-->
+          <!--<div id="pair_chart_div"></div>-->
+      <!--</div>-->
+  </body>
+</html>

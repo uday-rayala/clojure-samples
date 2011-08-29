@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+}
+
+#go-radiator {
+    width: 200px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#all-stats {
+    width: 1000px;
+    height: 600px;
+    vertical-align: middle;
+}
+
+@font-face {
+	font-family: red_blood;
+	src: url('dblftr15.ttf');
+}
+
+#go-notifications-wall {
+    font-family: red_blood;
+    color: red;
+    margin-left: 200px;
+}
+
+#go-notifications-wall h1 {
+    font-size: 80;
+    height: 60px;
+}
+
+.build-status {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    line-height:2em;
+    display: inline-block;
+}
+
+.passed {
+    background-color: green;
+}
+
+.failed {
+    background-color: red;
+}
+
+.building {
+    background-color: yellow;
+}
