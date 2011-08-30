@@ -1,3 +1,8 @@
+2011-08-30 pat/mushtaq: putting xquery modules in same place as core.
+2011-08-30 pat, mushtaq: removing whitespace.
+2011-08-30 pat, mushtaq: removed unnecessary libs; added required libs (i.e. scala).
+2011-08-30 Mushtaq: Unbreaking the build
+2011-08-30 Mushtaq: Fixing the broken window: - Removed jars not required for deployment from the zip - Changed "compile" folder to "lib" in the zip.
 2011-08-26 Charles/Suzuki #650 removed A++ markup in publication title meta info
 2011-08-26 eevert "mushtaq/mark: adding meta verticals into the journal"
 2011-08-26 mushtaq/mark: adding meta verticals into the journal
@@ -71,13 +76,11 @@
 2011-08-11 Alinoor/Michael #380 adding starting with rule for inline equations
 2011-08-11 Mushtaq: cleanup of tests for Manifest and DeliveriesValidator
 2011-08-10 Mushtaq: optimizing nested for loop to get delivery list. given that there are 20K zips and 20K manifests in perf env, the nested loop would be very inefficient
-2011-08-10 Merge branch 'master' of slgblogr0037:aim
 2011-08-10 Suzuki/Michael/Mushtaq compelete story #547
 2011-08-10 pat/mushtaq: no longer deleting zips in workspace; no longer failing if corrupt zip file; no longer unzipping in parallel (number of threads exploded on perf).
 2011-08-10 pat, mushtaq: pointing perf to 1m dds delivery.
 2011-08-10 pat/mushtaq: giving aim a bit more heap space.
 2011-08-10 pat/alex: remove ml step, because it never got executed and it's in core (supposedly).
-2011-08-10 Merge branch 'master' of slgblogr0037.springer-sbm.com:aim
 2011-08-10 Charles/Rob #339 ignored test failing build
 2011-08-10 alinoor/mark #380 fixing the title ingestion rules
 2011-08-10 Rob/Charles #339 made books invalid temporarily until core supports them
@@ -114,13 +117,10 @@
 2011-08-03 Uday/Alex #94 Added a zip file with search releavece documents in dev environment
 2011-08-03 Uday/Mushtaq: Allow parallel unzip when more than one zip file is present in the source directory. required separating cleaning and unzipping tasks.
 2011-08-02 Mushtaq/Ken: Fixed ignored tests. Based on feedback from Mark and Uday, rolled back reordering of rules as it is a functional change and not just refactoring
-2011-08-02 Merge branch 'master' of segblogr0065:aim
 2011-08-01 pat: explicitely adding resource directory to coverage config.
 2011-08-01 pat: getting rid of jetty targets, which were inadvertently checked in.
 2011-08-01 pat: cleaning up build file
-2011-08-01 Merge branch 'master' of segblogr0065:aim
 2011-08-01 Mushtaq: enabled a commented test and removed comments from fully qualified path for journal article
-2011-08-01 Merge branch 'master' of segblogr0065:aim
 2011-08-01 Mark/Mushtaq fully qualified paths for book chapter
 2011-08-01 separate rules for journal articles and book chapters, rearranged the rules after analyzing the logs
 2011-07-30 pat: added scct coverage plugin.
@@ -171,7 +171,6 @@
 2011-07-19 Ken, Rob #154 removes PDF validation
 2011-07-19 Ken, Rob #154 merged test data
 2011-07-19 liz/mark: need to delete stuff in this forest
-2011-07-19 Merge branch 'master' of segblogr0065:aim
 2011-07-19 Mark/Liz: Updating the port for xdbc aim
 2011-07-19 Uday/Alex/Charles #Commenting Ignoring and commenting some rules which will be fixed later by Charles/Chris
 2011-07-19 Chris,Charles #458 Refactored contains elements rule
@@ -187,7 +186,6 @@
 2011-07-15 Uday: Changing the tostring of not rule
 2011-07-14 Uday: Pulling Mustaque's changes - Made document matcher return a status instead of the Document
 2011-07-14 Uday Moving Mustaque's changes from github
-2011-07-14 Merge branch 'master' of segblogr0065:aim
 2011-07-14 Ken/Alex - #admin - fixed the aim small import script after some files were moved
 2011-07-14 Ken/Alex - #admin - fixed the aim small import script after some files were moved
 2011-07-14 Alex, Ken #113 appends author name metadata for chapters
@@ -219,13 +217,10 @@
 2011-07-05 Harinee Refactored tests for unique tests for xpaths in DocumentMatcherTest. Also added a test for invalid Volume number for Book Chapter
 2011-07-04 Uday/Mark: changing dev box ip address
 2011-07-04 Uday: Create working directory if doesnot exists
-2011-07-04 Merge branch 'master' of segblogr0065:aim
 2011-07-04 Harinee Adding functional test for Unsupported Article (with Markup in Abstract Heading)
 2011-07-04 Uday/Alinoor: Added summary csv file script
-2011-07-04 Merge branch 'master' of segblogr0065:aim
 2011-07-04 Uday/Alinoor - script to package up unsupported and invalid documents from ingestion
 2011-07-01 pat: removing unused folder
-2011-07-01 Merge branch 'master' of segblogr0065:aim
 2011-07-01 Uday/Alex: #315 some more refactoring
 2011-06-30 Uday: #315 Added more meaningful messages to the loggers
 2011-06-30 Uday: #351 Added document name to the log messages
@@ -245,16 +240,13 @@
 2011-06-29 alex/duncan non-admin user task: adding the read permission to AIM content ingestion and stuff to allow AIM build to run locally
 2011-06-29 Uday/Suzuki #315 Added rules framework
 2011-06-29 Uday/Alinoor: functional test for invalid document and Introduced the concept of importable documents. Need to add more validation rules
-2011-06-28 Merge branch 'master' of segblogr0065:aim
 2011-06-28 Alinoor/Uday : Added qa properties to capfile
 2011-06-28 Alinoor/Uday Added aim qa properties
 2011-06-27 mark screwed up the imports
 2011-06-27 uday/pat/mark: try/catch around the import so we can see it actually import some stuff
 2011-06-27 uday/mark: doi being put in the wrong place in the document
-2011-06-24 Merge branch 'master' of segblogr0065:aim
 2011-06-24 Uday/Mark reverting meta data namespace to meta from facet
 2011-06-24 Uday/Mark Added facet namespace to metadata
-2011-06-24 Merge branch 'master' of segblogr0065:aim
 2011-06-24 Uday: Finxing dev server url
 2011-06-24 Uday/Mark Made MarkLogicClientTest more robust and updated import script for ci
 2011-06-24 Uday/Mark inlined clean script in tests
@@ -281,7 +273,6 @@
 2011-06-23 Uday/Mark #471 made ci to run zip task
 2011-06-23 Uday/Mark #471 added target to create zip file
 2011-06-23 uday/mark: #471 => filling in cap file
-2011-06-23 Merge branch 'master' of segblogr0065:aim
 2011-06-23 uday/mark - empty capfile to get us started
 2011-06-23 uday/mark: adding meta data assertion to the end to end test
 2011-06-23 Uday/Mark #471 Added metadata to the content xml

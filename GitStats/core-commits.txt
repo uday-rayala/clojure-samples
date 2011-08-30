@@ -1,3 +1,23 @@
+2011-08-30 Suzuki/Uday #14 Story complete and tested, reverting to mock state to allow development without open am authentication
+2011-08-30 charles/duncan #650 results page teaser A++
+2011-08-30 charles/duncan #650 results page teaser A++
+2011-08-30 Chris/Jose #659 Fix mocked javascript test.
+2011-08-30 Chris/Jose #659 Fixed JS bug where show/hide authors was being applied to all lists
+2011-08-30 Harinee: Added test for Must Have defect #627 for multiple facets selected from same category
+2011-08-30 Suzuki/Uday #14 amend user Anonymous company details to match css anonymous.
+2011-08-30 Uday/Suzuki: #14 Changed the user names so that we can identify them
+2011-08-30 Uday/Suzuki: #14 Added users springer recognized and anonymous for testing
+2011-08-30 Chris/Jose #659 Fixed author/editor show/hide js so it can handle having more than one list of people on a page
+2011-08-30 Ken/Marc #323 Bugfix on how volume informations are displayed.
+2011-08-30 Michael: changed capfile to remove artifact after unpacking.
+2011-08-30 Uday/Suzuki #14 Changing log level to DEBUG for verifying in Dev
+2011-08-30 Ken/Marc #597 modified CSS to match template look on home page
+2011-08-30 Uday/Suzuki: #14 Added log message for user id from openam
+2011-08-30 ken/Marc #597 Translation added.
+2011-08-30 Liz/Jose #windowfix Remove grep process in process listing.
+2011-08-30 Marc #323 Bugix in ordering volume info.
+2011-08-30 Uday/Marc #597 Fixed the facets for sub disciplines and disciplines
+2011-08-26 Rob: refactored snippet code
 2011-08-26 pat: moved test helpers into test package.
 2011-08-26 pat: deleted duplicated toNodes methods.
 2011-08-26 pat: moved URIs to test package; moved a++ truncator to content package.
@@ -40,7 +60,6 @@
 2011-08-26 Uday/Marc Fixing Build
 2011-08-26 Uday/Marc #109 Bugfix on discipline and sub-discipline facet selection on search page.
 2011-08-26 pat: renamed page title to browser title.
-2011-08-27 Merge branch 'master' of slgblogr0037:core
 2011-08-27 Andreas: Moved OpenAM Realm configuration into app.properties
 2011-08-26 Andreas: Changed DEV-Configuration to use real OpenAM
 2011-08-26 pat: not necessary to explicitely specify default layout.
@@ -72,7 +91,6 @@
 2011-08-25 charles #650 fix broken build
 2011-08-25 Charles #650 ensure A++ text has elements removed when used in facets
 2011-08-25 Karl: moved look inside badge on covers down, added headlines for #645 and #646 to the style in basic.css
-2011-08-25 Merge branch 'master' of slgblogr0037:core
 2011-08-25 pat: removing jetty plugin.
 2011-08-25 pat: removing unused file.
 2011-08-25 pat: removing unused repo.
@@ -83,7 +101,6 @@
 2011-08-25 michael/duncan - #652 - introduce truncator for marketing text
 2011-08-25 Chris/Alinoor #659 introduced BookDOI in BookChapterBuilder
 2011-08-26 Andreas: Reactivated Auth-Tests
-2011-08-26 Merge branch 'master' of slgblogr0037:core
 2011-08-26 Andreas: Fixed openam-mock / AuthenticationTests
 2011-08-25 charles/suzuki #650 support A++ in the book titles of search results
 2011-08-25 Charles/Chris #650 Wrote an XMLTrimmer utlity to split XML apart whilst preserving well-formedness
@@ -92,7 +109,6 @@
 2011-08-25 Marc ignoring some of the authentication tests due to a caching bug in openAM.
 2011-08-25 Jose/marc #323 Further xPath cleanup in Chapter.
 2011-08-25 Marc/Jose #323 Xpath variables refactoring for Journal.
-2011-08-25 Merge branch 'master' of slgblogr0037:core
 2011-08-25 Karl: minor css changes for .content-item-list, moved css for h2 with bottom gradient to basic.css
 2011-08-25 michael/duncan - #652 - add some Journal unit tests
 2011-08-25 michael/duncan - #652 - fix broken directory creation
@@ -117,7 +133,6 @@
 2011-08-24 Suzuki/Marc #323 refactor bookSeriesTitle to seriesTitle
 2011-08-24 Suzuki/Marc #323 Add first implementation of about section for journal.
 2011-08-24 Uday/Alex: Removing unnneccasary findelement and hoping it might fix the build
-2011-08-25 Merge branch 'master' of slgblogr0037:core
 2011-08-25 Tom/Andreas - Adding a directory to the base role for identity in /opt directory
 2011-08-24 Andreas/Liz: Using springer-sbm.com for all Domains in capfile
 2011-08-24 Andreas/Liz: check_health fixed
@@ -128,7 +143,6 @@
 2011-08-24 Liz/Jose #133 Books and Journals replaced by Chapters and Articles, implemented as home.facet.Item.
 2011-08-24 Suzuki/Marc #148 #264 Fix SeriesTitle.
 2011-08-24 Marc #264 #148 Bugfix on seriesTitle (use different path).
-2011-08-23 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-23 Karl/Volker: minor ui improvements, added styles for headlines in #278
 2011-08-23 Mark/Mushtaq: #641 and #109 Added integration tests for facets for Disciplines and SubDisciplines
 2011-08-23 Mark/Mushtaq: #641 and #109 Added facets for Disciplines and SubDisciplines
@@ -173,7 +187,6 @@
 2011-08-22 Harinee: added helpers for system test
 2011-08-19 uday/rob/mark: applying the same trick to the not contains custom matcher
 2011-08-19 rob/uday/mark - don't use scalatest custom matchers they are SLOOOOOW! Build sped up by 100% by not using them #win
-2011-08-19 Merge branch 'master' of 172.18.20.37:core
 2011-08-19 Harinee: uncommented system test
 2011-08-19 Harinee: Introducing helpers in System test
 2011-08-19 Rob #509 change Journal link on homepage to journal search and display journal cover images in search results
@@ -182,7 +195,6 @@
 2011-08-19 Harinee: Removing duplicate config.xqy from systemtest
 2011-08-19 Harinee: amended file to support system test
 2011-08-19 Harinee: Amended system test
-2011-08-19 Merge branch 'master' of 172.18.20.37:core
 2011-08-19 pat: fixing tidy_up method so that it cleans all bar the latest 5 releases after deployment.
 2011-08-19 Chris/Jose #148 Fixed merge conflicts
 2011-08-19 Chris/Jose #148 Implemented access rights with book page. As per story it is based on book subject for now. Tidied up templates and also implented book covers.
@@ -206,7 +218,6 @@
 2011-08-19 Charles/Pat #532 support A++ in book title of chapter page
 2011-08-19 Chris/Jose #148 Added more tests for empty content and modified jade templates to handle them.
 2011-08-19 rob/mark #509 rough first version with a journal in the system
-2011-08-19 Merge branch 'master' of slgblogr0037:core
 2011-08-19 mark: more tidying up for about section #266
 2011-08-19 Uday/Jose #148 Book series title on Book page.
 2011-08-18 Uday/Alinoor/Mushtaq: Created a customer matcher for comparing XML. It just wraps xmlunit. Use this if you care to predicatably match all attributes of a node
@@ -229,9 +240,7 @@
 2011-08-18 mark: #266 making the number next to affiliations not be superscript
 2011-08-19 Chris - Disabled new OpenAM agent malarky so the build will work
 2011-08-19 Andreas/Sebastian Deactivated agent for application and updated a test (class renamed)
-2011-08-19 Merge branch 'master' of slgblogr0037:core
 2011-08-19 Andreas/Sebastian/Uday: More changes to openam
-2011-08-19 Merge branch 'openam'
 2011-08-19 OpenAM Changes reverted from master
 2011-08-19 Andreas/Sebastian: Make OpenAM-Mock-Stub work with different Users
 2011-08-18 Alex #devops - adding these back in so the jar can be rebuilt if needed
@@ -239,7 +248,6 @@
 2011-08-18 Uday/Jose #148 Book page displays authors list.
 2011-08-18 Uday/Jose #148 CSS class applied to book page content.
 2011-08-18 Uday/Jose #148 Book subtitle display
-2011-08-18 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-18 Karl: added styles for the book page default area #148
 2011-08-18 Karl: renamed abstract.css to document.css
 2011-08-18 mark/charles #532 support A++ in references text; moved references from Chapter and Article to Content
@@ -262,7 +270,6 @@
 2011-08-17 pat/charles #532 introduced A_++ type alias to be explicit about which parts of content are A++
 2011-08-17 Rob/Suzuki #629 modified search weighting rules
 2011-08-17 charles/pat #532 support a++ markup in abstract headings
-2011-08-17 Merge branch 'master' of 172.18.20.37:core
 2011-08-17 Harinee: added test to handle #628 Must have defect (teaser should show correct total no. of results when facet is selected)
 2011-08-17 Mark/Chris #266 Added a test for editors in chapterz
 2011-08-17 mark: renaming editors to editors builder - moving towards that pattern
@@ -277,11 +284,8 @@
 2011-08-17 Alinoor/Mushtaq #575 rendering images on full text page
 2011-08-17 pat/charles #532: added a++ rendering test for chapter content.
 2011-08-17 chris/mark #266 fixing some bugs jeremy spotted
-2011-08-17 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-17 Karl: removed the grey border from the fake page image (look inside) and applied it through css
 2011-08-17 pat/charles: #532 testing abstract.content rendering; always wrapping abstract content in <Para> element; renaming title -> heading, text -> content; no need to escape nodeSeq in jade.
-2011-08-17 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
-2011-08-17 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-16 Karl: enriched markup of abstract page with microdata according to schema.org
 2011-08-16 pat/mushtaq: #532 renaming a++ to a_++ so that we don't need to use back ticks.
 2011-08-16 Uday: #windowfix Cleaning up Author/Chapter classes
@@ -306,7 +310,6 @@
 2011-08-16 pat/charles: #532 reverting changes committed in 'af8e604' (i.e. getting rid of trimming inner text).
 2011-08-16 pat/charles #532 made abstract return NodeSeq instead of String
 2011-08-16 Rob/Chris #339 added title to cover image and fixed css class
-2011-08-16 Merge branch 'master' of slgblogr0037:core
 2011-08-16 Karl: added missing closing tag </html>, corrected author list on abstract page (comma, ellipsis)
 2011-08-16 pat/charles: removed HTML generation of abstract sections from Chapter and removed A++ rendering from Scala code
 2011-08-16 Uday/Andreas #605 Made naming server property come from application properties so that we can configure it for different environments.
@@ -338,7 +341,6 @@
 2011-08-12 Uday Removed mustache dialect completely !!
 2011-08-12 Alinoor/Uday jadifying the search page
 2011-08-12 Ken/Mushtaq #624 changed name of failing functional test page source dump + added the stack trace
-2011-08-12 Merge branch 'master' of slgblogr0037:core
 2011-08-12 pat: deleted FacetItemBuilder and renamed test.
 2011-08-12 pat: using system keys.
 2011-08-12 Ken/Mushtaq #624 Save page source when functional tests fail
@@ -363,7 +365,6 @@
 2011-08-11 Uday/Chris #600 Added integration test for anoynous package
 2011-08-11 Alinoor #380 improved test to trim and remove $ for latex in page title
 2011-08-11 Alinoor #380 test to check $ for latex are correctly removed for a page title
-2011-08-11 Merge branch 'master' of slgblogr0037:core
 2011-08-11 Karl: refactored .action to .action and .icon
 2011-08-11 Alex/Mark #266 - added JournalElectronicISSN to page
 2011-08-11 Alex/Mark #266 - added keywords to builder; to about section and refactored ranges to circumvent the 22 item case class rule
@@ -418,11 +419,9 @@
 2011-08-08 charles/mark: #380 - exclude image tags from showing up in the abstract
 2011-08-08 Alex/Rob #266 refactored findByDoi to getAbstract and getFullText in preparation for story
 2011-08-08 Uday/Marc #601 Uncomment tests for authentication.
-2011-08-08 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-08 pat, michael: fixed pagination validation if more than 1000 pages.
 2011-08-08 Uday/Marc #601 Delete stuff related to openam
 2011-08-08 pat, michael: pulled out view variable.
-2011-08-08 Merge branch 'master' of 172.18.20.37:core
 2011-08-08 Karl: moved font-family declarations to only one place in basic.css, added a border to the cover image, adjusted styles for sub and sup
 2011-08-08 OpenAM Changes reverted from master
 2011-08-08 Uday/Marc #601 Delete stuff related to openam
@@ -452,9 +451,7 @@
 2011-08-04 Rob #100 tweaked similar query options
 2011-08-04 Uday: #595 Fixing the javascript error in IE8
 2011-08-04 Karl: #548 added different colors for the home page if you are recognised as a company
-2011-08-04 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-04 Uday/Harinee - #567 changed search text
-2011-08-04 Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 2011-08-04 Karl: renamed subjects-nav to verticals-nav on the home page
 2011-08-04 suzuki/mark: tidying up the Widget stuff
 2011-08-04 Ken/Chris #554 chapter page handles multilingual abstracts
@@ -478,14 +475,10 @@
 2011-08-03 Ken/Chris #554 Adjusted Xquery to look for the first article title element
 2011-08-03 Ken/Chris refactored the journal article builder to take a sequence of titles instead of a single title
 2011-08-03 Ken/Chris #519 Fixed templates so they dont render h2 when there is no abstract heading
-2011-08-03 Merge branch 'master' of segblogr0065:core
 2011-08-03 pat, suzuki: moved a couple of more git repos.
-2011-08-03 Merge branch 'master' of segblogr0065:core
 2011-08-03 Karl: styled subheading h3 for #519
 2011-08-03 Alex/Uday - added function for home page search facet #devops
-2011-08-03 Merge branch 'master' of segblogr0065:core
 2011-08-03 Ken/Chris #519 refactored Abstract class so that the HTML rendering is handled by a separate object AbstractContentRenderer
-2011-08-03 Merge branch 'master' of segblogr0065:core
 2011-08-03 Alex/Uday #94 - added specifications for the word query specification (for CasperDocuments)
 2011-08-03 Karl: refactored styling of paragraphs (now just inside .formatted)
 2011-08-03 Karl: reduced font size of section links when no access by 1 px
@@ -502,7 +495,6 @@
 2011-08-02 alinoor/mark: #178 pulling out common test steps so we can reuse for chapters
 2011-08-02 Duncan/Rob #100 implemented javascript sort order dropdown
 2011-08-02 Ken/Mushtaq #565 changed localisation from en_GB to en_US
-2011-08-02 Merge branch 'master' of segblogr0065:core
 2011-08-02 Karl: minor ui adjustments (facets, results-only-access, body)
 2011-08-02 Uday/Karl #550 Trimming author names in tooltip
 2011-08-02 Liz/Chris #537 Fixed a bug where teaser appeared if you had access for everything
@@ -537,23 +529,16 @@
 2011-08-01 Liz/Alex #537 - added tests and search-generation code for the teaser
 2011-08-01 Alex/Liz #537 - troubleshooting/merging - checking in obvious non-conflict files first
 2011-08-01 Duncan/Rob #100 added js sort, not functional yet
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 Mark/Kief DevOps - Ability to install ganglia node role onto a machine, and have it talk to a server
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 rob/duncan - #100 - sorting by oldest first and relevance - still no-JS version with links
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 Karl: added class .formatted to #abstract-content for lists in a++ markup
 2011-08-01 Uday/Ken #539 resetting page number whenever the show/hide content checkbox is changed
 2011-08-01 Karl: #178 adjusted section links list for no access (text color, bullets)
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 Duncan/Rob #100 first steps wiring up querystring for sort order
 2011-08-01 Uday #refactor moved search url to a common place
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 Ken/Uday #539 new search doesn't lose search parameters (facets, sort order ...)
 2011-08-02 Suzuki/Alinoor #178 - section when there is no access
 2011-08-02 Suzuki/Alinoor #178 - i18n the section title
-2011-08-01 Merge branch 'master' of segblogr0065:core
-2011-08-01 Merge branch 'master' of segblogr0065:core
 2011-08-01 Mark/Kief DevOps - Added basic ganglia recipe
 2011-08-01 Karl: ui adjustments of facets #553 (and expanders)
 2011-08-01 Alex/Liz #537 - further merges for all code from last friday to get the master branch up-to-date
@@ -573,7 +558,6 @@
 2011-07-30 pat: moving test into same package as class under test.
 2011-07-30 pat: moving to unit test directory.
 2011-07-30 pat: getting rid of old mustache tests.
-2011-07-30 Merge branch 'master' of segblogr0065:core
 2011-07-30 pat: added scct coverage plugin.
 2011-07-30 pat: getting rid of spike test
 2011-07-30 pat: upgraded to sbt 0.10.1 so that we can use scct coverage plugin.
@@ -581,10 +565,8 @@
 2011-07-29 Liz/Uday #539 commenting out step to fix build. will reassess
 2011-07-29 Uday Liz #539 styling and internationalisation changes
 2011-07-29 Uday/Liz #539 Fixed show all checkbox on search results pagination
-2011-07-29 Merge branch 'master' of segblogr0065:core
 2011-07-29 pat: pulled in last mustache change that got missed in merge.
 2011-07-29 Uday/Liz/Harinee: #539 Added test to check if author names link to fresh author facet search
-2011-07-29 pat: merging conflicts.
 2011-07-29 alinoor/mushtaq/mark: fix chef script for scala
 2011-07-29 Uday/Liz #539 updated accpetance test to check if the restricted access is maintained across facet search
 2011-07-29 pat: now defaulting to jade for article page.
@@ -627,13 +609,10 @@
 2011-07-27 pat, kief: updated check sum after reverting changes in article.mustache.
 2011-07-27 Revert "pat, alex: removing hasAccess check, because it's not yet implemented in scala code."
 2011-07-27 Rob/Chris #576 added story number to ignored test
-2011-07-27 Merge branch 'master' of segblogr0065:core
 2011-07-27 pat, karl: removed js attributes.
 2011-07-27 Alex/Kief - DevOps #2 - Got chef installing ML with xdbc server.
-2011-07-27 Merge branch 'master' of segblogr0065:core
 2011-07-27 pat: putting everything in place to switch over to jade for rendering articles - still defaulting to mustache, though.
 2011-07-27 Rob/Chris fixed bug in fake access when a doc has no subjects
-2011-07-27 pat: synced template changes
 2011-07-27 pat: synced template changes
 2011-07-27 pat, alex: removing hasAccess check, because it's not yet implemented in scala code.
 2011-07-27 Rob/Chris #572: Fixed single quote bug
@@ -649,7 +628,6 @@
 2011-07-27 mark: ok findByQuery(String) is now out #windowfixing
 2011-07-27 mark: further crusades against the extra findQuery method in MarkLogicContentRepo #windowfixing
 2011-07-27 Uday: removed time because it doesnt work in mac should fix it
-2011-07-27 Merge branch 'master' of segblogr0065:core
 2011-07-27 pat: introduced translate view-helper method.
 2011-07-27 mark: continuing the attempt to get rid of the findQuery - merging stuff changed by the showAll story
 2011-07-27 mark #windowfixing - getting rid of calls to findByQuery(String) on MarkLogicContentRepository from tests. Use findByQuery(Query)
@@ -714,13 +692,10 @@
 2011-07-25 Uday/Chris #95 Fixed null URL bug
 2011-07-25 Uday/Chris #95 Fixed the previous button and now both pagination controls activate when appropiate
 2011-07-25 pat: added safety test to make sure we don't get out of sync while we are transitioning from mustache to jade.
-2011-07-25 Merge branch 'master' of segblogr0065:core
-2011-07-22 Liz/Chris #95 next page arrow working on search results page
 2011-07-22 Liz/Chris #95 next page arrow working on search results page
 2011-07-22 Ken/Suzuki #549: setup of cover image route path
 2011-07-22 Rob/Mark #539 Changed the fake access to deny access to Subject Oncology
 2011-07-22 Alex/Charles #536 - Added multilanguage No access message and updated translation files
-2011-07-22 Merge branch 'master' of segblogr0065:core
 2011-07-22 pat: starting to replace mustache with jade #articlePage.
 2011-07-22 Alex,Charles #devops removing clean up on deploy to dev as it fails - added broke window
 2011-07-22 Alex/Charles #devops - fixed permissions with remove old releases script
@@ -730,13 +705,11 @@
 2011-07-22 rob/mark: somehow snippets was commented out #fail #98
 2011-07-22 pat: merged partials.
 2011-07-22 Uday Alinoor Fixed authors not coming up in search results page for online first journals
-2011-07-22 Merge branch 'master' of segblogr0065:core
 2011-07-22 Uday/Alinoor #WindowFixing Made ML sbt task to use ruby on path instead of hardcoded ruby path
 2011-07-22 rob/mark - #98 - highlighting snippet if it appears in anywhere in the body or abstract
 2011-07-22 Ken #501 [defect] back button shows actual search term in input field
 2011-07-22 Alex,Charles #536 support emtpy string on search query
 2011-07-22 Charles,Alex #536 rollback after broken build
-2011-07-22 Chris/Liz #95 Added page number to search URL
 2011-07-22 Chris/Liz #95 Added page number to search URL
 2011-07-22 Alex/Charles #536 - Fixed issue with sequences of textnodes being passed to module
 2011-07-22 Alex,Charles #devops improved marklogic deploy packaging
@@ -749,7 +722,6 @@
 2011-07-21 Suzuki/Duncan tidy code and introduce Samurai code srash
 2011-07-21 Alex #admin-7 - removed deprecated ruby files from build process
 2011-07-21 pat: removing duplicated declaration of log level
-2011-07-21 Merge branch 'master' of segblogr0065:core
 2011-07-21 pat: removing unused directories
 2011-07-21 mark/chrisj - Fixed the facet ordering
 2011-07-21 chris/mark - fixing bug with snippet. Let's see if Jeremy can break it now
@@ -768,13 +740,11 @@
 2011-07-20 pat: bye bye mustache - hello jade #statusPage
 2011-07-20 pat: getting rid of no-layout-engine.
 2011-07-20 pat: DRY-ed health check (and fixed hard coded port number).
-2011-07-20 Merge branch 'master' of segblogr0065:core
 2011-07-20 pat: added some code to health check so that it doesn't fall over when the app is not up yet.
 2011-07-20 Alex/Lee - start of spike to speed up ML configuration steps
 2011-07-20 pat, mark: health check now checks that correct version has been deployed.
 2011-07-20 Charles/Chris #458 Added new filters for various a++ elements to html
 2011-07-20 Alex/Lee #admin - configuring inherit permissions for CasperDocuments database
-2011-07-20 Merge branch 'master' of segblogr0065:core
 2011-07-20 Karl: changed positioning of look inside badge from top to bottom
 2011-07-20 mark forgot to add this bit, oops
 2011-07-20 Mark/Liz #95 Able to paginate from the back end
@@ -798,7 +768,6 @@
 2011-07-20 Charles,Chris #458 support transforming camel-cased atrributes and elements when converting to a++
 2011-07-20 Uday/Harinee Commenting the snippet in search result since it is breaking the app in QA
 2011-07-20 Duncan/Alinoor #365 fixed cover image
-2011-07-20 Merge branch 'master' of segblogr0065:core
 2011-07-20 Karl: corrected position of fake page behind the cover image #365
 2011-07-20 Duncan/Alinoor #365 fixed article cover image
 2011-07-20 Duncan/Alinoor #365 cover image text i18n
@@ -817,10 +786,8 @@
 2011-07-19 suzuki/alex test file to see if it affects chef
 2011-07-19 Alex/Suzuki - added AimModules to the step script
 2011-07-19 pat, alex, suzuki: reverted back to old school health check
-2011-07-19 Merge branch 'master' of segblogr0065:core
 2011-07-19 pat, suzuki, alex, mark, uday: removing merge message / adding awesome health check
 2011-07-19 Duncan/Alinoor #365 cover images for book chapters
-2011-07-19 pat, suzuki, uday, alex, mark: manual merge.
 2011-07-19 pat, suzuki, uday, alex, mark: pointed app on dev to local marklogic instance.
 2011-07-19 Ken, Rob #154 styling for pdf link
 2011-07-19 Duncan/Alinoor #365 generating cover image url
@@ -830,7 +797,6 @@
 2011-07-19 Charles, Chris #458 Fixed problem with whitespace being stripped from text before elements in book chapters
 2011-07-19 Charles, Chris #458 Fixed problem with whitespace being stripped from text before elements
 2011-07-19 Charles,Chris #458 show article abstract containing a++ markup
-2011-07-19 Merge branch 'master' of segblogr0065:core
 2011-07-19 Karl: adjusted abstract actions bar (width, form)
 2011-07-19 Suzuki/Kief DevOps #2 - Added install of gdb package on ML machines
 2011-07-19 Alex/Suzuki fix port changes
@@ -844,7 +810,6 @@
 2011-07-19 liz/mark: changing all 9997 ports to 8401
 2011-07-19 Uday #342 Made volume and series label not appear when they are not available
 2011-07-19 Uday #342 Made volume and issue label not come in article page when they are not available for online first articles
-2011-07-19 Merge branch 'master' of segblogr0065:core
 2011-07-19 karl: adjusted some margins in the results list
 2011-07-19 Duncan/Alinoor - windows fix - remove old releases in capfile
 2011-07-19 duncan/mark: #91 => sort by selected and then alphabetical
@@ -863,27 +828,22 @@
 2011-07-19 Liz/Alinoor #98 fixing test and XML builders are now trimming new lines and spaces
 2011-07-19 Suzuki/Kief DevOps #2: Changed the capfile to use CasperDocuments and CasperModule database names in all environments.
 2011-07-19 mark: dunno how that <strong sneaked in
-2011-07-18 merging
-2011-07-18 Merge branch 'master' of segblogr0065:core
 2011-07-18 duncan/mark => #91 - splitting the assertion for result count and search term display
 2011-07-18 karl: some ui refinements on the results page (faux columns,...)
 2011-07-18 Liz/Alinoor #98 test for chapter abstract when snippet match is on title of chapter
 2011-07-18 duncan/mark - #91 - hide the 'for searchterm' text if there is no search term
 2011-07-18 duncan/mark #91 - URL encoding query string when it forms part of a url
 2011-07-18 Ken Uday #342 fixes build
-2011-07-18 Merge branch 'master' of segblogr0065:core
 2011-07-18 Suzuki/Kief: DevOps #2 Half-baked changes for ML deployment
 2011-07-18 Ken, Uday #342 handles optional book title
 2011-07-18 Ken Uday: #342 Changed xpaths for volume id and issue id
 2011-07-18 duncan/mark = #91 adding proper title
 2011-07-18 mark/duncan #91 -> putting the span to get orangeness on the message
 2011-07-18 Liz/Alinoor #98 refactoring snippet xquery
-2011-07-18 Merge branch 'master' of segblogr0065:core
 2011-07-18 duncan/mark: #91 -> fixing the build which broke from our renaming of search results text
 2011-07-18 karl: red border for a++ markup on abstract page, some adjustments of search results list
 2011-07-18 duncan/mark #107 => putting in the new headings for search results
 2011-07-18 marcus mark erraticus/duncan craggicus - #91 - add tooltip/title text on link for add/remove facet item
-2011-07-18 Merge branch 'master' of segblogr0065:core
 2011-07-18 karl: some minor changes in the css
 2011-07-18 Uday: Some more renaming of classes
 2011-07-18 Uday: Renamed SearchResults and other classes to end with Section as the names are confusing
@@ -891,7 +851,6 @@
 2011-07-18 Ken Uday #113 Refactored search result test for authors link
 2011-07-18 karl: corrected some markup on results page, changed .teaser to .snippet in screen.css
 2011-07-18 Liz/Alinoor #98 - filtering snippets to only use those  in the body or abstract
-2011-07-18 Merge branch 'master' of segblogr0065:core
 2011-07-18 Suzuki/Kief : DevOps #1 - Added sudoers file and ssh keys to make deployment from go easier
 2011-07-18 Ken, Uday #stupidJ fixes build
 2011-07-18 Ken, Uday #113 author names on journal article pages link to author facet search for that author
@@ -902,7 +861,6 @@
 2011-07-15 chrisj/mark: #91 -> get the X showing and hiding depending on selected facet
 2011-07-15 mark: tidying up the stuff around getParameterMap on httpservletrequest #107
 2011-07-15 Ken, Suzuki #113 author names on search result page links to facet search
-2011-07-15 Merge branch 'master' of segblogr0065:core
 2011-07-15 Charles/Alinoor #Devops2 - fix chef to run using current release
 2011-07-15 liz/duncan - #98 - functional test driving putting the abstract into the search results xqy
 2011-07-15 liz/duncan - #98 - using abstracts as snippets for both chapters and articles
@@ -916,7 +874,6 @@
 2011-07-15 Rob/Uday #513 replaced ... with ellipsis character and removed comma after last author
 2011-07-15 Rob/Uday #513 Made pub title not truncate when total length is less then 78
 2011-07-15 Rob/Uday #513 Moved truncatedcontenttitle to searchresult as it makes more sense to be in this class
-2011-07-15 Merge branch 'master' of segblogr0065:core
 2011-07-15 RW/LD #513 implemented story
 2011-07-14 Ken #113 added test for author facet
 2011-07-14 Ken, Alex #113 marklogic returns authors facet info
@@ -933,7 +890,6 @@
 2011-07-14 Alinoor, Charles #devops2 add script to install vagrant
 2011-07-14 Alinoor, Charles #devops2 removed old dev config
 2011-07-14 Charles/Alinoor #DevOps2 - renamed capfile task dev-vm to dev_vm
-2011-07-14 Merge branch 'master' of segblogr0065:core
 2011-07-14 Alinoor, Charles #devops2 updating name of dev-vm task
 2011-07-14 chrisj/duncan - #98 - Changed the stupid word that MarkN came up with ;) (extra-> item)
 2011-07-14 chrisj/duncan - #98 - snippet renamed to wrapper, taken out spurious occurrence of entire result node from search results
@@ -941,7 +897,6 @@
 2011-07-13 Uday/ChrisJ #98 Bring back snippet text from MarkLogic on search results page
 2011-07-13 Charles/Alinoor/Kief DevOps #2 - Capistrano configuration to deploy to newdev VM
 2011-07-13 Charles/Alinoor/Kief DevOps #2 - Capistrano configuration to deploy to newdev VM
-2011-07-13 Merge branch 'master' of segblogr0065:core
 2011-07-13 Charles #A++Spike added code to demonstrate beautiful soup and Scala xml transformations
 2011-07-13 Alinoor/Kief DevOps #1 - Able to deploy webapp to Vagrant VM, assuming MarkLogic deployed on physical host machine
 2011-07-13 alex/mark -> #107 can now drill down on multiple filter types
@@ -951,10 +906,8 @@
 2011-07-13 added a further check for CasperContent db - if it doesn't exist at time of connection, it will not get created - until now #admin
 2011-07-13 Uday/ChrisJ : #Fixing build
 2011-07-13 Uday/ChrisJ: #451 added elipses before the show all authors link
-2011-07-13 Merge branch 'master' of segblogr0065:core
 2011-07-13 Karl: updated expander arrows
 2011-07-13 Uday/ChrisJ : #451 Moved showall and hide links to mustache files so that it can be internationalized
-2011-07-12 Merge branch 'master' of segblogr0065:core
 2011-07-12 karl - putting in a space
 2011-07-12 Alex / Mark - #107 - changes to address situations where unnecessary text remains on the search response text even when no facets have been selected
 2011-07-12 uday{akumar}/duncan{the great} - #451 - made authors show/hide in chapter
@@ -986,7 +939,6 @@
 2011-07-11 duncan - eighth step towards itemTitle windowfix
 2011-07-11 Uday/Suzuki #451: tidy script
 2011-07-11 Uday/Suzuki #451: added js to handle authors
-2011-07-11 Merge branch 'master' of segblogr0065:core
 2011-07-11 Charles fixed fails around reading the property web.root.dir and the xslt stuff
 2011-07-11 duncan - seventh step towards itemTitle windowfix
 2011-07-11 duncan - sixth step towards itemTitle windowfix
@@ -994,7 +946,6 @@
 2011-07-11 Uday: renamed empty expander css
 2011-07-11 Alex/Uday: Refactored css classes for facets
 2011-07-11 duncan - fifth step towards itemTitle windowfix
-2011-07-11 Merge branch 'master' of segblogr0065:core
 2011-07-11 pat, charles: added support for intellij and local configuration.
 2011-07-11 duncan - fourth step towards itemTitle windowfix
 2011-07-11 pat, charles: adding js-test back to default build.
@@ -1003,13 +954,11 @@
 2011-07-11 duncan - third step towards itemTitle windowfix
 2011-07-11 Alex/Uday: #112 Added publication title facet to the search results
 2011-07-11 Mark/Suzuki #155: merge
-2011-07-11 Merge branch 'master' of segblogr0065:core
 2011-07-11 suzuki/mark: #155 adding the links to full text on search results
 2011-07-11 duncan - second step towards itemTitle windowfix
 2011-07-11 duncan - first step towards itemTitle windowfix
 2011-07-11 Alex/Uday: #112 Refactored search results facets
 2011-07-11 Alex/Uday #112 refactored facets in search results
-2011-07-11 Merge branch 'master' of segblogr0065:core
 2011-07-11 pat, charles: converted injector to trait and pulled out fulltextrenderer wiring.
 2011-07-11 Alex / Uday #112 - Added XQuery update for Publication Title facet search rendering
 2011-07-11 Alex / Uday #Admin - Set tests to run against the CasperContent database (and not Documents)
@@ -1018,7 +967,6 @@
 2011-07-11 Ken #451 adds 'Show all' link to shortened list of authors
 2011-07-11 Alinoor/Duncan #110 - subdiscipline facet
 2011-07-11 pat, charles: fixed marklogic module path for local installs.
-2011-07-11 Merge branch 'master' of segblogr0065:core
 2011-07-11 pat, charles: changed git username to be the same as hostname
 2011-07-11 Alex/Uday: Fixing functional tests for reference heading
 2011-07-11 Alex/Uday: references heading style change
@@ -1046,18 +994,12 @@
 2011-07-07 uday/mark: #391 -> adding the rest of the words in. Now just need to pull words into file
 2011-07-07 uday/mark #391 -> multi lingual stringing is now IN!
 2011-07-07 uday/mark - can now set a cookie to put the site into German
-2011-07-07 Merge branch 'master' of segblogr0065:core
 2011-07-07 Charles #115 removed content type name conversion as it will be fixed at the meta data level
 2011-07-07 Ken/Suzuki #240 handles references section with no references
 2011-07-07 Duncan/Alinoor - #87 diacritic sensitive searching
-2011-07-07 Merge branch 'master' of segblogr0065:core
 2011-07-07 Charles #115 added tests for expander controller
 2011-07-07 Duncan/Alinoor reduce logging of css errors
 2011-07-07 Charles/Alex #115 split ExpanderManager into Expander controller and view
-2011-07-07 Merge branch 'master' of segblogr0065:core
-2011-07-07 Charles/Alex #115 renamed flap to expander in javascript and CSS
-2011-07-07 Charles/Alex #115 renamed flap to expander in javascript
-2011-07-07 Charles/Alex #115 renamed flap to expander in javascript
 2011-07-07 Ken: send Xvfb output to /dev/null so that the js-test are less verbose
 2011-07-07 pat, michael: replaced hostname with ip because it wouldn't work unless you've hacked your hosts file.
 2011-07-06 alex/duncan #498 fix for page title
@@ -1069,13 +1011,10 @@
 2011-07-06 alex/duncan #498 CaptiveDiv css checking added to tests
 2011-07-06 alex/duncan #498 CaptiveDiv Javascript fix for chrome
 2011-07-06 alex/duncan #498 CaptiveDiv Javascript 1
-2011-07-06 merged
-2011-07-06 merge
 2011-07-06 Uday/Suzuki #240 : Added reference heading,body and test to chapter
 2011-07-06 charles, ken #115 support multiple content types + percentage bars
 2011-07-06 Uday/Suzuki: #240 Made references show reference unstructed tag
 2011-07-06 mark/alinoor #491 - changed backgorund colour of no js message
-2011-07-06 Merge branch 'master' of segblogr0065:core
 2011-07-06 Uday/Suzuki #240 : Added reference heading and test
 2011-07-06 alinoor/mark: more harrah suggestions on the build
 2011-07-06 Mark/Alinoor - removing hard coding of scala version from dependencies
@@ -1091,27 +1030,22 @@
 2011-07-05 mark: changing the browser to be firefox
 2011-07-05 Revert "suzuki/mark: taking out the crazy xvfb stuff"
 2011-07-05 suzuki/mark: taking out the crazy xvfb stuff
-2011-07-05 Merge branch 'master' of segblogr0065:core
 2011-07-05 Charles # 115 cleanup/refactor
 2011-07-05 Uday/Harinee: Moved this file to aim
 2011-07-05 Kief: Port forward for ML console
 2011-07-05 Charles #155 adding percentage in content type facet
-2011-07-05 merged
 2011-07-05 Charles #115 show facet numbers on search results page
 2011-07-05 Uday Added script to download summary from dev/qa machines
 2011-07-05 alex/duncan - #498 - fix up abstract heading
 2011-07-05 alex/duncan - #498 - style chapter page, quote dodgy CSS filter syntax, still no js
 2011-07-05 Uday/Suzuki #240 added test and reference to article
-2011-07-05 Merge branch 'master' of segblogr0065:core
 2011-07-05 Charles #115 added content type facet to marklogic and basic html
 2011-07-05 alex/duncan - #498 - style article page not chapter, and no js
 2011-07-04 Uday/Alex: Removed xdbc url from properties
 2011-07-04 Alex/Duncan #499 remove the subtitle
-2011-07-04 Merge branch 'master' of segblogr0065:core
 2011-07-04 Kief - IP address of static web server has changed, so I've updated the chef scripts to match. Short term workaround
 2011-07-04 Harinee Added functional test for boolean search
 2011-07-04 alex/duncan refer to dev box by name not number
-2011-07-04 Merge branch 'master' of segblogr0065:core
 2011-07-04 Alex/Duncan: ML update script to get the latest EA version from segblogr0065
 2011-07-03 pat: moved mustache tests to integration folder
 2011-07-03 pat: moving unit test to unit test tree
@@ -1123,10 +1057,8 @@
 2011-07-03 pat: DRY-ed test and used scalaTest to check for expected exception
 2011-07-03 pat: looks like one lazy val slipped through...
 2011-07-03 pat: removed duplicated call to set content type.
-2011-07-01 Merge branch 'master' of segblogr0065:core
 2011-07-01 pat: replaced lazy vals with def
 2011-07-01 alinoor/duncan - #311 - refactor to extract XSLT path
-2011-07-01 pat, uday: #497 manual merge #jstestdriver
 2011-07-01 pat, uday: #497 #jstestdriver added focus on search.
 2011-07-01 alinoor/duncan - #311 - refactor to extract XSLT path from code
 2011-07-01 duncan/alinoor - #499 - search results style update
@@ -1134,7 +1066,6 @@
 2011-07-01 Uday/Alex: Refactored search results functional test
 2011-07-01 alinoor/duncan - #499 - put in the search results list styling and changed js test port
 2011-07-01 pat: removing main.js temporarily because it failed js tests.
-2011-07-01 Merge branch 'master' of segblogr0065:core
 2011-07-01 pat: added js-test-driver. still need to integrate into ci, though.
 2011-07-01 pat: added virtual framebuffer package to installation script.
 2011-06-30 Duncan/Karl/Alinoor - #499 new style changes in header
@@ -1144,22 +1075,17 @@
 2011-06-30 Duncan/Alinoor - #311 moved css for full text pages
 2011-06-30 Duncan/Alinoor - #311 adding ops/run-app-as-prod.sh
 2011-06-30 Duncan/Alinoor - #311 fixed full text page when deployed as production
-2011-06-30 Merge branch 'master' of segblogr0065:core
 2011-06-30 Duncan/Alinoor - #311 debugging dev fulltext page
-2011-06-30 Merge branch 'master' of segblogr0065:core
 2011-06-30 pat, alex: making sure that modules are installed after steps are executed; added a bit more logging
 2011-06-30 Duncan/Alinoor - #311 extracted full text regex path into a trait with unit tests
 2011-06-30 pat, alex: added some logging before executing ml steps.
-2011-06-30 Merge branch 'master' of segblogr0065:core
 2011-06-30 Charles/Alinoor - #311 fulltext with css and images
 2011-06-29 Alex - environmental task (dev) - added permissions to make module executable
 2011-06-29 Uday: Made authorNames abstract method instead of structural type
 2011-06-29 Alex - QA fix to prevent search from being limited to indexed element items
 2011-06-29 alex/duncan set appserver default user to casper-db-user
-2011-06-29 merge
 2011-06-29 Charles/Alinoor #311 added fulltext html page
 2011-06-29 Uday : Modified property loader test to not depend on the actual properties.
-2011-06-28 Merge branch 'master' of segblogr0065:core
 2011-06-28 pat: not using default layout on internal status page
 2011-06-28 Duncan/Alex - Task - Created Read only database user and associated role and privileges
 2011-06-28 alex/duncan #84 fix search so that NOT queries are expressed as a starter not a joiner
@@ -1171,13 +1097,9 @@
 2011-06-28 duncan/charles #74 fixed the broken path to CoverDate
 2011-06-28 Alex #83 - added tests necessary to satisfy the >1 search result story
 2011-06-28 Alex #83 - Added necessary tests to satisfy >1 search term tests
-2011-06-28 Merge branch 'master' of segblogr0065:core
 2011-06-28 pat, jeremy, harinee: fixing marklogic url on qa
 2011-06-28 kief/charles/mark -> adding ml setup to the build
-2011-06-28 Merge branch 'master' of github.com:ThoughtWorksDonateNow2/casper-core
 2011-06-28 pat, alinoor: added mustache test
-2011-06-28 Merge branch 'master' of segblogr0065:core
-2011-06-27 pat: manual merge
 2011-06-27 uday/mark: just get inner text of the BookTitle node
 2011-06-27 Uday/Mark - #471 finally it's game.over for the meta data -> series title now gone
 2011-06-27 Duncan/Uday with Mark stealing checkin glory - moving journal sub title out of meta
@@ -1196,7 +1118,6 @@
 2011-06-27 Charles/Alex cleanup
 2011-06-27 Charles/Alex #81 remove MarkLogic endpoint urls for deployments, replace with default of localhost
 2011-06-27 Uday/Mark: #471 -< moving lookup of data from meta to main doc >-
-2011-06-27 merged
 2011-06-27 Charles/Alex #81 added support to modify marklogic config through individual xquery steps
 2011-06-27 pat, alinoor: added shared resources to idea classpath
 2011-06-27 pat, alinoor: removed tests/unit/resources/documents/*
@@ -1204,7 +1125,6 @@
 2011-06-27 Uday/Mark: putting back the new line for abstract text. That's our only change around that area
 2011-06-27 Uday/Mark: making Article authors come from the main xml instead of from the evil meta
 2011-06-27 Pat/Uday/Mark: turning off parallel execution for unit tests b/c there are two tests which rely on system properties
-2011-06-27 merging
 2011-06-27 Uday/Mark: build is failing if we don't clean-all before each run so for now we'll do that
 2011-06-27 Charles/Pat/Alex fixing path
 2011-06-27 Alinoor/Suzuki - fixed clean-all script
@@ -1221,20 +1141,16 @@
 2011-06-26 pat: made intellij happy with xsbt
 2011-06-26 pat: pulled shared test classes and resources back into test tree
 2011-06-26 pat: fixed sbt-clean script
-2011-06-25 pat: here comes the monster - xsbt 0.10
 2011-06-25 pat: removing accidentally checked in file
 2011-06-25 pat: pulling out shared test classes in anticipation of moving over to xsbt
 2011-06-25 pat: updating git ignore file
-2011-06-25 Merge branch 'xsbt' of github.com:ThoughtWorksDonateNow2/casper-core into xsbt
 2011-06-25 pat: moved shared test sources into main tree
 2011-06-25 pat: moved shared test sources into main tree
 2011-06-25 pat: fixed duplicated test issue - still don't know how to use shared test code
 2011-06-25 case classes comes with default implementation of hashcode, equals method. So by making Property a case class, we get rid of those methods. BTW case classes also provide default toString, but I guess we need a custom one here.
-2011-06-24 suzuki/duncan #74 merged stuff
 2011-06-24 suzuki/duncan #74 major rework around article and chapter enumeration
 2011-06-24 pat: tagging build version element
 2011-06-24 Alex/Charles #deployment updated dev MarkLogic endpoint
-2011-06-24 Merge branch 'master' of segblogr0065:core
 2011-06-24 Alex/Charles #deployment fixed dev deployment, added smoke tests for search
 2011-06-24 Uday: Modifying given, when, then according to the feedback from Mustaq
 2011-06-24 Uday/Mark Changed properties to point to localhost instead of dev box name and also added script to add xdbc server
@@ -1243,57 +1159,42 @@
 2011-06-24 Charles #idiot taking bad comments out of capfile - sorry everyone, my bad
 2011-06-24 Charles/Alex #81 adding back marklogic configuration in build after updating the GO servers hosts file
 2011-06-24 suzuki/duncan #74 some cleanups
-2011-06-24 Merge branch 'master' of segblogr0065:core
-2011-06-23 Merge branch 'master' of segblogr0065:core
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 alinoor/duncan: #74 extracted the enumeration from the article page
 2011-06-23 Charles/Suzuki #81 reverted build script to fix build
 2011-06-23 Charles/Suzuki #81 ignoring failing tests
 2011-06-23 Charles/Suzuki #81 fixed project path
-2011-06-23 merge
 2011-06-23 Charles/Suzuki #81 read MarkLogic url from properties file in SBT
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 alinoor/duncan: #74 minor refactor into Formatting mixin
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 Alex/Lee - configured development environment to closer mirror production/performance env in terms of db settings
 2011-06-23 alinoor/duncan: #74 remove spurious comma
 2011-06-23 alinoor/mark: #74 added tests for optional elements in Enumeration
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 alinoor/duncan #74 refactor chapter to separate out enumeration
-2011-06-23 merge
 2011-06-23 Charles/Suzuki #81 udpated capistrano and associated scripts for MarkLogic deployment
 2011-06-23 pat: tidying up
 2011-06-23 Alex - added phrase-around configuration
 2011-06-23 Alex changed permissions on configure.xqy to repair build
 2011-06-23 Alex - reverting changes and adding configure.xqy back
 2011-06-23 Alex - reverting changes
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 Alex #2 configuration script checked in and ready for dev
-2011-06-23 Merge branch 'master' of segblogr0065:core
 2011-06-23 mark: more #windowfixing around SearchResultsPageTests
 2011-06-23 mark: #windowfixer - game over for AcceptanceTestResult => totally replace in the acceptance tests
 2011-06-23 mark: removing one more place that old method style is used
 2011-06-23 Suzuki/Charles #81 Tidy
 2011-06-23 mark: #windowfixing - first step to getting rid of AcceptanceTestResult. Abstracting search results onto the SearchResultPage
-2011-06-23 merge
 2011-06-23 Charles/Suzuki #81 added phrase test
 2011-06-23 charles/mark: deleting some unused methods #windowfixer
 2011-06-23 mark: pushing the creation of the sub page into SearchResultsPage
 2011-06-22 charles/mark - #74 -> getting the authors to be comma separated
 2011-06-22 pat/mark:  tearing down the modules for our modules database. Was previously using the default one. D'oh
-2011-06-22 Merge branch 'master' of segblogr0065:core
 2011-06-22 duncan/mark #74 ->  adding extra data around the search results for chapter and article
 2011-06-22 Kief - changed the capfile to deploy to the Vagrant VM using the casper account rather than the vagrant account.
 2011-06-21 pat: fixed build script
 2011-06-21 pat: fixed issue that caused tests to run multiple times.
 2011-06-21 pat: getting rid of old sbt launcher and fixing sbt script
 2011-06-21 pat: putting the version in sbt launcher
-2011-06-21 Merge branch 'master' of segblogr0065:core
 2011-06-21 Alex - draft dev install script
 2011-06-21 duncan/mark: #74 - undoing the evil copy/paste of the previous checkin by pulling out some traits
-2011-06-21 Merge branch 'master' of segblogr0065:core
 2011-06-21 {"duncan/mark #74" : "adding vol/issue/date to the search results"}
-2011-06-21 duncan/mark: merging the uday stuff
 2011-06-21 mark/duncan: searchresult in progress
 2011-06-21 duncan/mark: added content type to the search result
 2011-06-21 duncan/mark: #74 making the search results test able to handle multiple return values
@@ -1301,28 +1202,22 @@
 2011-06-21 [Uday] Refactored functional tests to use 'then' and 'and'
 2011-06-21 [Uday] Split functional test to steps
 2011-06-20 [Uday] Added some styles to chapter page
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 Kief - Configured the vagrant VM to have a fixed IP address for capistrano to use
 2011-06-20 Kief - modified the deploy script to warn that it doesn't run on OS X. Needs a bit of tweaking to make it work.
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 Kief - Added a script and capfile configuration to deploy to a locally running VM. Doesn't actually work yet, but it's a nice idea.
 2011-06-20 [Uday] Fixing page range unavailable in chapter
 2011-06-20 [Uday] Fixing article page when date is missing
 2011-06-20 pat, suzuki: added some git config fu.
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 pat, suzuki: added fix to install script so that Fedora can resolve local hostname.
 2011-06-20 [Uday] Made Part in Chapter optional element
 2011-06-20 [Uday] Made chapter search results navigate to chapter page
 2011-06-20 pat: added system properties to status page
 2011-06-20 pat: pushed property conversion logic into status object
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 pat: moved logic to Status object and added environment variables
 2011-06-20 [Uday] Swaped chapter title and book title in xml
 2011-06-20 [Uday] Split chapter title and subtitle
 2011-06-20 pat: fixed buildVersion bug
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 pat: added buildversion and environment info to status page
-2011-06-20 Merge branch 'master' of segblogr0065:core
 2011-06-20 Kief - added Vanilla VM to Vagrant, this is used to build / update the basic system image. Currently uses Centos 55, Ruby 1.9.2, installs both Chef and Puppet.
 2011-06-20 [Uday] Added book volume and series name to the chapter page
 2011-06-20 pat: renaming StatusService to StatusRepository.
@@ -1341,120 +1236,89 @@
 2011-06-19 pat: ignoring lib_managed in plugins directory
 2011-06-19 pat: getting rid of light build configuration and sbt 0.7.7 artifacts
 2011-06-18 pat: added missing dependencies
-2011-06-17 pat, mark, uday: merging
 2011-06-17 pat, mark, uday: displaying application properties on internal status page.
 2011-06-17 charles/mark: adding the tap function to GetMethod so we can call it more nicely https://github.com/raganwald/homoiconic/blob/master/2008-10-29/kestrel.markdown#readme
 2011-06-17 charles/mark: creating abstraction for mark logic module calls
 2011-06-17 mark/charles fixed broken packages
-2011-06-17 Merge branch 'master' of segblogr0065:core
 2011-06-17 charles/mark indroducing enums for marklogic modules
 2011-06-17 [Uday] Made chapter functional test check for copy right year
-2011-06-17 Merge branch 'master' of segblogr0065:core
 2011-06-17 pat: moving MLCR to content package.
 2011-06-17 charles/mark: putting stuff onto single lines
-2011-06-17 merging
 2011-06-17 charles/mark: window fixing duties - moving files into the packages as discussed in the code assassination
 2011-06-17 [Uday/Pat] Refactored controller to remove duplicate content display logic
 2011-06-17 mark/charles: fixing some broken windows - pulling trimmedText into xml helper
-2011-06-17 merged
 2011-06-17 Charles/Mark #150 added range for volumes
 2011-06-17 [Uday] #454 refactored Chapter class
 2011-06-17 [Uday/Alex] #454 Added copyright year and page range to Chapter Abstract page
 2011-06-17 mark's stupidity checking in code that didnt compile. #fail
 2011-06-17 charles/mark: #150 - show the issue number correctly
 2011-06-17 Mark/Charles #150 renamed classes and methods to fit the domain
-2011-06-17 merging
 2011-06-17 charles/mark/pat: random tidying up
 2011-06-17 [Uday/Alex] #454 Added authors, abstract to chapter and refactored Chapter and JournalAbstract
 2011-06-17 charles/mark: removing unnecessary message from ml setup - that is now automated
-2011-06-17 Merge branch 'master' of segblogr0065:core
 2011-06-17 pat, alex: using local booster instead of downloading it from google code.
 2011-06-17 pat, alex: removing app server on 9996 because we no longer need it.
-2011-06-17 Merge branch 'master' of segblogr0065:core
 2011-06-17 alinoor/mark: putting some usage information into the mark logic setup scripts
 2011-06-17 pat: removing unused test
 2011-06-17 pat: removing sample test
 2011-06-16 [Uday/Alex] #454 Added chapter title to the chapter page
-2011-06-16 Merge branch 'master' of segblogr0065:core
 2011-06-16 alinoor/mark #74 - adding repository test for search
 2011-06-16 [Uday/Alex] #454 Added chapter page with book title
 2011-06-16 [Uday/Alex] Refactored funtional test to support multiple test files
 2011-06-16 Alinoor/Mark #73 - making title display if its empty as nothing
 2011-06-16 alinoor/mark: #74 was blowing up if there was no sub title provided. Sorted that for search results page
-2011-06-16 Merge branch 'master' of segblogr0065:core
 2011-06-16 Alinoor/Mark #73 - simplifying read bytes code for mark logic db install script
-2011-06-16 Merge branch 'master' of segblogr0065:core
 2011-06-16 alinoor/mark: #73 -> modified marklogic database deployment script to teardown modules
 2011-06-16 pat: changed logo and background colour.
-2011-06-16 Merge branch 'master' of segblogr0065:core
 2011-06-16 pat: pulled out http support
 2011-06-16 alinoor/mark: #74 -> tidied up tests, modified search results to handle subtitles.
 2011-06-16 [Uday/Alex] Changed abstract doi xquery file name to a more generic name
 2011-06-16 [Uday/Alex] Added health check test to see if the default user is admin on http servers in mark logic
 2011-06-16 pat/mark: adding a test to check the mark logic http server is running
-2011-06-15 Merge branch 'master' of segblogr0065:core
 2011-06-15 alinoor/mark: #73 -> fixed abstract page tests to work with multiple documents inserted in to db
-2011-06-15 Merge branch 'master' of segblogr0065:core
 2011-06-15 kief - updated vagrant file for repackaged box. Box repacking is not actually complete yet.
 2011-06-15 alinoor/mark: #73 -> renamed the transformer to something understandable. Also limit to 20 results per page
 2011-06-15 alinoor/mark: #73 -> changed search query to include title and doi. Other random tidying up
 2011-06-15 kief - Vagrant setup to use 64 bit CentOS. Still has a few issues, particularly with ruby version installation.
 2011-06-15 Alex : added a comment for booster to show where the user's uid is being evaluated
-2011-06-15 Merge branch 'master' of segblogr0065:core
 2011-06-15 Alex - patched booster to support changing the default user
 2011-06-15 duncan/mark (supervised by charles) - setting the authentication level and giving reminder
-2011-06-15 Merge branch 'master' of segblogr0065:core
 2011-06-15 duncan/mark: pulling out some of the ml python stuff into its own module and creating separate modules/app server creation scripts
 2011-06-14 Charles #150 added content repository tests
 2011-06-14 Charles #150 added content repository tests
 2011-06-14 kief - node.json file for testing chef recipes for the build node prototype
 2011-06-14 Kief fixed relative paths for chef-repo in vagrant box
-2011-06-14 Merge branch 'master' of segblogr0065:core
 2011-06-14 Kief - Work in progress Vagrant files. Mostly just putting the structure of things in place at this point.
 2011-06-14 Charles/Alinoor #150 moved formatting from JournalAbstract into template
-2011-06-14 Merge branch 'master' of segblogr0065:core
 2011-06-14 Charles/Alinoor #150 updated URL template to include DOI as path
 2011-06-14 pat: removing comment
-2011-06-14 Merge branch 'master' of segblogr0065:core
 2011-06-13 Charles/Alinoor added article abstract text and heading
 2011-06-13 Charles/Alinoor #150 added author list to abstract page
-2011-06-13 Merge branch 'master' of segblogr0065:core
 2011-06-13 alex/mark: #455 - parameterising the deploy of the modules
 2011-06-13 Charles #150 added page range to abstract enumeration
-2011-06-13 Merge branch 'master' of segblogr0065:core
 2011-06-13 alex/mark: added some debug info for search. Also renamed test to be consistent
 2011-06-13 Charles #150 added volume to abstract enumeration
-2011-06-13 merging
 2011-06-13 alex/mark: story #455 -> creating cap target for deploying marklogic modules programatically
 2011-06-13 Charles/Alinoor added test for journal titles when where are more than one JournalTitle element
 2011-06-13 mark: makigng the SearchResultsTest use the builder that we wrote on friday instead of hard coded xml
 2011-06-13 mark: making xml creation parameterisable
-2011-06-13 Merge branch 'master' of segblogr0065:core
 2011-06-13 Alex/Charles #1 : added 'security' changes to script - so no authentication is required in dev/ci
 2011-06-10 Uday: Added launcher to start jetty and generating zip file
-2011-06-10 merging
 2011-06-10 alinoor/mark: pulling up the mark logic setup from the abstract page test
 2011-06-10 Charles/Alex #150 added article title and journal title to journal article page
-2011-06-10 merged
 2011-06-10 alinoor/mark: throwing a more useful exception if can't find text on the page. Although code pixies already fixed the build anyway
 2011-06-10 Charles/Alex #150 fix compile error that crept through
-2011-06-10 Merge branch 'master' of segblogr0065:core
 2011-06-10 Charles/Alex #150 use http client for abstract page lookup in MarkLogic
 2011-06-10 Alex/Charles #150 added ci to ml install script
 2011-06-10 Alex/Charles #150 added CI params to install script
-2011-06-10 Merge branch 'master' of segblogr0065:core
 2011-06-10 alinoor/mark - #455 - added a web driver end to end test using the marklogic db setup magic of charles/alex
 2011-06-10 Uday: Added target to zip
 2011-06-10 Alex/Charles #150 Adding code to create 2 appservers for test and main
-2011-06-10 Merge branch 'master' of segblogr0065:core
 2011-06-10 Alex/Charles #150 Adding code to create 2 appservers for test and main
-2011-06-10 alinoor/mark: merging stuff
 2011-06-10 Charles/Alex #150 fixing namespace issue on xquery
 2011-06-10 alinoor/mark: writing a test around the content repository and implementing build pattern that liz showed us.
 2011-06-10 Uday: Integrated junit xml listener
-2011-06-10 Merge branch 'master' of segblogr0065:core
 2011-06-10 Charles/Alex #150 updated properties and Injector
-2011-06-10 Charles/Alex #150 use real MarkLogic server instead of fake
 2011-06-10 Alex / Charles #1 Configuring home folder for users so app server can read modules from the filesystem
 2011-06-09 alinoor/mark: #455 -> abstracting away the http request to MarkLogic to a separate class. Using commons library to take care of passing http params to the request
 2011-06-09 Alex,Charles #150 Refactored abstract page unit tests
@@ -1463,7 +1327,6 @@
 2011-06-09 alinoor/mark story #455 - hooked up the repository to call mark logic. Currently not hooked into Injector because we don't have data setup on CI. Charles and Alex are ON IT though
 2011-06-09 Uday: Moving from sbt0.7 to sbt0.10.0
 2011-06-09 alinoor/mark - story #455 made use of fake mark logic server to return total results. real mark logic query implementation still outstanding
-2011-06-09 alinoor/mark -> merging with the changes of charles/alinoor from yest
 2011-06-09 alinoor/mark/alex => #455 - search query, hooked up from ui. Not yet MarkLogiced
 2011-06-09 Charles, Alex #1 added Fake Marklogic server, return page title for abstract page
 2011-06-08 alex/mark/rob - adding some sample documents to put in the db & xquery module scripts
@@ -1472,15 +1335,12 @@
 2011-06-07 pat/mark: redirect standard error to the log file as well otherwise it hangs the cap script
 2011-06-07 pat, rob and charles overseeing mark - adding the qa stage for deployment
 2011-06-07 uday: modified install script to install openssl-devel so that capistrano works
-2011-06-07 Merge branch 'master' of segblogr0065:core
 2011-06-07 Alex #0 : Removed wget and rpm install
 2011-06-07 Alex #0 : Made some further improvements
 2011-06-07 Alex #0 : Complete MarkLogic configuration script - test ready
-2011-06-07 Merge branch 'master' of segblogr0065:core
 2011-06-07 uday/mark: initial puppet manifest. All praise to the puppet
 2011-06-07 rob: added qa scripts
 2011-06-07 mark, charles, fixed failing test in intellij, reinstated project module to view sbt source code
-2011-06-07 Merge branch 'master' of segblogr0065:core
 2011-06-07 added ML installer
 2011-06-07 pat, charles: moved idea files out of root directory.
 2011-06-07 pat, charles: moved wrongly placed unit test
@@ -1490,22 +1350,18 @@
 2011-06-07 pat, uday: changed the start server script to pass options correctly
 2011-06-07 pat, uday: setting env property on deployment
 2011-06-07 pat, uday: made markLogic url configurable
-2011-06-07 Merge branch 'master' of segblogr0065:core
 2011-06-07 pat, uday: added ability to load different properties on environments
 2011-06-07 Mark/Charles re-arranged test folders and attach SBT and Scala sources
 2011-06-06 Charles/Uday #0 updated install script
 2011-06-06 Charles/Uday #0 added uninstall script, removed RVM and updated install to compile ruby
-2011-06-06 Merge branch 'master' of segblogr0065:core
 2011-06-06 pat, uday: changed url of health check to point to an actual page.
 2011-06-06 mark: call ./build ci so it'll do code coverage
 2011-06-06 mark: ok it does fail. Now let's pass then
 2011-06-06 mark: testing that a failed test makes build fail
 2011-06-06 Rob/Charles #0 ignore out folder
 2011-06-06 Rob/Charles #0 merging
-2011-06-06 Rob/Charles #0 merging
 2011-06-06 Rob/Charles #0 updtating setup script
 2011-06-06 pat: adding zip action to default build
-2011-06-06 pat: merged changes
 2011-06-05 pat: removed and ignored sbt build artifacts
 2011-06-05 pat: removing and ignoring sbt build properties file which changes constantly
 2011-06-05 pat: finally got rid of version in artifact names
@@ -1514,18 +1370,13 @@
 2011-06-04 pat: fixed deployment script.
 2011-06-04 pat: wrote scripts to automate deployment to dev environment.
 2011-06-03 Charles #0 fixed test
-2011-06-03 Merge branch 'master' of segblogr0065:core
 2011-06-03 Alex #0 Checked in current test code (after pull)
-2011-06-03 Merge branch 'master' of segblogr0065:core
 2011-06-03 mark: simplify the example
 2011-06-03 mark: getting rid of ideaproject
 2011-06-03 Alex #0 Checked in current test code
-2011-06-03 Charles/Rob #0 Added Internal status page, added com.springer package
 2011-06-03 Charles/Rob #0 Added Internal status page
 2011-06-03 mark: junit xml reporting!
-2011-06-03 Merge branch 'master' of segblogr0065:core
 2011-06-03 Alex #0 Teardown and basic configuration in place
-2011-06-03 Merge branch 'master' of segblogr0065:core
 2011-06-03 pat: moved script to do local install; added script to install dev environment
 2011-06-03 Alex/Charles #0 Added a test to confirm whether there will be any build issues surrounding using XQ modules on the filesystem
 2011-06-03 Alex/Charles #0 Added a new test to confirm DB is empty
@@ -1533,7 +1384,6 @@
 2011-06-03 Alex/Charles #0 increasing memory for SBT
 2011-06-03 Alex/Charles #0 Changed port for ML URI to map to XDBC Server
 2011-06-03 Alex/Charles #0 Added functional ML test
-2011-06-03 Merge branch 'master' of segblogr0065:core
 2011-06-03 Charles #0 Added git setup
 2011-06-03 Charles #0 adding integration tests to build file
 2011-06-03 Charles #0 updating IntelliJ project settings and some SBT settings
@@ -1543,7 +1393,6 @@
 2011-06-02 pat, mark: also running integration tests
 2011-06-02 pat, mark: re-enable embedded jetty
 2011-06-02 pat, mark: removed embedded jetty temporarily; forced same version of jetty on classpath
-2011-06-02 pat, mark: resolving merge conflict
 2011-06-02 pat: overrideing artifact id
 2011-06-02 mark: adding the test to default build target
 2011-06-02 mark: split the tests up into functional/unit. Also add some source code into the repo
@@ -1556,7 +1405,6 @@
 2011-06-01 charles/mark: updating intellij files to latest
 2011-06-01 charles/mark: can ignore the managed lib - created by sbt
 2011-06-01 charles/mark: adios to play, hello scalatra
-2011-06-01 Merge branch 'master' of segblogr0065:core
 2011-06-01 pat, charles: fixing path to play symlink
 2011-06-01 mark: adding the script to setup the machines.
 2011-06-01 pat: fixing some intellij project settings.
