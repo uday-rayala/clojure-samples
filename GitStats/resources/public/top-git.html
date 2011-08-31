@@ -6,15 +6,29 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="/top-git.js"></script>
       <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script type="text/javascript" src="http://systemsbiology-visualizations.googlecode.com/svn/trunk/src/main/js/load.js"></script>
+
     <script type="text/javascript">
+        jQuery.noConflict();
+        var $j = jQuery;
+
         google.load("visualization", "1", {packages:["corechart"]});
-        google.setOnLoadCallback(getDataAndDrawChart);
+        google.load("prototype", "1.6");
     </script>
+
+      <script type="text/javascript">
+          systemsbiology.load("visualization", "1.0", {packages:["bioheatmap"]});
+      </script>
+      <script type="text/javascript">
+          google.setOnLoadCallback(getDataAndDrawChart);
+        </script>
   </head>
 
   <body>
       <div id="tcdiv" style="width:400px"></div>
       <div id="chart_div"></div>
+      <div id="heatmapContainer" style="width:400px"></div>
       <div id="pair_chart_div"></div>
   </body>
 </html>

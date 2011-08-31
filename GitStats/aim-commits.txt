@@ -1,3 +1,6 @@
+2011-08-30 Charles/Duncan #650 support all A++ markup in book title and subtitle
+2011-08-30 Michael: changed capfile to remove artifact
+2011-08-30 pat/mushtaq: fixed module installation.
 2011-08-30 pat/mushtaq: putting xquery modules in same place as core.
 2011-08-30 pat, mushtaq: removing whitespace.
 2011-08-30 pat, mushtaq: removed unnecessary libs; added required libs (i.e. scala).

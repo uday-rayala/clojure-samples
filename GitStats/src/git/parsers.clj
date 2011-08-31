@@ -23,7 +23,18 @@
 (defn pair-names [commits] (filter is-pair? (map people/commiters commits)))
 
 (defn top-unused-words [commits]
-  (take 50 (sort-by last #(compare %2 %1) (all-unused-words commits))))
+  (filter #(< 10 (last %1)) (sort-by last #(compare %2 %1) (all-unused-words commits))))
 
+
+;(filter #(> 100 (last %1)) (sort-by last #(compare %2 %1) (all-unused-words commits)))
 (defn unused-words-starting [prefix commits]
   (filter (fn [commit] (.startsWith (first commit) prefix)) (all-unused-words commits)))
+
+(defn default-if-nil [value default] (if value value default))
+
+(defn pair-matrix-count [freq name otherName]
+  (let [matched (filter (fn [x] (= (set [name otherName]) (first x))) freq)]
+    (default-if-nil (second (first matched)) 0)))
+
+(defn pairing-matrix [all-names freq]
+  (map (fn [name] (map (fn [otherName] (pair-matrix-count freq name otherName)) all-names)) all-names))

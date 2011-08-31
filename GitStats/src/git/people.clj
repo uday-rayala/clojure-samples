@@ -7,9 +7,9 @@
     {:name "mark"  :alias #{}},
     {:name "pat"  :alias #{}},
     {:name "charles"  :alias #{}},
-    {:name "liz"  :alias #{}},
+    {:name "liz"  :alias #{"lix"}},
     {:name "ken"  :alias #{}},
-    {:name "chris"  :alias #{}},
+    {:name "chris"  :alias #{"chrisj"}},
     {:name "suzuki"  :alias #{}},
     {:name "alex"  :alias #{}},
     {:name "alinoor"  :alias #{}},
@@ -20,7 +20,8 @@
     {:name "marc"  :alias #{}},
     {:name "kief"  :alias #{}},
     {:name "jose"  :alias #{}},
-    {:name "micheal" :alias #{"mike"}},
+    {:name "harinee"  :alias #{}},
+    {:name "michael" :alias #{"mike", "micheal"}},
     ]
 )
 

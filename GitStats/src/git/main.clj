@@ -6,7 +6,7 @@
     [ring.adapter.jetty]
     [git.parsers]
   )
-  (:require [compojure.route :as route])
+  (:require [compojure.route :as route] [git.people :as people])
 )
 
 (use '[clojure.string :only (join)])
@@ -33,12 +33,19 @@
 (defn pair-name-count [] (map (fn [line] [(form-name (first line)) (last line)]) (pair-frequencies)))
 (defn pair-counts [] (json-str (count-maps (pair-name-count) :pair :count)))
 
+;(defn normalized-pairs [] (group-by first (map #(let [names (first %1)] [(first names) (last names) (last %1)]) (pair-frequencies))))
+;(defn second-object-pair [pair] {:name (second pair) :count (last pair)})
+;(defn object-pair [pair] (let [pairing-map (map second-object-pair (last pair))] {:name (first pair) :pairing pairing-map}))
+
+(defn pair-counts-seperate [] (json-str (let [all-names (sort (people/people-names)) freq (pair-frequencies)]
+  {:names all-names :pairing (pairing-matrix all-names freq)})))
 
 (defroutes main-routes
   (GET "/" [] "<a href=\"/top-git.html\">Click here for stats</a>")
   (GET "/top-git.json" [] (top-git))
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
+  (GET "/pair-counts-seperate.json" [] (pair-counts-seperate))
   (route/resources "/")
 )
 

@@ -7,7 +7,7 @@ function drawChart(dataAsJson) {
     var total = dataAsJson.length
   data.addRows(total);
 
-    $.each(dataAsJson, function(index, pair) {
+    $j.each(dataAsJson, function(index, pair) {
           data.setValue(index, 0, pair.name);
           data.setValue(index, 1, parseInt(pair.core));
           data.setValue(index, 2, parseInt(pair.aim));
@@ -28,7 +28,7 @@ function drawPairChart(dataAsJson) {
     var total = dataAsJson.length
   data.addRows(total);
 
-    $.each(dataAsJson, function(index, pair) {
+    $j.each(dataAsJson, function(index, pair) {
           data.setValue(index, 0, pair.pair);
           data.setValue(index, 1, parseInt(pair.count));
     });
@@ -49,7 +49,7 @@ function drawTagCloud(dataAsJson) {
     var total = dataAsJson.length
     data.addRows(total);
 
-    $.each(dataAsJson, function(index, row) {
+    $j.each(dataAsJson, function(index, row) {
         data.setValue(index, 0, row.word);
         data.setValue(index, 1, parseInt(row.count));
     });
@@ -60,10 +60,33 @@ function drawTagCloud(dataAsJson) {
     tc.draw(data, null);
 }
 
+function drawHeatMap(dataAsJson) {
+          var data = new google.visualization.DataTable();
+
+          data.addColumn('string', 'Name');
+
+          $j.each(dataAsJson.names, function (index, name) {
+              data.addColumn('number', name);
+          });
+
+
+          data.addRows(dataAsJson.names.length);
+          $j.each(dataAsJson.names, function (outer, name) {
+            data.setCell(outer, 0, name);
+            $j.each(dataAsJson.pairing[outer], function (inner, count) {
+                data.setCell(outer, inner + 1, parseInt(count));
+            });
+          });
+
+          heatmap = new org.systemsbiology.visualization.BioHeatMap(document.getElementById('heatmapContainer'));
+          heatmap.draw(data, {cellWidth:30, cellHeight:30, passThroughBlack: true, startColor: {r: 255,g: 0, b: 0,a: 1 }, endColor: {r: 0,g: 255, b: 0,a: 1 }});
+      }
+
 function getDataAndDrawChart() {
-    $.get('/top-git.json', drawChart, "json");
-    $.get('/all-words.json', drawTagCloud, "json");
-    $.get('/pair-counts.json', drawPairChart, "json");
+    $j.get('/top-git.json', drawChart, "json");
+    $j.get('/all-words.json', drawTagCloud, "json");
+    $j.get('/pair-counts.json', drawPairChart, "json");
+    $j.get('/pair-counts-seperate.json', drawHeatMap, "json");
 }
 
 

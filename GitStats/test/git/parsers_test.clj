@@ -19,3 +19,8 @@
 (deftest test-all-unused-words
   (is (collection= [["commit" 2], ["new" 1], ["marklogic" 1], ["some" 1]] (all-unused-words ["Uday/Mark Some marklogic commit", "Uday/Mark New commit"])))
 )
+
+(deftest test-pair-matrix-count
+  (is (= 10 (pair-matrix-count [[#{"Uday" "Mark"} 10], [#{"Mark" "Pat" 5}]] "Uday" "Mark")))
+  (is (= 0 (pair-matrix-count [[#{"Uday" "Mark"} 10], [#{"Mark" "Pat" 5}]] "Uday" "Pat")))
+)

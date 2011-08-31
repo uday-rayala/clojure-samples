@@ -1,3 +1,24 @@
+2011-08-30 Volker: adding background-color to search-results search terms after decision by Design/Darius changed whitespace
+2011-08-30 Rob/Mark #285 really fixed build this time
+2011-08-30 Rob/Mark #285 fix marklogic index settings
+2011-08-30 rob/mark #285 handling cover images
+2011-08-30 Rob/Mark #285 merged IndustryPage by Ken/Marc and IndustrySector page
+2011-08-30 rob/mark #285  showing the recently published articles on the industry sector page
+2011-08-30 Marc #139 remove println
+2011-08-30 charles/duncan #650 tests for A++ in book subtitle
+2011-08-30 charles/duncan #650 tests for A++ in book title
+2011-08-30 charles/duncan #650 convert from advert to teaser in CSS and Jade
+2011-08-30 Alex - #devops - added extra elem attrib range index creation to script for verticals lookups
+2011-08-30 Ken/Marc #139 retrieves disciplines/sub-disciplines filtered by Industry sector
+2011-08-30 Harinee: changing QA config back to point to stubbed OpenAM
+2011-08-30 Chris/Jose #661 Added test frameworky stuff for book parts
+2011-08-30 Uday/Steffen/Harinee #fixing qa environment for open am server
+2011-08-30 Volker: added .a-plus-plus style reset on results headers
+2011-08-30 Volker: changed .results-advert to .results-teaser
+2011-08-30 Uday/Suzuki #597 "Fix bug to display selected facets of Discpline and Sub Discpline"
+2011-08-30 Harinee: Changing the config file for QA to point to OpenAM server to test odd/even IP authentication story
+2011-08-30 Harinee: Added test for must have defect #656 for Indexterms rendered in abstract
+2011-08-30 Ken/Marc #139 basic layout for industry sector landing page
 2011-08-30 Suzuki/Uday #14 Story complete and tested, reverting to mock state to allow development without open am authentication
 2011-08-30 charles/duncan #650 results page teaser A++
 2011-08-30 charles/duncan #650 results page teaser A++
