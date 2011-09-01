@@ -1,3 +1,58 @@
+2011-09-01 pat/ken: skipping deployment if unneccessary.
+2011-09-01 Rob/Uday #139 change to use meta:FlattenedTaxonomy element
+2011-09-01 Rob/Uday #597 fix bug in discipline/sub-discipline hierarchy
+2011-09-01 charles/mushtaq #645 fix build
+2011-09-01 charles/mushtaq #645 WIP - updated Jade and tests
+2011-09-01 Uday #597 Refacotring xquery so that we have once place where discipline and subdiscipline pairs are calculated
+2011-09-01 Michael: a few changes to the local.sh, also removed ML as it's installed by ml-install.py
+2011-09-02 Steffen: fixed devtest app.properties
+2011-09-02 Uday/Steffen: prepared openam-mock to handle real User-IDs properly
+2011-09-02 Steffen: changed capfile for devtest target to point to the devtest openam server
+2011-09-01 Uday/Rob #597 changing the way taxonomy is recieved in the meta data
+2011-09-01 Michael: changed to ml-install ML5 from local repo rather than ML4.2
+2011-09-01 Duncan/Marc - use encode not URLEncoder
+2011-09-01 Volker: #661/#662 adding styles for Front/Back matter
+2011-09-01 Duncan/Marc #139 Add test for search link, translation and sorting of disciplines and subdisciplines.
+2011-09-01 Chris/Mark #157 Added link to journal page from issue page
+2011-09-01 chris/mark - adding generic wait until method & using to try and fix the build failure #1078 on go
+2011-09-01 chris/mark #157 - putting the proper jade
+2011-09-01 Pat/Ken: Removed unused xquery-unit library
+2011-09-01 Volker: #277 adding styles for upcoming journal_volumes_and_issues page
+2011-09-01 chris/mark #157 added the rest of the stuff to the page - cover image, issns. Hopefully it compiles now too
+2011-09-01 chris/mark #157 added more info to issue page
+2011-09-01 Charles/Mushtaq: #642 updating text on consumer industry marketing
+2011-09-01 Charles/Mushtaq: #642 Added marketing text for all verticals.
+2011-09-01 Uday/Chris #157 - Added published date thing
+2011-08-31 Volker: #157/#158 changed & extended .toc & author-list for other pages
+2011-08-31 Ken/Harinee: system tests use firefox driver instead of html-unit-driver
+2011-08-31 marc/mark #139 getting the menu to show industry sectors if you came from the industry sector page
+2011-08-31 Mushtaq/Mark: Fixing the build
+2011-08-31 charles/mushtaq #642 Shows marketing text for aerospace
+2011-08-31 Rob/Alex start refactoring taxonomies
+2011-08-31 Volker: #642 added #intro to industry_sector pages #157/#158: added TOC styles for new upcoming journal_issue page
+2011-08-31 Chris/Uday #157 Issue page now has volume number
+2011-08-31 Chris/Uday #157 Added support for issue title on issue page
+2011-08-31 Ken/Harinee: moved all pages and steps in system folder to shared folder so that they don't get duplicated
+2011-08-31 Uday/Chris #157 Showing issue page now
+2011-08-31 Ken: moved com.springer.test.content to com.springer.test.functional
+2011-08-31 Mark/Marc #139 Add disciplines and subdisciplines list.
+2011-08-31 Ken: got rid of the annoying "test.content" folder in functional-tests
+2011-08-31 Ken: moved com.springer.system to com.springer.test.system
+2011-08-31 Ken: more moving test source files from com.springer to com.springer.test
+2011-08-31 Ken: moved source files from com.springer.pages to com.springer.test.pages
+2011-08-31 Ken: other source files moved from com.springer.content to com.springer.test.content
+2011-08-31 Ken: moved source files from com.springer.steps to com.springer.test.steps
+2011-08-31 Uday/Chris #157 - Refactored article builder to include issue information
+2011-08-31 Ken: Moved functional and shared source files from com.springer.content to com.springer.test.content
+2011-08-31 Marc #597 finally commit uncommuited changes from one of the dev boxes.
+2011-08-31 Uday #Refactoring search result page functional test
+2011-08-31 Ken: clean up system test code
+2011-08-31 Ken: moving sources shared by functional and system tests to shared folder to reduce code duplication
+2011-08-31 pat: fixed authentication switch; added resource handler; tidyied up logging.
+2011-08-31 pat: web server is no longer a singleton.
+2011-08-30 Rob refactored the search config options
+2011-08-30 Uday Made log level from properties file which we can configure for different environments.
+2011-08-30 Rob workaround for snippets matching phrases
 2011-08-30 Volker: adding background-color to search-results search terms after decision by Design/Darius changed whitespace
 2011-08-30 Rob/Mark #285 really fixed build this time
 2011-08-30 Rob/Mark #285 fix marklogic index settings

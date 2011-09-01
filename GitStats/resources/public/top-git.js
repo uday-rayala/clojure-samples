@@ -16,7 +16,8 @@ function drawChart(dataAsJson) {
 
   var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
   chart.draw(data, {width: 800, height: 480, title: 'Top Git',
-                    hAxis: {title: 'Name', titleTextStyle: {color: 'red'}}
+                    hAxis: {title: 'Name', titleTextStyle: {color: 'red'}},
+                    isStacked: true
                    });
 }
 

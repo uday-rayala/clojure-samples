@@ -1,3 +1,12 @@
+2011-09-01 Suzuki/Jose #660 Removed invalid test. Implemented Frontmatter validation rules.
+2011-09-01 Suzuki/Jose #660 Book front matter.
+2011-09-01 Suzuki/Jose #660 Book with front and backmatter file.
+2011-09-01 mark: #157 we need to have the volume in journal now
+2011-09-01 Charles/Mushtaq: Added few tests for XPath class
+2011-08-31 charles/mushtaq windowFixing added by-name parameters to Logger
+2011-08-31 Uday/Chris #157 Added issue information to journal xml
+2011-08-31 Mark/Marc #597 Changes on how to add taxonomies to articles.
+2011-08-31 Uday/Chris - #157 - Refactored tests to have shared builders.
 2011-08-30 Charles/Duncan #650 support all A++ markup in book title and subtitle
 2011-08-30 Michael: changed capfile to remove artifact
 2011-08-30 pat/mushtaq: fixed module installation.

@@ -33,11 +33,10 @@
 (defn pair-name-count [] (map (fn [line] [(form-name (first line)) (last line)]) (pair-frequencies)))
 (defn pair-counts [] (json-str (count-maps (pair-name-count) :pair :count)))
 
-;(defn normalized-pairs [] (group-by first (map #(let [names (first %1)] [(first names) (last names) (last %1)]) (pair-frequencies))))
-;(defn second-object-pair [pair] {:name (second pair) :count (last pair)})
-;(defn object-pair [pair] (let [pairing-map (map second-object-pair (last pair))] {:name (first pair) :pairing pairing-map}))
+(def excluded-people #{"harinee", "kief", "karl"})
 
-(defn pair-counts-seperate [] (json-str (let [all-names (sort (people/people-names)) freq (pair-frequencies)]
+(defn people-who-can-pair [] (remove excluded-people (sort (people/people-names))))
+(defn pair-counts-seperate [] (json-str (let [all-names (people-who-can-pair) freq (pair-frequencies)]
   {:names all-names :pairing (pairing-matrix all-names freq)})))
 
 (defroutes main-routes
