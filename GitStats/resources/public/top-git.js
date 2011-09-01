@@ -36,7 +36,7 @@ function drawPairChart(dataAsJson) {
 
 
   var chart = new google.visualization.ColumnChart(document.getElementById('pair_chart_div'));
-  chart.draw(data, {width: 1400, height: 480, title: 'Pair Count',
+  chart.draw(data, {width: 1400, height: 800, title: 'Pair Count',
                     hAxis: {title: 'Name', titleTextStyle: {color: 'red'}}
                    });
 }
@@ -80,7 +80,9 @@ function drawHeatMap(dataAsJson) {
           });
 
           heatmap = new org.systemsbiology.visualization.BioHeatMap(document.getElementById('heatmapContainer'));
-          heatmap.draw(data, {cellWidth:30, cellHeight:30, passThroughBlack: true, startColor: {r: 255,g: 0, b: 0,a: 1 }, endColor: {r: 0,g: 255, b: 0,a: 1 }});
+          heatmap.draw(data, {cellWidth:30, cellHeight:30,
+//          passThroughBlack: true, startColor: {r: 255,g: 0, b: 0,a: 1 }, endColor: {r: 0,g: 255, b: 0,a: 1 }
+            });
       }
 
 function getDataAndDrawChart() {

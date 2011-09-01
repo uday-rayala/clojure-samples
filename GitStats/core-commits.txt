@@ -1,3 +1,7 @@
+2011-09-01 charles/mushtaq #645 Updated the xquery for featured-books
+2011-09-01 Duncan/Marc #277 First test for VolumesAndIssues page.
+2011-09-01 chris/mark #157 refactoring the issue summary to use its own query. Now for pages!
+2011-09-01 Rob/Uday #139 fixed industry home page discipline/sub-discipline list
 2011-09-01 pat/ken: skipping deployment if unneccessary.
 2011-09-01 Rob/Uday #139 change to use meta:FlattenedTaxonomy element
 2011-09-01 Rob/Uday #597 fix bug in discipline/sub-discipline hierarchy
