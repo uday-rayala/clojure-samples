@@ -1,3 +1,8 @@
+2011-09-02 Charles/Jose #660 Backmatter and Frontmatter content type refactor as map.
+2011-09-02 Charles/Jose #660 Backmatter and Frontmatter builder refactor.
+2011-09-02 charles/jose #660 support backmatter during ingestion - store back/front matter with generated marklogic uri if necessary
+2011-09-01 Suzuki/Jose #660 BookBackmatter as valid document.
+2011-09-01 Suzuki/Jose #660 BookBackmatter suffix for PDFs.
 2011-09-01 Suzuki/Jose #660 BookFrontMatter pdf copied.
 2011-09-01 Ken: skipping ingestion if unnecessary
 2011-09-01 Uday/Rob #139 Changed the pre computed discipline, sub-discipline, vertical mapping

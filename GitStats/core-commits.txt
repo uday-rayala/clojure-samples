@@ -1,3 +1,32 @@
+2011-09-02 Mushtaq/Alinoor: #646 Added tests for the story. Currently ignored till some code is added
+2011-09-02 Marc #277 first version of displaying volumes and issues on VolumesAndIssuesPage (ordering still not correct)
+2011-09-02 Chris/Mark #158 Added articles to issue page
+2011-09-02 Ken: switched webdriver implementation for system tests to HtmlUnit since the go-agent doesn't support Firefox yet
+2011-09-02 Ken/Tom: refactored functional tests so that the ML set-up steps are in seperate steps since we don't need the ML steps for the system + fixed system tests to run against the DEV environment
+2011-09-02 Rob/Uday #667 refactored xquery snippet module
+2011-09-02 Uday/Rob #667 Fixed the defect. Made snippets filter IndexTerm elements
+2011-09-02 Mushtaq/Suzuki: #646 refactored to remove duplication of code for taxonomy builder
+2011-09-02 chris/mark: rough version of toc #158
+2011-09-02 Chris/Mark #158 Refactored xqy to return article search results  (╯°□°)╯︵ ┻━┻
+2011-09-02 Uday/Rob #667 Added integration test to see if the second para from body is hightlighted
+2011-09-02 Uday #667 Reusing APlusPlusParas in SectionBuilders also
+2011-09-02 Mushtaq/Suzuki: #645 Hyperlink Cover Images
+2011-09-02 Uday/Rob #667 Added ignored tests which will be fixed soon
+2011-09-02 Mushtaq/Suzuki: #645 Display correct images
+2011-09-02 Mushtaq/Suzuki: #645 Display correct images
+2011-09-02 Uday/Rob #667 Refactored builder parameter name. using implicit conversions!!
+2011-09-02 Marc/Duncan - #277 - basic page layout mostly done
+2011-09-02 Chris #157 Issue page now handles issue id ranges.
+2011-09-02 harinee/mark #285 changed the names of the industry sectors on the menu so they match what's in the excel
+2011-09-02 Mushtaq/Suzuki: #645 Authors names are displayed with truncation when applicable
+2011-09-02 Chris/Mark #157 Added translation support for issue page
+2011-09-01 Rob removed facets from search response where not needed to speed things up
+2011-09-01 harinee/mark #285 fixing problem when searching for industry sector which contains space in its name
+2011-09-01 charles/mushtaq #645 Work in progress
+2011-09-01 Chris/Mark #157 Refactoring commit. +1
+2011-09-01 Rob/Uday #139 fixed duplicate value in sub-disciplines
+2011-09-01 Duncan/Marc #277 Add link from issue page to volumes and issues page
+2011-09-01 Mark/Chris #157 Page ranges on issues is now included. Also updated xqy to pull all the articles back for a given issue because we're so damn nice ^_^
 2011-09-01 charles/mushtaq #645 Updated the xquery for featured-books
 2011-09-01 Duncan/Marc #277 First test for VolumesAndIssues page.
 2011-09-01 chris/mark #157 refactoring the issue summary to use its own query. Now for pages!

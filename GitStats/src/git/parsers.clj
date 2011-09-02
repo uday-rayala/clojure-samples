@@ -1,7 +1,10 @@
 (ns git.parsers
   (:use [clojure.set])
-  (:require [git.people :as people])
+  (:require [git.people :as people] [clojure.string :as string])
 )
+
+(defn non-empty-partition? [partition] (not (string/blank? (string/join partition))))
+(defn group-commits [commits] (filter non-empty-partition? (partition-by string/blank? commits)))
 
 (defn is-pair? [collection] (= 2 (count collection)))
 (defn total-count [set-collection key] (count (filter #(% key) set-collection)))
@@ -38,3 +41,17 @@
 
 (defn pairing-matrix [all-names freq]
   (map (fn [name] (map (fn [otherName] (pair-matrix-count freq name otherName)) all-names)) all-names))
+
+(defn insertions [diff] (Integer/parseInt (first (re-seq #"\d+(?= insertions)" diff))))
+(defn deletions [diff] (Integer/parseInt (first (re-seq #"\d+(?= deletions)" diff))))
+(defn code-size [diff] (+ (insertions diff) (deletions diff)))
+
+(defn code-commit-date [date-time] (let
+  [input-formatter (new java.text.SimpleDateFormat "EEE MMM d HH:mm:ss yyyy Z"),
+   date-formatter (new java.text.SimpleDateFormat "dd-MM-yyyy")]
+    (.format date-formatter (.parse input-formatter date-time))))
+
+(defn code-commit-time [date-time] (let
+  [input-formatter (new java.text.SimpleDateFormat "EEE MMM d HH:mm:ss yyyy Z"),
+   time-formatter (new java.text.SimpleDateFormat "HH:mm")]
+    (.format time-formatter (.parse input-formatter date-time))))

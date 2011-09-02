@@ -24,3 +24,16 @@
   (is (= 10 (pair-matrix-count [[#{"Uday" "Mark"} 10], [#{"Mark" "Pat" 5}]] "Uday" "Mark")))
   (is (= 0 (pair-matrix-count [[#{"Uday" "Mark"} 10], [#{"Mark" "Pat" 5}]] "Uday" "Pat")))
 )
+
+(deftest test-code-size
+  (is (= 81 (code-size " 10 files changed, 78 insertions(+), 3 deletions(-)")))
+)
+
+(defn date [date month year] (.getTime (doto (java.util.Calendar/getInstance) (.set year month date 0 0 0))))
+
+(deftest test-code-commit-date
+  (is (= "02-09-2010" (code-commit-date "Fri Sep 2 14:18:59 2010 +0100")))
+)
+(deftest test-code-commit-time
+  (is (= "14:18" (code-commit-time "Fri Sep 2 14:18:59 2010 +0100")))
+)
