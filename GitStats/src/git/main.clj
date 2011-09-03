@@ -15,6 +15,7 @@
 (defn core-lines [] (read-lines "core-commits.txt"))
 (defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
+(defn failed-build-numbers [] (read-lines "failed-builds.txt"))
 
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
@@ -66,6 +67,17 @@
   (json-str)
 ))
 
+;2011-06-07T16:20:10+01:00
+(defn get-hours [build] (Integer/parseInt (first (re-seq #"\d\d(?=:\d\d:\d\d)" build))))
+
+(defn failing-build-details [builds] (let [details (group-by get-hours builds)] (map (fn [h] (count (details h))) (range 0 23))))
+
+(defn failed-builds-by-day [] (->>
+  (failed-build-numbers)
+  (failing-build-details)
+  (json-str)
+))
+
 (defroutes main-routes
   (GET "/" [] "<a href=\"/top-git.html\">Click here for stats</a>")
   (GET "/top-git.json" [] (top-git))
@@ -74,6 +86,7 @@
   (GET "/pair-counts-seperate.json" [] (pair-counts-seperate))
   (GET "/code-changes.json" [] (code-changes))
   (GET "/code-changes-plain.json" [] (code-changes-plain))
+  (GET "/failed-builds-by-day.json" [] (failed-builds-by-day))
   (route/resources "/")
 )
 

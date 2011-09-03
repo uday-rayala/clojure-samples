@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Tooltips</title>
+    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+    <script src="js/protovis.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="center">
+    <div id="fig">
+        <script type="text/javascript+protovis">
+
+            var dataURL = "/failed-builds-by-day.json";
+            var jsonData = $.ajax({ type: "GET", url: dataURL, async: false }).responseText;
+            var failedBuilds = JSON.parse(jsonData);
+
+            console.log(failedBuilds);
+
+            var data = failedBuilds;
+
+        </script>
+
+        <script type="text/javascript+protovis">
+
+            /* Sizing and scales. */
+            var w = 800,
+            h = 500,
+            x = pv.Scale.linear(1, 50).range(0, w),
+            y = pv.Scale.ordinal(pv.range(24)).splitBanded(0, h, 4/5);
+
+            /* The root panel. */
+            var vis = new pv.Panel()
+            .width(w)
+            .height(h)
+            .bottom(20)
+            .left(100)
+            .right(40)
+            .top(5);
+
+            /* The bars. */
+            var bar = vis.add(pv.Bar)
+            .data(data)
+            .top(function() y(this.index))
+            .height(y.range().band)
+            .left(0)
+            .width(x);
+
+            /* The value label. */
+            bar.anchor("right").add(pv.Label)
+            .textStyle("white")
+            .text(function(d) d.toFixed(1));
+
+            /* The variable label. */
+            bar.anchor("left").add(pv.Label)
+            .textMargin(5)
+            .textAlign("right")
+            .text(function(d) {
+                return (this.index + ":00") + "-" +((this.index + 1) + ":00");
+            });
+
+            /* X-axis ticks. */
+            vis.add(pv.Rule)
+            .data(x.ticks(5))
+            .left(x)
+            .strokeStyle(function(d) d ? "rgba(255,255,255,.3)" : "#000")
+            .add(pv.Rule)
+            .bottom(0)
+            .height(5)
+            .strokeStyle("#000")
+            .anchor("bottom").add(pv.Label)
+            .text(x.tickFormat);
+
+            vis.render();
+
+        </script>
+    </div>
+</div>
+</body>
+</html>
