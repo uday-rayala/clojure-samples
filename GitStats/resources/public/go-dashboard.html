@@ -41,15 +41,15 @@
             /* Sizing and scales. */
             var w = 1000,
             h = 500,
-            x = pv.Scale.linear(0, 50).range(0, w),
-            y = pv.Scale.ordinal(pv.range(start, end, 1)).splitBanded(0, h, 4/5);
+            x = pv.Scale.ordinal(pv.range(start, end, 1)).splitBanded(0, w, 4/5),
+            y = pv.Scale.linear(0, 50).range(0, h);
 
             /* The root panel. */
             var vis = new pv.Panel()
             .def("i", -1)
             .width(w)
             .height(h)
-            .bottom(20)
+            .bottom(50)
             .left(100)
             .right(40)
             .top(5);
@@ -57,40 +57,43 @@
             /* The bars. */
             var bar = vis.add(pv.Bar)
             .data(data)
-            .top(function() y(start + this.index))
-            .height(y.range().band)
-            .left(0)
+            .height(y)
+            .left(function() x(start + this.index))
             .fillStyle(function() vis.i() == this.index ? "orange" : "red")
             .event("mouseover", function() vis.i(this.index))
             .event("mouseout", function() vis.i(-1))
-            .width(x);
+            .bottom(0)
+            .width(x.range().band);
 
             /* The value label. */
-            bar.anchor("right").add(pv.Label)
+            bar.anchor("top").add(pv.Label)
             .visible(function() vis.i() >= 0)
             .textStyle("white")
             .text(function(d) d.toFixed(1));
 
-            /* The variable label. */
-            bar.anchor("left").add(pv.Label)
-            .textMargin(5)
-            .textAlign("right")
+
+            /* X-axis ticks. */
+            vis.add(pv.Rule)
+            .data(x.range())
+            .left(x)
+            .strokeStyle("#fff")
+            .visible(function(d) d > 0)
+            .add(pv.Rule)
+            .anchor("bottom").add(pv.Label)
+            .textAlign("left")
             .text(function(d) {
                 var curr = this.index + start
                 return (curr + ":00") + "-" +((curr + 1) + ":00");
             });
 
-            /* X-axis ticks. */
+            /* Y-axis ticks. */
             vis.add(pv.Rule)
-            .data(x.ticks(5))
-            .left(x)
-            .strokeStyle(function(d) d ? "rgba(255,255,255,.3)" : "#000")
+            .data(y.ticks(5))
+            .bottom(y)
+            .strokeStyle(function(d) d ? "#eee" : "#000")
             .add(pv.Rule)
-            .bottom(0)
-            .height(5)
-            .strokeStyle("#000")
-            .anchor("bottom").add(pv.Label)
-            .text(x.tickFormat);
+            .anchor("left").add(pv.Label)
+            .text(y.tickFormat);
 
             vis.render();
 
