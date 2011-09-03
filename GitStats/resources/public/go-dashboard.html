@@ -44,7 +44,7 @@
             .top(function() y(this.index))
             .height(y.range().band)
             .left(0)
-            .fillStyle(function() vis.i() == this.index ? "orange" : "steelblue")
+            .fillStyle(function() vis.i() == this.index ? "orange" : "red")
             .event("mouseover", function() vis.i(this.index))
             .event("mouseout", function() vis.i(-1))
             .width(x);

@@ -78,8 +78,15 @@
   (json-str)
 ))
 
+(defn links [link-map] (map (fn [l] (str "<a href=\"/" (first l) "\">Click here for " (second l) "</a>")) link-map))
+(defn home-links [] (apply str (interpose "<br/>" (links {
+  "top-git.html" "Top Git"
+  "code-changes.html" "Code Changes"
+  "go-dashboard.html" "Go Dashboard"
+}))))
+
 (defroutes main-routes
-  (GET "/" [] "<a href=\"/top-git.html\">Click here for stats</a>")
+  (GET "/" [] (home-links))
   (GET "/top-git.json" [] (top-git))
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
