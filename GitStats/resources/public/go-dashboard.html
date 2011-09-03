@@ -30,6 +30,7 @@
 
             /* The root panel. */
             var vis = new pv.Panel()
+            .def("i", -1)
             .width(w)
             .height(h)
             .bottom(20)
@@ -43,10 +44,14 @@
             .top(function() y(this.index))
             .height(y.range().band)
             .left(0)
+            .fillStyle(function() vis.i() == this.index ? "orange" : "steelblue")
+            .event("mouseover", function() vis.i(this.index))
+            .event("mouseout", function() vis.i(-1))
             .width(x);
 
             /* The value label. */
             bar.anchor("right").add(pv.Label)
+            .visible(function() vis.i() >= 0)
             .textStyle("white")
             .text(function(d) d.toFixed(1));
 
