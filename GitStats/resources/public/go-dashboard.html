@@ -9,24 +9,40 @@
 <div id="center">
     <div id="fig">
         <script type="text/javascript+protovis">
+            function firstNonZeroElement(arr) {
+                var value = 0;
+                var counting = true;
+
+                $.each(arr, function (index, element) {
+                    if(counting && element != 0) {
+                        value = index;
+                        counting = false;
+                    }
+                });
+
+                return value;
+            }
 
             var dataURL = "/failed-builds-by-day.json";
             var jsonData = $.ajax({ type: "GET", url: dataURL, async: false }).responseText;
             var failedBuilds = JSON.parse(jsonData);
 
-            console.log(failedBuilds);
+            var start = firstNonZeroElement(failedBuilds);
+            var end = failedBuilds.length - firstNonZeroElement(failedBuilds.slice(0).reverse());
 
-            var data = failedBuilds;
+            var nonZeroElements = failedBuilds.slice(start, end);
 
+            var data = nonZeroElements;
+            console.log("Data: "+ data);
         </script>
 
         <script type="text/javascript+protovis">
 
             /* Sizing and scales. */
-            var w = 800,
+            var w = 1000,
             h = 500,
-            x = pv.Scale.linear(1, 50).range(0, w),
-            y = pv.Scale.ordinal(pv.range(24)).splitBanded(0, h, 4/5);
+            x = pv.Scale.linear(0, 50).range(0, w),
+            y = pv.Scale.ordinal(pv.range(start, end, 1)).splitBanded(0, h, 4/5);
 
             /* The root panel. */
             var vis = new pv.Panel()
@@ -41,7 +57,7 @@
             /* The bars. */
             var bar = vis.add(pv.Bar)
             .data(data)
-            .top(function() y(this.index))
+            .top(function() y(start + this.index))
             .height(y.range().band)
             .left(0)
             .fillStyle(function() vis.i() == this.index ? "orange" : "red")
@@ -60,7 +76,8 @@
             .textMargin(5)
             .textAlign("right")
             .text(function(d) {
-                return (this.index + ":00") + "-" +((this.index + 1) + ":00");
+                var curr = this.index + start
+                return (curr + ":00") + "-" +((curr + 1) + ":00");
             });
 
             /* X-axis ticks. */
