@@ -1,0 +1,6 @@
+(map git.people/commiters (git.main/core-lines)) 
+
+(def stories (->> (git.main/story-mappings) (map first))) 
+
+
+ (def commiters-stories (git.parsers/commiters-and-stories (git.main/core-lines)))   

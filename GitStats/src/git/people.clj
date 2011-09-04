@@ -40,6 +40,6 @@
 
 (defn commiters-and-story [commit]
   (let [words (get-words commit)]
-    (get-person-names words)))
+    {:people (get-person-names words) :story (get-story-number commit)}))
 
 
