@@ -20,6 +20,7 @@
 (defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
 (defn failed-build-numbers [] (read-lines "failed-builds.txt"))
+(defn core-message-and-changes [] (read-lines "core-message-and-changes.txt"))
 
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
@@ -82,6 +83,11 @@
   (json-str)
 ))
 
+(defn code-commits-by-day [] (->>
+  (core-lines)
+  (json-str)
+))
+
 (defn links [link-map] (map (fn [l] (str "<a href=\"/" (first l) "\">Click here for " (second l) "</a>")) link-map))
 (defn home-links [] (apply str (interpose "<br/>" (links {
   "top-git.html" "Top Git"
@@ -98,6 +104,7 @@
   (GET "/code-changes.json" [] (code-changes))
   (GET "/code-changes-plain.json" [] (code-changes-plain))
   (GET "/failed-builds-by-day.json" [] (failed-builds-by-day))
+  (GET "/code-commits-by-day.json" [] (code-commits-by-day))
   (route/resources "/")
 )
 

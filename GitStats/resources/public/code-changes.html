@@ -39,6 +39,10 @@
                 return {x: commitDate, y: minutes, z: commit.size, m: commit.message};
             });
 
+            data.sort(function(a, b) {
+                return b.z - a.z;
+            });
+
             var dateFormat = pv.Format.date("%d/%B");
             var timeFormat = pv.Format.date("%H:%M");
 

@@ -4,40 +4,12 @@
     <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
     <script src="js/protovis.js" type="text/javascript"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="failing-builds.js"></script>
 </head>
 <body>
 <div id="center">
     <div id="fig">
         <script type="text/javascript+protovis">
-            function firstNonZeroElement(arr) {
-                var value = 0;
-                var counting = true;
-
-                $.each(arr, function (index, element) {
-                    if(counting && element != 0) {
-                        value = index;
-                        counting = false;
-                    }
-                });
-
-                return value;
-            }
-
-            var dataURL = "/failed-builds-by-day.json";
-            var jsonData = $.ajax({ type: "GET", url: dataURL, async: false }).responseText;
-            var failedBuilds = JSON.parse(jsonData);
-
-            var start = firstNonZeroElement(failedBuilds);
-            var end = failedBuilds.length - firstNonZeroElement(failedBuilds.slice(0).reverse());
-
-            var nonZeroElements = failedBuilds.slice(start, end);
-
-            var data = nonZeroElements;
-            console.log("Data: "+ data);
-        </script>
-
-        <script type="text/javascript+protovis">
-
             /* Sizing and scales. */
             var w = 1000,
             h = 500,
@@ -96,7 +68,6 @@
             .text(y.tickFormat);
 
             vis.render();
-
         </script>
     </div>
 </div>

@@ -3,13 +3,14 @@ pushd .
 cd /Users/rudayaku/Projects/core
 git checkout master
 git pull --rebase
-git log --date=short --no-merges --pretty="format:%cd %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/core-commits.txt
-git log --shortstat --pretty="format:%cd%n%s" > /Users/rudayaku/Projects/clojure-samples/GitStats/core-code-change-commits.txt
+git log --no-merges --pretty="format:%cd | %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/core-commits.txt
+git log --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-code-change-commits.txt
+git log --no-merges --pretty="format:%s" --name-only > /Users/rudayaku/Projects/clojure-samples/GitStats/core-message-and-changes.txt
 
 cd /Users/rudayaku/Projects/casper-aim
 git checkout springer
 git pull --rebase
-git log --date=short --no-merges --pretty="format:%cd %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/aim-commits.txt
+git log --no-merges --pretty="format:%cd | %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/aim-commits.txt
 
 popd
 
