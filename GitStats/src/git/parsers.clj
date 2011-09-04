@@ -17,6 +17,9 @@
   (let [commiters-collection (map people/commiters commits)]
     (frequencies-in-set-collection commiters-collection (people/people-names))))
 
+(defn commiters-and-stories [commits]
+  (map people/commiters-and-story commits))
+
 (defn all-unused-words [commits]
   (let [unused-words-collection (map unused-words commits)]
     (let [unused-words (reduce union unused-words-collection)]

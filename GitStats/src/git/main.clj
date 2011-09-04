@@ -17,7 +17,7 @@
                              (map (fn [line] (clojure.string/split line #":")))
                              (filter #(= 2 (count %)))))
 (defn core-lines [] (read-lines "core-commits.txt"))
-(defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
+(defn core-code-change-lines [] (roead-lines "core-code-change-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
 (defn failed-build-numbers [] (read-lines "failed-builds.txt"))
 (defn core-message-and-changes [] (read-lines "core-message-and-changes.txt"))
