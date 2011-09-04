@@ -37,3 +37,25 @@
 (deftest test-code-commit-time
   (is (= "14:18" (code-commit-time "Fri Sep 2 14:18:59 2010 +0100")))
 )
+
+
+;(def functional-areas [
+;  {:name "Xquery" :location "src/main/xquery/"}
+;])
+
+(deftest test-group-by-areas
+  (is (= [{:area "Xquery" :changes 15} {:area "Code" :changes 18}] (group-by-areas [
+    "10 5 src/main/xquery/1.xqy",
+    "5 1 src/main/scala/com/1.scala",
+    "6	6	src/main/scala/com/springer/stub/{UserBuilder.scala => UserBuilderFilter.scala}",
+    "3 2 src/main/com/1.scala",
+    ]))))
+
+(deftest test-merge-all-groups
+  (is (= [{:area "Xquery" :size 10} {:area "Code" :size 20}] (merge-all-groups [
+    {:area "Xquery" :changes 5}
+    {:area "Xquery" :changes 5}
+    {:area "Code" :changes 5}
+    {:area "Code" :changes 15}
+]))))
+

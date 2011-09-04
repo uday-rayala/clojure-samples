@@ -4,8 +4,8 @@ cd /Users/rudayaku/Projects/core
 git checkout master
 git pull --rebase
 git log --no-merges --pretty="format:%cd | %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/core-commits.txt
-git log --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-code-change-commits.txt
-git log --no-merges --pretty="format:%s" --name-only > /Users/rudayaku/Projects/clojure-samples/GitStats/core-message-and-changes.txt
+git log -l30000 --no-merges --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-code-change-commits.txt
+git log -l30000 --no-merges --pretty="format:%s" --numstat --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-message-and-changes.txt
 
 cd /Users/rudayaku/Projects/casper-aim
 git checkout springer

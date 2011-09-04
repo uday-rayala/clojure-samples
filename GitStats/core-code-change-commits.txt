@@ -162,8 +162,6 @@ Fri Sep 2 14:29:59 2011 +0100
 Steffen: fixed devtest app.properties
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Fri Sep 2 14:27:58 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Fri Sep 2 14:24:03 2011 +0100
 Uday/Steffen: prepared openam-mock to handle real User-IDs properly
  1 files changed, 9 insertions(+), 3 deletions(-)
@@ -352,8 +350,6 @@ Tue Aug 30 18:50:41 2011 +0100
 Rob workaround for snippets matching phrases
  2 files changed, 18 insertions(+), 7 deletions(-)
 
-Tue Aug 30 18:27:54 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Tue Aug 30 18:26:32 2011 +0100
 Volker: adding background-color to search-results search terms after decision by Design/Darius changed whitespace
  2 files changed, 6 insertions(+), 3 deletions(-)
@@ -686,8 +682,6 @@ Fri Aug 26 12:09:54 2011 +0100
 pat: renamed page title to browser title.
  19 files changed, 33 insertions(+), 33 deletions(-)
 
-Sat Aug 27 12:01:59 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Sat Aug 27 11:08:16 2011 +0100
 Andreas: Moved OpenAM Realm configuration into app.properties
  4 files changed, 10 insertions(+), 4 deletions(-)
@@ -812,8 +806,6 @@ Thu Aug 25 15:53:42 2011 +0100
 Karl: moved look inside badge on covers down, added headlines for #645 and #646 to the style in basic.css
  2 files changed, 2 insertions(+), 1 deletions(-)
 
-Thu Aug 25 15:51:29 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Thu Aug 25 15:48:50 2011 +0100
 pat: removing jetty plugin.
  4 files changed, 2 insertions(+), 7 deletions(-)
@@ -854,8 +846,6 @@ Fri Aug 26 14:59:22 2011 +0100
 Andreas: Reactivated Auth-Tests
  2 files changed, 5 insertions(+), 5 deletions(-)
 
-Fri Aug 26 14:44:08 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Fri Aug 26 14:35:30 2011 +0100
 Andreas: Fixed openam-mock / AuthenticationTests
  2 files changed, 7 insertions(+), 9 deletions(-)
@@ -888,8 +878,6 @@ Thu Aug 25 13:02:08 2011 +0100
 Marc/Jose #323 Xpath variables refactoring for Journal.
  2 files changed, 2 insertions(+), 1 deletions(-)
 
-Thu Aug 25 13:00:46 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Thu Aug 25 12:12:46 2011 +0100
 Karl: minor css changes for .content-item-list, moved css for h2 with bottom gradient to basic.css
  4 files changed, 15 insertions(+), 8 deletions(-)
@@ -986,8 +974,6 @@ Wed Aug 24 14:04:45 2011 +0100
 Uday/Alex: Removing unnneccasary findelement and hoping it might fix the build
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Thu Aug 25 12:58:14 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Thu Aug 25 12:57:17 2011 +0100
 Tom/Andreas - Adding a directory to the base role for identity in /opt directory
  1 files changed, 7 insertions(+), 0 deletions(-)
@@ -1028,8 +1014,6 @@ Wed Aug 24 10:25:17 2011 +0100
 Marc #264 #148 Bugfix on seriesTitle (use different path).
  2 files changed, 6 insertions(+), 46 deletions(-)
 
-Tue Aug 23 18:11:25 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Tue Aug 23 18:10:30 2011 +0100
 Karl/Volker: minor ui improvements, added styles for headlines in #278
  3 files changed, 14 insertions(+), 4 deletions(-)
@@ -1206,8 +1190,6 @@ Fri Aug 19 19:09:38 2011 +0100
 rob/uday/mark - don't use scalatest custom matchers they are SLOOOOOW! Build sped up by 100% by not using them #win
  1 files changed, 4 insertions(+), 3 deletions(-)
 
-Fri Aug 19 19:00:20 2011 +0100
-Merge branch 'master' of 172.18.20.37:core
 Fri Aug 19 19:00:07 2011 +0100
 Harinee: uncommented system test
  1 files changed, 24 insertions(+), 24 deletions(-)
@@ -1240,8 +1222,6 @@ Fri Aug 19 18:04:12 2011 +0100
 Harinee: Amended system test
  3 files changed, 30 insertions(+), 36 deletions(-)
 
-Fri Aug 19 18:02:47 2011 +0100
-Merge branch 'master' of 172.18.20.37:core
 Fri Aug 19 17:50:03 2011 +0100
 pat: fixing tidy_up method so that it cleans all bar the latest 5 releases after deployment.
  2 files changed, 12 insertions(+), 18 deletions(-)
@@ -1334,8 +1314,6 @@ Fri Aug 19 10:49:47 2011 +0100
 rob/mark #509 rough first version with a journal in the system
  16 files changed, 139 insertions(+), 105 deletions(-)
 
-Fri Aug 19 10:12:49 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Fri Aug 19 10:00:22 2011 +0100
 mark: more tidying up for about section #266
  2 files changed, 2 insertions(+), 2 deletions(-)
@@ -1424,14 +1402,10 @@ Fri Aug 19 13:38:53 2011 +0100
 Andreas/Sebastian Deactivated agent for application and updated a test (class renamed)
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-Fri Aug 19 13:28:56 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Fri Aug 19 13:28:44 2011 +0100
 Andreas/Sebastian/Uday: More changes to openam
  6 files changed, 18 insertions(+), 41 deletions(-)
 
-Fri Aug 19 12:14:00 2011 +0100
-Merge branch 'openam'
 Fri Aug 19 12:12:35 2011 +0100
 OpenAM Changes reverted from master
  20 files changed, 1451 insertions(+), 1 deletions(-)
@@ -1460,8 +1434,6 @@ Thu Aug 18 12:38:16 2011 +0100
 Uday/Jose #148 Book subtitle display
  5 files changed, 18 insertions(+), 1 deletions(-)
 
-Thu Aug 18 12:23:45 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Thu Aug 18 12:23:36 2011 +0100
 Karl: added styles for the book page default area #148
  1 files changed, 25 insertions(+), 0 deletions(-)
@@ -1550,8 +1522,6 @@ Wed Aug 17 16:32:56 2011 +0100
 charles/pat #532 support a++ markup in abstract headings
  16 files changed, 63 insertions(+), 58 deletions(-)
 
-Wed Aug 17 16:25:49 2011 +0100
-Merge branch 'master' of 172.18.20.37:core
 Wed Aug 17 16:25:27 2011 +0100
 Harinee: added test to handle #628 Must have defect (teaser should show correct total no. of results when facet is selected)
  1 files changed, 8 insertions(+), 4 deletions(-)
@@ -1608,8 +1578,6 @@ Wed Aug 17 12:03:01 2011 +0100
 chris/mark #266 fixing some bugs jeremy spotted
  18 files changed, 70 insertions(+), 48 deletions(-)
 
-Wed Aug 17 11:48:32 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Wed Aug 17 11:48:24 2011 +0100
 Karl: removed the grey border from the fake page image (look inside) and applied it through css
  2 files changed, 1 insertions(+), 0 deletions(-)
@@ -1618,10 +1586,6 @@ Wed Aug 17 11:34:52 2011 +0100
 pat/charles: #532 testing abstract.content rendering; always wrapping abstract content in <Para> element; renaming title -> heading, text -> content; no need to escape nodeSeq in jade.
  16 files changed, 72 insertions(+), 85 deletions(-)
 
-Wed Aug 17 11:26:50 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
-Wed Aug 17 09:48:54 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Tue Aug 16 22:10:41 2011 +0100
 Karl: enriched markup of abstract page with microdata according to schema.org
  10 files changed, 19 insertions(+), 19 deletions(-)
@@ -1718,8 +1682,6 @@ Tue Aug 16 15:01:06 2011 +0100
 Rob/Chris #339 added title to cover image and fixed css class
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-Tue Aug 16 14:24:11 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Tue Aug 16 14:23:59 2011 +0100
 Karl: added missing closing tag </html>, corrected author list on abstract page (comma, ellipsis)
  2 files changed, 2 insertions(+), 2 deletions(-)
@@ -1844,8 +1806,6 @@ Fri Aug 12 16:39:40 2011 +0100
 Ken/Mushtaq #624 changed name of failing functional test page source dump + added the stack trace
  1 files changed, 10 insertions(+), 6 deletions(-)
 
-Fri Aug 12 16:33:23 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Fri Aug 12 16:32:32 2011 +0100
 pat: deleted FacetItemBuilder and renamed test.
  2 files changed, 1 insertions(+), 22 deletions(-)
@@ -1942,8 +1902,6 @@ Thu Aug 11 15:01:01 2011 +0100
 Alinoor #380 test to check $ for latex are correctly removed for a page title
  1 files changed, 12 insertions(+), 0 deletions(-)
 
-Thu Aug 11 14:38:40 2011 +0100
-Merge branch 'master' of slgblogr0037:core
 Thu Aug 11 14:38:20 2011 +0100
 Karl: refactored .action to .action and .icon
  10 files changed, 62 insertions(+), 66 deletions(-)
@@ -2160,8 +2118,6 @@ Mon Aug 8 16:30:10 2011 +0100
 Uday/Marc #601 Uncomment tests for authentication.
  1 files changed, 2 insertions(+), 5 deletions(-)
 
-Mon Aug 8 16:20:56 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Mon Aug 8 16:20:50 2011 +0100
 pat, michael: fixed pagination validation if more than 1000 pages.
  2 files changed, 19 insertions(+), 8 deletions(-)
@@ -2174,8 +2130,6 @@ Mon Aug 8 16:06:09 2011 +0100
 pat, michael: pulled out view variable.
  1 files changed, 19 insertions(+), 16 deletions(-)
 
-Mon Aug 8 16:57:25 2011 +0200
-Merge branch 'master' of 172.18.20.37:core
 Mon Aug 8 16:56:39 2011 +0200
 Karl: moved font-family declarations to only one place in basic.css, added a border to the cover image, adjusted styles for sub and sup
  5 files changed, 25 insertions(+), 12 deletions(-)
@@ -2292,14 +2246,10 @@ Thu Aug 4 12:58:44 2011 +0100
 Karl: #548 added different colors for the home page if you are recognised as a company
  1 files changed, 22 insertions(+), 0 deletions(-)
 
-Thu Aug 4 12:53:57 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Thu Aug 4 12:24:22 2011 +0100
 Uday/Harinee - #567 changed search text
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Thu Aug 4 12:18:38 2011 +0100
-Merge branch 'master' of slgblogr0037.springer-sbm.com:core
 Thu Aug 4 12:18:30 2011 +0100
 Karl: renamed subjects-nav to verticals-nav on the home page
  2 files changed, 11 insertions(+), 10 deletions(-)
@@ -2392,14 +2342,10 @@ Wed Aug 3 14:52:12 2011 +0100
 Ken/Chris #519 Fixed templates so they dont render h2 when there is no abstract heading
  2 files changed, 2 insertions(+), 0 deletions(-)
 
-Wed Aug 3 14:36:07 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Aug 3 14:36:00 2011 +0100
 pat, suzuki: moved a couple of more git repos.
  1 files changed, 2 insertions(+), 2 deletions(-)
 
-Wed Aug 3 13:44:28 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Aug 3 13:44:17 2011 +0100
 Karl: styled subheading h3 for #519
  2 files changed, 12 insertions(+), 0 deletions(-)
@@ -2408,14 +2354,10 @@ Wed Aug 3 13:36:42 2011 +0100
 Alex/Uday - added function for home page search facet #devops
  1 files changed, 15 insertions(+), 0 deletions(-)
 
-Wed Aug 3 13:34:25 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Aug 3 12:30:28 2011 +0100
 Ken/Chris #519 refactored Abstract class so that the HTML rendering is handled by a separate object AbstractContentRenderer
  5 files changed, 75 insertions(+), 58 deletions(-)
 
-Wed Aug 3 12:12:30 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Aug 3 12:12:20 2011 +0100
 Alex/Uday #94 - added specifications for the word query specification (for CasperDocuments)
  6 files changed, 126 insertions(+), 10 deletions(-)
@@ -2480,8 +2422,6 @@ Tue Aug 2 16:08:30 2011 +0100
 Ken/Mushtaq #565 changed localisation from en_GB to en_US
  4 files changed, 1 insertions(+), 1 deletions(-)
 
-Tue Aug 2 16:04:15 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Aug 2 16:04:11 2011 +0100
 Karl: minor ui adjustments (facets, results-only-access, body)
  2 files changed, 3 insertions(+), 4 deletions(-)
@@ -2618,20 +2558,14 @@ Mon Aug 1 17:37:14 2011 +0100
 Duncan/Rob #100 added js sort, not functional yet
  4 files changed, 38 insertions(+), 20 deletions(-)
 
-Mon Aug 1 16:59:17 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 16:57:23 2011 +0100
 Mark/Kief DevOps - Ability to install ganglia node role onto a machine, and have it talk to a server
  6 files changed, 39 insertions(+), 22 deletions(-)
 
-Mon Aug 1 16:46:54 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 16:31:09 2011 +0100
 rob/duncan - #100 - sorting by oldest first and relevance - still no-JS version with links
  5 files changed, 38 insertions(+), 8 deletions(-)
 
-Mon Aug 1 16:16:02 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 16:15:49 2011 +0100
 Karl: added class .formatted to #abstract-content for lists in a++ markup
  3 files changed, 12 insertions(+), 6 deletions(-)
@@ -2644,8 +2578,6 @@ Mon Aug 1 16:10:31 2011 +0100
 Karl: #178 adjusted section links list for no access (text color, bullets)
  1 files changed, 3 insertions(+), 5 deletions(-)
 
-Mon Aug 1 15:59:43 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 15:58:32 2011 +0100
 Duncan/Rob #100 first steps wiring up querystring for sort order
  11 files changed, 126 insertions(+), 51 deletions(-)
@@ -2654,8 +2586,6 @@ Mon Aug 1 15:51:17 2011 +0100
 Uday #refactor moved search url to a common place
  2 files changed, 19 insertions(+), 15 deletions(-)
 
-Mon Aug 1 15:43:04 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 15:18:49 2011 +0100
 Ken/Uday #539 new search doesn't lose search parameters (facets, sort order ...)
  10 files changed, 66 insertions(+), 25 deletions(-)
@@ -2668,10 +2598,6 @@ Tue Aug 2 14:23:01 2011 +0100
 Suzuki/Alinoor #178 - i18n the section title
  5 files changed, 12 insertions(+), 1 deletions(-)
 
-Mon Aug 1 14:43:26 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Mon Aug 1 12:59:35 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Aug 1 12:47:14 2011 +0100
 Mark/Kief DevOps - Added basic ganglia recipe
  13 files changed, 745 insertions(+), 0 deletions(-)
@@ -2748,8 +2674,6 @@ Sat Jul 30 11:37:35 2011 +0100
 pat: getting rid of old mustache tests.
  4 files changed, 0 insertions(+), 68 deletions(-)
 
-Sat Jul 30 11:21:45 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Sat Jul 30 11:21:08 2011 +0100
 pat: added scct coverage plugin.
  2 files changed, 4 insertions(+), 1 deletions(-)
@@ -2778,8 +2702,6 @@ Fri Jul 29 17:03:24 2011 +0100
 Uday/Liz #539 Fixed show all checkbox on search results pagination
  2 files changed, 38 insertions(+), 10 deletions(-)
 
-Fri Jul 29 16:24:23 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 29 16:21:33 2011 +0100
 pat: pulled in last mustache change that got missed in merge.
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -2788,8 +2710,6 @@ Fri Jul 29 16:19:45 2011 +0100
 Uday/Liz/Harinee: #539 Added test to check if author names link to fresh author facet search
  1 files changed, 7 insertions(+), 2 deletions(-)
 
-Fri Jul 29 16:14:12 2011 +0100
-pat: merging conflicts.
 Fri Jul 29 16:05:33 2011 +0100
 alinoor/mushtaq/mark: fix chef script for scala
  1 files changed, 7 insertions(+), 7 deletions(-)
@@ -2958,8 +2878,6 @@ Wed Jul 27 17:00:09 2011 +0100
 Rob/Chris #576 added story number to ignored test
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Wed Jul 27 16:53:29 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 27 16:53:13 2011 +0100
 pat, karl: removed js attributes.
  1 files changed, 10 insertions(+), 10 deletions(-)
@@ -2968,8 +2886,6 @@ Wed Jul 27 16:41:35 2011 +0100
 Alex/Kief - DevOps #2 - Got chef installing ML with xdbc server.
  8 files changed, 118 insertions(+), 214 deletions(-)
 
-Wed Jul 27 16:38:22 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 27 16:38:17 2011 +0100
 pat: putting everything in place to switch over to jade for rendering articles - still defaulting to mustache, though.
  1 files changed, 3 insertions(+), 3 deletions(-)
@@ -2978,8 +2894,6 @@ Wed Jul 27 16:37:23 2011 +0100
 Rob/Chris fixed bug in fake access when a doc has no subjects
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Wed Jul 27 16:27:41 2011 +0100
-pat: synced template changes
 Wed Jul 27 16:23:48 2011 +0100
 pat: synced template changes
  3 files changed, 6 insertions(+), 5 deletions(-)
@@ -3040,8 +2954,6 @@ Wed Jul 27 14:58:27 2011 +0100
 Uday: removed time because it doesnt work in mac should fix it
  1 files changed, 2 insertions(+), 1 deletions(-)
 
-Wed Jul 27 15:34:41 2011 +0200
-Merge branch 'master' of segblogr0065:core
 Wed Jul 27 15:34:32 2011 +0200
 pat: introduced translate view-helper method.
  8 files changed, 21 insertions(+), 30 deletions(-)
@@ -3298,10 +3210,6 @@ Mon Jul 25 10:35:32 2011 +0100
 pat: added safety test to make sure we don't get out of sync while we are transitioning from mustache to jade.
  1 files changed, 61 insertions(+), 0 deletions(-)
 
-Mon Jul 25 09:49:15 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Fri Jul 22 17:39:11 2011 +0100
-Liz/Chris #95 next page arrow working on search results page
 Fri Jul 22 17:34:49 2011 +0100
 Liz/Chris #95 next page arrow working on search results page
  10 files changed, 82 insertions(+), 27 deletions(-)
@@ -3318,8 +3226,6 @@ Fri Jul 22 17:03:08 2011 +0100
 Alex/Charles #536 - Added multilanguage No access message and updated translation files
  3 files changed, 3 insertions(+), 1 deletions(-)
 
-Fri Jul 22 16:44:29 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 22 16:44:24 2011 +0100
 pat: starting to replace mustache with jade #articlePage.
  2 files changed, 165 insertions(+), 1 deletions(-)
@@ -3356,8 +3262,6 @@ Fri Jul 22 14:02:02 2011 +0100
 Uday Alinoor Fixed authors not coming up in search results page for online first journals
  3 files changed, 21 insertions(+), 12 deletions(-)
 
-Fri Jul 22 14:01:25 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 22 14:01:07 2011 +0100
 Uday/Alinoor #WindowFixing Made ML sbt task to use ruby on path instead of hardcoded ruby path
  1 files changed, 3 insertions(+), 3 deletions(-)
@@ -3378,8 +3282,6 @@ Fri Jul 22 12:17:08 2011 +0100
 Charles,Alex #536 rollback after broken build
  4 files changed, 12 insertions(+), 6 deletions(-)
 
-Fri Jul 22 12:02:30 2011 +0100
-Chris/Liz #95 Added page number to search URL
 Fri Jul 22 12:00:11 2011 +0100
 Chris/Liz #95 Added page number to search URL
  9 files changed, 136 insertions(+), 18 deletions(-)
@@ -3428,8 +3330,6 @@ Thu Jul 21 15:48:48 2011 +0100
 pat: removing duplicated declaration of log level
  1 files changed, 0 insertions(+), 3 deletions(-)
 
-Thu Jul 21 15:48:03 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jul 21 15:47:59 2011 +0100
 pat: removing unused directories
  2 files changed, 0 insertions(+), 18 deletions(-)
@@ -3502,8 +3402,6 @@ Wed Jul 20 19:07:00 2011 +0100
 pat: DRY-ed health check (and fixed hard coded port number).
  1 files changed, 4 insertions(+), 12 deletions(-)
 
-Wed Jul 20 19:01:01 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 20 19:00:55 2011 +0100
 pat: added some code to health check so that it doesn't fall over when the app is not up yet.
  1 files changed, 9 insertions(+), 1 deletions(-)
@@ -3524,8 +3422,6 @@ Wed Jul 20 18:16:34 2011 +0100
 Alex/Lee #admin - configuring inherit permissions for CasperDocuments database
  1 files changed, 7 insertions(+), 1 deletions(-)
 
-Wed Jul 20 18:12:22 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 20 18:12:18 2011 +0100
 Karl: changed positioning of look inside badge from top to bottom
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -3618,8 +3514,6 @@ Wed Jul 20 13:09:00 2011 +0100
 Duncan/Alinoor #365 fixed cover image
  0 files changed, 0 insertions(+), 0 deletions(-)
 
-Wed Jul 20 12:55:22 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 20 12:55:14 2011 +0100
 Karl: corrected position of fake page behind the cover image #365
  1 files changed, 4 insertions(+), 3 deletions(-)
@@ -3692,8 +3586,6 @@ Tue Jul 19 19:06:44 2011 +0100
 pat, alex, suzuki: reverted back to old school health check
  1 files changed, 10 insertions(+), 20 deletions(-)
 
-Tue Jul 19 18:29:01 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 19 18:28:55 2011 +0100
 pat, suzuki, alex, mark, uday: removing merge message / adding awesome health check
  1 files changed, 0 insertions(+), 3 deletions(-)
@@ -3702,8 +3594,6 @@ Tue Jul 19 18:27:50 2011 +0100
 Duncan/Alinoor #365 cover images for book chapters
  6 files changed, 26 insertions(+), 7 deletions(-)
 
-Tue Jul 19 18:12:52 2011 +0100
-pat, suzuki, uday, alex, mark: manual merge.
 Tue Jul 19 18:09:41 2011 +0100
 pat, suzuki, uday, alex, mark: pointed app on dev to local marklogic instance.
  2 files changed, 2 insertions(+), 2 deletions(-)
@@ -3740,8 +3630,6 @@ Tue Jul 19 17:24:51 2011 +0100
 Charles,Chris #458 show article abstract containing a++ markup
  18 files changed, 91 insertions(+), 48 deletions(-)
 
-Tue Jul 19 17:18:11 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 19 17:18:06 2011 +0100
 Karl: adjusted abstract actions bar (width, form)
  1 files changed, 17 insertions(+), 5 deletions(-)
@@ -3794,8 +3682,6 @@ Tue Jul 19 15:06:11 2011 +0100
 Uday #342 Made volume and issue label not come in article page when they are not available for online first articles
  7 files changed, 83 insertions(+), 30 deletions(-)
 
-Tue Jul 19 14:54:21 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 19 14:54:13 2011 +0100
 karl: adjusted some margins in the results list
  1 files changed, 4 insertions(+), 4 deletions(-)
@@ -3868,10 +3754,6 @@ Tue Jul 19 09:25:06 2011 +0100
 mark: dunno how that <strong sneaked in
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Mon Jul 18 18:06:21 2011 +0100
-merging
-Mon Jul 18 18:05:35 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 18 18:05:26 2011 +0100
 duncan/mark => #91 - splitting the assertion for result count and search term display
  6 files changed, 22 insertions(+), 17 deletions(-)
@@ -3896,8 +3778,6 @@ Mon Jul 18 17:43:48 2011 +0100
 Ken Uday #342 fixes build
  6 files changed, 23 insertions(+), 21 deletions(-)
 
-Mon Jul 18 17:22:37 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 18 17:22:33 2011 +0100
 Suzuki/Kief: DevOps #2 Half-baked changes for ML deployment
  21 files changed, 1652 insertions(+), 79 deletions(-)
@@ -3922,8 +3802,6 @@ Mon Jul 18 15:42:33 2011 +0100
 Liz/Alinoor #98 refactoring snippet xquery
  4 files changed, 70 insertions(+), 39 deletions(-)
 
-Mon Jul 18 15:39:53 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 18 15:39:49 2011 +0100
 duncan/mark: #91 -> fixing the build which broke from our renaming of search results text
  5 files changed, 16 insertions(+), 15 deletions(-)
@@ -3940,8 +3818,6 @@ Mon Jul 18 14:45:11 2011 +0100
 marcus mark erraticus/duncan craggicus - #91 - add tooltip/title text on link for add/remove facet item
  3 files changed, 5 insertions(+), 2 deletions(-)
 
-Mon Jul 18 14:30:40 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 18 14:30:22 2011 +0100
 karl: some minor changes in the css
  1 files changed, 9 insertions(+), 6 deletions(-)
@@ -3970,8 +3846,6 @@ Mon Jul 18 12:15:53 2011 +0100
 Liz/Alinoor #98 - filtering snippets to only use those  in the body or abstract
  2 files changed, 68 insertions(+), 6 deletions(-)
 
-Mon Jul 18 12:06:06 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 18 12:05:59 2011 +0100
 Suzuki/Kief : DevOps #1 - Added sudoers file and ssh keys to make deployment from go easier
  9 files changed, 65 insertions(+), 13 deletions(-)
@@ -4012,8 +3886,6 @@ Fri Jul 15 17:12:03 2011 +0100
 Ken, Suzuki #113 author names on search result page links to facet search
  5 files changed, 45 insertions(+), 32 deletions(-)
 
-Fri Jul 15 17:00:56 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 15 17:00:49 2011 +0100
 Charles/Alinoor #Devops2 - fix chef to run using current release
  5 files changed, 8 insertions(+), 9 deletions(-)
@@ -4066,8 +3938,6 @@ Fri Jul 15 11:26:25 2011 +0100
 Rob/Uday #513 Moved truncatedcontenttitle to searchresult as it makes more sense to be in this class
  4 files changed, 18 insertions(+), 17 deletions(-)
 
-Fri Jul 15 11:27:36 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 15 10:29:35 2011 +0100
 RW/LD #513 implemented story
  12 files changed, 156 insertions(+), 41 deletions(-)
@@ -4132,8 +4002,6 @@ Thu Jul 14 11:30:21 2011 +0100
 Charles/Alinoor #DevOps2 - renamed capfile task dev-vm to dev_vm
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Thu Jul 14 11:15:16 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jul 14 11:15:09 2011 +0100
 Alinoor, Charles #devops2 updating name of dev-vm task
  2 files changed, 2 insertions(+), 2 deletions(-)
@@ -4162,8 +4030,6 @@ Wed Jul 13 17:27:54 2011 +0100
 Charles/Alinoor/Kief DevOps #2 - Capistrano configuration to deploy to newdev VM
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Wed Jul 13 16:16:23 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 13 16:16:19 2011 +0100
 Charles #A++Spike added code to demonstrate beautiful soup and Scala xml transformations
  2 files changed, 283 insertions(+), 1 deletions(-)
@@ -4200,8 +4066,6 @@ Wed Jul 13 10:50:17 2011 +0100
 Uday/ChrisJ: #451 added elipses before the show all authors link
  7 files changed, 23 insertions(+), 17 deletions(-)
 
-Wed Jul 13 10:44:18 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 13 10:26:29 2011 +0100
 Karl: updated expander arrows
  1 files changed, 0 insertions(+), 0 deletions(-)
@@ -4210,8 +4074,6 @@ Wed Jul 13 10:22:25 2011 +0100
 Uday/ChrisJ : #451 Moved showall and hide links to mustache files so that it can be internationalized
  6 files changed, 33 insertions(+), 9 deletions(-)
 
-Tue Jul 12 17:53:50 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 12 17:53:29 2011 +0100
 karl - putting in a space
  1 files changed, 13 insertions(+), 0 deletions(-)
@@ -4336,8 +4198,6 @@ Mon Jul 11 17:32:23 2011 +0100
 Uday/Suzuki #451: added js to handle authors
  2 files changed, 47 insertions(+), 4 deletions(-)
 
-Mon Jul 11 17:22:23 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 11 17:22:19 2011 +0100
 Charles fixed fails around reading the property web.root.dir and the xslt stuff
  4 files changed, 16 insertions(+), 12 deletions(-)
@@ -4366,8 +4226,6 @@ Mon Jul 11 16:27:36 2011 +0100
 duncan - fifth step towards itemTitle windowfix
  2 files changed, 3 insertions(+), 8 deletions(-)
 
-Mon Jul 11 16:03:10 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 11 16:03:07 2011 +0100
 pat, charles: added support for intellij and local configuration.
  8 files changed, 37 insertions(+), 14 deletions(-)
@@ -4400,8 +4258,6 @@ Mon Jul 11 15:12:18 2011 +0100
 Mark/Suzuki #155: merge
  1 files changed, 4 insertions(+), 4 deletions(-)
 
-Mon Jul 11 15:07:48 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 11 15:07:31 2011 +0100
 suzuki/mark: #155 adding the links to full text on search results
  9 files changed, 107 insertions(+), 24 deletions(-)
@@ -4422,8 +4278,6 @@ Mon Jul 11 12:55:51 2011 +0100
 Alex/Uday #112 refactored facets in search results
  4 files changed, 25 insertions(+), 55 deletions(-)
 
-Mon Jul 11 12:36:53 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 11 12:36:48 2011 +0100
 pat, charles: converted injector to trait and pulled out fulltextrenderer wiring.
  12 files changed, 75 insertions(+), 91 deletions(-)
@@ -4456,8 +4310,6 @@ Mon Jul 11 11:18:19 2011 +0100
 pat, charles: fixed marklogic module path for local installs.
  1 files changed, 1 insertions(+), 12 deletions(-)
 
-Mon Jul 11 11:04:44 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 11 11:04:39 2011 +0100
 pat, charles: changed git username to be the same as hostname
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -4566,8 +4418,6 @@ Thu Jul 7 16:00:15 2011 +0100
 uday/mark - can now set a cookie to put the site into German
  10 files changed, 102 insertions(+), 8 deletions(-)
 
-Thu Jul 7 15:54:08 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jul 7 15:52:47 2011 +0100
 Charles #115 removed content type name conversion as it will be fixed at the meta data level
  3 files changed, 6 insertions(+), 6 deletions(-)
@@ -4580,8 +4430,6 @@ Thu Jul 7 15:22:41 2011 +0100
 Duncan/Alinoor - #87 diacritic sensitive searching
  2 files changed, 17 insertions(+), 4 deletions(-)
 
-Thu Jul 7 15:06:28 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jul 7 15:06:24 2011 +0100
 Charles #115 added tests for expander controller
  2 files changed, 46 insertions(+), 5 deletions(-)
@@ -4594,14 +4442,6 @@ Thu Jul 7 12:26:34 2011 +0100
 Charles/Alex #115 split ExpanderManager into Expander controller and view
  5 files changed, 36 insertions(+), 23 deletions(-)
 
-Thu Jul 7 11:57:44 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Thu Jul 7 11:57:30 2011 +0100
-Charles/Alex #115 renamed flap to expander in javascript and CSS
-Thu Jul 7 11:57:13 2011 +0100
-Charles/Alex #115 renamed flap to expander in javascript
-Thu Jul 7 11:49:41 2011 +0100
-Charles/Alex #115 renamed flap to expander in javascript
 Thu Jul 7 11:32:35 2011 +0100
 Ken: send Xvfb output to /dev/null so that the js-test are less verbose
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -4646,10 +4486,6 @@ Wed Jul 6 15:23:21 2011 +0100
 alex/duncan #498 CaptiveDiv Javascript 1
  7 files changed, 130 insertions(+), 6 deletions(-)
 
-Wed Jul 6 15:08:34 2011 +0100
-merged
-Wed Jul 6 15:02:01 2011 +0100
-merge
 Wed Jul 6 14:59:49 2011 +0100
 Uday/Suzuki #240 : Added reference heading,body and test to chapter
  16 files changed, 143 insertions(+), 84 deletions(-)
@@ -4666,8 +4502,6 @@ Wed Jul 6 12:38:32 2011 +0100
 mark/alinoor #491 - changed backgorund colour of no js message
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Wed Jul 6 12:20:02 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jul 6 12:19:57 2011 +0100
 Uday/Suzuki #240 : Added reference heading and test
  7 files changed, 27 insertions(+), 16 deletions(-)
@@ -4728,8 +4562,6 @@ Tue Jul 5 18:05:51 2011 +0100
 suzuki/mark: taking out the crazy xvfb stuff
  1 files changed, 1 insertions(+), 24 deletions(-)
 
-Tue Jul 5 17:53:29 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 5 17:53:20 2011 +0100
 Charles # 115 cleanup/refactor
  2 files changed, 12 insertions(+), 8 deletions(-)
@@ -4746,8 +4578,6 @@ Tue Jul 5 16:34:42 2011 +0100
 Charles #155 adding percentage in content type facet
  6 files changed, 26 insertions(+), 16 deletions(-)
 
-Tue Jul 5 15:47:47 2011 +0100
-merged
 Tue Jul 5 15:22:24 2011 +0100
 Charles #115 show facet numbers on search results page
  8 files changed, 56 insertions(+), 67 deletions(-)
@@ -4768,8 +4598,6 @@ Tue Jul 5 12:24:24 2011 +0100
 Uday/Suzuki #240 added test and reference to article
  9 files changed, 106 insertions(+), 18 deletions(-)
 
-Tue Jul 5 12:19:35 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jul 5 12:19:27 2011 +0100
 Charles #115 added content type facet to marklogic and basic html
  8 files changed, 129 insertions(+), 9 deletions(-)
@@ -4786,8 +4614,6 @@ Mon Jul 4 17:14:06 2011 +0100
 Alex/Duncan #499 remove the subtitle
  5 files changed, 11 insertions(+), 56 deletions(-)
 
-Mon Jul 4 17:06:52 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 4 17:06:46 2011 +0100
 Kief - IP address of static web server has changed, so I've updated the chef scripts to match. Short term workaround
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -4800,8 +4626,6 @@ Mon Jul 4 15:09:20 2011 +0100
 alex/duncan refer to dev box by name not number
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Mon Jul 4 15:03:47 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jul 4 13:51:42 2011 +0100
 Alex/Duncan: ML update script to get the latest EA version from segblogr0065
  1 files changed, 7 insertions(+), 0 deletions(-)
@@ -4846,8 +4670,6 @@ Sun Jul 3 10:21:55 2011 +0100
 pat: removed duplicated call to set content type.
  1 files changed, 4 insertions(+), 5 deletions(-)
 
-Fri Jul 1 17:15:43 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 1 17:15:39 2011 +0100
 pat: replaced lazy vals with def
  10 files changed, 60 insertions(+), 64 deletions(-)
@@ -4856,8 +4678,6 @@ Fri Jul 1 17:12:09 2011 +0100
 alinoor/duncan - #311 - refactor to extract XSLT path
  61 files changed, 8 insertions(+), 18 deletions(-)
 
-Fri Jul 1 16:39:14 2011 +0100
-pat, uday: #497 manual merge #jstestdriver
 Fri Jul 1 16:37:41 2011 +0100
 pat, uday: #497 #jstestdriver added focus on search.
  11 files changed, 64 insertions(+), 22 deletions(-)
@@ -4886,8 +4706,6 @@ Fri Jul 1 09:28:00 2011 +0100
 pat: removing main.js temporarily because it failed js tests.
  1 files changed, 0 insertions(+), 48 deletions(-)
 
-Fri Jul 1 09:16:12 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jul 1 09:16:06 2011 +0100
 pat: added js-test-driver. still need to integrate into ci, though.
  5 files changed, 62 insertions(+), 0 deletions(-)
@@ -4924,14 +4742,10 @@ Thu Jun 30 12:17:33 2011 +0100
 Duncan/Alinoor - #311 fixed full text page when deployed as production
  1 files changed, 2 insertions(+), 5 deletions(-)
 
-Thu Jun 30 11:21:41 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 30 11:21:32 2011 +0100
 Duncan/Alinoor - #311 debugging dev fulltext page
  1 files changed, 4 insertions(+), 0 deletions(-)
 
-Thu Jun 30 11:10:16 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 30 11:10:12 2011 +0100
 pat, alex: making sure that modules are installed after steps are executed; added a bit more logging
  2 files changed, 6 insertions(+), 5 deletions(-)
@@ -4944,8 +4758,6 @@ Thu Jun 30 10:35:56 2011 +0100
 pat, alex: added some logging before executing ml steps.
  1 files changed, 2 insertions(+), 0 deletions(-)
 
-Thu Jun 30 10:06:11 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 30 10:06:01 2011 +0100
 Charles/Alinoor - #311 fulltext with css and images
  10 files changed, 470 insertions(+), 38 deletions(-)
@@ -4966,8 +4778,6 @@ Wed Jun 29 17:51:48 2011 +0100
 alex/duncan set appserver default user to casper-db-user
  14 files changed, 25 insertions(+), 4 deletions(-)
 
-Wed Jun 29 16:01:42 2011 +0100
-merge
 Wed Jun 29 15:53:25 2011 +0100
 Charles/Alinoor #311 added fulltext html page
  65 files changed, 27476 insertions(+), 5 deletions(-)
@@ -4976,8 +4786,6 @@ Wed Jun 29 13:09:01 2011 +0100
 Uday : Modified property loader test to not depend on the actual properties.
  2 files changed, 3 insertions(+), 2 deletions(-)
 
-Tue Jun 28 19:12:06 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 28 19:12:01 2011 +0100
 pat: not using default layout on internal status page
  3 files changed, 33 insertions(+), 17 deletions(-)
@@ -5022,8 +4830,6 @@ Tue Jun 28 11:01:34 2011 +0100
 Alex #83 - Added necessary tests to satisfy >1 search term tests
  1 files changed, 5 insertions(+), 0 deletions(-)
 
-Tue Jun 28 10:56:12 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 28 10:56:07 2011 +0100
 pat, jeremy, harinee: fixing marklogic url on qa
  1 files changed, 1 insertions(+), 0 deletions(-)
@@ -5032,16 +4838,10 @@ Tue Jun 28 10:37:07 2011 +0100
 kief/charles/mark -> adding ml setup to the build
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Tue Jun 28 09:31:13 2011 +0100
-Merge branch 'master' of github.com:ThoughtWorksDonateNow2/casper-core
 Tue Jun 28 09:28:06 2011 +0100
 pat, alinoor: added mustache test
  1 files changed, 39 insertions(+), 0 deletions(-)
 
-Tue Jun 28 09:10:31 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Mon Jun 27 22:18:51 2011 +0100
-pat: manual merge
 Mon Jun 27 18:15:27 2011 +0100
 uday/mark: just get inner text of the BookTitle node
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -5114,8 +4914,6 @@ Mon Jun 27 14:04:36 2011 +0100
 Uday/Mark: #471 -< moving lookup of data from meta to main doc >-
  9 files changed, 61 insertions(+), 54 deletions(-)
 
-Mon Jun 27 13:59:39 2011 +0100
-merged
 Mon Jun 27 13:58:09 2011 +0100
 Charles/Alex #81 added support to modify marklogic config through individual xquery steps
  12 files changed, 283 insertions(+), 223 deletions(-)
@@ -5144,8 +4942,6 @@ Mon Jun 27 10:14:58 2011 +0100
 Pat/Uday/Mark: turning off parallel execution for unit tests b/c there are two tests which rely on system properties
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-Mon Jun 27 10:05:55 2011 +0100
-merging
 Mon Jun 27 10:05:21 2011 +0100
 Uday/Mark: build is failing if we don't clean-all before each run so for now we'll do that
  2 files changed, 2 insertions(+), 1 deletions(-)
@@ -5210,8 +5006,6 @@ Sun Jun 26 11:40:50 2011 +0100
 pat: fixed sbt-clean script
  1 files changed, 2 insertions(+), 5 deletions(-)
 
-Sat Jun 25 17:08:14 2011 +0100
-pat: here comes the monster - xsbt 0.10
 Sat Jun 25 15:45:16 2011 +0100
 pat: removing accidentally checked in file
  1 files changed, 0 insertions(+), 2 deletions(-)
@@ -5224,8 +5018,6 @@ Sat Jun 25 15:37:00 2011 +0100
 pat: updating git ignore file
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Sat Jun 25 15:23:46 2011 +0100
-Merge branch 'xsbt' of github.com:ThoughtWorksDonateNow2/casper-core into xsbt
 Sat Jun 25 15:23:09 2011 +0100
 pat: moved shared test sources into main tree
  5 files changed, 3 insertions(+), 1 deletions(-)
@@ -5242,8 +5034,6 @@ Sat Jun 25 12:14:15 2011 +0530
 case classes comes with default implementation of hashcode, equals method. So by making Property a case class, we get rid of those methods. BTW case classes also provide default toString, but I guess we need a custom one here.
  5 files changed, 10 insertions(+), 19 deletions(-)
 
-Fri Jun 24 18:18:48 2011 +0100
-suzuki/duncan #74 merged stuff
 Fri Jun 24 18:00:44 2011 +0100
 suzuki/duncan #74 major rework around article and chapter enumeration
  19 files changed, 178 insertions(+), 146 deletions(-)
@@ -5256,8 +5046,6 @@ Fri Jun 24 16:17:38 2011 +0100
 Alex/Charles #deployment updated dev MarkLogic endpoint
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Fri Jun 24 16:06:02 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 24 16:05:57 2011 +0100
 Alex/Charles #deployment fixed dev deployment, added smoke tests for search
  2 files changed, 10 insertions(+), 4 deletions(-)
@@ -5290,12 +5078,6 @@ Fri Jun 24 10:27:12 2011 +0100
 suzuki/duncan #74 some cleanups
  3 files changed, 4 insertions(+), 4 deletions(-)
 
-Fri Jun 24 09:27:25 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Thu Jun 23 17:48:52 2011 +0100
-Merge branch 'master' of segblogr0065:core
-Thu Jun 23 17:40:15 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 17:38:46 2011 +0100
 alinoor/duncan: #74 extracted the enumeration from the article page
  8 files changed, 74 insertions(+), 65 deletions(-)
@@ -5312,20 +5094,14 @@ Thu Jun 23 17:11:00 2011 +0100
 Charles/Suzuki #81 fixed project path
  1 files changed, 2 insertions(+), 1 deletions(-)
 
-Thu Jun 23 17:00:50 2011 +0100
-merge
 Thu Jun 23 16:56:43 2011 +0100
 Charles/Suzuki #81 read MarkLogic url from properties file in SBT
  4 files changed, 30 insertions(+), 3 deletions(-)
 
-Thu Jun 23 16:37:47 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 16:37:43 2011 +0100
 alinoor/duncan: #74 minor refactor into Formatting mixin
  5 files changed, 19 insertions(+), 28 deletions(-)
 
-Thu Jun 23 16:23:14 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 16:22:39 2011 +0100
 Alex/Lee - configured development environment to closer mirror production/performance env in terms of db settings
  1 files changed, 31 insertions(+), 2 deletions(-)
@@ -5338,14 +5114,10 @@ Thu Jun 23 16:06:55 2011 +0100
 alinoor/mark: #74 added tests for optional elements in Enumeration
  5 files changed, 31 insertions(+), 5 deletions(-)
 
-Thu Jun 23 15:14:26 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 15:14:15 2011 +0100
 alinoor/duncan #74 refactor chapter to separate out enumeration
  10 files changed, 70 insertions(+), 69 deletions(-)
 
-Thu Jun 23 15:14:09 2011 +0100
-merge
 Thu Jun 23 15:11:43 2011 +0100
 Charles/Suzuki #81 udpated capistrano and associated scripts for MarkLogic deployment
  7 files changed, 84 insertions(+), 21 deletions(-)
@@ -5370,14 +5142,10 @@ Thu Jun 23 10:38:17 2011 +0100
 Alex - reverting changes
  1 files changed, 11 insertions(+), 142 deletions(-)
 
-Thu Jun 23 10:26:07 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 10:26:03 2011 +0100
 Alex #2 configuration script checked in and ready for dev
  1 files changed, 142 insertions(+), 13 deletions(-)
 
-Thu Jun 23 09:56:41 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 23 09:56:36 2011 +0100
 mark: more #windowfixing around SearchResultsPageTests
  3 files changed, 13 insertions(+), 18 deletions(-)
@@ -5398,8 +5166,6 @@ Thu Jun 23 09:41:37 2011 +0100
 mark: #windowfixing - first step to getting rid of AcceptanceTestResult. Abstracting search results onto the SearchResultPage
  3 files changed, 10 insertions(+), 8 deletions(-)
 
-Thu Jun 23 09:40:58 2011 +0100
-merge
 Thu Jun 23 09:38:01 2011 +0100
 Charles/Suzuki #81 added phrase test
  2 files changed, 17 insertions(+), 6 deletions(-)
@@ -5420,8 +5186,6 @@ Wed Jun 22 16:36:34 2011 +0100
 pat/mark:  tearing down the modules for our modules database. Was previously using the default one. D'oh
  2 files changed, 20 insertions(+), 7 deletions(-)
 
-Wed Jun 22 15:37:49 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 22 15:31:11 2011 +0100
 duncan/mark #74 ->  adding extra data around the search results for chapter and article
  14 files changed, 164 insertions(+), 138 deletions(-)
@@ -5446,8 +5210,6 @@ Tue Jun 21 22:24:09 2011 +0100
 pat: putting the version in sbt launcher
  1 files changed, 0 insertions(+), 0 deletions(-)
 
-Tue Jun 21 15:49:24 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 21 15:49:08 2011 +0100
 Alex - draft dev install script
  1 files changed, 121 insertions(+), 0 deletions(-)
@@ -5456,14 +5218,10 @@ Tue Jun 21 15:16:18 2011 +0100
 duncan/mark: #74 - undoing the evil copy/paste of the previous checkin by pulling out some traits
  3 files changed, 25 insertions(+), 51 deletions(-)
 
-Tue Jun 21 15:03:26 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 21 15:02:45 2011 +0100
 {"duncan/mark #74" : "adding vol/issue/date to the search results"}
  10 files changed, 118 insertions(+), 33 deletions(-)
 
-Tue Jun 21 14:18:54 2011 +0100
-duncan/mark: merging the uday stuff
 Tue Jun 21 14:06:32 2011 +0100
 mark/duncan: searchresult in progress
  4 files changed, 31 insertions(+), 14 deletions(-)
@@ -5492,8 +5250,6 @@ Mon Jun 20 18:04:28 2011 +0100
 [Uday] Added some styles to chapter page
  6 files changed, 40 insertions(+), 26 deletions(-)
 
-Mon Jun 20 17:30:11 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 17:30:05 2011 +0100
 Kief - Configured the vagrant VM to have a fixed IP address for capistrano to use
  2 files changed, 2 insertions(+), 6 deletions(-)
@@ -5502,8 +5258,6 @@ Mon Jun 20 17:07:46 2011 +0100
 Kief - modified the deploy script to warn that it doesn't run on OS X. Needs a bit of tweaking to make it work.
  1 files changed, 5 insertions(+), 0 deletions(-)
 
-Mon Jun 20 17:02:41 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 17:02:33 2011 +0100
 Kief - Added a script and capfile configuration to deploy to a locally running VM. Doesn't actually work yet, but it's a nice idea.
  3 files changed, 51 insertions(+), 0 deletions(-)
@@ -5520,8 +5274,6 @@ Mon Jun 20 15:29:39 2011 +0100
 pat, suzuki: added some git config fu.
  1 files changed, 4 insertions(+), 1 deletions(-)
 
-Mon Jun 20 15:22:44 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 15:22:41 2011 +0100
 pat, suzuki: added fix to install script so that Fedora can resolve local hostname.
  2 files changed, 5 insertions(+), 0 deletions(-)
@@ -5542,8 +5294,6 @@ Mon Jun 20 12:52:31 2011 +0100
 pat: pushed property conversion logic into status object
  3 files changed, 11 insertions(+), 9 deletions(-)
 
-Mon Jun 20 12:41:40 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 12:41:34 2011 +0100
 pat: moved logic to Status object and added environment variables
  6 files changed, 78 insertions(+), 28 deletions(-)
@@ -5560,14 +5310,10 @@ Mon Jun 20 11:24:49 2011 +0100
 pat: fixed buildVersion bug
  2 files changed, 6 insertions(+), 1 deletions(-)
 
-Mon Jun 20 11:11:23 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 11:11:18 2011 +0100
 pat: added buildversion and environment info to status page
  9 files changed, 59 insertions(+), 13 deletions(-)
 
-Mon Jun 20 10:06:04 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 20 10:05:50 2011 +0100
 Kief - added Vanilla VM to Vagrant, this is used to build / update the basic system image. Currently uses Centos 55, Ruby 1.9.2, installs both Chef and Puppet.
  2 files changed, 23 insertions(+), 0 deletions(-)
@@ -5640,8 +5386,6 @@ Sat Jun 18 16:42:36 2011 +0100
 pat: added missing dependencies
  1 files changed, 8 insertions(+), 5 deletions(-)
 
-Fri Jun 17 19:05:23 2011 +0100
-pat, mark, uday: merging
 Fri Jun 17 19:00:29 2011 +0100
 pat, mark, uday: displaying application properties on internal status page.
  13 files changed, 117 insertions(+), 41 deletions(-)
@@ -5658,8 +5402,6 @@ Fri Jun 17 17:30:24 2011 +0100
 mark/charles fixed broken packages
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Fri Jun 17 17:27:11 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 17 17:27:08 2011 +0100
 charles/mark indroducing enums for marklogic modules
  3 files changed, 11 insertions(+), 8 deletions(-)
@@ -5668,8 +5410,6 @@ Fri Jun 17 17:23:41 2011 +0100
 [Uday] Made chapter functional test check for copy right year
  3 files changed, 3 insertions(+), 3 deletions(-)
 
-Fri Jun 17 17:16:17 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 17 17:16:08 2011 +0100
 pat: moving MLCR to content package.
  3 files changed, 7 insertions(+), 4 deletions(-)
@@ -5678,8 +5418,6 @@ Fri Jun 17 17:12:55 2011 +0100
 charles/mark: putting stuff onto single lines
  1 files changed, 3 insertions(+), 7 deletions(-)
 
-Fri Jun 17 17:07:31 2011 +0100
-merging
 Fri Jun 17 17:04:29 2011 +0100
 charles/mark: window fixing duties - moving files into the packages as discussed in the code assassination
  37 files changed, 72 insertions(+), 1892 deletions(-)
@@ -5692,8 +5430,6 @@ Fri Jun 17 16:04:27 2011 +0100
 mark/charles: fixing some broken windows - pulling trimmedText into xml helper
  3 files changed, 17 insertions(+), 26 deletions(-)
 
-Fri Jun 17 16:00:27 2011 +0100
-merged
 Fri Jun 17 15:59:21 2011 +0100
 Charles/Mark #150 added range for volumes
  4 files changed, 45 insertions(+), 49 deletions(-)
@@ -5718,8 +5454,6 @@ Fri Jun 17 13:57:40 2011 +0100
 Mark/Charles #150 renamed classes and methods to fit the domain
  16 files changed, 76 insertions(+), 92 deletions(-)
 
-Fri Jun 17 12:47:47 2011 +0100
-merging
 Fri Jun 17 12:44:44 2011 +0100
 charles/mark/pat: random tidying up
  7 files changed, 26 insertions(+), 23 deletions(-)
@@ -5732,8 +5466,6 @@ Fri Jun 17 11:04:04 2011 +0100
 charles/mark: removing unnecessary message from ml setup - that is now automated
  1 files changed, 0 insertions(+), 1 deletions(-)
 
-Fri Jun 17 09:49:51 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 17 09:49:42 2011 +0100
 pat, alex: using local booster instead of downloading it from google code.
  1 files changed, 4 insertions(+), 7 deletions(-)
@@ -5742,8 +5474,6 @@ Fri Jun 17 09:49:19 2011 +0100
 pat, alex: removing app server on 9996 because we no longer need it.
  2 files changed, 0 insertions(+), 15 deletions(-)
 
-Fri Jun 17 09:48:58 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 17 09:48:55 2011 +0100
 alinoor/mark: putting some usage information into the mark logic setup scripts
  2 files changed, 14 insertions(+), 18 deletions(-)
@@ -5760,8 +5490,6 @@ Thu Jun 16 17:24:43 2011 +0100
 [Uday/Alex] #454 Added chapter title to the chapter page
  5 files changed, 31 insertions(+), 22 deletions(-)
 
-Thu Jun 16 17:03:35 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 16 17:03:34 2011 +0100
 alinoor/mark #74 - adding repository test for search
  3 files changed, 23 insertions(+), 21 deletions(-)
@@ -5782,14 +5510,10 @@ Thu Jun 16 16:14:19 2011 +0100
 alinoor/mark: #74 was blowing up if there was no sub title provided. Sorted that for search results page
  3 files changed, 18 insertions(+), 6 deletions(-)
 
-Thu Jun 16 15:42:00 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 16 15:38:02 2011 +0100
 Alinoor/Mark #73 - simplifying read bytes code for mark logic db install script
  1 files changed, 16 insertions(+), 29 deletions(-)
 
-Thu Jun 16 15:20:01 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 16 15:19:46 2011 +0100
 alinoor/mark: #73 -> modified marklogic database deployment script to teardown modules
  1 files changed, 16 insertions(+), 0 deletions(-)
@@ -5798,8 +5522,6 @@ Thu Jun 16 14:50:36 2011 +0100
 pat: changed logo and background colour.
  4 files changed, 2 insertions(+), 3 deletions(-)
 
-Thu Jun 16 14:39:59 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Thu Jun 16 14:39:14 2011 +0100
 pat: pulled out http support
  2 files changed, 15 insertions(+), 7 deletions(-)
@@ -5820,14 +5542,10 @@ Thu Jun 16 11:38:26 2011 +0100
 pat/mark: adding a test to check the mark logic http server is running
  1 files changed, 8 insertions(+), 7 deletions(-)
 
-Wed Jun 15 17:41:00 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 15 17:37:57 2011 +0100
 alinoor/mark: #73 -> fixed abstract page tests to work with multiple documents inserted in to db
  3 files changed, 3 insertions(+), 3 deletions(-)
 
-Wed Jun 15 17:36:25 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 15 17:36:15 2011 +0100
 kief - updated vagrant file for repackaged box. Box repacking is not actually complete yet.
  1 files changed, 3 insertions(+), 3 deletions(-)
@@ -5848,8 +5566,6 @@ Wed Jun 15 11:42:12 2011 +0100
 Alex : added a comment for booster to show where the user's uid is being evaluated
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Wed Jun 15 11:33:41 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 15 11:28:26 2011 +0100
 Alex - patched booster to support changing the default user
  1 files changed, 1094 insertions(+), 0 deletions(-)
@@ -5858,8 +5574,6 @@ Wed Jun 15 11:07:40 2011 +0100
 duncan/mark (supervised by charles) - setting the authentication level and giving reminder
  1 files changed, 7 insertions(+), 4 deletions(-)
 
-Wed Jun 15 09:32:02 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 15 09:31:53 2011 +0100
 duncan/mark: pulling out some of the ml python stuff into its own module and creating separate modules/app server creation scripts
  10 files changed, 105 insertions(+), 10 deletions(-)
@@ -5880,8 +5594,6 @@ Tue Jun 14 15:37:58 2011 +0100
 Kief fixed relative paths for chef-repo in vagrant box
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Tue Jun 14 15:30:50 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 14 15:30:23 2011 +0100
 Kief - Work in progress Vagrant files. Mostly just putting the structure of things in place at this point.
  5 files changed, 122 insertions(+), 0 deletions(-)
@@ -5890,8 +5602,6 @@ Tue Jun 14 14:46:24 2011 +0100
 Charles/Alinoor #150 moved formatting from JournalAbstract into template
  6 files changed, 71 insertions(+), 82 deletions(-)
 
-Tue Jun 14 14:23:36 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 14 14:23:16 2011 +0100
 Charles/Alinoor #150 updated URL template to include DOI as path
  7 files changed, 467 insertions(+), 140 deletions(-)
@@ -5900,8 +5610,6 @@ Tue Jun 14 14:21:17 2011 +0100
 pat: removing comment
  1 files changed, 0 insertions(+), 3 deletions(-)
 
-Tue Jun 14 08:39:48 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 13 17:19:00 2011 +0100
 Charles/Alinoor added article abstract text and heading
  5 files changed, 62 insertions(+), 16 deletions(-)
@@ -5910,8 +5618,6 @@ Mon Jun 13 16:27:10 2011 +0100
 Charles/Alinoor #150 added author list to abstract page
  6 files changed, 53 insertions(+), 28 deletions(-)
 
-Mon Jun 13 16:26:55 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 13 16:26:49 2011 +0100
 alex/mark: #455 - parameterising the deploy of the modules
  4 files changed, 8 insertions(+), 7 deletions(-)
@@ -5920,8 +5626,6 @@ Mon Jun 13 15:44:32 2011 +0100
 Charles #150 added page range to abstract enumeration
  5 files changed, 100 insertions(+), 19 deletions(-)
 
-Mon Jun 13 15:41:58 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 13 15:41:57 2011 +0100
 alex/mark: added some debug info for search. Also renamed test to be consistent
  2 files changed, 15 insertions(+), 2 deletions(-)
@@ -5930,8 +5634,6 @@ Mon Jun 13 15:15:55 2011 +0100
 Charles #150 added volume to abstract enumeration
  16 files changed, 808 insertions(+), 309 deletions(-)
 
-Mon Jun 13 15:08:49 2011 +0100
-merging
 Mon Jun 13 15:08:13 2011 +0100
 alex/mark: story #455 -> creating cap target for deploying marklogic modules programatically
  6 files changed, 57 insertions(+), 7 deletions(-)
@@ -5948,8 +5650,6 @@ Mon Jun 13 10:53:12 2011 +0100
 mark: making xml creation parameterisable
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Mon Jun 13 09:36:00 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 13 09:35:19 2011 +0100
 Alex/Charles #1 : added 'security' changes to script - so no authentication is required in dev/ci
  1 files changed, 24 insertions(+), 10 deletions(-)
@@ -5958,8 +5658,6 @@ Fri Jun 10 18:39:34 2011 +0100
 Uday: Added launcher to start jetty and generating zip file
  3 files changed, 27 insertions(+), 6 deletions(-)
 
-Fri Jun 10 17:49:59 2011 +0100
-merging
 Fri Jun 10 17:48:57 2011 +0100
 alinoor/mark: pulling up the mark logic setup from the abstract page test
  4 files changed, 9 insertions(+), 32 deletions(-)
@@ -5968,8 +5666,6 @@ Fri Jun 10 17:47:16 2011 +0100
 Charles/Alex #150 added article title and journal title to journal article page
  7 files changed, 56 insertions(+), 14 deletions(-)
 
-Fri Jun 10 17:22:40 2011 +0100
-merged
 Fri Jun 10 17:21:53 2011 +0100
 alinoor/mark: throwing a more useful exception if can't find text on the page. Although code pixies already fixed the build anyway
  2 files changed, 17 insertions(+), 10 deletions(-)
@@ -5978,8 +5674,6 @@ Fri Jun 10 16:53:34 2011 +0100
 Charles/Alex #150 fix compile error that crept through
  1 files changed, 1 insertions(+), 2 deletions(-)
 
-Fri Jun 10 16:43:14 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 10 16:42:23 2011 +0100
 Charles/Alex #150 use http client for abstract page lookup in MarkLogic
  10 files changed, 136 insertions(+), 20 deletions(-)
@@ -5992,8 +5686,6 @@ Fri Jun 10 16:05:06 2011 +0100
 Alex/Charles #150 added CI params to install script
  1 files changed, 1 insertions(+), 2 deletions(-)
 
-Fri Jun 10 15:40:52 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 10 15:40:47 2011 +0100
 alinoor/mark - #455 - added a web driver end to end test using the marklogic db setup magic of charles/alex
  8 files changed, 117 insertions(+), 7 deletions(-)
@@ -6006,14 +5698,10 @@ Fri Jun 10 15:09:54 2011 +0100
 Alex/Charles #150 Adding code to create 2 appservers for test and main
  2 files changed, 29 insertions(+), 0 deletions(-)
 
-Fri Jun 10 15:07:12 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 10 15:06:50 2011 +0100
 Alex/Charles #150 Adding code to create 2 appservers for test and main
  1 files changed, 0 insertions(+), 0 deletions(-)
 
-Fri Jun 10 14:27:34 2011 +0100
-alinoor/mark: merging stuff
 Fri Jun 10 14:13:24 2011 +0100
 Charles/Alex #150 fixing namespace issue on xquery
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -6026,14 +5714,10 @@ Fri Jun 10 10:52:09 2011 +0100
 Uday: Integrated junit xml listener
  13 files changed, 18 insertions(+), 0 deletions(-)
 
-Fri Jun 10 10:50:31 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 10 10:34:46 2011 +0100
 Charles/Alex #150 updated properties and Injector
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-Fri Jun 10 10:34:11 2011 +0100
-Charles/Alex #150 use real MarkLogic server instead of fake
 Fri Jun 10 10:31:02 2011 +0100
 Alex / Charles #1 Configuring home folder for users so app server can read modules from the filesystem
  1 files changed, 1 insertions(+), 0 deletions(-)
@@ -6066,8 +5750,6 @@ Thu Jun 9 12:30:25 2011 +0100
 alinoor/mark - story #455 made use of fake mark logic server to return total results. real mark logic query implementation still outstanding
  7 files changed, 32 insertions(+), 18 deletions(-)
 
-Thu Jun 9 11:52:35 2011 +0100
-alinoor/mark -> merging with the changes of charles/alinoor from yest
 Thu Jun 9 11:38:50 2011 +0100
 alinoor/mark/alex => #455 - search query, hooked up from ui. Not yet MarkLogiced
  14 files changed, 110 insertions(+), 13 deletions(-)
@@ -6100,8 +5782,6 @@ Tue Jun 7 17:42:25 2011 +0100
 uday: modified install script to install openssl-devel so that capistrano works
  1 files changed, 3 insertions(+), 0 deletions(-)
 
-Tue Jun 7 17:09:54 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 7 17:09:30 2011 +0100
 Alex #0 : Removed wget and rpm install
  1 files changed, 2 insertions(+), 2 deletions(-)
@@ -6114,8 +5794,6 @@ Tue Jun 7 15:57:13 2011 +0100
 Alex #0 : Complete MarkLogic configuration script - test ready
  1 files changed, 23 insertions(+), 4 deletions(-)
 
-Tue Jun 7 15:55:49 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 7 15:55:44 2011 +0100
 uday/mark: initial puppet manifest. All praise to the puppet
  1 files changed, 27 insertions(+), 0 deletions(-)
@@ -6128,8 +5806,6 @@ Tue Jun 7 15:04:38 2011 +0100
 mark, charles, fixed failing test in intellij, reinstated project module to view sbt source code
  4 files changed, 34 insertions(+), 1 deletions(-)
 
-Tue Jun 7 14:48:42 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 7 14:46:25 2011 +0100
 added ML installer
  1 files changed, 53 insertions(+), 0 deletions(-)
@@ -6166,8 +5842,6 @@ Tue Jun 7 11:12:19 2011 +0100
 pat, uday: made markLogic url configurable
  3 files changed, 39 insertions(+), 33 deletions(-)
 
-Tue Jun 7 10:50:13 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Tue Jun 7 10:50:01 2011 +0100
 pat, uday: added ability to load different properties on environments
  5 files changed, 55 insertions(+), 0 deletions(-)
@@ -6184,8 +5858,6 @@ Mon Jun 6 16:39:57 2011 +0100
 Charles/Uday #0 added uninstall script, removed RVM and updated install to compile ruby
  3 files changed, 71 insertions(+), 12 deletions(-)
 
-Mon Jun 6 15:18:30 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Mon Jun 6 15:18:18 2011 +0100
 pat, uday: changed url of health check to point to an actual page.
  1 files changed, 1 insertions(+), 1 deletions(-)
@@ -6206,8 +5878,6 @@ Mon Jun 6 12:10:56 2011 +0100
 Rob/Charles #0 ignore out folder
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Mon Jun 6 12:08:50 2011 +0100
-Rob/Charles #0 merging
 Mon Jun 6 12:06:03 2011 +0100
 Rob/Charles #0 merging
  1 files changed, 0 insertions(+), 1 deletions(-)
@@ -6220,8 +5890,6 @@ Mon Jun 6 08:58:50 2011 +0100
 pat: adding zip action to default build
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-Mon Jun 6 08:52:43 2011 +0100
-pat: merged changes
 Sun Jun 5 20:15:55 2011 +0100
 pat: removed and ignored sbt build artifacts
  22 files changed, 4 insertions(+), 172 deletions(-)
@@ -6254,14 +5922,10 @@ Fri Jun 3 17:42:34 2011 +0100
 Charles #0 fixed test
  1 files changed, 2 insertions(+), 2 deletions(-)
 
-Fri Jun 3 17:37:08 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 3 17:36:32 2011 +0100
 Alex #0 Checked in current test code (after pull)
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-Fri Jun 3 17:35:25 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 3 18:05:02 2011 +0100
 mark: simplify the example
  2 files changed, 5 insertions(+), 14 deletions(-)
@@ -6274,8 +5938,6 @@ Fri Jun 3 17:34:56 2011 +0100
 Alex #0 Checked in current test code
  1 files changed, 11 insertions(+), 2 deletions(-)
 
-Fri Jun 3 17:34:34 2011 +0100
-Charles/Rob #0 Added Internal status page, added com.springer package
 Fri Jun 3 17:25:26 2011 +0100
 Charles/Rob #0 Added Internal status page
  18 files changed, 131 insertions(+), 115 deletions(-)
@@ -6284,14 +5946,10 @@ Fri Jun 3 16:37:35 2011 +0100
 mark: junit xml reporting!
  4 files changed, 25 insertions(+), 2 deletions(-)
 
-Fri Jun 3 14:30:11 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 3 14:29:46 2011 +0100
 Alex #0 Teardown and basic configuration in place
  3 files changed, 53 insertions(+), 2 deletions(-)
 
-Fri Jun 3 14:01:32 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 3 14:01:07 2011 +0100
 pat: moved script to do local install; added script to install dev environment
  3 files changed, 104 insertions(+), 0 deletions(-)
@@ -6320,8 +5978,6 @@ Fri Jun 3 11:49:12 2011 +0100
 Alex/Charles #0 Added functional ML test
  3 files changed, 39 insertions(+), 30 deletions(-)
 
-Fri Jun 3 11:12:06 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Fri Jun 3 11:11:59 2011 +0100
 Charles #0 Added git setup
  1 files changed, 9 insertions(+), 6 deletions(-)
@@ -6358,8 +6014,6 @@ Thu Jun 2 14:28:20 2011 +0100
 pat, mark: removed embedded jetty temporarily; forced same version of jetty on classpath
  2 files changed, 6 insertions(+), 4 deletions(-)
 
-Thu Jun 2 13:28:59 2011 +0100
-pat, mark: resolving merge conflict
 Thu Jun 2 13:27:49 2011 +0100
 pat: overrideing artifact id
  2 files changed, 5 insertions(+), 2 deletions(-)
@@ -6408,8 +6062,6 @@ Wed Jun 1 16:53:17 2011 +0100
 charles/mark: adios to play, hello scalatra
  1765 files changed, 443 insertions(+), 455786 deletions(-)
 
-Wed Jun 1 11:25:24 2011 +0100
-Merge branch 'master' of segblogr0065:core
 Wed Jun 1 11:25:12 2011 +0100
 pat, charles: fixing path to play symlink
  1 files changed, 1 insertions(+), 1 deletions(-)

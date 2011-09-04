@@ -2,6 +2,21 @@
   (:use [clojure.set])
   (:require [git.people :as people] [clojure.string :as string])
 )
+(use '[clojure.contrib.string :only (substring? split)])
+
+(def functional-areas [
+  {:name "Xquery" :location "src/main/xquery/"}
+  {:name "Code" :location "src/main/scala/"}
+  {:name "Unit" :location "src/test/unit/"}
+])
+
+(defn group-and-filter [f coll] (remove (fn [group] (nil? (first group))) (group-by f coll)))
+
+(defn find-functional-area [file] (first (filter (fn [area] (substring? (:location area) file)) functional-areas)))
+(defn change-size [change] (apply + (map #(Integer/parseInt %1) (take 2 (split #"\s+" change)))))
+(defn to-area-object [area-group] {:area (:name (first area-group)) :changes (apply + (map change-size (last area-group)))})
+(defn group-by-areas [files] (map to-area-object (group-and-filter find-functional-area files)))
+(defn merge-all-groups [groups] (map (fn [g] {:area (first g) :size (apply + (map :changes (last g)))}) (group-by :area groups)))
 
 (defn non-empty-partition? [partition] (not (string/blank? (string/join partition))))
 (defn group-commits [commits] (filter non-empty-partition? (partition-by string/blank? commits)))

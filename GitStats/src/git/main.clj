@@ -93,7 +93,20 @@
   "top-git.html" "Top Git"
   "code-changes.html" "Code Changes"
   "go-dashboard.html" "Go Dashboard"
+  "changes-by-functional-area.html" "Changes by area"
 }))))
+
+(defn code-area-worked-by [name] (->>
+    (core-message-and-changes)
+    (group-commits)
+    (map (fn [commit] {:names (people/commiters (first commit)) :files (next commit)}))
+    (filter (fn [obj] (contains? (:names obj) name)))
+    (map (fn [obj] (group-by-areas (:files obj))))
+    (flatten)
+    (merge-all-groups)
+))
+
+(defn code-area-worked [] (json-str (map (fn [name] {:name name :changes (code-area-worked-by name)}) (people-who-can-pair))))
 
 (defroutes main-routes
   (GET "/" [] (home-links))
@@ -105,6 +118,7 @@
   (GET "/code-changes-plain.json" [] (code-changes-plain))
   (GET "/failed-builds-by-day.json" [] (failed-builds-by-day))
   (GET "/code-commits-by-day.json" [] (code-commits-by-day))
+  (GET "/code-area-worked.json" [] (code-area-worked))
   (route/resources "/")
 )
 

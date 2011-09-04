@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>Grouped Bar Chart</title>
+    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/protovis.js"></script>
+</head>
+<body>
+<div id="center">
+    <div id="fig">
+        <script type="text/javascript">
+            var dataURL = "/code-area-worked.json";
+            var jsonData = $.ajax({ type: "GET", url: dataURL, async: false }).responseText;
+            var codeData = JSON.parse(jsonData);
+
+            var areas = $.map(codeData[0].changes, function(d) {
+                return d.area;
+            });
+
+
+            var data = [];
+
+            $.each(codeData, function(index, d) {
+                var elements = $.map(areas, function(a) {
+                    var element = $.grep(d.changes, function(i) {
+                        return i.area == a;
+                    })[0];
+
+                    if (element)
+                        return element.size;
+                    else return 0;
+                });
+
+                data.push(elements);
+            });
+
+            var names = $.map(codeData, function(d) {
+                return d.name;
+            });
+
+            console.log(areas);
+            console.log(names);
+            console.log(data);
+
+            var m = areas.length;
+
+        </script>
+        <script type="text/javascript+protovis">
+
+            /* Sizing and scales. */
+            var w = 1500,
+            h = 500,
+            x = pv.Scale.ordinal(names).splitBanded(0, w, 4/5),
+            y = pv.Scale.linear(0, 30000).range(0, h);
+
+            /* The root panel. */
+            var vis = new pv.Panel()
+            .width(w)
+            .height(h)
+            .bottom(20)
+            .left(20)
+            .right(10)
+            .top(5);
+
+            /* The bars. */
+            var bar = vis.add(pv.Panel)
+            .data(data)
+            .left(function() x(this.index))
+            .width(x.range().band)
+            .bottom(0)
+            .add(pv.Bar)
+            .data(function(d) d)
+            .left(function() this.index * x.range().band / m)
+            .width(x.range().band / m)
+            .bottom(0)
+            .height(y)
+            .fillStyle(pv.Colors.category20().by(pv.index));
+
+            /* The value label. */
+            bar.anchor("top").add(pv.Label)
+            .textStyle("white")
+            .text(function(d) d.toFixed(1));
+
+            /* X-axis ticks. */
+            vis.add(pv.Rule)
+            .data(names)
+            .left(function(i) x(i) + (x.range().band / 2))
+            .lineWidth(0)
+            .anchor("bottom").add(pv.Label)
+            .textAlign("left");
+
+            /* Y-axis ticks. */
+            vis.add(pv.Rule)
+            .data(y.ticks(5))
+            .bottom(y)
+            .strokeStyle(function(d) d ? "rgba(255,255,255,.3)" : "#000")
+            .add(pv.Rule)
+            .left(0)
+            .width(5)
+            .strokeStyle("#000")
+            .anchor("left").add(pv.Label)
+            .text(y.tickFormat);
+
+            vis.render();
+
+        </script>
+    </div>
+</div>
+</body>
+</html>
