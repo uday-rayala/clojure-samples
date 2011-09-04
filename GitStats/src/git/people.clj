@@ -28,8 +28,7 @@
 (def stop-words #{"a", "an", "the", "so", "no", "to", "of", "for", "and", "in", "master", "branch", "on", "from", "it", "is", "with", "up", "into", "that"})
 
 (defn person-names [person] (conj (:alias person) (:name person)))
-(defn people-name
-  s [] (map :name people))
+(defn people-names [] (map :name people))
 (defn people-all-names [] (reduce #(union %1 %2) #{} (map person-names people)))
 (defn has-person [name-set person] (not (empty? (intersection name-set (person-names person)))))
 (defn get-person-names [words] (set (map :name (filter #(has-person words %) people))))
