@@ -12,6 +12,10 @@
 (use '[clojure.string :only (join)])
 
 
+(defn story-mappings [] (->> "story-mappings.txt"
+                             read-lines
+                             (map (fn [line] (clojure.string/split line #":")))
+                             (filter (fn [x] (= 2 (count x)) ))))
 (defn core-lines [] (read-lines "core-commits.txt"))
 (defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
