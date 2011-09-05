@@ -32,11 +32,11 @@ var maxValue = Math.max.apply( Math, sizes);
 var dateFormat = pv.Format.date("%d/%B");
 var timeFormat = pv.Format.date("%H:%M");
 
-$(document).ready(function() {
+function createSlider(minV, maxV) {
     $( "#slider-range" ).slider({
         range: true,
-        min: minValue,
-        max: maxValue,
+        min: minV,
+        max: maxV,
         values: [ minValue, maxValue ],
         slide: function( event, ui ) {
             minValue = ui.values[ 0 ];
@@ -46,5 +46,13 @@ $(document).ready(function() {
         stop: function( event, ui ) {
             vis.render();
         }
+    });
+}
+
+$(document).ready(function() {
+    createSlider(minValue, maxValue);
+
+    $('#slice-slider').click(function() {
+        createSlider(minValue, maxValue);
     });
 });
