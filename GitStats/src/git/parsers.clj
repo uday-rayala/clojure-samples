@@ -8,6 +8,8 @@
   {:name "Xquery" :location "src/main/xquery/"}
   {:name "Code" :location "src/main/scala/"}
   {:name "Unit" :location "src/test/unit/"}
+  {:name "Functional" :location "src/test/functional/"}
+  {:name "Integration" :location "src/test/integration/"}
 ])
 
 (defn group-and-filter [f coll] (remove (fn [group] (nil? (first group))) (group-by f coll)))
