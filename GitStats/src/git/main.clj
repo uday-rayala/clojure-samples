@@ -29,16 +29,20 @@
 (defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 
 (def stories (->> (story-mappings) (map first)))
-(def commiters-stories (git.parsers/commiters-and-stories (core-lines)))
+(def commiters-stories
+  (merge (git.parsers/commiters-and-stories (core-lines))
+         (git.parsers/commiters-and-stories (aim-lines))))
 (defn commiters-for-story [story]
   (->> commiters-stories
-       (filter (fn [x] (= story (:story x))))
+       (filter (fn [story-commiter] (= story (:story story-commiter))))
        (mapcat #(:people %))
        set))
 
 (defn stories-and-commiters []
   (->> stories
        (map (fn [story] {:story story :commiters (commiters-for-story (str "#" story))}))))
+
+(defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
 
 (defn top-git-json [caspers aims] (json-str (sort-by :core (merge-count-maps caspers aims :name))))
 
@@ -131,6 +135,7 @@
   (GET "/failed-builds-by-day.json" [] (failed-builds-by-day))
   (GET "/code-commits-by-day.json" [] (code-commits-by-day))
   (GET "/code-area-worked.json" [] (code-area-worked))
+  (GET "/stories-and-commiters.json" [] (stories-and-commiters-json))
   (route/resources "/")
 )
 
