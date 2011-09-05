@@ -1,6 +1,23 @@
 (map git.people/commiters (git.main/core-lines)) 
 
+  
+
+
+
+(->> commiters-stories 
+     (filter (fn [x] (= "#1" (:story x)))) 
+     (mapcat #(:people %)) 
+     set)  
+
+(defn commiters-for-story [story]
+	(->> commiters-stories
+	     (filter (fn [x] (= story (:story x)))) 
+	     (mapcat #(:people %)) 
+	     set))
+
 (def stories (->> (git.main/story-mappings) (map first))) 
+(def commiters-stories (git.parsers/commiters-and-stories (git.main/core-lines)))
 
+(->> stories
+     (map (fn [story] {:story story :commiters (commiters-for-story (str "#" story)) })))
 
- (def commiters-stories (git.parsers/commiters-and-stories (git.main/core-lines)))   

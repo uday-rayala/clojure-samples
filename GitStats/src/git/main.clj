@@ -28,6 +28,18 @@
 (defn casper-maps [] (count-maps (top-counts (core-lines)) :name :core))
 (defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 
+(def stories (->> (story-mappings) (map first)))
+(def commiters-stories (git.parsers/commiters-and-stories (core-lines)))
+(defn commiters-for-story [story]
+  (->> commiters-stories
+       (filter (fn [x] (= story (:story x))))
+       (mapcat #(:people %))
+       set))
+
+(defn stories-and-commiters []
+  (->> stories
+       (map (fn [story] {:story story :commiters (commiters-for-story (str "#" story))}))))
+
 (defn top-git-json [caspers aims] (json-str (sort-by :core (merge-count-maps caspers aims :name))))
 
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
