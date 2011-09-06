@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    <title>Grouped Bar Chart</title>
+
+
+    <style type="text/css">
+        #by-story .container {
+            height: 250px;
+            width: 780px;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+
+    <script src="js/highcharts.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/themes/gray.js"></script>
+	<script src="changes-by-story.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+		    drawChart();	
+        });
+    </script>
+</head>
+<body>
+    <div id="by-area"></div>
+    <div id="by-story"></div>
+
+</body>
+</html>
