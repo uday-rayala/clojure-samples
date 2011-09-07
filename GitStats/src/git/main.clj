@@ -61,21 +61,9 @@
 
 (defn code-change [commit] {:date (first commit) :message (second commit) :size (code-size (last commit))})
 
-(defn buckets [x] (int (/ (:size x) 100)))
-(defn small-commits [x] (< 300 (:size x)))
-(defn group-by-size [objects] (let [grouped (group-by buckets (filter small-commits objects))]
-  (map (fn [x] {:seriesKey (first x) :seriesValue (last x)}) grouped)))
-
 (defn sort-commits [objects] (sort-by (fn [x] (.parse (new java.text.SimpleDateFormat "EEE MMM d HH:mm:ss yyyy Z") (:date x))) objects))
 (defn top-big-commits [objects] (take 100 (sort-by :size #(compare %2 %1) objects)))
 
-(defn code-changes [] (->>
-  (core-code-change-lines)
-  (group-commits)
-  (map code-change)
-  (group-by-size)
-  (json-str)
-))
 (defn code-changes-plain [] (->>
   (core-code-change-lines)
   (group-commits)
@@ -128,7 +116,6 @@
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
   (GET "/pair-counts-seperate.json" [] (pair-counts-seperate))
-  (GET "/code-changes.json" [] (code-changes))
   (GET "/code-changes-plain.json" [] (code-changes-plain))
   (GET "/failed-builds-by-day.json" [] (failed-builds-by-day))
   (GET "/code-commits-by-day.json" [] (code-commits-by-day))

@@ -85,84 +85,12 @@ function drawHeatMap(dataAsJson) {
             });
       }
 
-function drawScatterMap(dataAsJson) {
-           var data = new google.visualization.DataTable();
-        data.addColumn('date', 'Date');
-
-            data.addRows(1000);
-
-        var seriesOptions = [];
-
-        // Function to get the Max value in Array
-        Array.max = function( array ){
-        return Math.max.apply( Math, array );
-        };
-
-        // Function to get the Min value in Array
-        Array.min = function( array ){
-        return Math.min.apply( Math, array );
-        };
-
-
-        var seriesKeys = $j.map(dataAsJson, function(series, outer) {
-            return parseInt(series.seriesKey);
-        });
-
-
-        $j.each(dataAsJson, function(outer, series) {
-            data.addColumn('datetime', 'Series' + series.seriesKey);
-            seriesOptions.push({pointSize: translate(parseInt(series.seriesKey), Array.min(seriesKeys), Array.max(seriesKeys), 20, 80)});
-        });
-
-        $j.each(dataAsJson, function(outer, series) {
-            $j.each(series.seriesValue, function(inner, value) {
-                var date = new Date(value.date);
-                var time = new Date(value.date);
-                time.setDate(1);
-                time.setMonth(1);
-                time.setYear(2000);
-
-                var allValues = [date];
-
-                for(i = 0; i < outer; i++)
-                    allValues.push(null);
-
-                allValues.push(time);
-
-                for(i = (outer + 1); i < dataAsJson.length; i++)
-                    allValues.push(null);
-
-                data.addRow(allValues);
-            });
-        });
-
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('code-change'));
-        chart.draw(data, {width: 2000, height: 1200,
-                          title: 'Code Size',
-                          hAxis: {title: 'Day'},
-                          vAxis: {title: 'Time'},
-                          series: seriesOptions,
-                          legend: 'none'
-                         });
-      }
-
-function translate(value, leftMin, leftMax, rightMin, rightMax) {
-    var leftSpan = Math.log(leftMax) - Math.log(leftMin);
-    var rightSpan = rightMax - rightMin;
-
-    var valueScaled = (Math.log(value) - Math.log(leftMin))/leftSpan;
-    if (valueScaled < 0) valueScaled = valueScaled * -1;
-
-    return rightMin + (valueScaled * rightSpan);
-}
 
 function getDataAndDrawChart() {
     $j.get('/top-git.json', drawChart, "json");
     $j.get('/all-words.json', drawTagCloud, "json");
     $j.get('/pair-counts.json', drawPairChart, "json");
     $j.get('/pair-counts-seperate.json', drawHeatMap, "json");
-    $j.get('/code-changes.json', drawScatterMap, "json");
 }
 
 
