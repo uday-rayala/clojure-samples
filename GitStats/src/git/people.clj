@@ -1,5 +1,6 @@
 (ns git.people
-  (:use [clojure.set]))
+  (:use [clojure.set])
+  (:require [clojure.contrib.string :as string]))
 
 (def people
     [
@@ -35,7 +36,9 @@
 (defn has-person [name-set person] (not (empty? (intersection name-set (person-names person)))))
 (defn get-person-names [words] (set (map :name (filter #(has-person words %) people))))
 
-(defn get-words [commit] (set (remove stop-words (re-seq #"[a-zA-Z]+(?=[^a-zA-z]?)" (.toLowerCase commit)))))
+(defn get-words [commit] (let [commit-message (last (string/split #"\|" 2 commit))]
+  (set (remove stop-words (re-seq #"[a-zA-Z]+(?=[^a-zA-z]?)" (.toLowerCase commit-message))))))
+
 (defn commiters [commit] (let [words (get-words commit)] (get-person-names words)))
 
 (defn get-story-number [commit] (first (re-seq #"#[0-9]+" commit)))
