@@ -43,6 +43,8 @@
        (map (fn [story] {:story (:story story) :area (:area story) :commiters (commiters-for-story (str "#" (:story story)))}))))
 
 (defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
+(defn functional-areas-and-commiters-json []
+  (json-str (group-by (fn [story] (:area story) ) (stories-and-commiters))))
 
 (defn top-git-json [caspers aims] (json-str (sort-by (fn [x] (+ (:core x) (:aim x))) #(compare %2 %1) (merge-count-maps caspers aims :name))))
 
@@ -121,6 +123,7 @@
   (GET "/code-commits-by-day.json" [] (code-commits-by-day))
   (GET "/code-area-worked.json" [] (code-area-worked))
   (GET "/stories-and-commiters.json" [] (stories-and-commiters-json))
+  (GET "/functional-areas-and-commiters.json" [] (functional-areas-and-commiters-json))
   (route/resources "/")
 )
 
