@@ -11,7 +11,7 @@ function getData(){
 function byStory() {
    var values = [];
    $.each(stories, function(index, story) {
-	 var value = { story:story.story, commiters: [] };
+     var value = { story:story.story, area: story.area, commiters: [] };
      var numberOfCommiters = story.commiters.length;
      $.each(story.commiters, function(index, commiter) {
 	   value.commiters.push([commiter, 100 / numberOfCommiters]);
@@ -22,12 +22,12 @@ function byStory() {
 }
 
 
-function drawChart(container, id, seriesValues) {
+function drawChart(container, id, area, seriesValues) {
 
    var options = {
 	   		      chart: { renderTo: container},
 	   		      title: {
-	   		         text: 'Story #' + id
+	   		        text: 'Story #' + id + " (" + area + ")"
 	   		      },
 	   		      tooltip: {
 	   		         formatter: function() {
@@ -71,8 +71,6 @@ $(document).ready(function() {
         $('#by-story').append(container);
         i++;
 
-        console.log(story);
-
-        drawChart(containerId, story.story, story.commiters);
+        drawChart(containerId, story.story, story.area, story.commiters);
     });
 });

@@ -28,7 +28,7 @@
 (defn casper-maps [] (count-maps (top-counts (core-lines)) :name :core))
 (defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 
-(def stories (->> (story-mappings) (map first)))
+(def stories (->> (story-mappings) (map (fn [story] {:story (first story) :area (last story)  } ))))
 (def commiters-stories
   (merge (git.parsers/commiters-and-stories (core-lines))
          (git.parsers/commiters-and-stories (aim-lines))))
@@ -40,7 +40,7 @@
 
 (defn stories-and-commiters []
   (->> stories
-       (map (fn [story] {:story story :commiters (commiters-for-story (str "#" story))}))))
+       (map (fn [story] {:story (:story story) :area (:area story) :commiters (commiters-for-story (str "#" (:story story)))}))))
 
 (defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
 
