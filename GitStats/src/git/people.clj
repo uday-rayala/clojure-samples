@@ -25,6 +25,8 @@
     ]
 )
 
+(def excluded-people #{"harinee", "kief", "karl"})
+
 (def stop-words #{"a", "an", "the", "so", "no", "to", "of", "for", "and", "in", "master", "branch", "on", "from", "it", "is", "with", "up", "into", "that"})
 
 (defn person-names [person] (conj (:alias person) (:name person)))
@@ -37,6 +39,8 @@
 (defn commiters [commit] (let [words (get-words commit)] (get-person-names words)))
 
 (defn get-story-number [commit] (first (re-seq #"#[0-9]+" commit)))
+
+(defn people-who-can-pair [] (remove excluded-people (sort (people-names))))
 
 (defn commiters-and-story [commit]
   (let [words (get-words commit)]

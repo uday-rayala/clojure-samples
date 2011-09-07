@@ -1,3 +1,203 @@
+Tue Sep 6 16:05:07 2011 +0100
+Chris/Mushtaq #690 Added German translation
+ 9 files changed, 32 insertions(+), 19 deletions(-)
+
+Tue Sep 6 16:05:07 2011 +0100
+Chris/Mushtaq #690 Changed behaviour of locked content checkbox
+ 9 files changed, 48 insertions(+), 17 deletions(-)
+
+Tue Sep 6 16:05:07 2011 +0100
+Chris/Mushtaq: #701 Fixed the bug
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 6 15:44:10 2011 +0100
+Ken/Mark #654 forgot to remove a js console.log statement
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+Tue Sep 6 14:48:21 2011 +0100
+ken/mark #654 fixing the pagination where it refreshes the page if you type in an out of bounds page number
+ 3 files changed, 9 insertions(+), 6 deletions(-)
+
+Tue Sep 6 14:16:39 2011 +0100
+Karl: css clean up, moved code for #share to structure.css and code for #intro to global.css
+ 4 files changed, 24 insertions(+), 29 deletions(-)
+
+Wed Sep 7 12:52:43 2011 +0100
+Andreas: Changed properties for dev to use the real OpenAM Server (for testing the IP-Module)
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+charles/alinoor #660 support front matter page range on book page
+ 9 files changed, 92 insertions(+), 55 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+charles/alinoor #660 clean up builders
+ 8 files changed, 43 insertions(+), 45 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+Charles/Jose #660 Page range for book front matter.
+ 4 files changed, 4 insertions(+), 2 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+Charles/Jose #660 Frontmatter draft test.
+ 3 files changed, 17 insertions(+), 7 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+Charles/Jose #660 Integration test for frontmatter first page.
+ 2 files changed, 9 insertions(+), 1 deletions(-)
+
+Tue Sep 6 12:40:16 2011 +0100
+charles/jose #660 add frontmatter to html book contents page
+ 4 files changed, 26 insertions(+), 2 deletions(-)
+
+Tue Sep 6 10:26:01 2011 +0100
+marc/duncan #277 add endId for volumes to vols and issues page if it is in the XML
+ 4 files changed, 22 insertions(+), 2 deletions(-)
+
+Tue Sep 6 09:57:16 2011 +0100
+Rob/Alex #677 added ml steps to create entitlements db
+ 6 files changed, 99 insertions(+), 6 deletions(-)
+
+Tue Sep 6 09:57:16 2011 +0100
+Rob/Alex #677 refactored user packages to use new entitlements db
+ 8 files changed, 57 insertions(+), 63 deletions(-)
+
+Tue Sep 6 09:12:26 2011 +0100
+Marc #277 Add link to issue page.
+ 4 files changed, 22 insertions(+), 2 deletions(-)
+
+Mon Sep 5 18:28:22 2011 +0100
+Marc #277 add translation for the title.
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 5 18:21:33 2011 +0100
+Marc #277 deal with issue and issues (and the translation)
+ 2 files changed, 15 insertions(+), 6 deletions(-)
+
+Mon Sep 5 17:48:36 2011 +0100
+marc/duncan #277 rename id to startId in volume metadata
+ 12 files changed, 31 insertions(+), 31 deletions(-)
+
+Mon Sep 5 17:17:59 2011 +0100
+marc/duncan #277 localise the Month in a cover date
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+Mon Sep 5 17:17:59 2011 +0100
+marc/duncan #277 optional date in issues
+ 4 files changed, 27 insertions(+), 22 deletions(-)
+
+Mon Sep 5 17:17:59 2011 +0100
+marc/duncan #277 title and cover date on Journal object
+ 2 files changed, 19 insertions(+), 7 deletions(-)
+
+Mon Sep 5 17:17:59 2011 +0100
+marc/duncan #277 issue title is optional
+ 9 files changed, 32 insertions(+), 12 deletions(-)
+
+Mon Sep 5 17:15:55 2011 +0100
+Ken: added devbox4 public key
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Mon Sep 5 17:49:54 2011 +0200
+Karl: new css for #693
+ 1 files changed, 30 insertions(+), 0 deletions(-)
+
+Mon Sep 5 16:49:04 2011 +0100
+Liz/Chris Increased duration on iWaitFor to hopefully fix one of the industry sector tests
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 5 16:26:43 2011 +0100
+Liz/Chris #158 Added default behaviour for when articles do not have a category
+ 4 files changed, 17 insertions(+), 12 deletions(-)
+
+Mon Sep 5 17:09:27 2011 +0200
+Karl/Volker: z-index for functions bar (because of upcoming date facet), added shadow support in ie for look inside badge
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+Mon Sep 5 16:01:41 2011 +0100
+Liz/Chris #158 Fixed minor formatting issue
+ 1 files changed, 1 insertions(+), 5 deletions(-)
+
+Mon Sep 5 15:51:17 2011 +0100
+Liz/Chris #158 Issue class now has 110% test coverage
+ 4 files changed, 82 insertions(+), 25 deletions(-)
+
+Mon Sep 5 15:11:13 2011 +0100
+Charles/Joze #660 ensure existing searches use new searchable collection, updated system tests
+ 4 files changed, 32 insertions(+), 6 deletions(-)
+
+Mon Sep 5 14:49:57 2011 +0100
+Liz/Chris #158 Refactored some code for more testability
+ 4 files changed, 27 insertions(+), 13 deletions(-)
+
+Mon Sep 5 13:52:57 2011 +0100
+Liz/Chris #158 Fixed abstract link on articles in the issue page
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 5 12:48:04 2011 +0100
+Adding meta:Id to the search constraint(s)
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 5 12:30:24 2011 +0100
+Liz/Chris #158 Added ACTION links to articles in an issue page
+ 8 files changed, 60 insertions(+), 24 deletions(-)
+
+Mon Sep 5 12:12:34 2011 +0100
+Charles/Jose #660 Searchable collection for searchable items.
+ 4 files changed, 57 insertions(+), 5 deletions(-)
+
+Mon Sep 5 13:05:15 2011 +0200
+Volker/Karl: changes for #690
+ 4 files changed, 63 insertions(+), 5 deletions(-)
+
+Mon Sep 5 11:47:31 2011 +0100
+Mushtaq/Alinoor #646 Functional test is working
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Mon Sep 5 11:42:50 2011 +0100
+Liz/Chris #158 Added no access indicators to articles on issue page
+ 9 files changed, 92 insertions(+), 31 deletions(-)
+
+Mon Sep 5 11:23:41 2011 +0100
+Mushtaq/Alinoor #646 featured journals
+ 3 files changed, 6 insertions(+), 9 deletions(-)
+
+Mon Sep 5 11:16:44 2011 +0100
+Ken/Mark #654 added pagination at the bottom of search results page
+ 2 files changed, 34 insertions(+), 26 deletions(-)
+
+Mon Sep 5 11:07:11 2011 +0100
+Mushtaq/Alinoor #646 featured journals
+ 7 files changed, 55 insertions(+), 16 deletions(-)
+
+Mon Sep 5 11:04:13 2011 +0100
+Ken/Mark: compiles system tests as part of build so that we get caught by system tests failing because of compilation errors
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 5 10:53:27 2011 +0100
+marc/duncan #277 theSecondVolumeExpanderTitleShouldBe ...
+ 3 files changed, 18 insertions(+), 21 deletions(-)
+
+Mon Sep 5 10:29:24 2011 +0100
+marc/duncan bug related to #597 - fix sorting of sub/disciplines
+ 5 files changed, 12 insertions(+), 10 deletions(-)
+
+Mon Sep 5 09:57:55 2011 +0100
+Mark #158 - Changed ML to include has access on article listings in issue page
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+Mon Sep 5 09:58:46 2011 +0100
+Ken: introducing run-system-tests-from-scratch.sh
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Mon Sep 5 09:02:50 2011 +0100
+Marc #277 fix unit test after reordering issues list.
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+Mon Sep 5 08:38:48 2011 +0100
+Marc #277 Reverse order of all volumes and issues.
+ 3 files changed, 19 insertions(+), 15 deletions(-)
+
 Fri Sep 2 17:38:45 2011 +0100
 Mushtaq/Alinoor: #646 Added tests for the story. Currently ignored till some code is added
  7 files changed, 89 insertions(+), 6 deletions(-)

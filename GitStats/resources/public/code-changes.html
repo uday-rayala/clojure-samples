@@ -14,21 +14,35 @@
         }
         #slider-range {
             margin: 10px;
-            width: 1000px;
+            width: 1500px;
         }
+        #zoom {
+            float: right;
+        }
+        #zoom-text {
+            margin-top: 10px;
+        }
+        #slider-vertical {
+            height: 500px;
+        }
+
     </style>
 </head>
 <body>
 <div id="center">
     <label for="sizes">Size range:</label>
-    <input type="text" id="sizes" style="border:0; color:#f6931f; font-weight:bold;" />
+    <span id="sizes" style="border:0; color:#f6931f; font-weight:bold;"></span>
     <div id="slider-range"></div>
     <input id="slice-slider" type="button" value="Slice Slider"/>
+    <div id="zoom">
+        <div id="slider-vertical"></div>
+        <div id="zoom-text">100%</div>
+    </div>
 
     <div id="fig">
         <script type="text/javascript+protovis">
             /* Sizing and scales. */
-            var w = 1000,
+            var w = 1500,
             h = 600,
             x = pv.Scale.linear(startDate, endDate).range(0, w),
             y = pv.Scale.linear(goodDay, nextGoodDay).range(0, h),
@@ -71,10 +85,9 @@
             .strokeStyle(function(d) c(d.z))
             .fillStyle(function() this.strokeStyle().alpha(.2))
             .visible(function(d) {
-                console.log("Min Value: "+minValue + "Max Value: "+maxValue);
                 return d.z > minValue && d.z < maxValue;
             })
-            .size(function(d) sizeScale(d.z))
+            .size(function(d) sizeScale(d.z) * ((zoom)/100))
             .title(function(d) d.m);
 
             vis.render();

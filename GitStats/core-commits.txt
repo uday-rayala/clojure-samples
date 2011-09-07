@@ -1,3 +1,53 @@
+Tue Sep 6 16:05:07 2011 +0100 | Chris/Mushtaq #690 Added German translation
+Tue Sep 6 16:05:07 2011 +0100 | Chris/Mushtaq #690 Changed behaviour of locked content checkbox
+Tue Sep 6 16:05:07 2011 +0100 | Chris/Mushtaq: #701 Fixed the bug
+Tue Sep 6 15:44:10 2011 +0100 | Ken/Mark #654 forgot to remove a js console.log statement
+Tue Sep 6 14:48:21 2011 +0100 | ken/mark #654 fixing the pagination where it refreshes the page if you type in an out of bounds page number
+Tue Sep 6 14:16:39 2011 +0100 | Karl: css clean up, moved code for #share to structure.css and code for #intro to global.css
+Wed Sep 7 12:52:43 2011 +0100 | Andreas: Changed properties for dev to use the real OpenAM Server (for testing the IP-Module)
+Tue Sep 6 12:40:16 2011 +0100 | charles/alinoor #660 support front matter page range on book page
+Tue Sep 6 12:40:16 2011 +0100 | charles/alinoor #660 clean up builders
+Tue Sep 6 12:40:16 2011 +0100 | Charles/Jose #660 Page range for book front matter.
+Tue Sep 6 12:40:16 2011 +0100 | Charles/Jose #660 Frontmatter draft test.
+Tue Sep 6 12:40:16 2011 +0100 | Charles/Jose #660 Integration test for frontmatter first page.
+Tue Sep 6 12:40:16 2011 +0100 | charles/jose #660 add frontmatter to html book contents page
+Tue Sep 6 10:26:01 2011 +0100 | marc/duncan #277 add endId for volumes to vols and issues page if it is in the XML
+Tue Sep 6 09:57:16 2011 +0100 | Rob/Alex #677 added ml steps to create entitlements db
+Tue Sep 6 09:57:16 2011 +0100 | Rob/Alex #677 refactored user packages to use new entitlements db
+Tue Sep 6 09:12:26 2011 +0100 | Marc #277 Add link to issue page.
+Mon Sep 5 18:28:22 2011 +0100 | Marc #277 add translation for the title.
+Mon Sep 5 18:21:33 2011 +0100 | Marc #277 deal with issue and issues (and the translation)
+Mon Sep 5 17:48:36 2011 +0100 | marc/duncan #277 rename id to startId in volume metadata
+Mon Sep 5 17:17:59 2011 +0100 | marc/duncan #277 localise the Month in a cover date
+Mon Sep 5 17:17:59 2011 +0100 | marc/duncan #277 optional date in issues
+Mon Sep 5 17:17:59 2011 +0100 | marc/duncan #277 title and cover date on Journal object
+Mon Sep 5 17:17:59 2011 +0100 | marc/duncan #277 issue title is optional
+Mon Sep 5 17:15:55 2011 +0100 | Ken: added devbox4 public key
+Mon Sep 5 17:49:54 2011 +0200 | Karl: new css for #693
+Mon Sep 5 16:49:04 2011 +0100 | Liz/Chris Increased duration on iWaitFor to hopefully fix one of the industry sector tests
+Mon Sep 5 16:26:43 2011 +0100 | Liz/Chris #158 Added default behaviour for when articles do not have a category
+Mon Sep 5 17:09:27 2011 +0200 | Karl/Volker: z-index for functions bar (because of upcoming date facet), added shadow support in ie for look inside badge
+Mon Sep 5 16:01:41 2011 +0100 | Liz/Chris #158 Fixed minor formatting issue
+Mon Sep 5 15:51:17 2011 +0100 | Liz/Chris #158 Issue class now has 110% test coverage
+Mon Sep 5 15:11:13 2011 +0100 | Charles/Joze #660 ensure existing searches use new searchable collection, updated system tests
+Mon Sep 5 14:49:57 2011 +0100 | Liz/Chris #158 Refactored some code for more testability
+Mon Sep 5 13:52:57 2011 +0100 | Liz/Chris #158 Fixed abstract link on articles in the issue page
+Mon Sep 5 12:48:04 2011 +0100 | Adding meta:Id to the search constraint(s)
+Mon Sep 5 12:30:24 2011 +0100 | Liz/Chris #158 Added ACTION links to articles in an issue page
+Mon Sep 5 12:12:34 2011 +0100 | Charles/Jose #660 Searchable collection for searchable items.
+Mon Sep 5 13:05:15 2011 +0200 | Volker/Karl: changes for #690
+Mon Sep 5 11:47:31 2011 +0100 | Mushtaq/Alinoor #646 Functional test is working
+Mon Sep 5 11:42:50 2011 +0100 | Liz/Chris #158 Added no access indicators to articles on issue page
+Mon Sep 5 11:23:41 2011 +0100 | Mushtaq/Alinoor #646 featured journals
+Mon Sep 5 11:16:44 2011 +0100 | Ken/Mark #654 added pagination at the bottom of search results page
+Mon Sep 5 11:07:11 2011 +0100 | Mushtaq/Alinoor #646 featured journals
+Mon Sep 5 11:04:13 2011 +0100 | Ken/Mark: compiles system tests as part of build so that we get caught by system tests failing because of compilation errors
+Mon Sep 5 10:53:27 2011 +0100 | marc/duncan #277 theSecondVolumeExpanderTitleShouldBe ...
+Mon Sep 5 10:29:24 2011 +0100 | marc/duncan bug related to #597 - fix sorting of sub/disciplines
+Mon Sep 5 09:57:55 2011 +0100 | Mark #158 - Changed ML to include has access on article listings in issue page
+Mon Sep 5 09:58:46 2011 +0100 | Ken: introducing run-system-tests-from-scratch.sh
+Mon Sep 5 09:02:50 2011 +0100 | Marc #277 fix unit test after reordering issues list.
+Mon Sep 5 08:38:48 2011 +0100 | Marc #277 Reverse order of all volumes and issues.
 Fri Sep 2 17:38:45 2011 +0100 | Mushtaq/Alinoor: #646 Added tests for the story. Currently ignored till some code is added
 Fri Sep 2 17:12:25 2011 +0100 | Marc #277 first version of displaying volumes and issues on VolumesAndIssuesPage (ordering still not correct)
 Fri Sep 2 17:02:24 2011 +0100 | Chris/Mark #158 Added articles to issue page

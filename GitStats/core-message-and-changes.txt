@@ -1,3 +1,295 @@
+Chris/Mushtaq #690 Added German translation
+2	2	src/main/scala/com/springer/app/ViewHelper.scala
+4	0	src/main/webapp/WEB-INF/scalate/templates/search/de_DE/locked-tooltip.jade
+7	0	src/main/webapp/WEB-INF/scalate/templates/search/de_DE/teaser-text.jade
+1	0	src/main/webapp/WEB-INF/scalate/templates/search/de_DE/toggle-text.jade
+4	0	src/main/webapp/WEB-INF/scalate/templates/search/en_US/locked-tooltip.jade
+7	0	src/main/webapp/WEB-INF/scalate/templates/search/en_US/teaser-text.jade
+1	0	src/main/webapp/WEB-INF/scalate/templates/search/en_US/toggle-text.jade
+5	16	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+1	1	src/test/functional/scala/com/springer/test/functional/IndustrySectorPageTests.scala
+
+Chris/Mushtaq #690 Changed behaviour of locked content checkbox
+3	1	src/main/scala/com/springer/content/search/SearchResults.scala
+20	4	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+2	1	src/main/webapp/static/js/SearchView.js
+2	2	src/test/functional/scala/com/springer/test/functional/SearchResultsPageTests.scala
+2	2	src/test/functional/scala/com/springer/test/functional/authorisation/SearchPageAuthorisationTests.scala
+4	3	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+1	1	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+9	3	src/test/unit/js/SearchViewTest.js
+5	0	src/test/unit/scala/com/springer/content/search/TeaserTests.scala
+
+Chris/Mushtaq: #701 Fixed the bug
+1	1	src/main/resources/lang/english.properties
+
+Ken/Mark #654 forgot to remove a js console.log statement
+0	1	src/main/webapp/static/js/SearchView.js
+
+ken/mark #654 fixing the pagination where it refreshes the page if you type in an out of bounds page number
+3	1	src/main/webapp/static/js/SearchController.js
+4	3	src/main/webapp/static/js/SearchView.js
+2	2	src/test/unit/js/SearchViewTest.js
+
+Karl: css clean up, moved code for #share to structure.css and code for #intro to global.css
+0	26	src/main/webapp/static/css/document.css
+11	0	src/main/webapp/static/css/global.css
+2	3	src/main/webapp/static/css/industry.css
+11	0	src/main/webapp/static/css/structure.css
+
+Andreas: Changed properties for dev to use the real OpenAM Server (for testing the IP-Module)
+1	1	src/main/resources/app.dev.properties
+
+charles/alinoor #660 support front matter page range on book page
+9	4	src/main/scala/com/springer/content/Book.scala
+8	0	src/main/scala/com/springer/content/xpaths/XPaths.scala
+3	3	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+22	2	src/main/xquery/modules/content-type/book.xqy
+2	2	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+1	1	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+11	7	src/test/integration/scala/com/springer/content/ContentRepositoryAbstractTests.scala
+2	2	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+37	37	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+
+charles/alinoor #660 clean up builders
+1	2	src/main/scala/com/springer/content/Book.scala
+3	3	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+10	11	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+3	4	src/test/functional/scala/com/springer/test/functional/authorisation/BookAuthorisationTests.scala
+1	1	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+8	7	src/test/integration/scala/com/springer/content/ContentRepositoryAbstractTests.scala
+16	16	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+1	1	src/test/unit/scala/com/springer/content/BookTests.scala
+
+Charles/Jose #660 Page range for book front matter.
+1	0	src/main/scala/com/springer/content/Book.scala
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+1	1	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+1	0	src/test/integration/scala/com/springer/content/ContentRepositoryAbstractTests.scala
+
+Charles/Jose #660 Frontmatter draft test.
+5	4	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+6	1	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+6	2	src/test/functional/scala/com/springer/test/steps/BookPageSteps.scala
+
+Charles/Jose #660 Integration test for frontmatter first page.
+3	1	src/main/scala/com/springer/content/Book.scala
+7	1	src/test/integration/scala/com/springer/content/ContentRepositoryAbstractTests.scala
+
+charles/jose #660 add frontmatter to html book contents page
+9	0	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+9	0	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+3	1	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+5	1	src/test/functional/scala/com/springer/test/steps/BookPageSteps.scala
+
+marc/duncan #277 add endId for volumes to vols and issues page if it is in the XML
+1	0	src/main/scala/com/springer/content/Journal.scala
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+18	0	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+2	1	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+Rob/Alex #677 added ml steps to create entitlements db
+4	1	ops/deploy/marklogic/steps/01_create_database.xqy
+24	2	ops/deploy/marklogic/steps/02_base_level_database_settings.xqy
+2	0	ops/deploy/marklogic/steps/08_configure_privileges.xqy
+65	0	ops/deploy/marklogic/steps/12_load_default_entitlements.xqy
+4	3	src/main/xquery/entitlements/get-customer-query.xqy
+1	1	src/main/xquery/modules/config.xqy
+
+Rob/Alex #677 refactored user packages to use new entitlements db
+7	2	ops/deploy/marklogic/steps/03_add_database_range_indexes.xqy
+33	0	src/main/xquery/entitlements/get-customer-query.xqy
+1	1	src/main/xquery/issue.xqy
+1	1	src/main/xquery/modules/content-type/article.xqy
+2	2	src/main/xquery/modules/content-type/book.xqy
+1	1	src/main/xquery/modules/content-type/chapter.xqy
+4	5	src/main/xquery/modules/content.xqy
+8	51	src/main/xquery/modules/user-packages.xqy
+
+Marc #277 Add link to issue page.
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+5	1	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+8	0	src/test/functional/scala/com/springer/test/pages/VolumesAndIssuesPage.scala
+8	0	src/test/functional/scala/com/springer/test/steps/VolumesAndIssuesPageSteps.scala
+
+Marc #277 add translation for the title.
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+
+Marc #277 deal with issue and issues (and the translation)
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+14	5	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+
+marc/duncan #277 rename id to startId in volume metadata
+4	4	src/main/scala/com/springer/content/Journal.scala
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+1	1	src/main/xquery/issue.xqy
+2	2	src/main/xquery/modules/content-type/journal.xqy
+1	1	src/test/functional/scala/com/springer/test/functional/ArticlePageTests.scala
+2	2	src/test/functional/scala/com/springer/test/functional/IssuePageTests.scala
+3	3	src/test/functional/scala/com/springer/test/functional/JournalPageTests.scala
+3	3	src/test/functional/scala/com/springer/test/functional/SearchResultsPageTests.scala
+5	5	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+1	1	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+2	2	src/test/shared/scala/com/springer/test/content/JournalBuilder.scala
+6	6	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+marc/duncan #277 localise the Month in a cover date
+3	3	src/main/scala/com/springer/content/Journal.scala
+
+marc/duncan #277 optional date in issues
+5	4	src/main/scala/com/springer/content/Journal.scala
+10	5	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+3	4	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+9	9	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+marc/duncan #277 title and cover date on Journal object
+3	3	src/main/scala/com/springer/content/Journal.scala
+16	4	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+marc/duncan #277 issue title is optional
+2	2	src/main/scala/com/springer/content/Journal.scala
+2	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+1	1	src/test/functional/scala/com/springer/test/functional/ArticlePageTests.scala
+1	1	src/test/functional/scala/com/springer/test/functional/IssuePageTests.scala
+6	4	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+7	0	src/test/functional/scala/com/springer/test/pages/VolumesAndIssuesPage.scala
+8	0	src/test/functional/scala/com/springer/test/steps/VolumesAndIssuesPageSteps.scala
+4	2	src/test/shared/scala/com/springer/test/content/JournalBuilder.scala
+1	1	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+Ken: added devbox4 public key
+2	1	ops/deploy/chef/cookbooks/casper_users/files/default/casper-authorized_keys
+
+Karl: new css for #693
+30	0	src/main/webapp/static/css/structure.css
+
+Liz/Chris Increased duration on iWaitFor to hopefully fix one of the industry sector tests
+1	1	src/test/shared/scala/com/springer/test/steps/HomePageSteps.scala
+
+Liz/Chris #158 Added default behaviour for when articles do not have a category
+4	2	src/main/scala/com/springer/content/search/ArticleResult.scala
+1	2	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+12	4	src/test/functional/scala/com/springer/test/functional/IssuePageTests.scala
+0	4	src/test/shared/scala/com/springer/steps/IssuePageSteps.scala
+
+Karl/Volker: z-index for functions bar (because of upcoming date facet), added shadow support in ie for look inside badge
+7	5	src/main/webapp/static/css/document.css
+1	1	src/main/webapp/static/css/results.css
+
+Liz/Chris #158 Fixed minor formatting issue
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+1	5	src/test/functional/scala/com/springer/test/functional/IssuePageTests.scala
+
+Liz/Chris #158 Issue class now has 110% test coverage
+16	18	src/main/scala/com/springer/content/Issue.scala
+3	0	src/main/scala/com/springer/content/xpaths/XPath.scala
+15	0	src/main/scala/com/springer/content/xpaths/XPaths.scala
+48	7	src/test/unit/scala/com/springer/content/IssueTests.scala
+
+Charles/Joze #660 ensure existing searches use new searchable collection, updated system tests
+12	4	src/main/xquery/modules/config.xqy
+8	1	src/test/shared/scala/com/springer/test/pages/sections/FacetSection.scala
+4	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+8	1	src/test/system/scala/com/springer/test/system/SystemTests.scala
+
+Liz/Chris #158 Refactored some code for more testability
+2	2	src/main/scala/com/springer/app/Controllers.scala
+5	1	src/main/scala/com/springer/content/Issue.scala
+1	0	src/main/xquery/issue.xqy
+20	11	src/test/unit/scala/com/springer/content/IssueTests.scala
+
+Liz/Chris #158 Fixed abstract link on articles in the issue page
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+
+Adding meta:Id to the search constraint(s)
+1	1	ops/deploy/marklogic/steps/11_set_database_query_specification.xqy
+
+Liz/Chris #158 Added ACTION links to articles in an issue page
+7	5	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+34	23	src/test/functional/scala/com/springer/test/functional/IssuePageTests.scala
+10	2	src/test/shared/scala/com/springer/pages/TableOfContentsArticle.scala
+2	2	src/test/shared/scala/com/springer/steps/IssuePageSteps.scala
+5	2	src/test/shared/scala/com/springer/test/content/JournalArticleBuilder.scala
+2	2	src/test/shared/scala/com/springer/test/pages/SearchResultSection.scala
+20	0	src/test/shared/scala/com/springer/test/steps/DownloadLinkSteps.scala
+1	9	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Charles/Jose #660 Searchable collection for searchable items.
+2	1	src/main/xquery/modules/config.xqy
+6	0	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+43	3	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+7	2	src/test/shared/scala/com/springer/test/platform/MarkLogicOperations.scala
+
+Volker/Karl: changes for #690
+1	0	src/main/webapp/static/css/basic.css
+38	2	src/main/webapp/static/css/global.css
+26	5	src/main/webapp/static/css/results.css
+-	-	src/main/webapp/static/images/tooltip_arrow_up.png
+
+Mushtaq/Alinoor #646 Functional test is working
+1	1	src/main/webapp/WEB-INF/scalate/templates/industry/industry.jade
+1	1	src/test/functional/scala/com/springer/test/functional/IndustrySectorPageTests.scala
+
+Liz/Chris #158 Added no access indicators to articles on issue page
+3	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+27	10	src/test/functional/scala/com/springer/test/functional/authorisation/ArticleAuthorisationTests.scala
+1	0	src/test/functional/scala/com/springer/test/functional/authorisation/SearchPageAuthorisationTests.scala
+4	1	src/test/shared/scala/com/springer/pages/TableOfContentsArticle.scala
+3	0	src/test/shared/scala/com/springer/steps/IssuePageSteps.scala
+31	10	src/test/shared/scala/com/springer/test/content/JournalArticleBuilder.scala
+2	1	src/test/shared/scala/com/springer/test/pages/SearchResultSection.scala
+21	0	src/test/shared/scala/com/springer/test/steps/AuthorisationSteps.scala
+0	8	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Mushtaq/Alinoor #646 featured journals
+0	7	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+4	0	src/test/shared/scala/com/springer/test/content/IndustrySummaryBuilder.scala
+2	2	src/test/unit/scala/com/springer/content/IndustrySummaryTests.scala
+
+Ken/Mark #654 added pagination at the bottom of search results page
+29	0	src/main/webapp/WEB-INF/scalate/templates/search/pagination.jade
+6	27	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+
+Mushtaq/Alinoor #646 featured journals
+1	0	src/main/resources/lang/deutsch.properties
+1	0	src/main/resources/lang/english.properties
+1	2	src/main/scala/com/springer/app/Controllers.scala
+1	1	src/main/scala/com/springer/content/IndustrySummary.scala
+20	2	src/main/webapp/WEB-INF/scalate/templates/industry/industry.jade
+12	0	src/main/xquery/industry-summary.xqy
+43	35	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+
+Ken/Mark: compiles system tests as part of build so that we get caught by system tests failing because of compilation errors
+1	1	build
+
+marc/duncan #277 theSecondVolumeExpanderTitleShouldBe ...
+1	2	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+7	12	src/test/functional/scala/com/springer/test/pages/VolumesAndIssuesPage.scala
+10	7	src/test/functional/scala/com/springer/test/steps/VolumesAndIssuesPageSteps.scala
+
+marc/duncan bug related to #597 - fix sorting of sub/disciplines
+6	5	src/main/scala/com/springer/content/Home.scala
+3	2	src/test/functional/scala/com/springer/test/functional/authorisation/HomePageAuthorisationTests.scala
+1	1	src/test/shared/scala/com/springer/test/content/HomeDataBuilder.scala
+1	1	src/test/shared/scala/com/springer/test/pages/HomePage.scala
+1	1	src/test/unit/scala/com/springer/content/HomeTests.scala
+
+Mark #158 - Changed ML to include has access on article listings in issue page
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/issue-toc.jade
+2	1	src/main/xquery/issue.xqy
+
+Ken: introducing run-system-tests-from-scratch.sh
+1	0	ops/system-tests-from-scratch.sh
+
+Marc #277 fix unit test after reordering issues list.
+1	1	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+8	8	src/test/unit/scala/com/springer/content/JournalTests.scala
+
+Marc #277 Reverse order of all volumes and issues.
+5	4	src/main/scala/com/springer/content/Journal.scala
+3	3	src/main/webapp/WEB-INF/scalate/templates/abstract-page/volumes-and-issues.jade
+11	8	src/test/functional/scala/com/springer/test/functional/VolumesAndIssuesPageTests.scala
+
 Mushtaq/Alinoor: #646 Added tests for the story. Currently ignored till some code is added
 3	2	src/main/scala/com/springer/content/IndustrySummary.scala
 13	2	src/test/functional/scala/com/springer/test/functional/IndustrySectorPageTests.scala

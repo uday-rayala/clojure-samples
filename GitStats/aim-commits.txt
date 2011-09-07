@@ -1,3 +1,9 @@
+Mon Sep 5 17:52:33 2011 +0100 | duncan/marc #277 change id to startid and add endId in volume metadata.
+Mon Sep 5 16:06:59 2011 +0100 | mark/marc/duncan #277 make Issue Title and Date Optional in the meta
+Mon Sep 5 15:03:46 2011 +0100 | Charles/Joze #660 include journals in searchable collection on insertion
+Mon Sep 5 14:11:30 2011 +0100 | Alinoor/Mushtaq #646 Fixing the build
+Mon Sep 5 13:03:15 2011 +0100 | Alinoor/Mushtaq #646 journal taTaxonomiesx
+Fri Sep 2 17:40:38 2011 +0100 | Charles/Jose #660 Searchable collection for searchable items.
 Fri Sep 2 15:33:12 2011 +0100 | Charles/Jose #660 Backmatter and Frontmatter content type refactor as map.
 Fri Sep 2 14:59:19 2011 +0100 | Charles/Jose #660 Backmatter and Frontmatter builder refactor.
 Fri Sep 2 14:16:06 2011 +0100 | charles/jose #660 support backmatter during ingestion - store back/front matter with generated marklogic uri if necessary

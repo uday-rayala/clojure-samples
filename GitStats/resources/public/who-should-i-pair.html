@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Circle Packing</title>
+    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+    <script type="text/javascript" src="js/protovis.js"></script>
+
+    <script src="js/jquery-1.6.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+
+
+    <script type="text/javascript" src="who-should-i-pair.js"></script>
+    <script type="text/javascript+protovis">
+        function showData(name) {
+            var data = {
+                pairing : allPairs[name]
+            };
+
+            /* For pretty number formatting. */
+            var format = pv.Format.number();
+
+            var vis = new pv.Panel()
+            .width(796)
+            .height(796)
+            .margin(2);
+
+            var pack = vis.add(pv.Layout.Pack)
+            .nodes(pv.dom(data).root("pairing").nodes())
+            .size(function(d) d.nodeValue);
+
+            pack.node.add(pv.Dot)
+            .fillStyle(function(d) d.firstChild ? "rgba(31, 119, 180, .25)" : "#ff7f0e")
+            .title(function(d) d.nodeName + (d.firstChild ? "" : ": " + format(d.nodeValue)))
+            .lineWidth(1);
+
+            pack.label.add(pv.Label)
+            .visible(function(d) !d.firstChild)
+            .text(function(d) {
+            return d.nodeName;
+            });
+
+            vis.render();
+        }
+    </script>
+
+</head>
+<body>
+<div id="center">
+
+</div>
+</body>
+</html>

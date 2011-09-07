@@ -29,10 +29,14 @@ var sizes = $.map(data, function (d) {
 var minValue = Math.min.apply( Math, sizes);
 var maxValue = Math.max.apply( Math, sizes);
 
+var zoom = 100;
+
 var dateFormat = pv.Format.date("%d/%B");
 var timeFormat = pv.Format.date("%H:%M");
 
-function createSlider(minV, maxV) {
+function createSizeSlider(minV, maxV) {
+    $( "#sizes" ).text(minV + " - " + maxV );
+
     $( "#slider-range" ).slider({
         range: true,
         min: minV,
@@ -41,7 +45,7 @@ function createSlider(minV, maxV) {
         slide: function( event, ui ) {
             minValue = ui.values[ 0 ];
             maxValue = ui.values[ 1 ];
-            $( "#sizes" ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            $( "#sizes" ).text(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
         },
         stop: function( event, ui ) {
             vis.render();
@@ -50,9 +54,24 @@ function createSlider(minV, maxV) {
 }
 
 $(document).ready(function() {
-    createSlider(minValue, maxValue);
+    createSizeSlider(minValue, maxValue);
 
     $('#slice-slider').click(function() {
-        createSlider(minValue, maxValue);
+        createSizeSlider(minValue, maxValue);
+    });
+
+    $( "#slider-vertical" ).slider({
+        orientation: "vertical",
+        range: "min",
+        min: 100,
+        max: 500,
+        value: 100,
+        slide: function( event, ui ) {
+            zoom = ui.value;
+            $('#zoom-text').text(zoom + " %");
+        },
+        stop: function( event, ui ) {
+            vis.render();
+        }
     });
 });

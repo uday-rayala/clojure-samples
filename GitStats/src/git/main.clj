@@ -56,10 +56,7 @@
 (defn pair-name-count [] (map (fn [line] [(form-name (first line)) (last line)]) (pair-frequencies)))
 (defn pair-counts [] (json-str (count-maps (pair-name-count) :pair :count)))
 
-(def excluded-people #{"harinee", "kief", "karl"})
-
-(defn people-who-can-pair [] (remove excluded-people (sort (people/people-names))))
-(defn pair-counts-seperate [] (json-str (let [all-names (people-who-can-pair) freq (pair-frequencies)]
+(defn pair-counts-seperate [] (json-str (let [all-names (people/people-who-can-pair) freq (pair-frequencies)]
   {:names all-names :pairing (pairing-matrix all-names freq)})))
 
 (defn code-change [commit] {:date (first commit) :message (second commit) :size (code-size (last commit))})
@@ -110,6 +107,7 @@
   "code-changes.html" "Code Changes"
   "go-dashboard.html" "Go Dashboard"
   "changes-by-functional-area.html" "Changes by area"
+  "who-should-i-pair.html" "Who Should I Pair ?"
 }))))
 
 (defn code-area-worked-by [name] (->>
@@ -122,7 +120,7 @@
     (merge-all-groups)
 ))
 
-(defn code-area-worked [] (json-str (map (fn [name] {:name name :changes (code-area-worked-by name)}) (people-who-can-pair))))
+(defn code-area-worked [] (json-str (map (fn [name] {:name name :changes (code-area-worked-by name)}) (people/people-who-can-pair))))
 
 (defroutes main-routes
   (GET "/" [] (home-links))
