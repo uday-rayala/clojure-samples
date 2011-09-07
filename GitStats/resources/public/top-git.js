@@ -62,32 +62,93 @@ function drawTagCloud(dataAsJson) {
 }
 
 function drawHeatMap(dataAsJson) {
-          var data = new google.visualization.DataTable();
+    var data = new google.visualization.DataTable();
 
-          data.addColumn('string', 'Name');
+    data.addColumn('string', 'Name');
 
-          $j.each(dataAsJson.names, function (index, name) {
-              data.addColumn('number', name);
-          });
+    $j.each(dataAsJson.names, function (index, name) {
+      data.addColumn('number', name);
+    });
 
 
-          data.addRows(dataAsJson.names.length);
-          $j.each(dataAsJson.names, function (outer, name) {
-            data.setCell(outer, 0, name);
-            $j.each(dataAsJson.pairing[outer], function (inner, count) {
-                data.setCell(outer, inner + 1, parseInt(count));
-            });
-          });
+    data.addRows(dataAsJson.names.length);
+    $j.each(dataAsJson.names, function (outer, name) {
+    data.setCell(outer, 0, name);
+    $j.each(dataAsJson.pairing[outer], function (inner, count) {
+        data.setCell(outer, inner + 1, parseInt(count));
+    });
+    });
 
-          heatmap = new org.systemsbiology.visualization.BioHeatMap(document.getElementById('heatmapContainer'));
-          heatmap.draw(data, {cellWidth:30, cellHeight:30,
-//          passThroughBlack: true, startColor: {r: 255,g: 0, b: 0,a: 1 }, endColor: {r: 0,g: 255, b: 0,a: 1 }
-            });
-      }
+    heatmap = new org.systemsbiology.visualization.BioHeatMap(document.getElementById('heatmapContainer'));
+    heatmap.draw(data, {cellWidth:30, cellHeight:30,
+    //          passThroughBlack: true, startColor: {r: 255,g: 0, b: 0,a: 1 }, endColor: {r: 0,g: 255, b: 0,a: 1 }
+    });
+}
+
+function drawStckedChart(dataAsJson) {
+    var names = $j.map(dataAsJson, function(d) { return d.name; });
+    var coreData = $j.map(dataAsJson, function(d) { return d.core})
+    var aimData = $j.map(dataAsJson, function(d) { return d.aim})
+    var data = [{ name: 'Aim', data: aimData }, { name: 'Core', data: coreData }];
+
+    var chart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'chart_div',
+         defaultSeriesType: 'column'
+      },
+      title: {
+         text: 'Top Git'
+      },
+      xAxis: {
+         categories: names
+      },
+      yAxis: {
+         min: 0,
+         title: {
+            text: 'Number of commits'
+         },
+         stackLabels: {
+            enabled: true,
+            style: {
+               fontWeight: 'bold',
+               color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+            }
+         }
+      },
+      legend: {
+         align: 'right',
+         x: -100,
+         verticalAlign: 'top',
+         y: 20,
+         floating: true,
+         backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
+         borderColor: '#CCC',
+         borderWidth: 1,
+         shadow: false
+      },
+      tooltip: {
+         formatter: function() {
+            return '<b>'+ this.x +'</b><br/>'+
+                this.series.name +': '+ this.y +'<br/>'+
+                'Total: '+ this.point.stackTotal;
+         }
+      },
+      plotOptions: {
+         column: {
+            stacking: 'normal',
+            dataLabels: {
+               enabled: true,
+               color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+         }
+      },
+       series: data
+    });
+}
 
 
 function getDataAndDrawChart() {
-    $j.get('/top-git.json', drawChart, "json");
+    $j.get('/top-git.json', drawStckedChart, "json");
     $j.get('/all-words.json', drawTagCloud, "json");
     $j.get('/pair-counts.json', drawPairChart, "json");
     $j.get('/pair-counts-seperate.json', drawHeatMap, "json");

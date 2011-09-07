@@ -44,7 +44,7 @@
 
 (defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
 
-(defn top-git-json [caspers aims] (json-str (sort-by :core (merge-count-maps caspers aims :name))))
+(defn top-git-json [caspers aims] (json-str (sort-by (fn [x] (+ (:core x) (:aim x))) #(compare %2 %1) (merge-count-maps caspers aims :name))))
 
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
 
