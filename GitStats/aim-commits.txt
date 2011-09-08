@@ -1,3 +1,10 @@
+Wed Sep 7 17:46:46 2011 +0100 | pat: using consistent directories on perf.
+Wed Sep 7 14:53:33 2011 +0100 | pat: giving role a better name.
+Wed Sep 7 14:51:45 2011 +0100 | pat: tidyied up capfile in anticipation of upcoming changes.
+Wed Sep 7 14:00:05 2011 +0100 | Chris/Mushtaq Cleaned up XPath classes
+Wed Sep 7 13:50:46 2011 +0100 | Chris/Mushtaq Fixing the OrXPath behaviour
+Tue Sep 6 16:25:02 2011 +0100 | marc/duncan #277 added start and end pages to issue in Journal
+Tue Sep 6 16:15:45 2011 +0100 | charles/alinoor #660 set front and backmatter meta IDs to be unique instead of using the same DOI as the book
 Mon Sep 5 17:52:33 2011 +0100 | duncan/marc #277 change id to startid and add endId in volume metadata.
 Mon Sep 5 16:06:59 2011 +0100 | mark/marc/duncan #277 make Issue Title and Date Optional in the meta
 Mon Sep 5 15:03:46 2011 +0100 | Charles/Joze #660 include journals in searchable collection on insertion

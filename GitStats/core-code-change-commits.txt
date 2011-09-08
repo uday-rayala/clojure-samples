@@ -1,3 +1,243 @@
+Wed Sep 7 19:01:02 2011 +0100
+uday/mark #77 -> changing the steps to take in resources directory so the phrases will be ingested on other environments
+ 8 files changed, 9 insertions(+), 19 deletions(-)
+
+Wed Sep 7 18:09:05 2011 +0100
+michael/mark #77 -> ability to get auto suggest from the front end - ml bit
+ 3 files changed, 56 insertions(+), 13 deletions(-)
+
+Wed Sep 7 18:09:05 2011 +0100
+michael/mark: xml version of the search terms #77
+ 3 files changed, 37680 insertions(+), 0 deletions(-)
+
+Wed Sep 7 18:09:04 2011 +0100
+michael/mark: #77 creating CasperPhrases database to store most popular searched terms
+ 1 files changed, 21 insertions(+), 0 deletions(-)
+
+Wed Sep 7 18:03:19 2011 +0100
+Alinoor #660 front matter page range with trimmed text
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Wed Sep 7 17:59:15 2011 +0100
+Alinoor/Charles #660 refactored out a matter.jade to for front and back matter
+ 10 files changed, 153 insertions(+), 46 deletions(-)
+
+Wed Sep 7 15:58:12 2011 +0100
+Mushtaq/Chris #653 Made a start by refactoring References class.
+ 2 files changed, 14 insertions(+), 0 deletions(-)
+
+Thu Sep 8 15:54:21 2011 +0100
+Andreas: Fixed build, UserTests now also checks for userId
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Thu Sep 8 15:45:21 2011 +0100
+Andreas: User is now created with User-ID.
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Wed Sep 7 15:13:07 2011 +0100
+Uday/Ken #689 Made operator a trait instead of string
+ 4 files changed, 29 insertions(+), 5 deletions(-)
+
+Wed Sep 7 14:54:07 2011 +0100
+andreas/mark: adding a hidden field with the user id so harinee can find it with some jquery skillz - .val()
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Wed Sep 7 14:52:05 2011 +0100
+ken/uday: should make system tests faster
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Wed Sep 7 14:48:21 2011 +0100
+Karl: corrected some classes and ids
+ 4 files changed, 13 insertions(+), 24 deletions(-)
+
+Wed Sep 7 14:36:22 2011 +0100
+ken/uday #689 implemented ML search with other operators (greater-than/less-than)
+ 4 files changed, 11 insertions(+), 2 deletions(-)
+
+Wed Sep 7 14:18:15 2011 +0100
+Chris/Mushtaq Copied XPath improvements from Aim to Core
+ 2 files changed, 19 insertions(+), 23 deletions(-)
+
+Wed Sep 7 14:15:19 2011 +0100
+Liz/Jose #windowfixing unit test for ViewHelper class (encoding and language aware render).
+ 1 files changed, 20 insertions(+), 2 deletions(-)
+
+Wed Sep 7 14:15:10 2011 +0100
+Uday #689 Added failing/ignored test to retrieve documents within a date range
+ 2 files changed, 31 insertions(+), 2 deletions(-)
+
+Wed Sep 7 14:10:01 2011 +0100
+Alinoor/Charles #660 BookDoi wrapper to generate book matter DOI's
+ 5 files changed, 37 insertions(+), 9 deletions(-)
+
+Wed Sep 7 12:28:30 2011 +0100
+Uday/Ken/Rob #689 Added facets for returning the latest and earliest publication dates
+ 2 files changed, 76 insertions(+), 0 deletions(-)
+
+Wed Sep 7 12:02:32 2011 +0100
+Alinoor/Charles #660 correctly setting up test data for back and front matter
+ 6 files changed, 32 insertions(+), 8 deletions(-)
+
+Thu Sep 8 10:59:44 2011 +0100
+pat/andreas: setting root logger to WARN and springer logger on QA to DEBUG.
+ 2 files changed, 4 insertions(+), 1 deletions(-)
+
+Wed Sep 7 10:49:11 2011 +0100
+charles/alinoor #660 pdf link on front matter
+ 11 files changed, 44 insertions(+), 18 deletions(-)
+
+Wed Sep 7 10:47:49 2011 +0100
+charles/alinoor #660 ignore failing test
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Wed Sep 7 10:35:52 2011 +0100
+Chris/Mushtaq #690 Corrected the German translation of 'locked'
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+Wed Sep 7 10:39:08 2011 +0100
+ken/uday #103 changed german translation for "search within this journal"
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Wed Sep 7 10:32:45 2011 +0100
+Ken/Uday #103 german translation for 'Search within this book'
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+Wed Sep 7 10:23:18 2011 +0100
+Karl: corrected the css for the disciplines nav #139, minor ui improvements for the global search
+ 2 files changed, 6 insertions(+), 17 deletions(-)
+
+Wed Sep 7 09:13:32 2011 +0100
+Marc come corrections in german translation.
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Tue Sep 6 19:07:58 2011 +0100
+Rob #677 made date ranges optional in customer materials xml
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+Tue Sep 6 19:02:11 2011 +0100
+pat/uday: fixed starting of identity hub on perf.
+ 1 files changed, 14 insertions(+), 20 deletions(-)
+
+Tue Sep 6 19:02:11 2011 +0100
+pat/uday: checking health on all core servers.
+ 1 files changed, 8 insertions(+), 7 deletions(-)
+
+Tue Sep 6 19:02:50 2011 +0100
+ken/mark #103 added functional test for search within book
+ 5 files changed, 36 insertions(+), 2 deletions(-)
+
+Tue Sep 6 18:44:16 2011 +0100
+Rob/Alex #677 modified date range for dummy customers (oldest content is older than 1901)
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+Tue Sep 6 18:27:09 2011 +0100
+marc corrections within german property file.
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+Tue Sep 6 18:23:35 2011 +0100
+ken/mark #103 searchs within books
+ 6 files changed, 9 insertions(+), 4 deletions(-)
+
+Tue Sep 6 18:16:09 2011 +0100
+Alex/Rob #691 split css/js for disciplines out from expanders on article page
+ 9 files changed, 129 insertions(+), 15 deletions(-)
+
+Tue Sep 6 18:12:38 2011 +0100
+pat/uday: removing accidentally checked in line.
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+Tue Sep 6 18:11:10 2011 +0100
+pat/uday: using capistrano roles and making sure that marklogic.evolve only gets executed once on perf.
+ 1 files changed, 18 insertions(+), 33 deletions(-)
+
+Tue Sep 6 17:55:41 2011 +0100
+ken/mark #103 added search within journal functionality to issues and "back-issues" pages
+ 4 files changed, 11 insertions(+), 10 deletions(-)
+
+Wed Sep 7 17:50:23 2011 +0100
+Andreas: Changed DEV back to not use the real OpenAM anymore
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 6 17:39:02 2011 +0100
+Karl: ui refinement on the global search field
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+Tue Sep 6 17:37:29 2011 +0100
+ken/mark #103 clears the search within text box when it's in focused
+ 7 files changed, 60 insertions(+), 1 deletions(-)
+
+Tue Sep 6 17:30:24 2011 +0100
+duncan/marc #693 change search field.
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+Tue Sep 6 17:12:42 2011 +0100
+duncan/marc #277 remove previous title link
+ 4 files changed, 0 insertions(+), 11 deletions(-)
+
+Tue Sep 6 17:05:46 2011 +0100
+Chris/Mushtaq: #646 Fixed translation issues
+ 4 files changed, 5 insertions(+), 3 deletions(-)
+
+Tue Sep 6 17:05:46 2011 +0100
+Chris/Mushtaq: #646 Removed volume and date information as suggested by Brian
+ 2 files changed, 6 insertions(+), 18 deletions(-)
+
+Tue Sep 6 16:58:49 2011 +0100
+pat/uday: pulling out user variable.
+ 1 files changed, 1 insertions(+), 6 deletions(-)
+
+Tue Sep 6 16:48:06 2011 +0100
+Ken/Mark #103 allows searching within journal
+ 5 files changed, 32 insertions(+), 9 deletions(-)
+
+Tue Sep 6 16:40:51 2011 +0100
+Karl: final styles for #693 (including new search button)
+ 4 files changed, 57 insertions(+), 73 deletions(-)
+
+Tue Sep 6 16:39:31 2011 +0100
+pat/uday: added build-doctor.
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Tue Sep 6 16:39:31 2011 +0100
+pat/uday: creating /var/casper[/core] directories.
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+
+Tue Sep 6 16:39:30 2011 +0100
+pat/uday: temporarily adding a bit of fu to create directory needed by apply steps.
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+Tue Sep 6 16:39:30 2011 +0100
+pat/uday: stopping if a step can't be applied.
+ 1 files changed, 16 insertions(+), 9 deletions(-)
+
+Tue Sep 6 16:39:30 2011 +0100
+pat/uday: simplifying classpath.
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 6 16:39:30 2011 +0100
+pat/uday: added code to only apply steps if they've never been applied before.
+ 1 files changed, 27 insertions(+), 5 deletions(-)
+
+Tue Sep 6 16:39:30 2011 +0100
+pat/uday: refactored apply-steps in anticipation of adding transaction logging.
+ 1 files changed, 4 insertions(+), 15 deletions(-)
+
+Tue Sep 6 16:31:35 2011 +0100
+marc/duncan #277 start and end pages taken from the Issue XML and correct issue number
+ 6 files changed, 66 insertions(+), 39 deletions(-)
+
+Tue Sep 6 16:14:34 2011 +0100
+Liz/Jose #150 PageRange builder with string input parameters.
+ 3 files changed, 13 insertions(+), 11 deletions(-)
+
+Tue Sep 6 16:14:34 2011 +0100
+Liz/Jose: #158 Tidying up
+ 1 files changed, 0 insertions(+), 4 deletions(-)
+
+Tue Sep 6 16:14:34 2011 +0100
+Jose/Liz : #158 Adding some unit tests for ViewHelper. Also preventing blowups on the issue page if the page range of the article is non-numeric
+ 10 files changed, 87 insertions(+), 19 deletions(-)
+
 Tue Sep 6 16:05:07 2011 +0100
 Chris/Mushtaq #690 Added German translation
  9 files changed, 32 insertions(+), 19 deletions(-)

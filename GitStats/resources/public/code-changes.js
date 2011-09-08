@@ -29,6 +29,9 @@ var sizes = $.map(data, function (d) {
 var minValue = Math.min.apply( Math, sizes);
 var maxValue = Math.max.apply( Math, sizes);
 
+var realMinValue = minValue;
+var realMaxValue = maxValue;
+
 var zoom = 100;
 
 var dateFormat = pv.Format.date("%d/%B");
@@ -45,12 +48,25 @@ function createSizeSlider(minV, maxV) {
         slide: function( event, ui ) {
             minValue = ui.values[ 0 ];
             maxValue = ui.values[ 1 ];
-            $( "#sizes" ).text(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            updateValues();
         },
+
         stop: function( event, ui ) {
             vis.render();
         }
     });
+}
+
+function updateValues () {
+    $( "#sizes" ).text(minValue + " - " + maxValue);
+}
+
+function updateSliders() {
+    $( "#slider-range").slider("values", 0, minValue);
+    $( "#slider-range").slider("values", 1, maxValue);
+    $( "#slider-range").slider("refresh");
+    updateValues();
+    vis.render();
 }
 
 $(document).ready(function() {
@@ -73,5 +89,31 @@ $(document).ready(function() {
         stop: function( event, ui ) {
             vis.render();
         }
+    });
+
+    $('#very-small-commits').click(function() {
+        minValue = 0;
+        maxValue = 50;
+        updateSliders();
+    });
+    $('#small-commits').click(function() {
+        minValue = 50;
+        maxValue = 200;
+        updateSliders();
+    });
+    $('#medium-commits').click(function() {
+        minValue = 200;
+        maxValue = 1000;
+        updateSliders();
+    });
+    $('#big-commits').click(function() {
+        minValue = 1000;
+        maxValue = 10000;
+        updateSliders();
+    });
+    $('#very-big-commits').click(function() {
+        minValue = 10000;
+        maxValue = realMaxValue;
+        updateSliders();
     });
 });
