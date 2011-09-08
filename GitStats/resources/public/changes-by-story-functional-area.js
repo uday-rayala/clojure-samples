@@ -13,12 +13,38 @@ function byStory() {
    $.each(stories, function(index, entries) {
      var value = { area: index, commiters: [] };
      var commiters = _(entries).chain().map(function(entry) { return entry.commiters; }).flatten().uniq().value();
+     var commits = _(entries).chain().map(function(entry) { return entry.commits; }).value();
+
+	 var commitersAndSize = {};
+	 $.each(commiters, function(index, commiter) {
+	   commitersAndSize[commiter] = _(commits).chain().flatten().filter(function(commit) { return _(commit.people).include(commiter); }).reduce(function(acc, commit) { return acc + commit.size;  }, 0).value();
+	 });
+
+
      $.each(commiters, function(index, commiter) {
-	   value.commiters.push([commiter, 100 / commiters.length]);
+	   value.commiters.push([commiter, commitersAndSize[commiter]]);
      })	;
      values.push(value);
    });
    return values;
+
+	 //    var values = [];
+	 //    $.each(stories, function(index, story) {
+	 //      var value = { story:story.story, area: story.area, commiters: [] };
+	 // 	
+	 // var commiters = {};
+	 // $.each(story.commiters, function(index, commiter) {
+	 //   commiters[commiter] = _(story.commits).chain().filter(function(commit) { return _(commit.people).include(commiter); }).reduce(function(acc, commit) { return acc + commit.size;  }, 0).value();
+	 // });
+	 // 
+	 //      var numberOfCommiters = story.commiters.length;
+	 //      $.each(story.commiters, function(index, commiter) {
+	 //   value.commiters.push([commiter, commiters[commiter]]);
+	 //      })	;
+	 //      values.push(value);
+	 //    });
+	 //    return values;
+
 }
 
 
