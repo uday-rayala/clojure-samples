@@ -38,14 +38,6 @@
        (mapcat #(:people %))
        set))
 
-(defn stories-and-commiters []
-  (->> stories
-       (map (fn [story] {:story (:story story) :area (:area story) :commiters (commiters-for-story (str "#" (:story story)))}))))
-
-(defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
-(defn functional-areas-and-commiters-json []
-  (json-str (group-by (fn [story] (:area story) ) (stories-and-commiters))))
-
 (defn top-git-json [caspers aims] (json-str (sort-by (fn [x] (+ (:core x) (:aim x))) #(compare %2 %1) (merge-count-maps caspers aims :name))))
 
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
@@ -61,10 +53,28 @@
 (defn pair-counts-seperate [] (json-str (let [all-names (people/people-who-can-pair) freq (pair-frequencies)]
   {:names all-names :pairing (pairing-matrix all-names freq)})))
 
-(defn code-change [commit] {:date (first commit) :message (second commit) :size (code-size (last commit))})
+(defn code-change [commit] {:date (first commit) :message (second commit) :size (code-size (last commit)) :story (people/get-story-number (second commit))})
 
 (defn sort-commits [objects] (sort-by (fn [x] (.parse (new java.text.SimpleDateFormat "EEE MMM d HH:mm:ss yyyy Z") (:date x))) objects))
 (defn top-big-commits [objects] (take 100 (sort-by :size #(compare %2 %1) objects)))
+
+(defn commits-with-size-of-change [story]
+  (->> (core-code-change-lines)
+       (group-commits)
+       (map code-change)
+       (filter (fn [codechange] (= "#100" (:story codechange) )))
+))
+
+(defn stories-and-commiters []
+  (->> stories
+       (map (fn [story] {:story (:story story)
+                        :area (:area story)
+                        :commiters (commiters-for-story (str "#" (:story story)))
+                        :commits (commits-with-size-of-change story)}))))
+
+(defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
+(defn functional-areas-and-commiters-json []
+    (json-str (group-by (fn [story] (:area story)) (stories-and-commiters))))
 
 (defn code-changes-plain [] (->>
   (core-code-change-lines)
