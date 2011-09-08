@@ -62,7 +62,7 @@
   (->> (core-code-change-lines)
        (group-commits)
        (map code-change)
-       (filter (fn [codechange] (= "#100" (:story codechange) )))
+       (filter (fn [codechange] (= (str "#" (:story story)) (:story codechange) )))
 ))
 
 (defn stories-and-commiters []
@@ -70,7 +70,7 @@
        (map (fn [story] {:story (:story story)
                         :area (:area story)
                         :commiters (commiters-for-story (str "#" (:story story)))
-                        :commits (commits-with-size-of-change story)}))))
+                        :commits (map (fn [commit] { :size (:size commit) :people (people/commiters (:message commit)) }) (commits-with-size-of-change story))}))))
 
 (defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
 (defn functional-areas-and-commiters-json []
