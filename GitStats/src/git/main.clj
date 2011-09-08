@@ -98,6 +98,8 @@
   "go-dashboard.html" "Go Dashboard"
   "changes-by-functional-area.html" "Changes by area"
   "who-should-i-pair.html" "Who Should I Pair ?"
+  "changes-by-story.html" "Who worked on which story?"
+  "changes-by-story-functional-area.html" "Who worked in which app functional area?"
 }))))
 
 (defn code-area-worked-by [name] (->>
