@@ -1,3 +1,87 @@
+Marc/Mushtaq: #661 Changed the BookChapterBuilder by adding part
+1	1	src/test/functional/scala/com/springer/test/functional/ChapterPageTests.scala
+12	5	src/test/shared/scala/com/springer/test/content/BookChapterBuilder.scala
+
+Marc/Jose #661 Add first implementation of xqy to get all parts of a book.
+25	0	src/main/xquery/modules/content-type/book.xqy
+
+Uday/Ken #689 Made available year range show correct years
+2	1	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+2	0	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+8	0	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+8	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Chris #653 #december Crossref links are now being inserted at the end of references when available
+6	2	src/main/scala/com/springer/content/Widget.scala
+5	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/references.jade
+7	3	src/test/functional/scala/com/springer/test/functional/ArticlePageTests.scala
+12	3	src/test/shared/scala/com/springer/test/pages/sections/ReferencesSection.scala
+4	0	src/test/shared/scala/com/springer/test/steps/ArticlePageSteps.scala
+6	4	src/test/unit/scala/com/springer/content/ReferencesTests.scala
+
+Chris #653 #december References now extracts DOI occurences
+2	2	src/main/scala/com/springer/content/Widget.scala
+6	3	src/test/unit/scala/com/springer/content/ReferencesTests.scala
+
+Alinoor/Jose #660 German translations and code clean up.
+4	4	src/main/resources/lang/deutsch.properties
+1	1	src/main/scala/com/springer/content/Book.scala
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+13	5	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+12	2	src/test/unit/scala/com/springer/content/BookTests.scala
+
+Uday/Ken #689 Made the template for published date facet
+20	3	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+
+Uday/Ken #689 Not showing published date facet if no search results
+17	3	src/main/scala/com/springer/content/search/SearchData.scala
+3	2	src/main/scala/com/springer/content/search/SearchResults.scala
+3	2	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+12	1	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+3	3	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+4	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+8	2	src/test/unit/scala/com/springer/content/search/SearchDataTest.scala
+
+Karl: styling for the date facet (#688, #689) + default styling for input fields
+11	1	src/main/webapp/static/css/basic.css
+0	1	src/main/webapp/static/css/document.css
+141	21	src/main/webapp/static/css/results.css
+-	-	src/main/webapp/static/images/search_button_small.png
+
+Alinoor/Jose #660 back matter and i18n
+4	0	src/main/resources/lang/deutsch.properties
+4	0	src/main/resources/lang/english.properties
+1	0	src/main/scala/com/springer/content/Book.scala
+6	4	src/main/webapp/WEB-INF/scalate/templates/abstract-page/anti-matter.jade
+3	2	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+9	7	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+2	4	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+10	2	src/test/functional/scala/com/springer/test/steps/BookPageSteps.scala
+
+Chris #653 #december Refactored references to now return a structure of ref stuff rather than just A++
+4	6	src/main/scala/com/springer/content/Widget.scala
+1	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/references.jade
+16	0	src/test/shared/scala/com/springer/test/content/CitationBuilder.scala
+0	8	src/test/unit/scala/com/springer/content/ContentTests.scala
+24	0	src/test/unit/scala/com/springer/content/ReferencesTests.scala
+
+ken/uday #103 displays "published in" years-range on search page
+4	0	src/main/scala/com/springer/content/search/SearchData.scala
+4	0	src/main/scala/com/springer/content/search/SearchResults.scala
+6	0	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+12	0	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+17	13	src/test/shared/scala/com/springer/test/content/SearchResultsBuilder.scala
+22	0	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+9	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+23	14	src/test/unit/scala/com/springer/content/search/SearchDataTest.scala
+6	14	src/test/unit/scala/com/springer/content/search/SearchResultsTest.scala
+6	6	src/test/unit/scala/com/springer/content/search/TeaserTests.scala
+
+Alinoor/Jose #660 back and front matter page range
+8	7	src/main/scala/com/springer/content/Book.scala
+0	7	src/main/scala/com/springer/content/xpaths/XPaths.scala
+5	3	src/test/unit/scala/com/springer/content/MatterTests.scala
+
 uday/mark #77 -> changing the steps to take in resources directory so the phrases will be ingested on other environments
 1	0	.gitignore
 2	1	ops/deploy/marklogic/apply-steps.rb
