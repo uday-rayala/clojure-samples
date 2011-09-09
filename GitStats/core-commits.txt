@@ -1,3 +1,42 @@
+Fri Sep 9 18:35:26 2011 +0100 | Mushtaq/Marc #661 big refactoring to allow multiple backmatters and frontmatters.
+Fri Sep 9 18:35:26 2011 +0100 | Marc/Mushtaq #661 Created relationship between book-mattters and book/part/subpart etc
+Fri Sep 9 18:03:40 2011 +0100 | Mike/Chris/Harinee: Refactored to run system tests with temporary solution. Needs further refactoring.
+Fri Sep 9 18:03:40 2011 +0100 | Harinee: Updating system test and moving AboutSectionSteps to shared
+Fri Sep 9 18:03:40 2011 +0100 | Harinee/Jeremy: Adding new system test
+Fri Sep 9 17:24:32 2011 +0100 | Uday/Mark #689 Refactored selected facets to have either a single value or a range
+Fri Sep 9 16:44:02 2011 +0100 | Rob/Alex #80 fixed wildcard searches
+Fri Sep 9 16:07:45 2011 +0100 | Alex/Rob #devops - after the refactoring, a lot of the initial scripts worked on the premise that you'd specify the base db name.  As all envs are the same we've set the main db to CasperDocuments
+Fri Sep 9 15:50:25 2011 +0100 | Chris #183 Added corporate image to header
+Fri Sep 9 12:48:44 2011 +0100 | Uday/Mark #689 Using the query parameters to display the constraints instead of ML constraints
+Fri Sep 9 12:44:11 2011 +0100 | Chris/ImaginaryFriend #183 Top header section now has corporate logos appearing for PharmaCars and ProteinCorp
+Fri Sep 9 13:36:06 2011 +0200 | Karl: changed css for the header #183
+Fri Sep 9 12:10:39 2011 +0100 | Marc/Mushtaq #661 Updated core to grab the book matters from the new structure
+Fri Sep 9 11:59:05 2011 +0100 | uday/mark: #689 making some methods private if they aren't used outside the class. Also removing unnecessary {}
+Fri Sep 9 11:59:44 2011 +0100 | Tom/Liz - adding hostname for QA ML since DNS is currently wrong
+Fri Sep 9 11:38:59 2011 +0100 | Alinoor/Jose #111 Language facet search.
+Fri Sep 9 11:04:06 2011 +0100 | Alinoor/Jose #111 Localization of language facets.
+Fri Sep 9 10:52:31 2011 +0100 | uday/mark #689 renaming a couple of files
+Fri Sep 9 10:52:31 2011 +0100 | uday/mark #689 adding some more acceptance criteria we need to get passing
+Fri Sep 9 10:38:28 2011 +0100 | Alinoor/Jose #111 Language facet.
+Fri Sep 9 10:38:27 2011 +0100 | Jose #111 Functional test for language facet.
+Fri Sep 9 10:26:51 2011 +0100 | Alex/Rob/Uday #devops - Fixed a problem where the indexes were being created on Documents rather than CasperDocuments - this has now been amended in the script
+Thu Sep 8 17:57:30 2011 +0100 | pat/liz/tom: using proper environment names.
+Thu Sep 8 17:12:17 2011 +0100 | Uday/Ken #689 Made publish in year input boxes show correct results.
+Thu Sep 8 16:52:53 2011 +0100 | Alinoor/Jose #660 View front and backmatter links removed.
+Thu Sep 8 16:53:35 2011 +0100 | Uday/Ken #689 Filtering search results by published year
+Thu Sep 8 16:49:09 2011 +0100 | chris/mark #77 -> pulling out the individual functions into their own object
+Thu Sep 8 16:38:08 2011 +0100 | chris/mark #77 - pulling the javascript into its own file
+Thu Sep 8 16:26:55 2011 +0100 | Mark/Chris #77 Fixed space bug in auto-suggest
+Thu Sep 8 16:09:09 2011 +0100 | Alinoor/Jose - access check for front and back matter
+Thu Sep 8 16:09:09 2011 +0100 | Alinoor/Jose - removing ignored tests
+Thu Sep 8 16:06:34 2011 +0100 | chris/mark: load the xml file from the dev repo (temporary solution until the duck (and his pair) sorts out cap deployment)
+Thu Sep 8 15:55:36 2011 +0100 | Chris/Mark #77 Fixed CSS like a boss
+Thu Sep 8 15:48:44 2011 +0100 | Mark/Chris #77 Implemented auto-suggest keyboard navigation-ness.
+Thu Sep 8 15:48:44 2011 +0100 | michael/mark #77 -> adding in jquery ui so we can display the auto suggest results
+Thu Sep 8 15:06:09 2011 +0100 | Marc/Mushtaq #661 Implemeted TOC Parts within a book object
+Thu Sep 8 15:06:08 2011 +0100 | Marc/Mushtaq: #661 Added integration test for enhanced book xml
+Thu Sep 8 15:16:46 2011 +0100 | Karl: refactored error messages on input fields because of the date facet (#695), ui bugfix in IE (error message of the pagination was hidden)
+Thu Sep 8 14:25:41 2011 +0100 | Uday #689 Added failing/ignored test for published date range facet and refactored the search facets
 Thu Sep 8 12:16:27 2011 +0100 | Marc/Mushtaq: #661 Changed the BookChapterBuilder by adding part
 Thu Sep 8 12:16:27 2011 +0100 | Marc/Jose #661 Add first implementation of xqy to get all parts of a book.
 Thu Sep 8 12:17:26 2011 +0100 | Uday/Ken #689 Made available year range show correct years

@@ -1,3 +1,18 @@
+Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 language codes validation for books, chapters and articles
+Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 Springer language codes validation rule.
+Fri Sep 9 16:15:00 2011 +0100 | charles/duncan #277 integration tests for article to journal vols, issues and dates
+Fri Sep 9 16:03:16 2011 +0100 | charles/duncan #277 integration tests for article to journal vols, issues and dates
+Fri Sep 9 12:00:43 2011 +0100 | Alinoor/Jose #111 Article, Chapter and Book language validation rules.
+Fri Sep 9 10:50:41 2011 +0100 | Marc/Mushtaq #661 Correct content type for book matters
+Fri Sep 9 09:15:42 2011 +0100 | Alinoor/Jose #111 language facet
+Thu Sep 8 22:05:06 2011 +0100 | pat: fixing roles
+Thu Sep 8 22:03:34 2011 +0100 | pat: adding ml role.
+Thu Sep 8 21:54:08 2011 +0100 | pat: using 3 ingestors.
+Thu Sep 8 18:46:52 2011 +0100 | Marc/Mushtaq: #661 Cleaned up the code in importable document
+Thu Sep 8 18:23:44 2011 +0100 | Marc/Mushtaq: #661 Updated aim to ingest all types of BFM and BBM
+Thu Sep 8 17:47:52 2011 +0100 | Tom/Liz/Pat - using shorter host name.
+Thu Sep 8 17:25:39 2011 +0100 | Tom/Liz/Pat - updating to use the dns entry which resolves to all three ML servers.
+Thu Sep 8 14:49:19 2011 +0100 | charles/duncan #277 ensure metadata from the latest article overwrites previous journal metadata
 Thu Sep 8 12:31:49 2011 +0100 | Alinoor/Jose #660 remove appending of matter type description from matter PDFs only BFM or BBM is appended
 Thu Sep 8 12:15:00 2011 +0100 | charles/duncan #277 journal.xqy now scans volumes and issues fully
 Wed Sep 7 17:46:46 2011 +0100 | pat: using consistent directories on perf.

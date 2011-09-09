@@ -12,7 +12,7 @@ function byStory() {
    var values = [];
    $.each(stories, function(index, story) {
      var value = { story:story.story, area: story.area, commiters: [] };
-	
+
 	 var commiters = {};
 	 $.each(story.commiters, function(index, commiter) {
 	   commiters[commiter] = _(story.commits).chain().filter(function(commit) { return _(commit.people).include(commiter); }).reduce(function(acc, commit) { return acc + commit.size;  }, 0).value();

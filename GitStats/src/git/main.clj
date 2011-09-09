@@ -18,6 +18,7 @@
                              (filter #(= 2 (count %)))))
 (defn core-lines [] (read-lines "core-commits.txt"))
 (defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
+(defn aim-code-change-lines [] (read-lines "aim-code-change-commits.txt"))
 (defn aim-lines [] (read-lines "aim-commits.txt"))
 (defn failed-build-numbers [] (read-lines "failed-builds.txt"))
 (defn core-message-and-changes [] (read-lines "core-message-and-changes.txt"))
@@ -58,19 +59,32 @@
 (defn sort-commits [objects] (sort-by (fn [x] (.parse (new java.text.SimpleDateFormat "EEE MMM d HH:mm:ss yyyy Z") (:date x))) objects))
 (defn top-big-commits [objects] (take 100 (sort-by :size #(compare %2 %1) objects)))
 
-(defn commits-with-size-of-change [story]
+(defn core-commits-with-size-of-change [story]
   (->> (core-code-change-lines)
        (group-commits)
        (map code-change)
        (filter (fn [codechange] (= (str "#" (:story story)) (:story codechange) )))
 ))
 
+(defn aim-commits-with-size-of-change [story]
+  (->> (aim-code-change-lines)
+       (group-commits)
+       (map code-change)
+       (filter (fn [codechange] (= (str "#" (:story story)) (:story codechange) )))
+))
+
+(defn commits-with-size-of-change [story]
+  (concat (core-commits-with-size-of-change story) (aim-commits-with-size-of-change story)))
+
+(defn commit-size-map [commit] { :size (:size commit) :people (people/commiters (:message commit)) })
+
 (defn stories-and-commiters []
   (->> stories
-       (map (fn [story] {:story (:story story)
+       (map (fn [story] (let [commit-size-people-maps (map commit-size-map (commits-with-size-of-change story))] {:story (:story story)
                         :area (:area story)
-                        :commiters (commiters-for-story (str "#" (:story story)))
-                        :commits (map (fn [commit] { :size (:size commit) :people (people/commiters (:message commit)) }) (commits-with-size-of-change story))}))))
+                        :commiters (set (mapcat :people commit-size-people-maps))
+                        :commits commit-size-people-maps})))))
+
 
 (defn stories-and-commiters-json [] (json-str (stories-and-commiters)))
 (defn functional-areas-and-commiters-json []

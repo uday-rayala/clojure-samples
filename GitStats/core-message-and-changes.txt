@@ -1,3 +1,255 @@
+Mushtaq/Marc #661 big refactoring to allow multiple backmatters and frontmatters.
+15	15	src/main/scala/com/springer/content/Book.scala
+1	1	src/main/scala/com/springer/content/ContentActions.scala
+4	4	src/main/webapp/WEB-INF/scalate/templates/abstract-page/book.jade
+49	0	src/main/xquery/modules/content-type/book.xqy
+4	1	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+9	7	src/test/unit/scala/com/springer/content/BookTests.scala
+2	2	src/test/unit/scala/com/springer/content/MatterTests.scala
+
+Marc/Mushtaq #661 Created relationship between book-mattters and book/part/subpart etc
+6	0	src/main/xquery/modules/content-type/book.xqy
+
+Mike/Chris/Harinee: Refactored to run system tests with temporary solution. Needs further refactoring.
+5	1	src/test/shared/scala/com/springer/test/steps/ArticlePageSteps.scala
+7	0	src/test/shared/scala/com/springer/test/steps/JournalPageSteps.scala
+18	15	src/test/system/scala/com/springer/test/system/SystemTests.scala
+
+Harinee: Updating system test and moving AboutSectionSteps to shared
+0	0	src/test/{functional => shared}/scala/com/springer/test/steps/AboutSectionSteps.scala
+2	2	src/test/system/scala/com/springer/test/system/SystemTests.scala
+
+Harinee/Jeremy: Adding new system test
+4	0	src/test/{functional => shared}/scala/com/springer/test/pages/JournalPage.scala
+6	0	src/test/{functional => shared}/scala/com/springer/test/steps/JournalPageSteps.scala
+7	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+12	10	src/test/system/scala/com/springer/test/system/SystemTests.scala
+
+Uday/Mark #689 Refactored selected facets to have either a single value or a range
+22	12	src/main/scala/com/springer/app/BrowserUrlParameters.scala
+2	2	src/main/scala/com/springer/app/Controllers.scala
+1	5	src/main/scala/com/springer/content/search/SearchData.scala
+19	3	src/main/scala/com/springer/content/search/SelectedFacet.scala
+4	2	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+1	1	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+2	2	src/test/integration/scala/com/springer/content/ContentRepositoryDatePublishedFacetSearchTests.scala
+3	3	src/test/integration/scala/com/springer/content/ContentRepositoryHighlightingSnippetsTests.scala
+3	3	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+0	1	src/test/shared/scala/com/springer/test/steps/GenericPageSteps.scala
+9	10	src/test/unit/scala/com/springer/app/BrowserUrlParametersTests.scala
+4	4	src/test/unit/scala/com/springer/content/search/QueryTest.scala
+4	4	src/test/unit/scala/com/springer/content/search/SelectedFacetTest.scala
+
+Rob/Alex #80 fixed wildcard searches
+14	0	ops/deploy/marklogic/steps/14_change_word_query_settings.xqy
+32	0	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+
+Alex/Rob #devops - after the refactoring, a lot of the initial scripts worked on the premise that you'd specify the base db name.  As all envs are the same we've set the main db to CasperDocuments
+2	2	ops/deploy/marklogic/steps/02_base_level_database_settings.xqy
+1	1	ops/deploy/marklogic/steps/04_add_phrase_throughs.xqy
+1	1	ops/deploy/marklogic/steps/05_add_phrase_arounds.xqy
+1	1	ops/deploy/marklogic/steps/06_set_database_word_lexicons.xqy
+
+Chris #183 Added corporate image to header
+1	0	src/main/webapp/WEB-INF/scalate/templates/common/header.jade
+
+Uday/Mark #689 Using the query parameters to display the constraints instead of ML constraints
+3	1	src/main/scala/com/springer/app/BrowserUrlParameters.scala
+1	1	src/main/scala/com/springer/app/QueryStringHelper.scala
+3	19	src/main/scala/com/springer/content/search/SelectedFacet.scala
+3	6	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+1	1	src/test/functional/scala/com/springer/test/functional/SearchResultsPageTests.scala
+14	3	src/test/unit/scala/com/springer/app/BrowserUrlParametersTests.scala
+5	5	src/test/unit/scala/com/springer/content/search/QueryTest.scala
+6	10	src/test/unit/scala/com/springer/content/search/SelectedFacetTest.scala
+
+Chris/ImaginaryFriend #183 Top header section now has corporate logos appearing for PharmaCars and ProteinCorp
+17	1	src/main/scala/com/springer/content/User.scala
+3	0	src/main/webapp/WEB-INF/scalate/templates/common/header.jade
+3	0	src/main/webapp/static/css/structure.css
+-	-	src/main/webapp/static/images/dummy/logo_pharmacars.png
+-	-	src/main/webapp/static/images/dummy/logo_proteincorp.png
+25	0	src/test/functional/scala/com/springer/test/functional/HeaderTests.scala
+4	0	src/test/functional/scala/com/springer/test/functional/authorisation/AuthorisationTests.scala
+19	0	src/test/functional/scala/com/springer/test/steps/HeaderSteps.scala
+
+Karl: changed css for the header #183
+8	1	src/main/webapp/static/css/results.css
+33	21	src/main/webapp/static/css/structure.css
+-	-	src/main/webapp/static/images/corporate_edition.png
+-	-	src/main/webapp/static/images/header_bg.png
+
+Marc/Mushtaq #661 Updated core to grab the book matters from the new structure
+2	2	src/main/scala/com/springer/content/Book.scala
+2	2	src/main/scala/com/springer/content/xpaths/XPaths.scala
+14	19	src/main/xquery/modules/content-type/book.xqy
+1	30	src/test/integration/scala/com/springer/content/ContentRepositoryBookTests.scala
+5	3	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+12	6	src/test/unit/scala/com/springer/content/MatterTests.scala
+
+uday/mark: #689 making some methods private if they aren't used outside the class. Also removing unnecessary {}
+24	78	src/main/scala/com/springer/app/BrowserUrlParameters.scala
+2	2	src/main/scala/com/springer/content/search/SearchData.scala
+0	15	src/test/unit/scala/com/springer/app/BrowserUrlParametersTests.scala
+
+Tom/Liz - adding hostname for QA ML since DNS is currently wrong
+1	1	ops/deploy/capfile
+
+Alinoor/Jose #111 Language facet search.
+14	9	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+4	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Alinoor/Jose #111 Localization of language facets.
+45	0	src/main/resources/lang/deutsch.properties
+46	0	src/main/resources/lang/english.properties
+3	3	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+4	4	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+uday/mark #689 renaming a couple of files
+13	17	src/main/scala/com/springer/app/{QueryParameters.scala => BrowserUrlParameters.scala}
+1	1	src/main/scala/com/springer/app/Controllers.scala
+1	1	src/main/scala/com/springer/app/QueryStringHelper.scala
+1	1	src/main/scala/com/springer/content/search/Query.scala
+2	2	src/main/scala/com/springer/content/search/SearchData.scala
+1	1	src/main/scala/com/springer/content/search/{FacetQueryParameter.scala => SelectedFacet.scala}
+3	3	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+2	2	src/test/integration/scala/com/springer/content/ContentRepositoryDatePublishedFacetSearchTests.scala
+3	3	src/test/integration/scala/com/springer/content/ContentRepositoryHighlightingSnippetsTests.scala
+3	3	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+18	18	src/test/unit/scala/com/springer/app/{QueryParameterTests.scala => BrowserUrlParametersTests.scala}
+4	4	src/test/unit/scala/com/springer/content/search/QueryTest.scala
+6	6	src/test/unit/scala/com/springer/content/search/SearchDataTest.scala
+4	4	src/test/unit/scala/com/springer/content/search/{FacetQueryParameterTest.scala => SelectedFacetTest.scala}
+
+uday/mark #689 adding some more acceptance criteria we need to get passing
+14	2	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+1	1	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Alinoor/Jose #111 Language facet.
+1	0	src/main/resources/lang/deutsch.properties
+1	0	src/main/resources/lang/english.properties
+2	1	src/main/scala/com/springer/content/search/SearchResults.scala
+7	0	src/main/xquery/modules/config.xqy
+9	5	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+9	2	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+3	2	src/test/shared/scala/com/springer/test/content/BookChapterBuilder.scala
+2	1	src/test/shared/scala/com/springer/test/content/JournalArticleBuilder.scala
+2	5	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+4	2	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Jose #111 Functional test for language facet.
+12	0	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+4	0	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+4	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Alex/Rob/Uday #devops - Fixed a problem where the indexes were being created on Documents rather than CasperDocuments - this has now been amended in the script
+3	2	ops/deploy/marklogic/steps/03_add_database_range_indexes.xqy
+
+pat/liz/tom: using proper environment names.
+15	14	ops/deploy/capfile
+1	1	src/test/system/scala/com/springer/test/system/SystemTests.scala
+
+Uday/Ken #689 Made publish in year input boxes show correct results.
+3	2	src/main/webapp/WEB-INF/scalate/templates/search/published-in-facet.jade
+3	1	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+1	1	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+
+Alinoor/Jose #660 View front and backmatter links removed.
+0	2	src/main/resources/lang/deutsch.properties
+0	2	src/main/resources/lang/english.properties
+0	1	src/main/webapp/WEB-INF/scalate/templates/abstract-page/anti-matter.jade
+
+Uday/Ken #689 Filtering search results by published year
+3	1	src/main/scala/com/springer/app/Controllers.scala
+15	1	src/main/scala/com/springer/app/QueryParameters.scala
+11	0	src/main/scala/com/springer/content/search/SearchData.scala
+7	4	src/main/webapp/WEB-INF/scalate/templates/search/published-in-facet.jade
+0	1	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+20	14	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+4	0	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+9	1	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+11	0	src/test/unit/scala/com/springer/app/QueryParameterTests.scala
+18	0	src/test/unit/scala/com/springer/content/search/SearchDataTest.scala
+
+chris/mark #77 -> pulling out the individual functions into their own object
+17	15	src/main/webapp/static/js/AutoSuggestView.js
+
+chris/mark #77 - pulling the javascript into its own file
+2	1	src/main/webapp/WEB-INF/scalate/layouts/default.jade
+7	0	src/main/webapp/static/js/AutoSuggestController.js
+27	0	src/main/webapp/static/js/AutoSuggestView.js
+2	19	src/main/webapp/static/js/Bootstrap.js
+
+Mark/Chris #77 Fixed space bug in auto-suggest
+1	2	src/main/webapp/static/js/Bootstrap.js
+
+Alinoor/Jose - access check for front and back matter
+5	5	src/main/scala/com/springer/content/Book.scala
+7	5	src/main/webapp/WEB-INF/scalate/templates/abstract-page/anti-matter.jade
+0	13	src/test/functional/scala/com/springer/test/functional/BookPageTests.scala
+15	0	src/test/functional/scala/com/springer/test/functional/authorisation/BookAuthorisationTests.scala
+2	0	src/test/functional/scala/com/springer/test/pages/BookPage.scala
+11	2	src/test/functional/scala/com/springer/test/steps/BookPageSteps.scala
+6	2	src/test/unit/scala/com/springer/content/MatterTests.scala
+
+Alinoor/Jose - removing ignored tests
+0	40	src/test/functional/scala/com/springer/test/functional/OpenAmTests.scala
+
+chris/mark: load the xml file from the dev repo (temporary solution until the duck (and his pair) sorts out cap deployment)
+1	1	ops/deploy/marklogic/steps/13_create_casperphrases.xqy
+
+Chris/Mark #77 Fixed CSS like a boss
+7	5	src/main/webapp/static/css/global.css
+
+Mark/Chris #77 Implemented auto-suggest keyboard navigation-ness.
+8	10	src/main/scala/com/springer/content/MarkLogicContentRepository.scala
+4	0	src/main/scala/com/springer/platform/MarkLogicHttpClient.scala
+32	0	src/main/webapp/static/css/global.css
+17	0	src/main/webapp/static/js/Bootstrap.js
+3	1	src/test/functional/scala/com/springer/test/functional/SearchResultsPageTests.scala
+1	1	src/test/unit/scala/com/springer/content/MarkLogicContentRepositoryTest.scala
+
+michael/mark #77 -> adding in jquery ui so we can display the auto suggest results
+5	0	src/main/scala/com/springer/app/Controllers.scala
+11	11	src/main/scala/com/springer/content/MarkLogicContentRepository.scala
+7	3	src/main/scala/com/springer/platform/MarkLogicHttpClient.scala
+1	0	src/main/webapp/WEB-INF/scalate/layouts/default.jade
+4	0	src/main/webapp/static/js/Bootstrap.js
+4914	0	src/main/webapp/static/js/lib/jquery-ui-1.8.16.custom.js
+9	6	src/main/xquery/auto-suggest.xqy
+
+Marc/Mushtaq #661 Implemeted TOC Parts within a book object
+6	4	src/main/scala/com/springer/content/Book.scala
+1	1	src/test/integration/scala/com/springer/content/ContentRepositoryBookTests.scala
+7	5	src/test/shared/scala/com/springer/test/content/BookBuilder.scala
+10	11	src/test/unit/scala/com/springer/content/BookTests.scala
+
+Marc/Mushtaq: #661 Added integration test for enhanced book xml
+4	1	src/main/xquery/modules/content-type/book.xqy
+70	0	src/test/integration/scala/com/springer/content/ContentRepositoryBookTests.scala
+
+Karl: refactored error messages on input fields because of the date facet (#695), ui bugfix in IE (error message of the pagination was hidden)
+35	0	src/main/webapp/static/css/global.css
+7	6	src/main/webapp/static/css/results.css
+
+Uday #689 Added failing/ignored test for published date range facet and refactored the search facets
+1	1	src/main/scala/com/springer/app/Controllers.scala
+3	18	src/main/scala/com/springer/app/{QueryStringHelper.scala => QueryParameters.scala}
+0	100	src/main/scala/com/springer/app/QueryStringHelper.scala
+1	1	src/main/scala/com/springer/content/search/FacetQueryParameter.scala
+1	3	src/main/scala/com/springer/content/search/SearchData.scala
+24	0	src/main/webapp/WEB-INF/scalate/templates/search/published-in-facet.jade
+1	22	src/main/webapp/WEB-INF/scalate/templates/search/search.jade
+8	2	src/test/functional/scala/com/springer/test/functional/SearchResultsPageFacetTests.scala
+1	1	src/test/integration/scala/com/springer/content/ContentRepositoryDatePublishedFacetSearchTests.scala
+2	2	src/test/integration/scala/com/springer/content/ContentRepositoryHighlightingSnippetsTests.scala
+2	2	src/test/integration/scala/com/springer/content/ContentRepositoryTests.scala
+20	2	src/test/shared/scala/com/springer/test/pages/SearchResultsPage.scala
+8	0	src/test/shared/scala/com/springer/test/steps/SearchResultsPageSteps.scala
+8	1	src/test/unit/scala/com/springer/app/{QueryStringHelperTests.scala => QueryParameterTests.scala}
+1	1	src/test/unit/scala/com/springer/content/search/FacetQueryParameterTest.scala
+5	12	src/test/unit/scala/com/springer/content/search/{RequestHelperTest.scala => QueryTest.scala}
+
 Marc/Mushtaq: #661 Changed the BookChapterBuilder by adding part
 1	1	src/test/functional/scala/com/springer/test/functional/ChapterPageTests.scala
 12	5	src/test/shared/scala/com/springer/test/content/BookChapterBuilder.scala

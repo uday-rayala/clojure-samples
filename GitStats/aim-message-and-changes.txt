@@ -1,0 +1,2813 @@
+Alinoor/Jose #111 language codes validation for books, chapters and articles
+3	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	0	src/main/scala/com/springer/aim/document/Rule.scala
+187	0	src/test/integration/resources/dds/invalid_articles/ArticleWithInvalidLanguage.xml
+101	0	src/test/integration/resources/dds/invalid_chapters/ChapterWithInvalidLanguage.xml
+9	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+23	9	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Alinoor/Jose #111 Springer language codes validation rule.
+0	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	0	src/main/scala/com/springer/aim/document/Rule.scala
+88	0	src/test/integration/resources/dds/invalid_books/BookWithInvalidLanguage.xml
+4	0	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+19	0	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+charles/duncan #277 integration tests for article to journal vols, issues and dates
+1	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+charles/duncan #277 integration tests for article to journal vols, issues and dates
+46	0	ide/idea/aim.ipr
+3	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+42	0	src/test/integration/scala/com/springer/casper/aim/JournalUpdateSteps.scala
+27	0	src/test/integration/scala/com/springer/casper/aim/JournalUpdateTest.scala
+48	4	src/test/shared/scala/com.springer.casper.aim.builders/ArticleBuilder.scala
+0	0	src/test/{functional => shared}/scala/com/springer/casper/aim/config/PropertyLoader.scala
+6	0	src/test/{functional => shared}/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Alinoor/Jose #111 Article, Chapter and Book language validation rules.
+3	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+187	0	src/test/integration/resources/dds/invalid_articles/ArticleWithNoLanguage.xml
+88	0	src/test/integration/resources/dds/invalid_books/BookWithNoLanguage.xml
+101	0	src/test/integration/resources/dds/invalid_chapters/ChapterWithNoLanguage.xml
+14	0	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Marc/Mushtaq #661 Correct content type for book matters
+8	20	src/main/scala/com/springer/aim/CasperDocument.scala
+1	1	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+5	3	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Alinoor/Jose #111 language facet
+7	0	src/main/scala/com/springer/aim/CasperDocument.scala
+2	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+2	0	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+3	3	src/test/shared/scala/com.springer.casper.aim.builders/ArticleBuilder.scala
+2	2	src/test/shared/scala/com.springer.casper.aim.builders/BookBuilder.scala
+3	2	src/test/shared/scala/com.springer.casper.aim.builders/ChapterBuilder.scala
+18	0	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+pat: fixing roles
+3	3	ops/deploy/capfile
+
+pat: adding ml role.
+3	3	ops/deploy/capfile
+
+pat: using 3 ingestors.
+3	2	ops/deploy/capfile
+
+Marc/Mushtaq: #661 Cleaned up the code in importable document
+14	13	src/main/scala/com/springer/aim/ImportManager.scala
+
+Marc/Mushtaq: #661 Updated aim to ingest all types of BFM and BBM
+9	9	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/LoadableFiles.scala
+5	7	src/main/scala/com/springer/aim/ZipManifest.scala
+5	16	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+9	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+1	1	src/test/functional/resources/book.manifest
+1	1	src/test/functional/resources/book_in_series.manifest
+1	1	src/test/functional/resources/book_with_pdf.manifest
+1	1	src/test/functional/resources/book_with_pdf_and_images.manifest
+1	1	src/test/functional/resources/small_delivery.manifest
+2	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+11	11	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+3	3	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+4	4	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+6	6	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+3	15	src/test/unit/scala/com/springer/casper/aim/document/ValidDocumentTest.scala
+
+Tom/Liz/Pat - using shorter host name.
+1	1	src/main/resources/app.perf.properties
+
+Tom/Liz/Pat - updating to use the dns entry which resolves to all three ML servers.
+1	1	src/main/resources/app.perf.properties
+
+charles/duncan #277 ensure metadata from the latest article overwrites previous journal metadata
+19	4	src/main/xquery/journal.xqy
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Alinoor/Jose #660 remove appending of matter type description from matter PDFs only BFM or BBM is appended
+1	1	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+2	8	src/main/scala/com/springer/aim/platform/FileHelper.scala
+2	8	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+
+charles/duncan #277 journal.xqy now scans volumes and issues fully
+91	64	src/main/xquery/journal.xqy
+2	2	src/main/xquery/upload-document.xqy
+1	3	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+pat: using consistent directories on perf.
+3	8	ops/deploy/capfile
+2	2	src/main/resources/app.perf.properties
+
+pat: giving role a better name.
+4	4	ops/deploy/capfile
+
+pat: tidyied up capfile in anticipation of upcoming changes.
+28	25	ops/deploy/capfile
+
+Chris/Mushtaq Cleaned up XPath classes
+8	0	src/main/scala/com/springer/aim/package.scala
+8	18	src/main/scala/com/springer/aim/xpath/XPath.scala
+
+Chris/Mushtaq Fixing the OrXPath behaviour
+5	3	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+2	0	src/main/scala/com/springer/aim/platform/Logger.scala
+1	2	src/main/scala/com/springer/aim/xpath/XPath.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/xpath/XPathTest.scala
+
+marc/duncan #277 added start and end pages to issue in Journal
+25	4	src/main/xquery/journal.xqy
+
+charles/alinoor #660 set front and backmatter meta IDs to be unique instead of using the same DOI as the book
+4	1	src/main/scala/com/springer/aim/CasperDocument.scala
+8	13	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+6	3	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+0	33	src/test/unit/scala/com/springer/casper/aim/document/MarkLogicIdBuilderTest.scala
+39	0	src/test/unit/scala/com/springer/casper/aim/document/ValidDocumentTest.scala
+
+duncan/marc #277 change id to startid and add endId in volume metadata.
+3	3	src/main/xquery/journal.xqy
+1	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+
+mark/marc/duncan #277 make Issue Title and Date Optional in the meta
+4	3	src/main/xquery/journal.xqy
+
+Charles/Joze #660 include journals in searchable collection on insertion
+1	1	src/main/xquery/journal.xqy
+
+Alinoor/Mushtaq #646 Fixing the build
+1	1	src/main/xquery/journal.xqy
+3	4	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+2	11	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Alinoor/Mushtaq #646 journal taTaxonomiesx
+1	0	src/main/xquery/journal.xqy
+7	4	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+16	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Charles/Jose #660 Searchable collection for searchable items.
+8	4	src/main/xquery/upload-document.xqy
+
+Charles/Jose #660 Backmatter and Frontmatter content type refactor as map.
+5	8	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/document/MarkLogicIdBuilderTest.scala
+
+Charles/Jose #660 Backmatter and Frontmatter builder refactor.
+2	5	src/main/scala/com/springer/aim/CasperDocument.scala
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+2	2	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+35	27	src/test/shared/scala/com.springer.casper.aim.builders/BookBuilder.scala
+4	3	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/document/MarkLogicIdBuilderTest.scala
+
+charles/jose #660 support backmatter during ingestion - store back/front matter with generated marklogic uri if necessary
+16	4	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+4	1	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+4	0	src/test/functional/resources/book_with_front_and_backmatters.manifest
+7	8	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+4	6	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+3	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+13	1	src/test/shared/scala/com.springer.casper.aim.builders/BookBuilder.scala
+6	4	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+33	0	src/test/unit/scala/com/springer/casper/aim/document/MarkLogicIdBuilderTest.scala
+
+Suzuki/Jose #660 BookBackmatter as valid document.
+6	0	src/main/scala/com/springer/aim/CasperDocument.scala
+4	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	0	src/main/scala/com/springer/aim/ImportManager.scala
+1	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+69	0	src/test/integration/resources/dds/BookWithBookBackmatter.xml
+2	2	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+
+Suzuki/Jose #660 BookBackmatter suffix for PDFs.
+1	0	src/main/scala/com/springer/aim/platform/FileHelper.scala
+
+Suzuki/Jose #660 BookFrontMatter pdf copied.
+1	1	.gitignore
+0	24117	logs/output.log.1
+0	24337	logs/output.log.2
+1	3	src/main/scala/com/springer/aim/ImportManager.scala
+6	5	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+6	2	src/main/scala/com/springer/aim/platform/FileHelper.scala
+0	0	src/test/functional/resources/{ => bkfrontmatter}/book_with_front_and_backmatters.manifest
+-	-	src/test/functional/resources/bkfrontmatter/book_with_front_and_backmatters.zip
+0	4	src/test/functional/resources/book_with_front_and_backmatters.manifest
+6	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+57	0	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Ken: skipping ingestion if unnecessary
+20	0	ops/deploy/capfile
+
+Uday/Rob #139 Changed the pre computed discipline, sub-discipline, vertical mapping
+3	3	src/main/scala/com/springer/aim/CasperDocument.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Rob/Uday #597 refactored meta:Taxonomy element
+22	7	src/main/scala/com/springer/aim/CasperDocument.scala
+2	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/Document.scala
+13	34	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Suzuki/Jose #660 Removed invalid test. Implemented Frontmatter validation rules.
+1	0	src/main/scala/com/springer/aim/CasperDocument.scala
+4	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	0	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+0	6	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+3	2	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+71	0	src/test/integration/resources/dds/BookWithBookFrontmatter.xml
+5	0	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+17	4	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Suzuki/Jose #660 Book front matter.
+10	0	src/main/scala/com/springer/aim/CasperDocument.scala
+5	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+13	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+28	0	src/test/functional/scala/com/springer/casper/aim/BookImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+15	2	src/test/shared/scala/com.springer.casper.aim.builders/BookBuilder.scala
+8	0	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Suzuki/Jose #660 Book with front and backmatter file.
+32	0	src/test/functional/resources/book_with_front_and_backmatters.manifest
+-	-	src/test/functional/resources/book_with_front_and_backmatters.zip
+
+mark: #157 we need to have the volume in journal now
+2	1	src/main/xquery/journal.xqy
+
+Charles/Mushtaq: Added few tests for XPath class
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+49	0	src/test/unit/scala/com/springer/casper/aim/xpath/XPathTest.scala
+
+charles/mushtaq windowFixing added by-name parameters to Logger
+11	2	src/main/scala/com/springer/aim/platform/Logger.scala
+3	2	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+12	3	src/test/unit/scala/com/springer/casper/aim/stubs/LoggerStub.scala
+
+Uday/Chris #157 Added issue information to journal xml
+13	1	src/main/xquery/journal.xqy
+31	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+7	1	src/test/shared/scala/com.springer.casper.aim.builders/ArticleBuilder.scala
+
+Mark/Marc #597 Changes on how to add taxonomies to articles.
+8	12	src/main/scala/com/springer/aim/CasperDocument.scala
+1	1	src/main/scala/com/springer/aim/Dependencies.scala
+2	2	src/main/scala/com/springer/aim/ImportManager.scala
+5	5	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+17	0	src/main/scala/com/springer/aim/verticals/TaxonomiesRepository.scala
+4	4	src/main/scala/com/springer/aim/verticals/VerticalsDataParser.scala
+3	0	src/main/scala/com/springer/aim/verticals/VerticalsFileLoader.scala
+0	21	src/main/scala/com/springer/aim/verticals/VerticalsRepository.scala
+22	7	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+7	7	src/test/unit/scala/com/springer/casper/aim/verticals/VerticalsDataParserTest.scala
+14	30	src/test/unit/scala/com/springer/casper/aim/verticals/VerticalsRepositoryTest.scala
+
+Uday/Chris - #157 - Refactored tests to have shared builders.
+1	0	ide/idea/aim.iml
+1	0	project/Build.scala
+14	10	src/test/{unit/scala/com/springer/casper/aim/builders => shared/scala/com.springer.casper.aim.builders}/ArticleBuilder.scala
+0	0	src/test/{unit/scala/com/springer/casper/aim/builders => shared/scala/com.springer.casper.aim.builders}/BookBuilder.scala
+0	0	src/test/{unit/scala/com/springer/casper/aim/builders => shared/scala/com.springer.casper.aim.builders}/ChapterBuilder.scala
+0	0	src/test/{unit/scala/com/springer/casper/aim/builders => shared/scala/com.springer.casper.aim.builders}/OnlineFirstArticleBuilder.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Charles/Duncan #650 support all A++ markup in book title and subtitle
+1	7	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	2	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Michael: changed capfile to remove artifact
+5	0	ops/deploy/capfile
+
+pat/mushtaq: fixed module installation.
+4	4	ops/deploy/capfile
+-	-	ops/deploy/marklogic-xcc-4.2.4.jar
+14	8	ops/deploy/{mark-logic-module-installation.sh => marklogic/install-modules.sh}
+1	1	project/Dependencies.scala
+2	1	project/Tasks.scala
+
+pat/mushtaq: putting xquery modules in same place as core.
+2	2	ops/deploy/capfile
+3	3	project/Tasks.scala
+0	0	src/main/{resources => }/xquery/clean-db.xqy
+0	0	src/main/{resources => }/xquery/journal.xqy
+0	0	src/main/{resources => }/xquery/upload-document.xqy
+
+pat, mushtaq: removing whitespace.
+0	0	project/Dependencies.scala
+
+pat, mushtaq: removed unnecessary libs; added required libs (i.e. scala).
+4	6	project/Dependencies.scala
+
+Mushtaq: Unbreaking the build
+1	1	ops/deploy/import.sh
+1	1	ops/deploy/mark-logic-module-installation.sh
+
+Mushtaq: Fixing the broken window: - Removed jars not required for deployment from the zip - Changed "compile" folder to "lib" in the zip.
+7	7	project/Dependencies.scala
+1	1	project/Tasks.scala
+
+Charles/Suzuki #650 removed A++ markup in publication title meta info
+1	1	src/main/scala/com/springer/aim/CasperDocument.scala
+4	5	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+eevert "mushtaq/mark: adding meta verticals into the journal"
+0	1	src/main/resources/xquery/journal.xqy
+0	8	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+mushtaq/mark: adding meta verticals into the journal
+1	0	src/main/resources/xquery/journal.xqy
+8	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+2	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Alex/Jose - #611 added fix for broken authors facet on QA dataset
+1	7	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Alex/Jose #611 swap operators order to deal with non printable characters.
+1	0	.gitignore
+1	1	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Alex/Jose #611 - stripping 'non-printable' characters from the author names
+1	1	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Uday/Alex #611 More logging with doi and authornames
+1	1	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Uday/Alex #611 Added log message to check what is happeneing in QA machine
+5	1	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Mushtaq: Cleaned up Dependencies trait
+8	19	src/main/scala/com/springer/aim/Dependencies.scala
+19	1	src/main/scala/com/springer/aim/verticals/VerticalsFileLoader.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/verticals/VerticalsDataParserTest.scala
+
+Uday/Alex #597 Changed the xml structure of vertical information in meta data
+12	7	src/main/scala/com/springer/aim/CasperDocument.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+2	6	src/test/functional/scala/com/springer/casper/aim/Document.scala
+30	11	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Mushtaq/Alinoor modified deployment directory to /opt/casper/aim
+1	1	ops/deploy/capfile
+
+Liz/Jose #windowfixing check folders exist before delete them.
+11	2	build
+
+Alex/Uday #611 - fixed a defect where authors with empty names were being added to the metadata - these have been removed from the metadata (but not the document) so they can no longer be faceted
+1	1	ide/idea/aim.iml
+7	2	src/main/scala/com/springer/aim/CasperDocument.scala
+19	0	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+suzuki/mushtaq/mark: #623 -> adding verticals meta data during ingestion
+1	0	.gitignore
+1	0	ops/deploy/capfile
+1	0	src/main/resources/app.dev.properties
+1	0	src/main/resources/app.perf.properties
+1	0	src/main/resources/app.properties
+1	0	src/main/resources/app.qa.properties
+19	3	src/main/scala/com/springer/aim/CasperDocument.scala
+35	0	src/main/scala/com/springer/aim/Dependencies.scala
+3	2	src/main/scala/com/springer/aim/ImportManager.scala
+3	4	src/main/scala/com/springer/aim/Main.scala
+1	0	src/main/scala/com/springer/aim/config/CasperProperties.scala
+6	5	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+46	0	src/main/scala/com/springer/aim/verticals/VerticalsDataParser.scala
+16	0	src/main/scala/com/springer/aim/verticals/VerticalsFileLoader.scala
+21	0	src/main/scala/com/springer/aim/verticals/VerticalsRepository.scala
+7	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+7	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+9	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+6	0	src/test/integration/resources/verticals/marketing_verticals.csv
+1	1	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+71	27	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+3	1	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+0	1	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+90	0	src/test/unit/scala/com/springer/casper/aim/verticals/VerticalsDataParserTest.scala
+60	0	src/test/unit/scala/com/springer/casper/aim/verticals/VerticalsRepositoryTest.scala
+2805	0	verticals/marketing_verticals.csv
+
+Rob #509 add rule to check VolumeID is an integer
+1	1	src/main/resources/xquery/journal.xqy
+1	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+11	5	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+
+pat: fixing tidy_up method so that it cleans all bar the latest 5 releases after deployment.
+14	0	ops/deploy/capfile
+
+Rob/Mark #509 add volume info to journal xml
+7	2	src/main/resources/xquery/journal.xqy
+4	0	src/test/functional/resources/articles_multi_volumes.manifest
+-	-	src/test/functional/resources/articles_multi_volumes.zip
+6	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+rob/mark #509 adding volumes dynamically on article ingestion
+25	21	src/main/resources/xquery/{upload-document.xqy => journal.xqy}
+2	40	src/main/resources/xquery/upload-document.xqy
+11	0	src/test/functional/resources/articles_multi_volumes.manifest
+-	-	src/test/functional/resources/articles_multi_volumes.zip
+8	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+3	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+
+Charles/Pat #532 added support for book titles and book series titles.
+2	6	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	4	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Rob/Mark #509 added volume to journal xml
+11	4	src/main/resources/xquery/upload-document.xqy
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+mark: forgot to add these test fixes
+4	4	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+rob/mark #509 creating a stub journal entry for journal articles
+39	5	src/main/resources/xquery/upload-document.xqy
+0	9	src/main/scala/com/springer/aim/ImportManager.scala
+4	4	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Charles #532 marking documents invalid if they contain A++ in the author names
+6	6	src/main/scala/com/springer/aim/DDSValidationRules.scala
+6	6	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+pat/charles: #532 removing 'no bibliography heading' rules because bibliography heading is not used in core.
+2	4	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	8	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+pat/charles: #532 removing 'no markup in bibliography heading' rules because bibliography heading is not used in core.
+2	4	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+pat/charles: #532 fixing invalid tests.
+11	14	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+pat/charles: #532 relaxed rules around rejecting a++ markup because the functionality to deal with a++ markup has been implemented in core.
+6	21	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+Charles/Mark #532 relaxed DDS import rules to allow markup in references/bibliographies
+3	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+pat: removed old sbt artifact.
+0	57	project/build/project.scala
+
+Alinoor/Mushtaq #575 AIM prepends DOI onto all FileRef attributes of ImageObjects
+16	2	src/main/scala/com/springer/aim/CasperDocument.scala
+20	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+pat/charles: upping log level from debug to info.
+1	1	src/main/resources/logback.xml
+
+Chris/Mark #509 Added functional test to check for journal insertion and started code in ImportManager (commented out)
+12	2	src/main/scala/com/springer/aim/ImportManager.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+7	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Rob/Suzuki #629 set document quality based on content type
+2	1	src/main/resources/xquery/upload-document.xqy
+10	1	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+2	1	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+4	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+15	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+pat/charles #532: Relaxing rules for Book|Journal Abstract Heading (See core commit 334c8fe); and a bit of rule reshuffling.
+10	9	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+pat/charles #532 mark up in journal title marked as invalid
+1	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+pat/charles #532 mark up in some elements set to invalid
+10	10	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+pat/charles: #532 documents with markup in DOIs are invalid (as per A++ DTD) - not unsupported.
+4	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	5	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Uday Fixing build
+1	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+pat/charles: #532 added a++ support for book sub titles; also removed journal subtitle rule because we're not displaying them anywhere in core. See core commit 2024ff5.
+0	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	5	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor/Jose #575 AIM preserves paths of images in manifest
+1	1	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+
+Alinoor/Jose #575 AIM preserves paths of images in manifest
+3	3	src/main/scala/com/springer/aim/LoadableFiles.scala
+14	10	src/main/scala/com/springer/aim/ZipManifest.scala
+7	6	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+25	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+8	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Rob/Chris #339 updated import to check object type in manifest
+6	6	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/LoadableFiles.scala
+5	3	src/main/scala/com/springer/aim/ZipManifest.scala
+104	0	src/test/functional/resources/book_with_frontmatter.manifest
+-	-	src/test/functional/resources/book_with_frontmatter.zip
+1	1	src/test/functional/resources/small_delivery.manifest
+6	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+9	8	src/test/unit/scala/com/springer/casper/aim/LoadableFilesTest.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Alinoor/Jose #575 renamed PDFHelper to FileHelper
+5	5	src/main/scala/com/springer/aim/CasperDocument.scala
+9	9	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+5	9	src/main/scala/com/springer/aim/platform/{PDFHelper.scala => FileHelper.scala}
+30	30	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Alinoor/Jose #575 Images folder under content.
+1	0	src/main/scala/com/springer/aim/config/CasperProperties.scala
+2	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+1	1	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+3	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Alinoor/Jose #575 Valid document which lacks images invalidates document.
+0	0	src/test/functional/resources/{small_delivery_with_pdf_and_images.manifest => book_with_pdf_and_images.manifest}
+-	-	src/test/functional/resources/{small_delivery_with_pdf_and_images.zip => book_with_pdf_and_images.zip}
+0	0	src/test/functional/resources/{small_delivery_with_pdf_and_images.manifest => book_with_pdf_and_missing_image.manifest}
+-	-	src/test/functional/resources/book_with_pdf_and_missing_image.zip
+7	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+10	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+2	1	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+
+Rob/Chris #339 added support for books in series. removed rule that blocks all books
+2	4	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	1	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+6	0	src/test/functional/resources/book_in_series.manifest
+-	-	src/test/functional/resources/book_in_series.zip
+10	3	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+6	2	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+21	0	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+19	3	src/test/unit/scala/com/springer/casper/aim/builders/BookBuilder.scala
+
+Alinoor/Jose #575 - fix broken build
+1	0	build
+0	1	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+-	-	src/test/functional/resources/small_delivery_with_pdf_and_images.zip
+0	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+
+Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+2	0	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+
+Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+2	2	src/main/scala/com/springer/aim/ImportManager.scala
+11	2	src/main/scala/com/springer/aim/LoadableFiles.scala
+14	4	src/main/scala/com/springer/aim/ZipManifest.scala
+16	5	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+14	1	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+12	0	src/test/functional/resources/small_delivery_with_pdf_and_images.manifest
+-	-	src/test/functional/resources/small_delivery_with_pdf_and_images.zip
+11	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+6	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+
+Charles/Pat #532 reverting DDS rules back so Aplusplus is only supported in abstract para
+13	40	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	4	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Mushtaq: trying to unbreak the build
+2	0	build
+
+Charles/Mushtaq: #532 Allow ingestion of documents with markup in BookSubTitle
+4	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+pat: tidyied up / added logging; removed time class because it's not thread-safe; moved parallelisation from inner to outer loop.
+20	29	src/main/scala/com/springer/aim/ImportManager.scala
+6	12	src/main/scala/com/springer/aim/Unzipper.scala
+2	0	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+21	11	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+
+Alinoor/Jose #575 - removed most of the validation rules for MediaObject and InlineMediaObject
+3	10	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	2	src/test/integration/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+0	0	src/test/integration/resources/dds/{invalid_articles => }/ArticleWithEquationInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_articles => }/ArticleWithInlineEquationInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_articles => }/ArticleWithInlineMediaObjectInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_articles => }/ArticleWithMediaObjectInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_chapters => }/ChapterWithEquationInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_chapters => }/ChapterWithInlineMediaObjectInAbstractPara.xml
+0	0	src/test/integration/resources/dds/{invalid_chapters => }/ChapterWithMediaObjectInAbstractPara.xml
+8	2	src/test/integration/resources/dds/OnlineFirstArticleValid.xml
+17	17	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Rob/Chris removed log message
+0	2	src/main/scala/com/springer/aim/ImportManager.scala
+
+Rob/Chris #339 added book pdf validation
+13	10	src/main/scala/com/springer/aim/CasperDocument.scala
+10	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+3	0	src/main/scala/com/springer/aim/ImportManager.scala
+3	0	src/main/scala/com/springer/aim/XmlHelper.scala
+2	1	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+1	0	src/test/functional/resources/book.pdf
+7	0	src/test/functional/resources/book_with_pdf.manifest
+-	-	src/test/functional/resources/book_with_pdf.zip
+12	3	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+2	1	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+11	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+18	1	src/test/unit/scala/com/springer/casper/aim/builders/BookBuilder.scala
+
+Mushtaq: #609 Fixing the log spurious log message "Manifest file is empty"
+3	5	src/main/scala/com/springer/aim/ZipManifest.scala
+0	8	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+pat: recursing down into input directory and following symlinks. (tripped over dot in extension in earlier commit.)
+1	1	src/main/resources/app.perf.properties
+5	8	src/main/scala/com/springer/aim/DeliveryFileHelper.scala
+4	4	src/main/scala/com/springer/aim/DeliveryFiles.scala
+6	4	src/test/unit/scala/com/springer/casper/aim/DeliveryFilesTest.scala
+
+pat: simplifying classpath (printf doesn't work on macs...)
+1	3	ops/deploy/import-articles.sh
+
+Revert "pat: recursing down into input directory and following symlinks."
+1	1	src/main/resources/app.perf.properties
+7	3	src/main/scala/com/springer/aim/DeliveryFileHelper.scala
+2	2	src/main/scala/com/springer/aim/DeliveryFiles.scala
+4	6	src/test/unit/scala/com/springer/casper/aim/DeliveryFilesTest.scala
+
+pat: recursing down into input directory and following symlinks.
+1	1	src/main/resources/app.perf.properties
+3	7	src/main/scala/com/springer/aim/DeliveryFileHelper.scala
+2	2	src/main/scala/com/springer/aim/DeliveryFiles.scala
+6	4	src/test/unit/scala/com/springer/casper/aim/DeliveryFilesTest.scala
+
+pat: removing unused file.
+0	101	src/test/sample.xml
+
+Ken/Mushtaq #609 Story finished
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+7	3	src/main/scala/com/springer/aim/ZipManifest.scala
+27	18	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Ken/Mushtaq #609 added manifest file name and DOI to error messages
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+11	8	src/main/scala/com/springer/aim/LoadableFiles.scala
+13	11	src/main/scala/com/springer/aim/ZipManifest.scala
+1	3	src/test/unit/scala/com/springer/casper/aim/LoadableFilesTest.scala
+8	2	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Marc/Charles #532 updating validation rules after merge - reverting some additions
+8	8	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Charles/Marc #532 rollback markup rules and ignoring tests in preparation for push of a++ support in core
+57	29	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+5	5	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Ken/Mushtaq #609 Wrapping up the story
+36	0	src/main/scala/com/springer/aim/DeliveryFileHelper.scala
+30	0	src/main/scala/com/springer/aim/DeliveryFiles.scala
+1	54	src/main/scala/com/springer/aim/DeliveryManager.scala
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+43	0	src/test/unit/scala/com/springer/casper/aim/DeliveryFilesTest.scala
+0	20	src/test/unit/scala/com/springer/casper/aim/DeliveryManagerTest.scala
+
+Ken/Mushtaq #609 refactored DeliveryManager class
+22	7	src/main/scala/com/springer/aim/DeliveryManager.scala
+1	0	src/main/scala/com/springer/aim/ImportManager.scala
+3	2	src/test/unit/scala/com/springer/casper/aim/DeliveryManagerTest.scala
+2	1	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+8	0	src/test/unit/scala/com/springer/casper/aim/stubs/LoggerStub.scala
+
+Ken/Mushtaq #609 Added integration test for UnzippedFiles trait
+0	2	src/main/scala/com/springer/aim/ImportManager.scala
+1	3	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+11	3	src/test/integration/scala/com/springer/casper/aim/UnzippedFilesTest.scala
+
+Ken/Mushtaq #609 added logging when manifest and associated zip file don't match
+0	24	src/main/scala/com/springer/aim/DeliveriesValidator.scala
+6	6	src/main/scala/com/springer/aim/DeliveryManager.scala
+7	7	src/main/scala/com/springer/aim/ImportManager.scala
+29	0	src/main/scala/com/springer/aim/LoadableFiles.scala
+3	0	src/main/scala/com/springer/aim/LoadableFilesException.scala
+15	0	src/main/scala/com/springer/aim/UnzippedFiles.scala
+3	3	src/main/scala/com/springer/aim/Unzipper.scala
+28	34	src/main/scala/com/springer/aim/ZipManifest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+0	46	src/test/integration/scala/com/springer/casper/aim/DeliveriesValidatorTest.scala
+21	0	src/test/integration/scala/com/springer/casper/aim/UnzippedFilesTest.scala
+19	0	src/test/unit/scala/com/springer/casper/aim/DeliveryManagerTest.scala
+81	0	src/test/unit/scala/com/springer/casper/aim/LoadableFilesTest.scala
+8	64	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Alinoor/Michael #380 adding starting with rule for inline equations
+7	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+6	0	src/main/scala/com/springer/aim/document/Rule.scala
+2	0	src/main/scala/com/springer/aim/xpath/APlusPlusElements.scala
+1	1	src/test/integration/resources/dds/invalid_articles/ArticleWithInlineEquationInAbstractPara.xml
+16	22	src/test/integration/resources/dds/invalid_articles/{ArticleWithInlineEquationInAbstractPara.xml => ArticleWithInlineEquationWith$$.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/ChapterWithInlineEquationInAbstractPara.xml
+8	6	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+28	3	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Mushtaq: cleanup of tests for Manifest and DeliveriesValidator
+0	31	src/test/functional/scala/com/springer/casper/aim/ManifestValidatorTest.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/{ManifestValidatorTest.scala => DeliveriesValidatorTest.scala}
+0	18	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Mushtaq: optimizing nested for loop to get delivery list. given that there are 20K zips and 20K manifests in perf env, the nested loop would be very inefficient
+6	4	src/main/scala/com/springer/aim/DeliveryManager.scala
+4	5	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Suzuki/Michael/Mushtaq compelete story #547
+3	2	src/main/scala/com/springer/aim/ZipManifest.scala
+0	1	src/test/functional/resources/invalid_chapter.manifest
+0	1	src/test/functional/resources/invalid_document.manifest
+0	2	src/test/functional/resources/small_delivery.manifest
+0	4	src/test/functional/resources/{small_delivery.manifest => small_delivery_with_missingPDF.manifest}
+-	-	src/test/functional/resources/small_delivery_with_missingPDF.zip
+0	1	src/test/functional/resources/unsupported_document.manifest
+3	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+7	3	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+pat/mushtaq: no longer deleting zips in workspace; no longer failing if corrupt zip file; no longer unzipping in parallel (number of threads exploded on perf).
+2	0	src/main/scala/com/springer/aim/DeliveryManager.scala
+17	12	src/main/scala/com/springer/aim/ImportManager.scala
+
+pat, mushtaq: pointing perf to 1m dds delivery.
+1	1	src/main/resources/app.perf.properties
+
+pat/mushtaq: giving aim a bit more heap space.
+1	1	ops/deploy/import.sh
+
+pat/alex: remove ml step, because it never got executed and it's in core (supposedly).
+0	36	ops/deploy/marklogic/steps/01_create_database
+
+Charles/Rob #339 ignored test failing build
+1	0	.gitignore
+1	1	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+alinoor/mark #380 fixing the title ingestion rules
+1	0	.gitignore
+6	10	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/main/scala/com/springer/aim/document/Rule.scala
+4	4	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+15	2	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Rob/Charles #339 made books invalid temporarily until core supports them
+2	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Rob/Charles #339 import book xml
+6	0	src/test/functional/resources/book.manifest
+1	1	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+
+Charles/Rob #339 support books in ingestion
+1	3	ide/idea/aim.iml
+17	1	src/main/scala/com/springer/aim/CasperDocument.scala
+9	5	src/main/scala/com/springer/aim/DDSValidationRules.scala
+7	4	src/main/scala/com/springer/aim/ImportManager.scala
+3	6	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+14	3	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+-	-	src/test/functional/resources/book.zip
+7	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/Document.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+88	0	src/test/integration/resources/dds/book.xml
+15	12	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+19	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+2	0	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+48	0	src/test/unit/scala/com/springer/casper/aim/builders/BookBuilder.scala
+
+Suzuki/Michael small naming refactor of app to aPlusPlus
+5	5	src/main/scala/com/springer/aim/ZipManifest.scala
+
+Michael/Suzuki dev task to clean forests in xml db
+0	2	src/main/resources/app.dev.properties
+0	1	src/main/resources/app.perf.properties
+1	1	src/main/resources/app.properties
+0	1	src/main/resources/app.qa.properties
+3	5	src/main/resources/xquery/clean-db.xqy
+2	2	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+1	1	src/test/functional/resources/app.properties
+
+Chris/Mushtaq #608 Fixing the build
+1	1	src/main/resources/app.properties
+1	1	src/test/functional/resources/app.properties
+
+Chris/Mushtaq #608 Finished story
+10	0	ops/deploy/capfile
+1	1	src/main/resources/app.properties
+3	12	src/main/scala/com/springer/aim/CasperDocument.scala
+3	5	src/main/scala/com/springer/aim/ImportManager.scala
+1	0	src/main/scala/com/springer/aim/ZipManifest.scala
+9	12	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+5	6	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+2	1	src/test/functional/resources/app.properties
+1	1	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Chris/Mushtaq: #608 XML files are now gettting loaded via manifest. We also have access to PDF files via the manifest. Remaining bit is to load the PDF. Created the new test data which is a pair of manifest and zip files
+9	6	src/main/scala/com/springer/aim/CasperDocument.scala
+6	15	src/main/scala/com/springer/aim/DeliveryManager.scala
+14	20	src/main/scala/com/springer/aim/ImportManager.scala
+41	0	src/main/scala/com/springer/aim/ZipManifest.scala
+7	0	src/test/functional/resources/invalid_chapter.manifest
+-	-	src/test/functional/resources/invalid_chapter.zip
+7	0	src/test/functional/resources/invalid_document.manifest
+-	-	src/test/functional/resources/invalid_document.zip
+6	27	src/test/functional/resources/small_delivery.manifest
+-	-	src/test/functional/resources/small_delivery.zip
+6	27	src/test/functional/resources/small_delivery_with_pdf.manifest
+-	-	src/test/functional/resources/small_delivery_with_pdf.zip
+15	0	src/test/functional/resources/unsupported_document.manifest
+-	-	src/test/functional/resources/unsupported_document.zip
+3	3	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+1	1	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+1	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+91	12	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Chris/Mushtaq: #608 Only zips with corresponding manifest will get digested. capfile will download manifest during deploy
+1	2	ops/deploy/capfile
+25	5	src/main/scala/com/springer/aim/DeliveryManager.scala
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+3	1	src/main/scala/com/springer/aim/Main.scala
+1	1	src/main/scala/com/springer/aim/ZipManifest.scala
+36	0	src/test/functional/resources/small_delivery.manifest
+2	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+24	1	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Ken/Pat #612 deploy and run AIM on MarkLogic node and pick up zip files from /aim_transfers folder
+1	1	ops/deploy/capfile
+2	2	src/main/resources/app.perf.properties
+
+charles/mark: #380 - update ingestion to reject (Inline)MediaObject only if it's not inside (Inline)Equation
+1	0	ide/idea/aim.iml
+32	30	src/main/scala/com/springer/aim/DDSValidationRules.scala
+27	4	src/main/scala/com/springer/aim/document/Rule.scala
+10	10	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+61	3	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Ken/Alinoor #612 updated capistrano script to ingest into PERF environment
+10	0	ops/deploy/capfile
+7	0	src/main/resources/app.perf.properties
+
+pat/michael: fixing whitespace issue around author names.
+1	3	src/main/scala/com/springer/aim/CasperDocument.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Mushtaq: cleaned up code for git push with minor changes
+27	25	src/main/scala/com/springer/aim/CasperDocument.scala
+11	8	src/main/scala/com/springer/aim/XmlHelper.scala
+6	8	src/main/scala/com/springer/aim/ZipManifest.scala
+1	9	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Mushtaq: fixing merge issues
+5	2	src/main/scala/com/springer/aim/XmlHelper.scala
+
+Mike/Mushtaq #608 Work in progress
+24	0	src/main/scala/com/springer/aim/DeliveriesValidator.scala
+2	5	src/main/scala/com/springer/aim/XmlHelper.scala
+17	0	src/main/scala/com/springer/aim/ZipManifest.scala
+36	0	src/test/functional/resources/small_delivery_with_pdf.manifest
+3	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+8	8	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+6	5	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+31	0	src/test/functional/scala/com/springer/casper/aim/ManifestValidatorTest.scala
+46	0	src/test/integration/scala/com/springer/casper/aim/ManifestValidatorTest.scala
+45	0	src/test/unit/scala/com/springer/casper/aim/ZipManifestTest.scala
+
+Mushtaq: Minor changes to CasperDocument class
+13	14	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Mushtaq: Refactoring of CasperDocument class and related changes
+93	81	src/main/scala/com/springer/aim/CasperDocument.scala
+17	2	src/main/scala/com/springer/aim/XmlHelper.scala
+2	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+5	6	src/main/scala/com/springer/aim/document/Rule.scala
+11	7	src/main/scala/com/springer/aim/xpath/XPath.scala
+8	8	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+24	24	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Uday Changed web server url
+1	1	ops/deploy/capfile
+
+Mike/Mushtaq: #607 Changed the input directory back to where it was for qa invironment
+1	1	src/main/resources/app.qa.properties
+
+Mike/Mushtaq #607 Modified QA properties to ingest 13GB of data in new format
+1	1	src/main/resources/app.qa.properties
+
+Mike/Mushtaq #607 Copy multiple zip files to the input directory using wget
+1	2	ops/deploy/capfile
+
+Mike/Mushtaq: #607 Rectifying the forest name in app.dev.properties. All this time we were deleting from Documents db and inserting into CasperDocuments db!
+1	1	src/main/resources/app.dev.properties
+
+Liz/Alinoor #532 - refactoring tests to be more specific in thier asserts
+3	11	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInBibUnstructured.xml
+46	43	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor #532 - refactoring test
+1	0	ide/idea/aim.iml
+53	74	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor #532 - updated valid chapter to include valid markup
+19	10	src/test/functional/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+-	-	src/test/functional/resources/small_delivery_with_pdf.zip
+
+Liz/Alinoor #532 - fixed failing test
+35	33	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	1	src/main/scala/com/springer/aim/document/Rule.scala
+15	14	src/test/functional/resources/dds/30_2010_Article_81.xml
+-	-	src/test/functional/resources/small_delivery_with_pdf.zip
+1	1	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+15	14	src/test/integration/resources/dds/30_2010_Article_81.xml
+3	11	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInBibHeading.xml
+13	4	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor #532 updated tests to check for only certain types of markup
+516	0	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInBibHeading.xml
+5	9	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor #532 updated tests to check for only certain types of markup
+19	27	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInAbstractHeading.xml
+19	27	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInArticleDOI.xml
+19	27	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInAuthorGivenName.xml
+0	0	src/test/integration/resources/dds/invalid_articles/{ArticleWithMarkupInArticleDOI.xml => ArticleWithMarkupInBibUnstructured.xml}
+3	13	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInJournalSubtitle.xml
+23	26	src/test/integration/resources/dds/invalid_articles/ArticleWithMarkupInJournalVolumeID.xml
+10	6	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor/Duncan #532 update validation rules to support some markup
+29	29	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/main/scala/com/springer/aim/document/Rule.scala
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithAbstractHeadingContainingMarkup.xml => ChapterWithAbstractHeadingContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithAuthorGivenNameContainingMarkup.xml => ChapterWithAuthorGivenNameContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithBookTitleContainingMarkup.xml => ChapterWithBookTitleContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithChapterDOIContainingMarkup.xml => ChapterWithChapterDOIContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithChapterTitleContainingMarkup.xml => ChapterWithChapterTitleContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithSeriesTitleContainingMarkup.xml => ChapterWithSeriesTitleContainingUnsupportedMarkup.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithMarkupInBookVolumeNumber.xml => ChapterWithUnsupportedMarkupInBookVolumeNumber.xml}
+1	1	src/test/integration/resources/dds/invalid_chapters/{ChapterWithMarkupInSubTitle.xml => ChapterWithUnsupportedMarkupInSubTitle.xml}
+17	17	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alinoor/Duncan #532 refactoring validation rules
+4	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+Uday/Alex #94 Added a zip file with search releavece documents in dev environment
+1	0	ops/deploy/capfile
+
+Uday/Mushtaq: Allow parallel unzip when more than one zip file is present in the source directory. required separating cleaning and unzipping tasks.
+8	3	src/main/scala/com/springer/aim/DeliveryManager.scala
+11	6	src/main/scala/com/springer/aim/ImportManager.scala
+
+Mushtaq/Ken: Fixed ignored tests. Based on feedback from Mark and Uday, rolled back reordering of rules as it is a functional change and not just refactoring
+8	87	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	29	src/main/scala/com/springer/aim/ImportManager.scala
+54	47	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+28	0	src/test/integration/scala/com/springer/casper/aim/ImportManagerTest.scala
+
+pat: explicitely adding resource directory to coverage config.
+3	1	project/Build.scala
+
+pat: getting rid of jetty targets, which were inadvertently checked in.
+1	1	build
+
+pat: cleaning up build file
+1	7	build
+
+Mushtaq: enabled a commented test and removed comments from fully qualified path for journal article
+1	1	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+8	8	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+Mark/Mushtaq fully qualified paths for book chapter
+10	1	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+
+separate rules for journal articles and book chapters, rearranged the rules after analyzing the logs
+86	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+18	3	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+8	8	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTest.scala
+
+pat: added scct coverage plugin.
+3	3	project/Build.scala
+2	1	project/plugins/build.sbt
+
+pat: upgraded to sbt 0.10.1 so that we can use scct coverage plugin.
+1	8	project/build.properties
+6	2	project/plugins/build.sbt
+-	-	tools/{sbt-launch-0.10.0.jar => sbt-launch-0.10.1.jar}
+
+mark/mushtaq now par works with adapter for local dtds
+13	10	src/main/scala/com/springer/aim/ImportManager.scala
+
+mushtaq/mark: bringing in the fully qualified paths for articles
+1	0	.gitignore
+17	3	src/main/scala/com/springer/aim/ImportManager.scala
+5	7	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+10	0	src/main/scala/com/springer/aim/xpath/XPath.scala
+
+mushtaq/mark: some reason par is hanging so will take it out for the minute
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+
+Mark/Mushtaq Local dtd resolution
+1	0	dds
+2	1	project/Tasks.scala
+1	0	src/main/resources/app.properties
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/A++V2.4.dtd
+-	-	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/A++V2.4.zip
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/A++V2.4JobSheetV2.4.1.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/A++V2.4JobSheetV2.4.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/Book.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/Common.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/JobSheet.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/JobSheetV2.4.1.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/JobSheetV2.4.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/Journal.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/calstblx.dtd
+0	0	{devel.springer.de/A++/V2.4/DTD => src/main/resources/dds}/mathml2.dtd
+11	1	src/main/scala/com/springer/aim/ImportManager.scala
+1	0	src/main/scala/com/springer/aim/config/CasperProperties.scala
+
+Mark/Mushtaq made file iterations parallel
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+
+mark: changed this url to fix some other problem locally. Will put it back for the moment
+1	1	src/main/resources/app.properties
+
+Mark/Mushtaq fixing build by correcting classpath
+1	1	ops/deploy/import-articles.sh
+1	1	project/Build.scala
+
+Mark/Mushtaq removed performance related code
+2	28	src/main/scala/com/springer/aim/ImportManager.scala
+
+Mark/Mushtaq aim build with scala 2.9
+2	2	ide/idea/aim.iml
+2	2	ide/idea/aim.ipr
+1	1	project/Dependencies.scala
+5	9	src/main/scala/com/springer/aim/ImportManager.scala
+1	0	src/main/scala/com/springer/aim/xpath/XPath.scala
+
+scala 2.9
+4	3	ide/idea/aim.iml
+0	19200	log.txt
+0	11731	log.txt.plain
+1	1	ops/deploy/import-articles.sh
+2	1	project/Build.scala
+2	2	project/build/project.scala
+5	0	src/main/scala/com/springer/aim/ImportManager.scala
+
+mushtaq/mark: putting the dtds locally so we can replicate what happens on qa
+97	0	devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd
+-	-	devel.springer.de/A++/V2.4/DTD/A++V2.4.zip
+76	0	devel.springer.de/A++/V2.4/DTD/A++V2.4JobSheetV2.4.1.dtd
+97	0	devel.springer.de/A++/V2.4/DTD/A++V2.4JobSheetV2.4.dtd
+348	0	devel.springer.de/A++/V2.4/DTD/Book.dtd
+909	0	devel.springer.de/A++/V2.4/DTD/Common.dtd
+146	0	devel.springer.de/A++/V2.4/DTD/JobSheet.dtd
+700	0	devel.springer.de/A++/V2.4/DTD/JobSheetV2.4.1.dtd
+379	0	devel.springer.de/A++/V2.4/DTD/JobSheetV2.4.dtd
+118	0	devel.springer.de/A++/V2.4/DTD/Journal.dtd
+290	0	devel.springer.de/A++/V2.4/DTD/calstblx.dtd
+2494	0	devel.springer.de/A++/V2.4/DTD/mathml2.dtd
+1	1	src/main/resources/app.properties
+24	2	src/main/scala/com/springer/aim/ImportManager.scala
+
+liz/mark: let's try it on QA with dtd on
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+
+mark: spelt that name wrong
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+
+liz/mark: putting in some more logging to profile qa ingestion
+20	9	src/main/scala/com/springer/aim/ImportManager.scala
+
+Uday: Adding command to download dds_articles to dev env
+1	0	ops/deploy/capfile
+
+Ken/Mushtaq #100 added functional test for setting meta:Date tags
+6	0	src/main/scala/com/springer/aim/CasperDocument.scala
+6	0	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+27	6	src/test/functional/scala/com/springer/casper/aim/{ArticleImportManagerTests.scala => ArticleImportManagerTest.scala}
+3	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+6	4	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+5	2	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Uday/Micheal #environment added task to create directories for dds_articles in dev
+5	0	ops/deploy/capfile
+
+Ken/Mushtaq #100 replaced multiple mockPDFHelpers with a single def
+5	36	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Uday/Micheal #495 added rules to invalidate documents with non-integers in month and year fields
+4	4	src/main/scala/com/springer/aim/CasperDocument.scala
+10	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+12	0	src/main/scala/com/springer/aim/document/Rule.scala
+4	4	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+187	0	src/test/integration/resources/dds/invalid_articles/ArticleWithNonIntegerMonth.xml
+4	0	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+20	0	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Ken/Mushtaq #100 removed duplicate year xpaths
+2	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	2	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+
+Ken/Mushtaq #100 removing mark's silliness
+0	7	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Ken/Mushtaq #100 adds date metatag for articles
+5	1	ide/idea/aim.ipr
+58	25	src/main/scala/com/springer/aim/CasperDocument.scala
+1	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+5	0	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+23	3	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+10	1	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+11	1	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+30	0	src/test/unit/scala/com/springer/casper/aim/builders/OnlineFirstArticleBuilder.scala
+
+Uday / Michael #495 : Change validation to require Year element for articles.
+3	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	0	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+342	0	src/test/integration/resources/dds/OnlineFirstArticleValid.xml
+185	0	src/test/integration/resources/dds/invalid_articles/ArticleWithNoCoverDateYear.xml
+339	0	src/test/integration/resources/dds/invalid_articles/OnlineFirstArticleWithNoOnlineDate.xml
+12	0	src/test/integration/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+uday/mark: putting dtd back on to see if it goes faster
+10	3	src/main/scala/com/springer/aim/ImportManager.scala
+
+alex/mark - putting in some extra logging to try and see why it's running so slow
+3	0	src/main/scala/com/springer/aim/ImportManager.scala
+
+Alex/Mark - #devops - trimming white space on Subject facets to avoid overlapping facet items
+1	1	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Alinoor - singleton SAX Parser
+14	13	src/main/scala/com/springer/aim/ImportManager.scala
+
+uday/mark: turning off the dtd validation for ingestion
+19200	0	log.txt
+11731	0	log.txt.plain
+24117	0	logs/output.log.1
+24337	0	logs/output.log.2
+16	2	src/main/scala/com/springer/aim/ImportManager.scala
+
+Uday/Alinoor #560 Removed spaces from the elements in metadata
+0	73	src/main/resources/log4j.properties
+8	16	src/main/scala/com/springer/aim/CasperDocument.scala
+20	20	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Uday/Alinoor - replacing log4j with logback
+2	2	ide/idea/aim.ipr
+1	1	project/Dependencies.scala
+0	11	project/Tasks.scala
+27	0	src/main/resources/logback.xml
+2	5	src/main/scala/com/springer/aim/ImportManager.scala
+2	3	src/main/scala/com/springer/aim/Unzipper.scala
+2	7	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+7	0	src/main/scala/com/springer/aim/platform/Logger.scala
+
+Uday/Alinoor - split tests into integration and functional
+1	1	build
+4	1	ide/idea/aim.iml
+5	5	project/Build.scala
+1	6	src/test/{functional/resources/dds/invalid_articles/ArticleWithInlineMediaObjectInAbstractPara.xml => integration/resources/dds/30_2010_Article_81.xml}
+1	1	src/test/{functional/resources/dds/invalid_chapters/ChapterWithChapterTitleContainingMarkup.xml => integration/resources/dds/978-1-4302-2854-7_Chapter_1.xml}
+0	0	src/test/{functional => integration}/resources/dds/ArticleWithInvalidAbstractHeadingElementsInBody.xml
+0	0	src/test/{functional => integration}/resources/dds/ArticleWithMultipleParagraphsInTheAbstractParaWithEmphasisElements.xml
+0	0	src/test/{functional => integration}/resources/dds/ChapterWithMultipleParagraphsInTheAbstractParaWithEmphasisElements.xml
+0	0	src/test/{functional => integration}/resources/dds/DocumentNotArticleOrChapter.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithEquationInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithInlineEquationInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithInlineMediaObjectInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMarkupInAbstractHeading.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMarkupInArticleDOI.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMarkupInAuthorGivenName.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMarkupInJournalSubtitle.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMarkupInJournalVolumeID.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithMediaObjectInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithNoAuthorNames.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithNoBibUnstructuredTag.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithNoBibilographyHeading.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithNoJournalTitle.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_articles/ArticleWithNoTitle.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithAbstractHeadingContainingMarkup.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithAuthorGivenNameContainingMarkup.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithBookTitleContainingMarkup.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithChapterDOIContainingMarkup.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithChapterTitleContainingMarkup.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithEquationInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithInlineEquationInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithInlineMediaObjectInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithMarkupInBookVolumeNumber.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithMarkupInSubTitle.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithMediaObjectInAbstractPara.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithNoAuthorNames.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithNoChapterTitle.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithNoDOI.xml
+0	0	src/test/{functional => integration}/resources/dds/invalid_chapters/ChapterWithSeriesTitleContainingMarkup.xml
+0	0	src/test/{functional => integration}/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Alex #admin - added timer to aim build
+2	3	build
+
+Ken #154 changed marklogic qa url so that it points to senldogo0425 instead of localhost since we move AIM to senldogo0424
+1	1	src/main/resources/app.qa.properties
+
+Alinoor/Ken #154 - in QA AIM now runs on senldogo0424
+2	3	ops/deploy/capfile
+
+Ken, Alinoor #154 AIM prepares content directory on file system before ingesting documents
+1	11	ide/idea/aim.iml
+2	2	ide/idea/aim.ipr
+1	1	src/main/resources/app.properties
+9	2	src/main/scala/com/springer/aim/ImportManager.scala
+1	0	src/main/scala/com/springer/aim/Main.scala
+2	2	src/main/scala/com/springer/aim/Unzipper.scala
+5	1	src/main/scala/com/springer/aim/config/CasperProperties.scala
+3	4	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+3	1	src/main/scala/com/springer/aim/utils/{FileUtils.scala => AimFileUtils.scala}
+
+Ken/Alinoor #154 - set content dir property for dev
+1	1	src/main/resources/app.dev.properties
+
+Uday Rob #Build Fixing dev build as it needs the scala libs
+2	1	project/Dependencies.scala
+
+Uday Moving to sbt 0.10.0 !!!
+1	1	build
+5	0	clean-all
+2	2	ide/idea/aim.ipr
+1	1	ops/build/sbt
+2	2	ops/deploy/import-articles.sh
+1	1	ops/deploy/import.sh
+60	0	project/Build.scala
+22	0	project/Dependencies.scala
+27	0	project/Tasks.scala
+6	6	project/build.properties
+5	0	project/plugins/build.sbt
+7	0	src/test/functional/resources/app.properties
+-	-	src/test/{unit => functional}/resources/invalid_chapter.zip
+-	-	src/test/{unit => functional}/resources/invalid_document.zip
+-	-	src/test/{unit => functional}/resources/small_delivery.zip
+-	-	src/test/{unit => functional}/resources/small_delivery_with_pdf.zip
+0	0	src/test/{unit => functional}/resources/unsupported-dds-document.xml
+-	-	src/test/{unit => functional}/resources/unsupported_document.zip
+0	0	src/test/{unit => functional}/resources/valid-dds-document.xml
+1	1	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+3	8	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+-	-	tools/sbt-launch-0.10.0.jar
+-	-	tools/sbt-launch-0.7.5.jar
+
+Charles,Chris #458 tidy up
+1	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+
+Charles,Chris #458 fiexd rule for checking for the existance of elements a given xpath
+2	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+5	3	src/main/scala/com/springer/aim/document/Rule.scala
+196	0	src/test/functional/resources/dds/ArticleWithInvalidAbstractHeadingElementsInBody.xml
+12	8	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+16	3	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+pat, suzuki, alex, uday, michael: changed dev server ip.
+1	1	ops/deploy/capfile
+
+pat, suzuki: updating forest name
+2	2	src/main/resources/app.qa.properties
+
+Ken, Rob #154 adjusted config properties so that pdfs can be written to the file system
+1	0	src/main/resources/app.dev.properties
+0	0	src/main/resources/app.properties
+1	0	src/main/resources/app.qa.properties
+
+Ken, Rob #154 removes PDF validation
+0	0	src/main/resources/app.dev.properties
+1	1	src/main/resources/app.qa.properties
+1	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+3	4	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+
+Ken, Rob #154 merged test data
+17	9	src/main/scala/com/springer/aim/CasperDocument.scala
+17	4	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+6	5	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+15	5	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+18	4	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+2	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+2	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+-	-	src/test/unit/resources/small_delivery.zip
+-	-	src/test/unit/resources/small_delivery_with_pdf.zip
+18	21	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+liz/mark: need to delete stuff in this forest
+1	1	src/main/resources/app.properties
+
+Mark/Liz: Updating the port for xdbc aim
+1	1	src/main/resources/app.dev.properties
+1	1	src/main/resources/app.properties
+
+Uday/Alex/Charles #Commenting Ignoring and commenting some rules which will be fixed later by Charles/Chris
+2	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+8	8	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Chris,Charles #458 Refactored contains elements rule
+2	8	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	4	src/main/scala/com/springer/aim/document/Rule.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Charles/Alex #458 added rules for elements not supported in chapter and article abstract
+5	4	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	1	src/main/scala/com/springer/aim/document/Rule.scala
+132	0	src/test/functional/resources/dds/ChapterWithMultipleParagraphsInTheAbstractParaWithEmphasisElements.xml
+14	5	src/test/functional/resources/dds/invalid_articles/ArticleWithMediaObjectInAbstractPara.xml
+109	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithEquationInAbstractPara.xml
+109	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithInlineEquationInAbstractPara.xml
+120	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithInlineMediaObjectInAbstractPara.xml
+110	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithMediaObjectInAbstractPara.xml
+30	1	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+
+Ken Uday #342 modified xpaths for volume Id and issue ID
+0	9	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+7	4	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+4	8	src/test/functional/resources/dds/30_2011_Article_97.xml
+-	-	src/test/unit/resources/small_delivery.zip
+
+Uday Ken Refactored to use xpaths
+12	13	src/main/scala/com/springer/aim/CasperDocument.scala
+5	2	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+3	2	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+0	3	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+2	0	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Ken Uday #342 Changed chapter xpath and made boot title and journal title optional
+-	-	delivery_articles/unsupported_document.zip
+8	2	src/main/scala/com/springer/aim/CasperDocument.scala
+0	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+3	1	src/main/scala/com/springer/aim/ImportManager.scala
+10	10	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+0	7	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+-	-	src/test/unit/resources/unsupported_document.zip
+35	4	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+4	2	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+7	4	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured - refactored to move the dds XML resources into the functional test area
+187	0	src/test/functional/resources/dds/30_2010_Article_81.xml
+155	0	src/test/functional/resources/dds/30_2011_Article_97.xml
+101	0	src/test/functional/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+212	0	src/test/functional/resources/dds/ArticleWithMultipleParagraphsInTheAbstractParaWithEmphasisElements.xml
+507	0	src/test/functional/resources/dds/DocumentNotArticleOrChapter.xml
+513	0	src/test/functional/resources/dds/NewArticle.xml
+196	0	src/test/functional/resources/dds/invalid_articles/ArticleWithEquationInAbstractPara.xml
+194	0	src/test/functional/resources/dds/invalid_articles/ArticleWithInlineEquationInAbstractPara.xml
+192	0	src/test/functional/resources/dds/invalid_articles/ArticleWithInlineMediaObjectInAbstractPara.xml
+516	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMarkupInAbstractHeading.xml
+516	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMarkupInArticleDOI.xml
+516	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMarkupInAuthorGivenName.xml
+517	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMarkupInJournalSubtitle.xml
+516	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMarkupInJournalVolumeID.xml
+193	0	src/test/functional/resources/dds/invalid_articles/ArticleWithMediaObjectInAbstractPara.xml
+514	0	src/test/functional/resources/dds/invalid_articles/ArticleWithNoAuthorNames.xml
+163	0	src/test/functional/resources/dds/invalid_articles/ArticleWithNoBibUnstructuredTag.xml
+163	0	src/test/functional/resources/dds/invalid_articles/ArticleWithNoBibilographyHeading.xml
+385	0	src/test/functional/resources/dds/invalid_articles/ArticleWithNoJournalTitle.xml
+510	0	src/test/functional/resources/dds/invalid_articles/ArticleWithNoTitle.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithAbstractHeadingContainingMarkup.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithAuthorGivenNameContainingMarkup.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithBookTitleContainingMarkup.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithChapterDOIContainingMarkup.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithChapterTitleContainingMarkup.xml
+102	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithMarkupInBookVolumeNumber.xml
+101	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithMarkupInSubTitle.xml
+99	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithNoAuthorNames.xml
+100	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithNoChapterTitle.xml
+100	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithNoDOI.xml
+106	0	src/test/functional/resources/dds/invalid_chapters/ChapterWithSeriesTitleContainingMarkup.xml
+
+Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured
+1	0	ide/idea/aim.iml
+9	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+7	0	src/main/scala/com/springer/aim/document/Rule.scala
+8	0	src/main/scala/com/springer/aim/xpath/APlusPlusElements.scala
+29	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+0	187	src/test/unit/resources/dds/30_2010_Article_81.xml
+0	155	src/test/unit/resources/dds/30_2011_Article_97.xml
+0	101	src/test/unit/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+0	507	src/test/unit/resources/dds/DocumentNotArticleOrChapter.xml
+0	513	src/test/unit/resources/dds/NewArticle.xml
+0	516	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInAbstractHeading.xml
+0	516	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInArticleDOI.xml
+0	516	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInAuthorGivenName.xml
+0	517	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInJournalSubtitle.xml
+0	516	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInJournalVolumeID.xml
+0	514	src/test/unit/resources/dds/invalid_articles/ArticleWithNoAuthorNames.xml
+0	163	src/test/unit/resources/dds/invalid_articles/ArticleWithNoBibUnstructuredTag.xml
+0	163	src/test/unit/resources/dds/invalid_articles/ArticleWithNoBibilographyHeading.xml
+0	385	src/test/unit/resources/dds/invalid_articles/ArticleWithNoJournalTitle.xml
+0	510	src/test/unit/resources/dds/invalid_articles/ArticleWithNoTitle.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithAbstractHeadingContainingMarkup.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithAuthorGivenNameContainingMarkup.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithBookTitleContainingMarkup.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithChapterDOIContainingMarkup.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithChapterTitleContainingMarkup.xml
+0	102	src/test/unit/resources/dds/invalid_chapters/ChapterWithMarkupInBookVolumeNumber.xml
+0	101	src/test/unit/resources/dds/invalid_chapters/ChapterWithMarkupInSubTitle.xml
+0	99	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoAuthorNames.xml
+0	100	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoChapterTitle.xml
+0	100	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoDOI.xml
+0	106	src/test/unit/resources/dds/invalid_chapters/ChapterWithSeriesTitleContainingMarkup.xml
+21	0	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+charles, Alex #458 movded file and ignored delivery_articles
+1	2	ops/import-small-delivery.sh
+
+Rob/Uday #154 added content directory property and method to copy PDFs
+0	0	src/main/resources/app.dev.properties
+1	0	src/main/resources/app.properties
+3	11	src/main/scala/com/springer/aim/Unzipper.scala
+1	0	src/main/scala/com/springer/aim/config/CasperProperties.scala
+18	2	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+17	0	src/main/scala/com/springer/aim/utils/FileUtils.scala
+
+Rob/Uday #154 added pdf size to meta:Info
+1	0	.gitignore
+1	0	project/build/project.scala
+13	1	src/main/scala/com/springer/aim/CasperDocument.scala
+4	12	src/main/scala/com/springer/aim/ImportManager.scala
+11	0	src/main/scala/com/springer/aim/config/CasperProperties.scala
+1	0	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+2	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+13	0	src/main/scala/com/springer/aim/platform/PDFHelper.scala
+74	14	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+9	1	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Uday: Changing the tostring of not rule
+1	1	src/main/scala/com/springer/aim/document/Rule.scala
+
+Uday: Pulling Mustaque's changes - Made document matcher return a status instead of the Document
+48	54	src/main/scala/com/springer/aim/DDSValidationRules.scala
+4	11	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+3	3	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+3	3	src/main/scala/com/springer/aim/document/Rule.scala
+6	0	src/main/scala/com/springer/aim/document/Status.scala
+4	4	src/main/scala/com/springer/aim/xpath/BibilograpyXPaths.scala
+15	15	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+2	2	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+2	2	src/main/scala/com/springer/aim/xpath/XPath.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+3	3	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday Moving Mustaque's changes from github
+-	-	delivery_articles/small_delivery.zip
+4	49	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	2	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+15	15	src/main/scala/com/springer/aim/document/Rule.scala
+13	0	src/main/scala/com/springer/aim/xpath/BibilograpyXPaths.scala
+28	0	src/main/scala/com/springer/aim/xpath/BookXPaths.scala
+30	0	src/main/scala/com/springer/aim/xpath/JournalXPaths.scala
+33	0	src/main/scala/com/springer/aim/xpath/XPath.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+4	4	src/test/unit/scala/com/springer/casper/aim/{RuleSetTest.scala => RuleStatusTest.scala}
+12	11	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Ken/Alex - #admin - fixed the aim small import script after some files were moved
+-	-	delivery_articles/small_delivery.zip
+2	1	ops/import-small-delivery.sh
+
+Ken/Alex - #admin - fixed the aim small import script after some files were moved
+2	1	ops/import-small-delivery.sh
+
+Alex, Ken #113 appends author name metadata for chapters
+5	3	src/main/scala/com/springer/aim/CasperDocument.scala
+11	5	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+24	1	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Alex, Ken #113 appends author name metadata for articles
+10	0	src/main/scala/com/springer/aim/Authors.scala
+20	4	src/main/scala/com/springer/aim/CasperDocument.scala
+25	0	src/main/scala/com/springer/aim/XmlHelper.scala
+23	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+22	1	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+
+Ken/Alex - updated step 01 to document the changed module script locations
+3	3	ops/deploy/marklogic/steps/01_create_database
+
+Ken, Rob #524 moved shell scripts to ops/deploy
+0	0	{src/main/scripts => ops/deploy}/download-summary.sh
+0	0	{src/main/scripts => ops/deploy}/import-articles.sh
+0	0	{src/main/scripts => ops/deploy}/import.sh
+0	0	{src/main/scripts => ops/deploy}/ingestion-summary.sh
+0	0	{src/main/scripts => ops/deploy}/mark-logic-module-installation.sh
+-	-	{src/main/scripts => ops/deploy}/marklogic-xcc-4.2.4.jar
+1	1	project/build/project.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+
+pat: changing working directory to drive with more space
+1	1	src/main/resources/app.qa.properties
+
+pat, jeremy: changing input and working dirs.
+2	2	src/main/resources/app.qa.properties
+
+Alex/Uday - #admintask bigger test set for development added
+3	0	ops/import-small-delivery.sh
+
+Alex / Uday #112 - Added code to AIM (and tests) to add Publication title metadata to book chapters and journal articles
+10	5	src/main/scala/com/springer/aim/CasperDocument.scala
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+4	19	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+5	2	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+11	10	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Alex/Alinoor #110 tests for primary subject type
+6	8	src/main/scala/com/springer/aim/CasperDocument.scala
+2	3	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+4	4	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+4	4	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Alinoor #110 subjects for chapters
+7	3	src/main/scala/com/springer/aim/CasperDocument.scala
+17	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+9	2	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+Alinoor #110 subjects for article
+1	1	ide/idea/aim.ipr
+10	4	src/main/scala/com/springer/aim/CasperDocument.scala
+2	1	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+0	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+18	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+11	2	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+
+Duncan/Alinoor - removed unecessary xqy files
+0	0	README
+0	11	src/main/resources/xquery/create-manifest.xqy
+0	15	src/main/resources/xquery/importers/casper/metadata-gen/config.xqy
+0	84	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-article.xqy
+0	48	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-book.xqy
+0	71	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-chapter.xqy
+0	5	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-config.xqy
+0	607	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-core.xqy
+0	78	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-journal.xqy
+0	71	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-series.xqy
+0	49	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd.xqy
+0	34	src/main/resources/xquery/importers/casper/record-loader.xqy
+0	214	src/main/resources/xquery/modules/import-manager.xqy
+0	109	src/main/resources/xquery/modules/utils.xqy
+0	8	src/main/resources/xquery/process-complete.xqy
+0	13	src/main/resources/xquery/process-file.xqy
+
+alinoor - removing unecessary java files and organised IDEA file
+12	12	aim.iml => ide/idea/aim.iml
+23	5	aim.ipr => ide/idea/aim.ipr
+0	3	java/.gitignore
+0	1	java/.idea/.name
+0	7	java/.idea/ant.xml
+0	21	java/.idea/compiler.xml
+0	5	java/.idea/copyright/profiles_settings.xml
+0	5	java/.idea/encodings.xml
+0	19	java/.idea/libraries/lib.xml
+0	10	java/.idea/libraries/lib_test.xml
+0	94	java/.idea/misc.xml
+0	9	java/.idea/modules.xml
+0	125	java/.idea/uiDesigner.xml
+0	7	java/.idea/vcs.xml
+0	15	java/Aim.iml
+0	3	java/ant
+0	83	java/build.xml
+-	-	java/lib-test/junit-4.5.jar
+-	-	java/lib-test/mockito-all-1.8.5.jar
+-	-	java/lib/commons-codec-1.3.jar
+-	-	java/lib/commons-httpclient-3.1.jar
+-	-	java/lib/commons-io-1.4.jar
+-	-	java/lib/commons-logging-1.1.1.jar
+-	-	java/lib/commons-net-2.2.jar
+-	-	java/lib/guava-r07.jar
+-	-	java/lib/log4j-1.2.15.jar
+-	-	java/lib/mail.jar
+-	-	java/lib/recordloader.jar
+-	-	java/lib/xcc.jar
+-	-	java/lib/xpp3.jar
+0	3	java/manifest.mf
+0	891	java/nbproject/build-impl.xml
+0	6	java/nbproject/coverage.properties
+0	8	java/nbproject/genfiles.properties
+0	0	java/nbproject/private/config.properties
+0	6	java/nbproject/private/private.properties
+0	4	java/nbproject/private/private.xml
+0	97	java/nbproject/project.properties
+0	16	java/nbproject/project.xml
+0	5	java/src/articleImportManager.properties
+0	18	java/src/articles.properties
+0	175	java/src/com/springer/articleimportmanager/ImportManager.java
+0	29	java/src/com/springer/articleimportmanager/Main.java
+0	219	java/src/com/springer/articleimportmanager/ManifestInformation.java
+0	112	java/src/com/springer/articleimportmanager/Options.java
+0	68	java/src/com/springer/articleimportmanager/db/Loader.java
+0	336	java/src/com/springer/articleimportmanager/db/XQueryClient.java
+0	51	java/src/com/springer/articleimportmanager/db/XQueryOptions.java
+0	86	java/src/com/springer/articleimportmanager/dds/DeliveryManager.java
+0	71	java/src/com/springer/articleimportmanager/dds/DeliveryOptions.java
+0	40	java/src/com/springer/articleimportmanager/exceptions/DatabaseConnectionException.java
+0	41	java/src/com/springer/articleimportmanager/exceptions/InvalidManifestStatusException.java
+0	41	java/src/com/springer/articleimportmanager/exceptions/InvalidPathException.java
+0	40	java/src/com/springer/articleimportmanager/exceptions/MissingPropertyException.java
+0	60	java/src/com/springer/articleimportmanager/ftp/FtpManager.java
+0	77	java/src/com/springer/articleimportmanager/ftp/FtpOptions.java
+0	66	java/src/com/springer/articleimportmanager/utilities/MailSender.java
+0	94	java/src/com/springer/articleimportmanager/utilities/Unzipper.java
+0	57	java/src/com/springer/articleimportmanager/utilities/XmlUtility.java
+0	25	java/src/imageImportManager.properties
+0	20	java/src/images.properties
+0	7	java/src/javamail.properties
+0	73	java/src/log4j.properties
+0	9	java/src/recordloader.properties
+0	290	java/test/com/springer/articleimportmanager/ManifestInformationTest.java
+0	129	java/test/com/springer/articleimportmanager/OptionsTest.java
+0	112	java/test/com/springer/articleimportmanager/db/XQueryClientTest.java
+0	75	java/test/com/springer/articleimportmanager/db/XQueryOptionsTest.java
+0	52	java/test/com/springer/articleimportmanager/exceptions/DatabaseConnectionExceptionTest.java
+0	52	java/test/com/springer/articleimportmanager/exceptions/InvalidPathExceptionTest.java
+0	52	java/test/com/springer/articleimportmanager/exceptions/MissingPropertyExceptionTest.java
+0	111	java/test/com/springer/articleimportmanager/ftp/FtpOptionsTest.java
+0	127	java/test/com/springer/articleimportmanager/utilities/XmlUtilityTest.java
+0	2	java/tools/ant/INSTALL
+0	1398	java/tools/ant/KEYS
+0	272	java/tools/ant/LICENSE
+0	6	java/tools/ant/NOTICE
+0	97	java/tools/ant/README
+0	5467	java/tools/ant/WHATSNEW
+0	335	java/tools/ant/bin/ant
+0	218	java/tools/ant/bin/ant.bat
+0	93	java/tools/ant/bin/ant.cmd
+0	24	java/tools/ant/bin/antRun
+0	50	java/tools/ant/bin/antRun.bat
+0	66	java/tools/ant/bin/antRun.pl
+0	98	java/tools/ant/bin/antenv.cmd
+0	114	java/tools/ant/bin/complete-ant-cmd.pl
+0	131	java/tools/ant/bin/envset.cmd
+0	31	java/tools/ant/bin/lcp.bat
+0	153	java/tools/ant/bin/runant.pl
+0	102	java/tools/ant/bin/runant.py
+0	60	java/tools/ant/bin/runrc.cmd
+-	-	java/tools/ant/etc/ant-bootstrap.jar
+0	148	java/tools/ant/etc/changelog.xsl
+0	299	java/tools/ant/etc/checkstyle/checkstyle-frames.xsl
+0	34	java/tools/ant/etc/checkstyle/checkstyle-text.xsl
+0	130	java/tools/ant/etc/checkstyle/checkstyle-xdoc.xsl
+0	489	java/tools/ant/etc/coverage-frames.xsl
+0	487	java/tools/ant/etc/jdepend-frames.xsl
+0	276	java/tools/ant/etc/jdepend.xsl
+0	733	java/tools/ant/etc/junit-frames-xalan1.xsl
+0	902	java/tools/ant/etc/junit-frames.xsl
+0	478	java/tools/ant/etc/junit-noframes.xsl
+0	203	java/tools/ant/etc/log.xsl
+0	503	java/tools/ant/etc/maudit-frames.xsl
+0	1026	java/tools/ant/etc/mmetrics-frames.xsl
+0	179	java/tools/ant/etc/tagdiff.xsl
+0	343	java/tools/ant/fetch.xml
+0	121	java/tools/ant/get-m2.xml
+0	3	java/tools/ant/lib/README
+-	-	java/tools/ant/lib/ant-antlr.jar
+0	76	java/tools/ant/lib/ant-antlr.pom
+-	-	java/tools/ant/lib/ant-apache-bcel.jar
+0	72	java/tools/ant/lib/ant-apache-bcel.pom
+-	-	java/tools/ant/lib/ant-apache-bsf.jar
+0	75	java/tools/ant/lib/ant-apache-bsf.pom
+-	-	java/tools/ant/lib/ant-apache-log4j.jar
+0	70	java/tools/ant/lib/ant-apache-log4j.pom
+-	-	java/tools/ant/lib/ant-apache-oro.jar
+0	75	java/tools/ant/lib/ant-apache-oro.pom
+-	-	java/tools/ant/lib/ant-apache-regexp.jar
+0	71	java/tools/ant/lib/ant-apache-regexp.pom
+-	-	java/tools/ant/lib/ant-apache-resolver.jar
+0	70	java/tools/ant/lib/ant-apache-resolver.pom
+-	-	java/tools/ant/lib/ant-apache-xalan2.jar
+0	95	java/tools/ant/lib/ant-apache-xalan2.pom
+-	-	java/tools/ant/lib/ant-commons-logging.jar
+0	71	java/tools/ant/lib/ant-commons-logging.pom
+-	-	java/tools/ant/lib/ant-commons-net.jar
+0	76	java/tools/ant/lib/ant-commons-net.pom
+-	-	java/tools/ant/lib/ant-jai.jar
+0	85	java/tools/ant/lib/ant-jai.pom
+-	-	java/tools/ant/lib/ant-javamail.jar
+0	79	java/tools/ant/lib/ant-javamail.pom
+-	-	java/tools/ant/lib/ant-jdepend.jar
+0	73	java/tools/ant/lib/ant-jdepend.pom
+-	-	java/tools/ant/lib/ant-jmf.jar
+0	66	java/tools/ant/lib/ant-jmf.pom
+-	-	java/tools/ant/lib/ant-jsch.jar
+0	75	java/tools/ant/lib/ant-jsch.pom
+-	-	java/tools/ant/lib/ant-junit.jar
+0	101	java/tools/ant/lib/ant-junit.pom
+-	-	java/tools/ant/lib/ant-junit4.jar
+0	71	java/tools/ant/lib/ant-junit4.pom
+-	-	java/tools/ant/lib/ant-launcher.jar
+0	58	java/tools/ant/lib/ant-launcher.pom
+-	-	java/tools/ant/lib/ant-netrexx.jar
+0	99	java/tools/ant/lib/ant-netrexx.pom
+0	120	java/tools/ant/lib/ant-parent.pom
+-	-	java/tools/ant/lib/ant-swing.jar
+0	67	java/tools/ant/lib/ant-swing.pom
+-	-	java/tools/ant/lib/ant-testutil.jar
+0	75	java/tools/ant/lib/ant-testutil.pom
+-	-	java/tools/ant/lib/ant.jar
+0	222	java/tools/ant/lib/ant.pom
+0	65	java/tools/ant/lib/libraries.properties
+
+Uday/Suzuki: #240 Added ingestion rules for handling bibilography
+5	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	2	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+2	322	src/test/unit/resources/dds/30_2010_Article_81.xml
+1	216	src/test/unit/resources/dds/30_2011_Article_97.xml
+-	-	src/test/unit/resources/small_delivery.zip
+
+Uday/Suzuki #240 added ingestion test and rules
+13	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+16	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+163	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoBibUnstructuredTag.xml
+163	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoBibilographyHeading.xml
+
+Uday: Fixed script by handling first argument
+7	1	src/main/scripts/download-summary.sh
+
+Uday Fixing cap file
+1	1	ops/deploy/capfile
+
+Uday Fixing cap file on cruise
+1	1	ops/deploy/capfile
+
+Uday: Moved from core project checked in by mistake
+8	0	src/main/scripts/download-summary.sh
+
+Uday/Harinee: Changed log file location
+3	3	src/main/scripts/ingestion-summary.sh
+
+Uday: Modified ingestion summary shell script
+2	2	src/main/scripts/ingestion-summary.sh
+
+Uday: added cap target to download artifacts
+5	1	ops/deploy/capfile
+
+Harinee #315 Adding functional test for validating only articles and chapters are supported
+7	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+507	0	src/test/unit/resources/dds/DocumentNotArticleOrChapter.xml
+
+Harinee #315 Adding functional tests for Unsupported Articles (for DOI, Author given anme, subtitle and volume ID)
+40	24	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+516	0	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInArticleDOI.xml
+516	0	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInAuthorGivenName.xml
+517	0	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInJournalSubtitle.xml
+516	0	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInJournalVolumeID.xml
+
+Harinee #315 Adding functional tests for Unsupported Chapter (for authorname, chapter title, Chapter DOI)
+15	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithAbstractHeadingContainingMarkup.xml
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithAuthorGivenNameContainingMarkup.xml
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithChapterDOIContainingMarkup.xml
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithChapterTitleContainingMarkup.xml
+
+Harinee #315 Adding functional test for Unsupported Chapter (for Series Title)
+4	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+106	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithSeriesTitleContainingMarkup.xml
+
+Harinee Refactored tests for unique tests for xpaths in DocumentMatcherTest. Also added a test for invalid Volume number for Book Chapter
+25	22	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+0	515	src/test/unit/resources/dds/invalid_articles/ArticleWithNoDOI.xml
+0	515	src/test/unit/resources/dds/invalid_articles/ArticleWithNoFirstPage.xml
+0	515	src/test/unit/resources/dds/invalid_articles/ArticleWithNoLastPage.xml
+0	100	src/test/unit/resources/dds/invalid_chapters/ChapterInfoWithNoChapterFirstPage.xml
+0	100	src/test/unit/resources/dds/invalid_chapters/ChapterInfoWithNoCopyrightYear.xml
+2	0	src/test/unit/resources/dds/invalid_chapters/{ChapterInfoWithNoChapterLastPage.xml => ChapterWithMarkupInBookVolumeNumber.xml}
+
+Uday/Mark: changing dev box ip address
+1	1	ops/deploy/capfile
+
+Uday: Create working directory if doesnot exists
+5	0	src/main/scala/com/springer/aim/DeliveryManager.scala
+
+Harinee Adding functional test for Unsupported Article (with Markup in Abstract Heading)
+6	2	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+516	0	src/test/unit/resources/dds/invalid_articles/ArticleWithMarkupInAbstractHeading.xml
+
+Uday/Alinoor: Added summary csv file script
+2	0	src/main/scripts/ingestion-summary.sh
+
+Uday/Alinoor - script to package up unsupported and invalid documents from ingestion
+1	0	ops/deploy/capfile
+2	0	src/main/scripts/import.sh
+16	0	src/main/scripts/ingestion-summary.sh
+
+pat: removing unused folder
+0	11	xquery/create-manifest.xqy
+0	15	xquery/importers/casper/metadata-gen/config.xqy
+0	25	xquery/importers/casper/metadata-gen/create-metadata-element.xqy
+0	9	xquery/importers/casper/metadata-gen/get-uri-list.xqy
+0	145	xquery/importers/casper/metadata-gen/in-mem-update.xqy
+0	80	xquery/importers/casper/metadata-gen/lib-metadata.xqy
+0	84	xquery/importers/casper/metadata-gen/lib-slmd-article.xqy
+0	48	xquery/importers/casper/metadata-gen/lib-slmd-book.xqy
+0	71	xquery/importers/casper/metadata-gen/lib-slmd-chapter.xqy
+0	5	xquery/importers/casper/metadata-gen/lib-slmd-config.xqy
+0	607	xquery/importers/casper/metadata-gen/lib-slmd-core.xqy
+0	78	xquery/importers/casper/metadata-gen/lib-slmd-journal.xqy
+0	71	xquery/importers/casper/metadata-gen/lib-slmd-series.xqy
+0	49	xquery/importers/casper/metadata-gen/lib-slmd.xqy
+0	34	xquery/importers/casper/record-loader.xqy
+0	201	xquery/interface/LICENSE.txt
+0	62	xquery/interface/bindings/rounded_corners.htc
+0	4	xquery/interface/css/custom.css
+0	60	xquery/interface/css/ie_6.css
+0	23	xquery/interface/css/ie_7.css
+0	503	xquery/interface/css/master.css
+0	32	xquery/interface/custom/appcss.css
+0	870	xquery/interface/custom/appfunctions.xqy
+0	3	xquery/interface/custom/appjs.js
+0	18	xquery/interface/custom/apptransform-abstract-metadata.xsl
+0	23	xquery/interface/custom/apptransform-abstract-title.xsl
+0	320	xquery/interface/custom/apptransform-detail.xsl
+0	10	xquery/interface/custom/get-uri.xqy
+0	124	xquery/interface/error.xqy
+-	-	xquery/interface/images/3px_drop_shadow_right.png
+-	-	xquery/interface/images/body_background_dark_gradient.png
+-	-	xquery/interface/images/category_background_light_gradient.png
+-	-	xquery/interface/images/facet_arrow.gif
+-	-	xquery/interface/images/facet_close.gif
+-	-	xquery/interface/images/facet_close.png
+-	-	xquery/interface/images/facet_green.png
+-	-	xquery/interface/images/facet_orange.png
+-	-	xquery/interface/images/facet_yellow.png
+-	-	xquery/interface/images/loading.gif
+-	-	xquery/interface/images/mt_icon_search.gif
+-	-	xquery/interface/images/mt_logo_Oscar.png
+-	-	xquery/interface/images/pager_arrows.png
+-	-	xquery/interface/images/toolbar_background_dark_gradient.png
+-	-	xquery/interface/images/toolbar_list_compact.png
+-	-	xquery/interface/images/toolbar_list_detailed.png
+-	-	xquery/interface/images/toolbar_menu_arrow.gif
+0	135	xquery/interface/js/application.js
+0	43	xquery/interface/js/sample-application.js
+0	508	xquery/interface/lib/config.xqy
+0	798	xquery/interface/lib/standard.xqy
+0	5	xquery/interface/lib/transform-abstract-metadata.xsl
+0	5	xquery/interface/lib/transform-abstract-title.xsl
+0	20	xquery/interface/lib/transform-detail.xsl
+0	26	xquery/interface/load.xqy
+0	9	xquery/interface/main.xqy
+0	107	xquery/interface/manifest.xml
+0	49	xquery/interface/rewrite.xqy
+-	-	xquery/interface/skins/dawn/_preview.png
+-	-	xquery/interface/skins/dawn/bg.png
+0	380	xquery/interface/skins/dawn/dawn.css
+-	-	xquery/interface/skins/dusk/_preview.png
+0	362	xquery/interface/skins/dusk/dusk.css
+0	37	xquery/interface/suggest.xqy
+0	1396	xquery/interface/yui/animation/animation-debug.js
+0	23	xquery/interface/yui/animation/animation-min.js
+0	1392	xquery/interface/yui/animation/animation.js
+0	7	xquery/interface/yui/autocomplete/assets/autocomplete-core.css
+0	57	xquery/interface/yui/autocomplete/assets/skins/sam/autocomplete-skin.css
+0	7	xquery/interface/yui/autocomplete/assets/skins/sam/autocomplete.css
+0	3009	xquery/interface/yui/autocomplete/autocomplete-debug.js
+0	12	xquery/interface/yui/autocomplete/autocomplete-min.js
+0	2966	xquery/interface/yui/autocomplete/autocomplete.js
+0	9	xquery/interface/yui/connection/connection-min.js
+-	-	xquery/interface/yui/container/assets/alrt16_1.gif
+-	-	xquery/interface/yui/container/assets/blck16_1.gif
+-	-	xquery/interface/yui/container/assets/close12_1.gif
+0	176	xquery/interface/yui/container/assets/container-core.css
+0	324	xquery/interface/yui/container/assets/container.css
+-	-	xquery/interface/yui/container/assets/hlp16_1.gif
+-	-	xquery/interface/yui/container/assets/info16_1.gif
+0	242	xquery/interface/yui/container/assets/skins/sam/container-skin.css
+0	7	xquery/interface/yui/container/assets/skins/sam/container.css
+-	-	xquery/interface/yui/container/assets/tip16_1.gif
+-	-	xquery/interface/yui/container/assets/warn16_1.gif
+0	9076	xquery/interface/yui/container/container-debug.js
+0	19	xquery/interface/yui/container/container-min.js
+0	9052	xquery/interface/yui/container/container.js
+0	5136	xquery/interface/yui/container/container_core-debug.js
+0	14	xquery/interface/yui/container/container_core-min.js
+0	5126	xquery/interface/yui/container/container_core.js
+0	3067	xquery/interface/yui/datasource/datasource-debug.js
+0	12	xquery/interface/yui/datasource/datasource-min.js
+0	2996	xquery/interface/yui/datasource/datasource.js
+0	7	xquery/interface/yui/fonts/fonts-min.css
+0	56	xquery/interface/yui/fonts/fonts.css
+0	242	xquery/interface/yui/menu/assets/menu-core.css
+0	503	xquery/interface/yui/menu/assets/menu.css
+-	-	xquery/interface/yui/menu/assets/menu_down_arrow.png
+-	-	xquery/interface/yui/menu/assets/menu_down_arrow_disabled.png
+-	-	xquery/interface/yui/menu/assets/menu_up_arrow.png
+-	-	xquery/interface/yui/menu/assets/menu_up_arrow_disabled.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator_selected.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox_disabled.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox_selected.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator_selected.png
+0	339	xquery/interface/yui/menu/assets/skins/sam/menu-skin.css
+0	7	xquery/interface/yui/menu/assets/skins/sam/menu.css
+-	-	xquery/interface/yui/menu/assets/skins/sam/menubaritem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menubaritem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_checkbox.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_checkbox_disabled.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_submenuindicator_disabled.png
+0	9870	xquery/interface/yui/menu/menu-debug.js
+0	16	xquery/interface/yui/menu/menu-min.js
+0	9823	xquery/interface/yui/menu/menu.js
+0	14	xquery/interface/yui/yahoo-dom-event/yahoo-dom-event.js
+0	214	xquery/modules/import-manager.xqy
+0	109	xquery/modules/utils.xqy
+0	8	xquery/process-complete.xqy
+0	13	xquery/process-file.xqy
+
+Uday/Alex: #315 some more refactoring
+40	33	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	1	src/main/scala/com/springer/aim/document/Rule.scala
+
+Uday: #315 Added more meaningful messages to the loggers
+24	25	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	3	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+2	2	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+7	2	src/main/scala/com/springer/aim/document/Rule.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+4	4	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Uday: #351 Added document name to the log messages
+2	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+5	10	src/main/scala/com/springer/aim/ImportManager.scala
+3	3	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+6	5	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+2	2	src/main/scala/com/springer/aim/document/Rule.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+5	5	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday/Alex: #315 Added more validation rules for unsupported book tags
+15	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+
+Uday/Alex #315 More validation rules
+23	11	src/main/scala/com/springer/aim/DDSValidationRules.scala
+0	5	src/main/scala/com/springer/aim/document/Rule.scala
+1	7	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+101	0	src/test/sample.xml
+2	11	src/test/unit/resources/dds/30_2010_Article_81.xml
+2	18	src/test/unit/resources/dds/30_2011_Article_97.xml
+-	-	src/test/unit/resources/small_delivery.zip
+
+Uday/Alex: #315 Added rule to check for markup
+24	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+18	2	src/main/scala/com/springer/aim/document/Rule.scala
+10	1	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithBookTitleContainingMarkup.xml
+101	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithMarkupInSubTitle.xml
+61	9	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Uday/Alex: #315 Added more validation rules for article xml
+8	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+28	39	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+515	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoDOI.xml
+515	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoFirstPage.xml
+515	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoLastPage.xml
+510	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoTitle.xml
+
+Uday/Alex: #315 Added validation rules for invalid chapter/article contents
+15	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+43	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+514	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoAuthorNames.xml
+385	0	src/test/unit/resources/dds/invalid_articles/ArticleWithNoJournalTitle.xml
+100	0	src/test/unit/resources/dds/invalid_chapters/ChapterInfoWithNoChapterFirstPage.xml
+100	0	src/test/unit/resources/dds/invalid_chapters/ChapterInfoWithNoChapterLastPage.xml
+100	0	src/test/unit/resources/dds/invalid_chapters/ChapterInfoWithNoCopyrightYear.xml
+100	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoChapterTitle.xml
+
+Uday/Alex: #351 Added validation for no book chapter doi
+6	4	src/main/scala/com/springer/aim/DDSValidationRules.scala
+7	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+100	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoDOI.xml
+
+Uday: #315 Loggers showing more information about what rule failed
+5	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	1	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+9	7	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+11	10	src/main/scala/com/springer/aim/document/Rule.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday Added rule to check if author names exists
+11	6	src/main/scala/com/springer/aim/DDSValidationRules.scala
+6	1	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+12	7	src/main/scala/com/springer/aim/document/Rule.scala
+23	4	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+99	0	src/test/unit/resources/dds/invalid_chapters/ChapterWithNoAuthorNames.xml
+7	7	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Uday: #315 Refactored to make rules more readable
+10	8	src/main/scala/com/springer/aim/DDSValidationRules.scala
+5	3	src/main/scala/com/springer/aim/document/Rule.scala
+7	7	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+
+Uday: Refacorting of rules
+2	2	src/main/scala/com/springer/aim/DDSValidationRules.scala
+6	7	src/main/scala/com/springer/aim/document/Rule.scala
+6	22	src/test/unit/scala/com/springer/casper/aim/RuleSetTest.scala
+27	1	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+2	2	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday: Refactored to remove chained rulesets instead have a list of rulesets
+3	3	src/main/scala/com/springer/aim/DDSValidationRules.scala
+1	1	src/main/scala/com/springer/aim/ImportManager.scala
+4	13	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+3	3	src/main/scala/com/springer/aim/document/Rule.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+4	5	src/test/unit/scala/com/springer/casper/aim/RuleSetTest.scala
+5	5	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday/Suzuki: #315 Added chapter title rule validation
+4	1	src/main/scala/com/springer/aim/CasperDocument.scala
+4	1	src/main/scala/com/springer/aim/DDSValidationRules.scala
+6	6	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+19	0	src/test/functional/scala/com/springer/casper/aim/DocumentMatcherTest.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+-	-	src/test/unit/resources/invalid_chapter.zip
+8	1	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+18	0	src/test/unit/scala/com/springer/casper/aim/builders/ChapterBuilder.scala
+
+duncan/alex task for non-admin user: fix cp in script for dev box
+1	1	src/main/scripts/mark-logic-module-installation.sh
+
+alex/duncan non-admin user task: adding the read permission to AIM content ingestion and stuff to allow AIM build to run locally
+36	0	ops/deploy/marklogic/steps/01_create_database
+1	1	src/main/resources/app.properties
+10	1	src/main/resources/xquery/upload-document.xqy
+2	1	src/main/scripts/mark-logic-module-installation.sh
+-	-	src/main/scripts/marklogic-xcc-4.2.4.jar
+
+Uday/Suzuki #315 Added rules framework
+-	-	delivery_articles/unsupported_document.zip
+13	0	src/main/scala/com/springer/aim/DDSValidationRules.scala
+2	2	src/main/scala/com/springer/aim/ImportManager.scala
+14	1	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+5	0	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+17	13	src/main/scala/com/springer/aim/document/Rule.scala
+10	10	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+1	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+634	0	src/test/unit/resources/unsupported-dds-document.xml
+-	-	src/test/unit/resources/unsupported_document.zip
+634	0	src/test/unit/resources/valid-dds-document.xml
+39	0	src/test/unit/scala/com/springer/casper/aim/RuleSetTest.scala
+32	0	src/test/unit/scala/com/springer/casper/aim/RuleTest.scala
+40	4	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Uday/Alinoor: functional test for invalid document and Introduced the concept of importable documents. Need to add more validation rules
+12	19	src/main/scala/com/springer/aim/ImportManager.scala
+17	0	src/main/scala/com/springer/aim/document/DocumentMatcher.scala
+41	0	src/main/scala/com/springer/aim/document/ImportableDocument.scala
+26	0	src/main/scala/com/springer/aim/document/Rule.scala
+7	1	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+28	6	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+22	15	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+21	0	src/test/functional/scala/com/springer/casper/aim/FunctionalConstants.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+-	-	src/test/unit/resources/invalid_document.zip
+-	-	{delivery_articles => src/test/unit/resources}/small_delivery.zip
+20	0	src/test/unit/scala/com/springer/casper/aim/document/DocumentMatcherTest.scala
+
+Alinoor/Uday : Added qa properties to capfile
+10	0	ops/deploy/capfile
+
+Alinoor/Uday Added aim qa properties
+6	0	src/main/resources/app.qa.properties
+
+mark screwed up the imports
+0	1	src/main/scala/com/springer/aim/ImportManager.scala
+
+uday/pat/mark: try/catch around the import so we can see it actually import some stuff
+5	2	src/main/scala/com/springer/aim/ImportManager.scala
+
+uday/mark: doi being put in the wrong place in the document
+2	2	src/main/scala/com/springer/aim/CasperDocument.scala
+
+Uday/Mark reverting meta data namespace to meta from facet
+14	14	src/main/scala/com/springer/aim/CasperDocument.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+10	10	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Uday/Mark Added facet namespace to metadata
+14	14	src/main/scala/com/springer/aim/CasperDocument.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+20	12	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+Uday: Finxing dev server url
+1	1	src/main/resources/app.dev.properties
+
+Uday/Mark Made MarkLogicClientTest more robust and updated import script for ci
+1	1	src/main/scripts/import.sh
+3	1	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+
+Uday/Mark inlined clean script in tests
+8	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+0	4	src/test/unit/resources/xquery/clean-db.xqy
+
+Uday/Mark: gonna try it with a different variable name - maybe it's a reserved name?
+2	2	src/main/resources/xquery/clean-db.xqy
+1	1	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+
+Uday/Mark Added build label to zip files
+3	0	project/build/project.scala
+1	1	src/main/resources/app.dev.properties
+
+Uday/Mark: using Alex's magic forest document deleting script so we don't take out the modules that we need
+1	0	ops/deploy/capfile
+1	0	src/main/resources/app.dev.properties
+1	0	src/main/resources/app.properties
+8	2	src/main/resources/xquery/clean-db.xqy
+2	6	src/main/scala/com/springer/aim/ImportManager.scala
+3	2	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+
+Uday/Mark: put some logging around the creation of modules
+0	1	ops/deploy/capfile
+
+Uday/Mark: put some logging around the creation of modules
+3	0	src/main/scripts/mark-logic-module-installation.sh
+
+Uday/Mark Changing dev properties for running aim
+4	1	src/main/resources/app.dev.properties
+
+Uday/Mark #471 added dev properties
+1	0	src/main/resources/app.dev.properties
+
+Uday/Mark #471 Added capability to load different properties in different environments
+0	5	src/main/resources/app.properties
+0	2	src/main/resources/app.qa.properties
+7	1	src/main/scala/com/springer/aim/ImportManager.scala
+0	117	src/main/scala/com/springer/aim/ManifestInformation.scala
+8	3	src/main/scala/com/springer/aim/platform/MarkLogicClient.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+
+Uday/Mark: introducing the property loader #471
+1	2	src/main/resources/app.dev.properties
+2	3	src/main/scala/com/springer/aim/ImportManager.scala
+29	0	src/main/scala/com/springer/aim/config/PropertyLoader.scala
+
+Uday/Mark: had the classpath incorrect #471
+1	1	src/main/scripts/mark-logic-module-installation.sh
+
+Uday/Mark: deploy the aim modules first #417
+1	0	ops/deploy/capfile
+
+Uday/MarK: #471 - call the existing xdbc server with our aim modules sb
+2	2	ops/deploy/capfile
+
+Uday/Mark #471 fixing capfile
+1	1	ops/deploy/capfile
+
+Uday/Mark #471 changed port
+2	2	src/main/resources/app.properties
+
+Uday/Mark #471 added script to upload xquery to Mark logic
+11	1	ops/deploy/capfile
+1	0	project/build/project.scala
+59	0	src/main/scripts/mark-logic-module-installation.sh
+
+uday/Mark: #471 => port 9999
+2	2	src/main/resources/app.properties
+
+Uday/Mark #471 adding jar dependecies to zip file
+1	0	project/build/project.scala
+1	1	src/main/scripts/import.sh
+
+Uday/Mark #471 added lib dependencies to zip file
+1	0	project/build/project.scala
+1	1	src/main/scripts/import.sh
+
+uday/mark: deploy to /opt/casper
+2	2	ops/deploy/capfile
+
+Uday/Mark renamed cap target
+1	1	ops/deploy/capfile
+
+Uday/Mark #471 made ci to run zip task
+1	1	build
+
+Uday/Mark #471 added target to create zip file
+2	2	ops/deploy/capfile
+18	0	project/build/project.scala
+1	0	src/main/scripts/import.sh
+
+uday/mark: #471 => filling in cap file
+0	1	aim.iml
+30	0	ops/deploy/capfile
+0	1	src/main/scripts/import-articles.sh
+2	2	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+
+uday/mark - empty capfile to get us started
+0	0	ops/deploy/capfile
+
+uday/mark: adding meta data assertion to the end to end test
+4	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+3	1	src/test/functional/scala/com/springer/casper/aim/Article.scala
+8	2	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+
+Uday/Mark #471 Added metadata to the content xml
+2	0	project/build/project.scala
+39	0	src/main/scala/com/springer/aim/CasperDocument.scala
+3	1	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/Main.scala
+7	18	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+4	0	src/test/functional/scala/com/springer/casper/aim/Article.scala
+4	3	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/Document.scala
+94	2	src/test/unit/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+65	0	src/test/unit/scala/com/springer/casper/aim/CasperDocumentTest.scala
+27	0	src/test/unit/scala/com/springer/casper/aim/builders/ArticleBuilder.scala
+
+Uday/Alinoor #471 refactoring
+2	2	src/main/scala/com/springer/aim/ImportManager.scala
+1	2	src/main/scala/com/springer/aim/{ => platform}/MarkLogicClient.scala
+2	1	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+1	3	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Uday/Alinoor #471 functional test for MarkLogicClient cleanDb function
+14	0	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+6	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Uday/Alinoor #471 refactored tests
+13	6	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+28	37	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+
+Uday : #471 Some more refactoring
+1	1	src/main/scala/com/springer/aim/DeliveryManager.scala
+9	10	src/main/scala/com/springer/aim/ImportManager.scala
+
+Uday : #471 Some more refactoring
+1	1	src/main/scala/com/springer/aim/DeliveryManager.scala
+9	10	src/main/scala/com/springer/aim/ImportManager.scala
+
+Uday : #471 Some more refactoring
+1	4	src/main/scala/com/springer/aim/DeliveryManager.scala
+2	4	src/main/scala/com/springer/aim/ImportManager.scala
+0	3	src/main/scala/com/springer/aim/Main.scala
+36	37	src/main/scala/com/springer/aim/Unzipper.scala
+
+Uday/Alinoor #471 Some more cleanup
+2	14	src/main/scala/com/springer/aim/DeliveryManager.scala
+5	15	src/main/scala/com/springer/aim/ImportManager.scala
+1	2	src/main/scala/com/springer/aim/Main.scala
+
+Uday/Alinoor #471 refactoring code
+13	2	src/main/scala/com/springer/aim/ImportManager.scala
+
+Uday/Alinoor #471 removed unecessary code
+0	23	src/main/scala/com/springer/aim/DatabaseConnectionException.scala
+5	13	src/main/scala/com/springer/aim/ImportManager.scala
+0	23	src/main/scala/com/springer/aim/InvalidPathException.scala
+1	1	src/main/scala/com/springer/aim/ManifestInformation.scala
+7	2	src/main/scala/com/springer/aim/MarkLogicClient.scala
+0	22	src/main/scala/com/springer/aim/MissingPropertyException.scala
+0	16	src/main/scala/com/springer/aim/Options.scala
+0	258	src/main/scala/com/springer/aim/XQueryClient.scala
+0	38	src/main/scala/com/springer/aim/XmlUtility.scala
+1	3	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+0	164	src/test/unit/scala/com/springer/aim/ManifestInformationTest.scala
+0	51	src/test/unit/scala/com/springer/aim/XQueryClientTests.scala
+0	73	src/test/unit/scala/com/springer/aim/XmlUtilityTest.scala
+
+Uday/Alinoor #471 introduced new ML client
+1	1	src/main/resources/app.properties
+6	0	src/main/resources/xquery/upload-document.xqy
+21	7	src/main/scala/com/springer/aim/ImportManager.scala
+22	0	src/main/scala/com/springer/aim/MarkLogicClient.scala
+23	10	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+37	0	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicClientTests.scala
+2	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Uday/Alinoor #471 recatored code
+10	12	src/main/scala/com/springer/aim/DeliveryManager.scala
+10	8	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/Main.scala
+12	12	src/main/scala/com/springer/aim/ManifestInformation.scala
+
+Alinoor/Uday #471 Cleaning up of articles before ingesting them
+4	0	src/main/resources/xquery/clean-db.xqy
+1	1	src/main/resources/xquery/importers/casper/record-loader.xqy
+9	3	src/main/scala/com/springer/aim/ImportManager.scala
+1	1	src/main/scala/com/springer/aim/Main.scala
+5	5	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+1	1	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Uday/Alinoor #471 functional test content ingestion on an empty database
+1	1	aim.iml
+47	6	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+21	5	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+40	0	src/test/functional/scala/com/springer/casper/aim/Document.scala
+16	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+516	0	src/test/unit/resources/dds/30_2010_Article_81.xml
+386	0	src/test/unit/resources/dds/30_2011_Article_97.xml
+9	0	src/test/unit/resources/dds/978-1-4302-2854-7_Chapter_1.xml
+513	0	src/test/unit/resources/dds/NewArticle.xml
+0	0	src/test/{functional => unit}/resources/xquery/clean-db.xqy
+
+Duncan/Alinoor #471 refactored code
+0	7	src/test/functional/scala/com/springer/casper/aim/config/Injector.scala
+5	2	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Duncan/Alinoor #471 refactored code
+11	2	src/test/functional/scala/com/springer/casper/aim/AimSteps.scala
+0	17	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerHighLevelTests.scala
+23	0	src/test/functional/scala/com/springer/casper/aim/ArticleImportManagerTests.scala
+0	21	src/test/functional/scala/com/springer/casper/aim/MarkLogicHelper.scala
+0	33	src/test/functional/scala/com/springer/casper/aim/MarkLogicOperations.scala
+0	5	src/test/functional/scala/com/springer/casper/aim/config/Injector.scala
+0	23	src/test/functional/scala/com/springer/casper/aim/data/HttpMarkLogic.scala
+0	7	src/test/functional/scala/com/springer/casper/aim/data/MarkLogic.scala
+53	0	src/test/functional/scala/com/springer/casper/aim/platform/MarkLogicOperations.scala
+
+Duncan/Alinoor #471 All XmlUtilityTest unit tests
+73	0	src/test/unit/scala/com/springer/aim/XmlUtilityTest.scala
+
+Duncan/Alinoor #471 All ManifestInformation unit tests
+1	2	src/main/scala/com/springer/aim/ManifestInformation.scala
+164	0	src/test/unit/scala/com/springer/aim/ManifestInformationTest.scala
+1	2	src/test/unit/scala/com/springer/aim/{db => }/XQueryClientTests.scala
+
+Duncan/Alinoor #471 fixed unit tests
+1	1	project/build/project.scala
+18	30	src/test/unit/scala/com/springer/aim/db/XQueryClientTests.scala
+
+Duncan/Alinoor - #471 put functional tests into standard dir
+3	2	aim.iml
+8	1	build
+8	1	project/build/project.scala
+0	0	src/test/{ => functional}/resources/xquery/clean-db.xqy
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/AimSteps.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/ArticleImportManagerHighLevelTests.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/MarkLogicHelper.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/MarkLogicOperations.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/config/Injector.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/config/PropertyLoader.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/data/HttpMarkLogic.scala
+0	0	src/test/{ => functional}/scala/com/springer/casper/aim/data/MarkLogic.scala
+64	0	src/test/unit/scala/com/springer/aim/db/XQueryClientTests.scala
+
+duncan/alinoor #471 rename properties tags
+7	10	src/main/resources/app.properties
+2	2	src/main/scala/com/springer/aim/DeliveryManager.scala
+4	4	src/main/scala/com/springer/aim/ImportManager.scala
+3	3	src/main/scala/com/springer/aim/ManifestInformation.scala
+4	4	src/main/scala/com/springer/aim/XQueryClient.scala
+
+alinoor/duncan #471 dont move delivery files
+0	2	src/main/resources/app.properties
+0	16	src/main/scala/com/springer/aim/DeliveryManager.scala
+0	44	src/main/scala/com/springer/aim/ImportManager.scala
+
+alinoor/duncan #471 put the zip file back..
+-	-	delivery_articles/small_delivery.zip
+
+alinoor/duncan #471 refactor properties files
+-	-	delivery_articles/small_delivery.zip
+0	0	src/main/resources/app.dev.properties
+13	0	src/main/resources/app.properties
+0	2	src/main/resources/articleImportManager.properties
+0	13	src/main/resources/casper.properties
+6	29	src/main/scala/com/springer/aim/ImportManager.scala
+2	1	src/main/scala/com/springer/aim/Main.scala
+
+Alinoor/Duncan #471 zip file got deleted
+-	-	delivery_articles/small_delivery.zip
+
+Alinoor/Duncan #471 test port fix
+-	-	delivery_articles/small_delivery.zip
+1	1	src/main/resources/app.properties
+
+Duncan/Alinoor #471 modified AIM marklogic db name
+1	1	src/main/resources/casper.properties
+
+Duncan/Alinoor #471 modified AIM marklogic db url
+1	1	src/main/resources/casper.properties
+
+Duncan/Alinoor #471 - modified marklogic db url to temporarily point to working database
+1	1	src/main/resources/casper.properties
+
+Duncan/Alinoor #471 - added mkdir to script to ensure directories AIM needs are there
+1	0	src/main/scripts/import-articles.sh
+
+Duncan/Alinoor #471 - modified article import manager test to output details of script failure
+1	3	src/main/scripts/import-articles.sh
+35	3	src/test/scala/com/springer/casper/aim/AimSteps.scala
+
+pat, duncan: #471 adding default build file
+2	0	build
+
+Duncan/Alinoor #471 some .gitignoring
+2	0	.gitignore
+2	2	src/main/scripts/import-articles.sh
+
+Duncan/Charles #471 added small_delivery.zip
+-	-	delivery_articles/small_delivery.zip
+
+Duncan/Charles #471 replacing sort
+-	-	delivery_articles/small_delivery.zip
+1	3	src/main/scala/com/springer/aim/DeliveryManager.scala
+
+Duncan/Charles #471 First Functional test passing
+-	-	delivery_articles/small_delivery.zip
+
+Duncan/Charles #471 First Functional test passing
+0	0	.gitignore
+18	0	aim.iml
+7	1	aim.ipr
+0	0	src/main/resources/app.dev.properties
+0	0	src/main/resources/app.qa.properties
+2	0	src/main/resources/articleImportManager.properties
+13	0	src/main/resources/casper.properties
+73	0	src/main/resources/log4j.properties
+11	0	src/main/resources/xquery/create-manifest.xqy
+15	0	src/main/resources/xquery/importers/casper/metadata-gen/config.xqy
+84	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-article.xqy
+48	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-book.xqy
+71	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-chapter.xqy
+5	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-config.xqy
+607	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-core.xqy
+78	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-journal.xqy
+71	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd-series.xqy
+49	0	src/main/resources/xquery/importers/casper/metadata-gen/lib-slmd.xqy
+34	0	src/main/resources/xquery/importers/casper/record-loader.xqy
+214	0	src/main/resources/xquery/modules/import-manager.xqy
+109	0	src/main/resources/xquery/modules/utils.xqy
+8	0	src/main/resources/xquery/process-complete.xqy
+13	0	src/main/resources/xquery/process-file.xqy
+23	0	src/main/scala/com/springer/aim/DatabaseConnectionException.scala
+60	0	src/main/scala/com/springer/aim/DeliveryManager.scala
+121	0	src/main/scala/com/springer/aim/ImportManager.scala
+23	0	src/main/scala/com/springer/aim/InvalidPathException.scala
+12	0	src/main/scala/com/springer/aim/Main.scala
+118	0	src/main/scala/com/springer/aim/ManifestInformation.scala
+22	0	src/main/scala/com/springer/aim/MissingPropertyException.scala
+16	0	src/main/scala/com/springer/aim/Options.scala
+65	0	src/main/scala/com/springer/aim/Unzipper.scala
+258	0	src/main/scala/com/springer/aim/XQueryClient.scala
+38	0	src/main/scala/com/springer/aim/XmlUtility.scala
+3	2	src/main/scripts/import-articles.sh
+3	3	src/test/scala/com/springer/casper/aim/AimSteps.scala
+1	1	src/test/scala/com/springer/casper/aim/ArticleImportManagerHighLevelTests.scala
+1	1	src/test/scala/com/springer/casper/aim/MarkLogicOperations.scala
+2	2	src/{main/scala/com/springer => test/scala/com/springer/casper}/aim/config/Injector.scala
+1	1	src/{main/scala/com/springer => test/scala/com/springer/casper}/aim/config/PropertyLoader.scala
+1	1	src/{main/scala/com/springer => test/scala/com/springer/casper}/aim/data/HttpMarkLogic.scala
+1	1	src/{main/scala/com/springer => test/scala/com/springer/casper}/aim/data/MarkLogic.scala
+
+Charles/Duncan #471 initial commit, test for AIM import script
+14	0	.gitignore
+31	0	aim.iml
+202	0	aim.ipr
+-	-	external_lib/recordloader.jar
+2	0	ops/build/sbt
+8	0	project/build.properties
+23	0	project/build/project.scala
+1	0	sbt
+2	0	src/main/resources/app.dev.properties
+2	0	src/main/resources/app.properties
+2	0	src/main/resources/app.qa.properties
+12	0	src/main/scala/com/springer/aim/config/Injector.scala
+29	0	src/main/scala/com/springer/aim/config/PropertyLoader.scala
+23	0	src/main/scala/com/springer/aim/data/HttpMarkLogic.scala
+7	0	src/main/scala/com/springer/aim/data/MarkLogic.scala
+6	0	src/main/scripts/import-articles.sh
+4	0	src/test/resources/xquery/clean-db.xqy
+22	0	src/test/scala/com/springer/casper/aim/AimSteps.scala
+17	0	src/test/scala/com/springer/casper/aim/ArticleImportManagerHighLevelTests.scala
+21	0	src/test/scala/com/springer/casper/aim/MarkLogicHelper.scala
+33	0	src/test/scala/com/springer/casper/aim/MarkLogicOperations.scala
+-	-	tools/sbt-launch-0.7.5.jar
+
+Better also add the build and dist directories...
+2	1	java/.gitignore
+
+added .gitignore so that the workspace.xml is not added again
+2	0	java/.gitignore
+
+removed workspace.xml
+0	433	java/.idea/workspace.xml
+
+Added tools/ant so the project can be built
+8	1	java/.idea/misc.xml
+65	26	java/.idea/workspace.xml
+3	0	java/ant
+14	13	java/nbproject/project.properties
+6	6	java/test/com/springer/articleimportmanager/ManifestInformationTest.java
+2	0	java/tools/ant/INSTALL
+1398	0	java/tools/ant/KEYS
+272	0	java/tools/ant/LICENSE
+6	0	java/tools/ant/NOTICE
+97	0	java/tools/ant/README
+5467	0	java/tools/ant/WHATSNEW
+335	0	java/tools/ant/bin/ant
+218	0	java/tools/ant/bin/ant.bat
+93	0	java/tools/ant/bin/ant.cmd
+24	0	java/tools/ant/bin/antRun
+50	0	java/tools/ant/bin/antRun.bat
+66	0	java/tools/ant/bin/antRun.pl
+98	0	java/tools/ant/bin/antenv.cmd
+114	0	java/tools/ant/bin/complete-ant-cmd.pl
+131	0	java/tools/ant/bin/envset.cmd
+31	0	java/tools/ant/bin/lcp.bat
+153	0	java/tools/ant/bin/runant.pl
+102	0	java/tools/ant/bin/runant.py
+60	0	java/tools/ant/bin/runrc.cmd
+-	-	java/tools/ant/etc/ant-bootstrap.jar
+148	0	java/tools/ant/etc/changelog.xsl
+299	0	java/tools/ant/etc/checkstyle/checkstyle-frames.xsl
+34	0	java/tools/ant/etc/checkstyle/checkstyle-text.xsl
+130	0	java/tools/ant/etc/checkstyle/checkstyle-xdoc.xsl
+489	0	java/tools/ant/etc/coverage-frames.xsl
+487	0	java/tools/ant/etc/jdepend-frames.xsl
+276	0	java/tools/ant/etc/jdepend.xsl
+733	0	java/tools/ant/etc/junit-frames-xalan1.xsl
+902	0	java/tools/ant/etc/junit-frames.xsl
+478	0	java/tools/ant/etc/junit-noframes.xsl
+203	0	java/tools/ant/etc/log.xsl
+503	0	java/tools/ant/etc/maudit-frames.xsl
+1026	0	java/tools/ant/etc/mmetrics-frames.xsl
+179	0	java/tools/ant/etc/tagdiff.xsl
+343	0	java/tools/ant/fetch.xml
+121	0	java/tools/ant/get-m2.xml
+3	0	java/tools/ant/lib/README
+-	-	java/tools/ant/lib/ant-antlr.jar
+76	0	java/tools/ant/lib/ant-antlr.pom
+-	-	java/tools/ant/lib/ant-apache-bcel.jar
+72	0	java/tools/ant/lib/ant-apache-bcel.pom
+-	-	java/tools/ant/lib/ant-apache-bsf.jar
+75	0	java/tools/ant/lib/ant-apache-bsf.pom
+-	-	java/tools/ant/lib/ant-apache-log4j.jar
+70	0	java/tools/ant/lib/ant-apache-log4j.pom
+-	-	java/tools/ant/lib/ant-apache-oro.jar
+75	0	java/tools/ant/lib/ant-apache-oro.pom
+-	-	java/tools/ant/lib/ant-apache-regexp.jar
+71	0	java/tools/ant/lib/ant-apache-regexp.pom
+-	-	java/tools/ant/lib/ant-apache-resolver.jar
+70	0	java/tools/ant/lib/ant-apache-resolver.pom
+-	-	java/tools/ant/lib/ant-apache-xalan2.jar
+95	0	java/tools/ant/lib/ant-apache-xalan2.pom
+-	-	java/tools/ant/lib/ant-commons-logging.jar
+71	0	java/tools/ant/lib/ant-commons-logging.pom
+-	-	java/tools/ant/lib/ant-commons-net.jar
+76	0	java/tools/ant/lib/ant-commons-net.pom
+-	-	java/tools/ant/lib/ant-jai.jar
+85	0	java/tools/ant/lib/ant-jai.pom
+-	-	java/tools/ant/lib/ant-javamail.jar
+79	0	java/tools/ant/lib/ant-javamail.pom
+-	-	java/tools/ant/lib/ant-jdepend.jar
+73	0	java/tools/ant/lib/ant-jdepend.pom
+-	-	java/tools/ant/lib/ant-jmf.jar
+66	0	java/tools/ant/lib/ant-jmf.pom
+-	-	java/tools/ant/lib/ant-jsch.jar
+75	0	java/tools/ant/lib/ant-jsch.pom
+-	-	java/tools/ant/lib/ant-junit.jar
+101	0	java/tools/ant/lib/ant-junit.pom
+-	-	java/tools/ant/lib/ant-junit4.jar
+71	0	java/tools/ant/lib/ant-junit4.pom
+-	-	java/tools/ant/lib/ant-launcher.jar
+58	0	java/tools/ant/lib/ant-launcher.pom
+-	-	java/tools/ant/lib/ant-netrexx.jar
+99	0	java/tools/ant/lib/ant-netrexx.pom
+120	0	java/tools/ant/lib/ant-parent.pom
+-	-	java/tools/ant/lib/ant-swing.jar
+67	0	java/tools/ant/lib/ant-swing.pom
+-	-	java/tools/ant/lib/ant-testutil.jar
+75	0	java/tools/ant/lib/ant-testutil.pom
+-	-	java/tools/ant/lib/ant.jar
+222	0	java/tools/ant/lib/ant.pom
+65	0	java/tools/ant/lib/libraries.properties
+
+Added initial AIM files from SVN.
+1	0	java/.idea/.name
+7	0	java/.idea/ant.xml
+21	0	java/.idea/compiler.xml
+5	0	java/.idea/copyright/profiles_settings.xml
+5	0	java/.idea/encodings.xml
+19	0	java/.idea/libraries/lib.xml
+10	0	java/.idea/libraries/lib_test.xml
+87	0	java/.idea/misc.xml
+9	0	java/.idea/modules.xml
+125	0	java/.idea/uiDesigner.xml
+7	0	java/.idea/vcs.xml
+394	0	java/.idea/workspace.xml
+15	0	java/Aim.iml
+83	0	java/build.xml
+-	-	java/lib-test/junit-4.5.jar
+-	-	java/lib-test/mockito-all-1.8.5.jar
+-	-	java/lib/commons-codec-1.3.jar
+-	-	java/lib/commons-httpclient-3.1.jar
+-	-	java/lib/commons-io-1.4.jar
+-	-	java/lib/commons-logging-1.1.1.jar
+-	-	java/lib/commons-net-2.2.jar
+-	-	java/lib/guava-r07.jar
+-	-	java/lib/log4j-1.2.15.jar
+-	-	java/lib/mail.jar
+-	-	java/lib/recordloader.jar
+-	-	java/lib/xcc.jar
+-	-	java/lib/xpp3.jar
+3	0	java/manifest.mf
+891	0	java/nbproject/build-impl.xml
+6	0	java/nbproject/coverage.properties
+8	0	java/nbproject/genfiles.properties
+0	0	java/nbproject/private/config.properties
+6	0	java/nbproject/private/private.properties
+4	0	java/nbproject/private/private.xml
+96	0	java/nbproject/project.properties
+16	0	java/nbproject/project.xml
+5	0	java/src/articleImportManager.properties
+18	0	java/src/articles.properties
+175	0	java/src/com/springer/articleimportmanager/ImportManager.java
+29	0	java/src/com/springer/articleimportmanager/Main.java
+219	0	java/src/com/springer/articleimportmanager/ManifestInformation.java
+112	0	java/src/com/springer/articleimportmanager/Options.java
+68	0	java/src/com/springer/articleimportmanager/db/Loader.java
+336	0	java/src/com/springer/articleimportmanager/db/XQueryClient.java
+51	0	java/src/com/springer/articleimportmanager/db/XQueryOptions.java
+86	0	java/src/com/springer/articleimportmanager/dds/DeliveryManager.java
+71	0	java/src/com/springer/articleimportmanager/dds/DeliveryOptions.java
+40	0	java/src/com/springer/articleimportmanager/exceptions/DatabaseConnectionException.java
+41	0	java/src/com/springer/articleimportmanager/exceptions/InvalidManifestStatusException.java
+41	0	java/src/com/springer/articleimportmanager/exceptions/InvalidPathException.java
+40	0	java/src/com/springer/articleimportmanager/exceptions/MissingPropertyException.java
+60	0	java/src/com/springer/articleimportmanager/ftp/FtpManager.java
+77	0	java/src/com/springer/articleimportmanager/ftp/FtpOptions.java
+66	0	java/src/com/springer/articleimportmanager/utilities/MailSender.java
+94	0	java/src/com/springer/articleimportmanager/utilities/Unzipper.java
+57	0	java/src/com/springer/articleimportmanager/utilities/XmlUtility.java
+25	0	java/src/imageImportManager.properties
+20	0	java/src/images.properties
+7	0	java/src/javamail.properties
+73	0	java/src/log4j.properties
+9	0	java/src/recordloader.properties
+290	0	java/test/com/springer/articleimportmanager/ManifestInformationTest.java
+129	0	java/test/com/springer/articleimportmanager/OptionsTest.java
+112	0	java/test/com/springer/articleimportmanager/db/XQueryClientTest.java
+75	0	java/test/com/springer/articleimportmanager/db/XQueryOptionsTest.java
+52	0	java/test/com/springer/articleimportmanager/exceptions/DatabaseConnectionExceptionTest.java
+52	0	java/test/com/springer/articleimportmanager/exceptions/InvalidPathExceptionTest.java
+52	0	java/test/com/springer/articleimportmanager/exceptions/MissingPropertyExceptionTest.java
+111	0	java/test/com/springer/articleimportmanager/ftp/FtpOptionsTest.java
+127	0	java/test/com/springer/articleimportmanager/utilities/XmlUtilityTest.java
+
+rob: adding files
+0	96	xquery/modules/.svn/entries
+0	185	xquery/modules/.svn/text-base/import-manager.xqy.svn-base
+0	109	xquery/modules/.svn/text-base/utils.xqy.svn-base
+
+rob: adding files
+11	0	xquery/create-manifest.xqy
+15	0	xquery/importers/casper/metadata-gen/config.xqy
+25	0	xquery/importers/casper/metadata-gen/create-metadata-element.xqy
+9	0	xquery/importers/casper/metadata-gen/get-uri-list.xqy
+145	0	xquery/importers/casper/metadata-gen/in-mem-update.xqy
+80	0	xquery/importers/casper/metadata-gen/lib-metadata.xqy
+84	0	xquery/importers/casper/metadata-gen/lib-slmd-article.xqy
+48	0	xquery/importers/casper/metadata-gen/lib-slmd-book.xqy
+71	0	xquery/importers/casper/metadata-gen/lib-slmd-chapter.xqy
+5	0	xquery/importers/casper/metadata-gen/lib-slmd-config.xqy
+607	0	xquery/importers/casper/metadata-gen/lib-slmd-core.xqy
+78	0	xquery/importers/casper/metadata-gen/lib-slmd-journal.xqy
+71	0	xquery/importers/casper/metadata-gen/lib-slmd-series.xqy
+49	0	xquery/importers/casper/metadata-gen/lib-slmd.xqy
+34	0	xquery/importers/casper/record-loader.xqy
+201	0	xquery/interface/LICENSE.txt
+62	0	xquery/interface/bindings/rounded_corners.htc
+4	0	xquery/interface/css/custom.css
+60	0	xquery/interface/css/ie_6.css
+23	0	xquery/interface/css/ie_7.css
+503	0	xquery/interface/css/master.css
+32	0	xquery/interface/custom/appcss.css
+870	0	xquery/interface/custom/appfunctions.xqy
+3	0	xquery/interface/custom/appjs.js
+18	0	xquery/interface/custom/apptransform-abstract-metadata.xsl
+23	0	xquery/interface/custom/apptransform-abstract-title.xsl
+320	0	xquery/interface/custom/apptransform-detail.xsl
+10	0	xquery/interface/custom/get-uri.xqy
+124	0	xquery/interface/error.xqy
+-	-	xquery/interface/images/3px_drop_shadow_right.png
+-	-	xquery/interface/images/body_background_dark_gradient.png
+-	-	xquery/interface/images/category_background_light_gradient.png
+-	-	xquery/interface/images/facet_arrow.gif
+-	-	xquery/interface/images/facet_close.gif
+-	-	xquery/interface/images/facet_close.png
+-	-	xquery/interface/images/facet_green.png
+-	-	xquery/interface/images/facet_orange.png
+-	-	xquery/interface/images/facet_yellow.png
+-	-	xquery/interface/images/loading.gif
+-	-	xquery/interface/images/mt_icon_search.gif
+-	-	xquery/interface/images/mt_logo_Oscar.png
+-	-	xquery/interface/images/pager_arrows.png
+-	-	xquery/interface/images/toolbar_background_dark_gradient.png
+-	-	xquery/interface/images/toolbar_list_compact.png
+-	-	xquery/interface/images/toolbar_list_detailed.png
+-	-	xquery/interface/images/toolbar_menu_arrow.gif
+135	0	xquery/interface/js/application.js
+43	0	xquery/interface/js/sample-application.js
+508	0	xquery/interface/lib/config.xqy
+798	0	xquery/interface/lib/standard.xqy
+5	0	xquery/interface/lib/transform-abstract-metadata.xsl
+5	0	xquery/interface/lib/transform-abstract-title.xsl
+20	0	xquery/interface/lib/transform-detail.xsl
+26	0	xquery/interface/load.xqy
+9	0	xquery/interface/main.xqy
+107	0	xquery/interface/manifest.xml
+49	0	xquery/interface/rewrite.xqy
+-	-	xquery/interface/skins/dawn/_preview.png
+-	-	xquery/interface/skins/dawn/bg.png
+380	0	xquery/interface/skins/dawn/dawn.css
+-	-	xquery/interface/skins/dusk/_preview.png
+362	0	xquery/interface/skins/dusk/dusk.css
+37	0	xquery/interface/suggest.xqy
+1396	0	xquery/interface/yui/animation/animation-debug.js
+23	0	xquery/interface/yui/animation/animation-min.js
+1392	0	xquery/interface/yui/animation/animation.js
+7	0	xquery/interface/yui/autocomplete/assets/autocomplete-core.css
+57	0	xquery/interface/yui/autocomplete/assets/skins/sam/autocomplete-skin.css
+7	0	xquery/interface/yui/autocomplete/assets/skins/sam/autocomplete.css
+3009	0	xquery/interface/yui/autocomplete/autocomplete-debug.js
+12	0	xquery/interface/yui/autocomplete/autocomplete-min.js
+2966	0	xquery/interface/yui/autocomplete/autocomplete.js
+9	0	xquery/interface/yui/connection/connection-min.js
+-	-	xquery/interface/yui/container/assets/alrt16_1.gif
+-	-	xquery/interface/yui/container/assets/blck16_1.gif
+-	-	xquery/interface/yui/container/assets/close12_1.gif
+176	0	xquery/interface/yui/container/assets/container-core.css
+324	0	xquery/interface/yui/container/assets/container.css
+-	-	xquery/interface/yui/container/assets/hlp16_1.gif
+-	-	xquery/interface/yui/container/assets/info16_1.gif
+242	0	xquery/interface/yui/container/assets/skins/sam/container-skin.css
+7	0	xquery/interface/yui/container/assets/skins/sam/container.css
+-	-	xquery/interface/yui/container/assets/tip16_1.gif
+-	-	xquery/interface/yui/container/assets/warn16_1.gif
+9076	0	xquery/interface/yui/container/container-debug.js
+19	0	xquery/interface/yui/container/container-min.js
+9052	0	xquery/interface/yui/container/container.js
+5136	0	xquery/interface/yui/container/container_core-debug.js
+14	0	xquery/interface/yui/container/container_core-min.js
+5126	0	xquery/interface/yui/container/container_core.js
+3067	0	xquery/interface/yui/datasource/datasource-debug.js
+12	0	xquery/interface/yui/datasource/datasource-min.js
+2996	0	xquery/interface/yui/datasource/datasource.js
+7	0	xquery/interface/yui/fonts/fonts-min.css
+56	0	xquery/interface/yui/fonts/fonts.css
+242	0	xquery/interface/yui/menu/assets/menu-core.css
+503	0	xquery/interface/yui/menu/assets/menu.css
+-	-	xquery/interface/yui/menu/assets/menu_down_arrow.png
+-	-	xquery/interface/yui/menu/assets/menu_down_arrow_disabled.png
+-	-	xquery/interface/yui/menu/assets/menu_up_arrow.png
+-	-	xquery/interface/yui/menu/assets/menu_up_arrow_disabled.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/menubaritem_submenuindicator_selected.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox_disabled.png
+-	-	xquery/interface/yui/menu/assets/menuitem_checkbox_selected.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/menuitem_submenuindicator_selected.png
+339	0	xquery/interface/yui/menu/assets/skins/sam/menu-skin.css
+7	0	xquery/interface/yui/menu/assets/skins/sam/menu.css
+-	-	xquery/interface/yui/menu/assets/skins/sam/menubaritem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menubaritem_submenuindicator_disabled.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_checkbox.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_checkbox_disabled.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_submenuindicator.png
+-	-	xquery/interface/yui/menu/assets/skins/sam/menuitem_submenuindicator_disabled.png
+9870	0	xquery/interface/yui/menu/menu-debug.js
+16	0	xquery/interface/yui/menu/menu-min.js
+9823	0	xquery/interface/yui/menu/menu.js
+14	0	xquery/interface/yui/yahoo-dom-event/yahoo-dom-event.js
+96	0	xquery/modules/.svn/entries
+185	0	xquery/modules/.svn/text-base/import-manager.xqy.svn-base
+109	0	xquery/modules/.svn/text-base/utils.xqy.svn-base
+214	0	xquery/modules/import-manager.xqy
+109	0	xquery/modules/utils.xqy
+8	0	xquery/process-complete.xqy
+13	0	xquery/process-file.xqy
+
+rob: new aim repo
+0	0	README

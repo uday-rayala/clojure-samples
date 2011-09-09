@@ -1,3 +1,159 @@
+Fri Sep 9 18:35:26 2011 +0100
+Mushtaq/Marc #661 big refactoring to allow multiple backmatters and frontmatters.
+ 7 files changed, 84 insertions(+), 30 deletions(-)
+
+Fri Sep 9 18:35:26 2011 +0100
+Marc/Mushtaq #661 Created relationship between book-mattters and book/part/subpart etc
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+Fri Sep 9 18:03:40 2011 +0100
+Mike/Chris/Harinee: Refactored to run system tests with temporary solution. Needs further refactoring.
+ 3 files changed, 30 insertions(+), 16 deletions(-)
+
+Fri Sep 9 18:03:40 2011 +0100
+Harinee: Updating system test and moving AboutSectionSteps to shared
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Fri Sep 9 18:03:40 2011 +0100
+Harinee/Jeremy: Adding new system test
+ 4 files changed, 29 insertions(+), 10 deletions(-)
+
+Fri Sep 9 17:24:32 2011 +0100
+Uday/Mark #689 Refactored selected facets to have either a single value or a range
+ 13 files changed, 74 insertions(+), 52 deletions(-)
+
+Fri Sep 9 16:44:02 2011 +0100
+Rob/Alex #80 fixed wildcard searches
+ 2 files changed, 46 insertions(+), 0 deletions(-)
+
+Fri Sep 9 16:07:45 2011 +0100
+Alex/Rob #devops - after the refactoring, a lot of the initial scripts worked on the premise that you'd specify the base db name.  As all envs are the same we've set the main db to CasperDocuments
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+Fri Sep 9 15:50:25 2011 +0100
+Chris #183 Added corporate image to header
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Fri Sep 9 12:48:44 2011 +0100
+Uday/Mark #689 Using the query parameters to display the constraints instead of ML constraints
+ 8 files changed, 36 insertions(+), 46 deletions(-)
+
+Fri Sep 9 12:44:11 2011 +0100
+Chris/ImaginaryFriend #183 Top header section now has corporate logos appearing for PharmaCars and ProteinCorp
+ 8 files changed, 71 insertions(+), 1 deletions(-)
+
+Fri Sep 9 13:36:06 2011 +0200
+Karl: changed css for the header #183
+ 4 files changed, 41 insertions(+), 22 deletions(-)
+
+Fri Sep 9 12:10:39 2011 +0100
+Marc/Mushtaq #661 Updated core to grab the book matters from the new structure
+ 6 files changed, 36 insertions(+), 62 deletions(-)
+
+Fri Sep 9 11:59:05 2011 +0100
+uday/mark: #689 making some methods private if they aren't used outside the class. Also removing unnecessary {}
+ 3 files changed, 26 insertions(+), 95 deletions(-)
+
+Fri Sep 9 11:59:44 2011 +0100
+Tom/Liz - adding hostname for QA ML since DNS is currently wrong
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Fri Sep 9 11:38:59 2011 +0100
+Alinoor/Jose #111 Language facet search.
+ 2 files changed, 18 insertions(+), 9 deletions(-)
+
+Fri Sep 9 11:04:06 2011 +0100
+Alinoor/Jose #111 Localization of language facets.
+ 4 files changed, 98 insertions(+), 7 deletions(-)
+
+Fri Sep 9 10:52:31 2011 +0100
+uday/mark #689 renaming a couple of files
+ 14 files changed, 62 insertions(+), 66 deletions(-)
+
+Fri Sep 9 10:52:31 2011 +0100
+uday/mark #689 adding some more acceptance criteria we need to get passing
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+
+Fri Sep 9 10:38:28 2011 +0100
+Alinoor/Jose #111 Language facet.
+ 10 files changed, 40 insertions(+), 18 deletions(-)
+
+Fri Sep 9 10:38:27 2011 +0100
+Jose #111 Functional test for language facet.
+ 3 files changed, 20 insertions(+), 0 deletions(-)
+
+Fri Sep 9 10:26:51 2011 +0100
+Alex/Rob/Uday #devops - Fixed a problem where the indexes were being created on Documents rather than CasperDocuments - this has now been amended in the script
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+Thu Sep 8 17:57:30 2011 +0100
+pat/liz/tom: using proper environment names.
+ 2 files changed, 16 insertions(+), 15 deletions(-)
+
+Thu Sep 8 17:12:17 2011 +0100
+Uday/Ken #689 Made publish in year input boxes show correct results.
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+
+Thu Sep 8 16:52:53 2011 +0100
+Alinoor/Jose #660 View front and backmatter links removed.
+ 3 files changed, 0 insertions(+), 5 deletions(-)
+
+Thu Sep 8 16:53:35 2011 +0100
+Uday/Ken #689 Filtering search results by published year
+ 10 files changed, 98 insertions(+), 22 deletions(-)
+
+Thu Sep 8 16:49:09 2011 +0100
+chris/mark #77 -> pulling out the individual functions into their own object
+ 1 files changed, 17 insertions(+), 15 deletions(-)
+
+Thu Sep 8 16:38:08 2011 +0100
+chris/mark #77 - pulling the javascript into its own file
+ 4 files changed, 38 insertions(+), 20 deletions(-)
+
+Thu Sep 8 16:26:55 2011 +0100
+Mark/Chris #77 Fixed space bug in auto-suggest
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+Thu Sep 8 16:09:09 2011 +0100
+Alinoor/Jose - access check for front and back matter
+ 7 files changed, 46 insertions(+), 27 deletions(-)
+
+Thu Sep 8 16:09:09 2011 +0100
+Alinoor/Jose - removing ignored tests
+ 1 files changed, 0 insertions(+), 40 deletions(-)
+
+Thu Sep 8 16:06:34 2011 +0100
+chris/mark: load the xml file from the dev repo (temporary solution until the duck (and his pair) sorts out cap deployment)
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Thu Sep 8 15:55:36 2011 +0100
+Chris/Mark #77 Fixed CSS like a boss
+ 1 files changed, 7 insertions(+), 5 deletions(-)
+
+Thu Sep 8 15:48:44 2011 +0100
+Mark/Chris #77 Implemented auto-suggest keyboard navigation-ness.
+ 6 files changed, 65 insertions(+), 12 deletions(-)
+
+Thu Sep 8 15:48:44 2011 +0100
+michael/mark #77 -> adding in jquery ui so we can display the auto suggest results
+ 7 files changed, 4951 insertions(+), 20 deletions(-)
+
+Thu Sep 8 15:06:09 2011 +0100
+Marc/Mushtaq #661 Implemeted TOC Parts within a book object
+ 4 files changed, 24 insertions(+), 21 deletions(-)
+
+Thu Sep 8 15:06:08 2011 +0100
+Marc/Mushtaq: #661 Added integration test for enhanced book xml
+ 2 files changed, 74 insertions(+), 1 deletions(-)
+
+Thu Sep 8 15:16:46 2011 +0100
+Karl: refactored error messages on input fields because of the date facet (#695), ui bugfix in IE (error message of the pagination was hidden)
+ 2 files changed, 42 insertions(+), 6 deletions(-)
+
+Thu Sep 8 14:25:41 2011 +0100
+Uday #689 Added failing/ignored test for published date range facet and refactored the search facets
+ 16 files changed, 86 insertions(+), 168 deletions(-)
+
 Thu Sep 8 12:16:27 2011 +0100
 Marc/Mushtaq: #661 Changed the BookChapterBuilder by adding part
  2 files changed, 13 insertions(+), 6 deletions(-)
