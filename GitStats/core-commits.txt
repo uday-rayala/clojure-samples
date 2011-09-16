@@ -1,3 +1,165 @@
+Thu Sep 15 18:17:12 2011 +0100 | pat: reading http response into stream.
+Thu Sep 15 18:12:41 2011 +0100 | pat: pulled out queries from http client.
+Thu Sep 15 18:06:22 2011 +0100 | Uday/Mushtaq #362 Completed most of the translations. Books with protocols are recognised.
+Thu Sep 15 18:02:42 2011 +0100 | pat/tom/jose: added option to force deployments.
+Thu Sep 15 15:56:05 2011 +0100 | Chris #771 Trying to be as cool as Mushtaq
+Thu Sep 15 15:56:05 2011 +0100 | Chris/Suzuki #771 Added validation class for checking that a given volume and/or issue exists
+Thu Sep 15 15:25:12 2011 +0100 | Harinee: Amending the search string to give more results for system test
+Thu Sep 15 15:16:46 2011 +0100 | Uday/Mushtaq #362 About Protocol link is handled
+Thu Sep 15 15:16:46 2011 +0100 | Uday/Mushtaq #362 Updated fulltext link to handle protocols
+Thu Sep 15 15:04:53 2011 +0100 | Karl: added an icon for external links, adjusted width of right column on document pages, added .aside-title to headlines with gradient (#146)
+Thu Sep 15 14:59:26 2011 +0100 | mark/duncan #695 adding the funky css stuff to allow error popup
+Thu Sep 15 14:44:48 2011 +0100 | Harinee/Sangeeta: Amending user to Springerlink
+Thu Sep 15 14:38:36 2011 +0100 | Chris/Suzuki #771 Very important change to jade
+Thu Sep 15 14:38:36 2011 +0100 | Suzuki/Chris #771 Tidy markup and added css bling
+Thu Sep 15 14:38:35 2011 +0100 | Chris/Suzuki #771 Added functionality to jump to an issue from the journal page. No validation yet.
+Thu Sep 15 14:23:04 2011 +0100 | Alinoor/Liz #662: Optimized imports.
+Thu Sep 15 14:20:09 2011 +0100 | Alinoor/Liz #662: BookMatter and BookChapter in separate files
+Thu Sep 15 13:58:28 2011 +0100 | Alinoor/Liz #662: Refactoring the parts and chapters that appear in book tables of contents
+Thu Sep 15 14:03:21 2011 +0100 | Karl: updated icons and added one for browse (e.g. on journal page)
+Thu Sep 15 13:56:26 2011 +0100 | Uday/Mushtaq #362 protocls now show up in home facets
+Thu Sep 15 13:37:50 2011 +0100 | Tom/Jose - correcting the jmx script as it had a typo and invoked the start-server script incorrectly
+Thu Sep 15 12:38:43 2011 +0100 | Harinee: Added more steps to the system test
+Thu Sep 15 12:06:43 2011 +0100 | Karl: corrected html on issue page (removed invalid <issn>)
+Thu Sep 15 12:01:39 2011 +0100 | Uday/Mushtaq #362 protocol link in home page works
+Thu Sep 15 11:45:13 2011 +0100 | Karl: added a generic class .hidden in the css for global use, defined color for links in the yellow actions bar
+Thu Sep 15 10:49:14 2011 +0100 | Alinoor/Liz #662: adding the subparts selection to the query results for books
+Thu Sep 15 10:36:38 2011 +0100 | duncan/mark #695 making more readabla
+Thu Sep 15 10:36:38 2011 +0100 | mark/duncan #695 javascript to complain when pub range end year is later than latest possible
+Thu Sep 15 10:36:38 2011 +0100 | mark/duncan #695 javascript to complain when pub range start year is earlier than earliest possible
+Thu Sep 15 10:14:53 2011 +0100 | Uday/Mushtaq #362 Corrected a space in the test
+Thu Sep 15 10:14:53 2011 +0100 | Uday/Mushtaq #362 Controller can handle URLs for protocols
+Thu Sep 15 10:14:53 2011 +0100 | Uday/Mushtaq #362 Search xquery now returns protocols
+Wed Sep 14 18:18:21 2011 +0100 | Karl: changed the style of the search located in the actions bar
+Wed Sep 14 17:14:35 2011 +0100 | Alinoor/Liz Window Fixing: get rid of the build output for the am agent
+Wed Sep 14 17:25:47 2011 +0100 | Harinee: Using beforeEach and afterEach in system test
+Wed Sep 14 17:25:47 2011 +0100 | Harinee: Adding Springer user
+Wed Sep 14 16:41:40 2011 +0100 | Chris/Suzuki #778 Updated home authorisation test to check for disciplines that car corp shouldnt have access to
+Wed Sep 14 16:29:29 2011 +0100 | Suzuki/Alex/Chris #778 Removed OR query from the car corp package query
+Wed Sep 14 16:20:51 2011 +0100 | Karl: minor correction in the html of the date facet
+Wed Sep 14 15:11:00 2011 +0100 | Liz/Alinoor buildFix: change in template broke a functional test
+Wed Sep 14 14:51:26 2011 +0100 | Chris/Suzuki #679 Fixed translation of journal title in article page
+Wed Sep 14 14:51:25 2011 +0100 | Tom/Jose - adding a script to allow us to start Casper with JMX listeners running
+Wed Sep 14 14:48:54 2011 +0100 | Karl: adjusted design of the results teaser and the 'also show locked results' box
+Wed Sep 14 14:48:53 2011 +0100 | Karl: corrected brackets for book chapter count on book page
+Wed Sep 14 12:50:58 2011 +0100 | mark: simplifying BrowserUrlParameters more
+Wed Sep 14 12:43:18 2011 +0100 | duncan/mark #695 fixing the available dates displayed so it doesn't take the date published facet into account
+Wed Sep 14 12:23:38 2011 +0100 | Chris/Suzuki #778 Refactored gajillions of tests to work with new access rights rules for car corp
+Wed Sep 14 12:23:38 2011 +0100 | Chris/Suzuki #778 Changed package tests to be correct
+Wed Sep 14 12:23:38 2011 +0100 | Chris/Suzuki #778 Added new access rights tests for car corp
+Wed Sep 14 12:23:38 2011 +0100 | Suzuki/Chris #778 Car-corp now has access to the automotive vertical
+Wed Sep 14 11:33:31 2011 +0100 | Karl: fixed nesting of html in the actions bar on the book page
+Wed Sep 14 11:33:31 2011 +0100 | Karl: fixed html for authors in book toc chapter
+Wed Sep 14 11:33:30 2011 +0100 | Karl: added style for the show/hide links of the jquery truncator
+Wed Sep 14 10:08:51 2011 +0100 | Jose/Suzuki/Chris #778 change Pharama corp to Car corp
+Tue Sep 13 18:19:30 2011 +0100 | Marc #661 If there are book series we have a different path.
+Tue Sep 13 18:19:45 2011 +0100 | pat: moving classes related to authentication and entitlement into respective packages.
+Tue Sep 13 18:02:59 2011 +0100 | pat: using by name params for logging.
+Tue Sep 13 17:55:43 2011 +0100 | Duncan/Chris #277 Fixed issue range on some page somewhere
+Tue Sep 13 17:54:12 2011 +0100 | Michael/Mushtaq #767 Now supporting BoldItalic in A++
+Tue Sep 13 17:54:12 2011 +0100 | Mike/Mushtaq #767 Now supporting ExternalRef in A++
+Tue Sep 13 17:48:56 2011 +0100 | pat: stop mixing in trait, because it's not needed.
+Tue Sep 13 17:48:14 2011 +0100 | pat: stop mixing in trait, because it's not needed.
+Tue Sep 13 17:47:02 2011 +0100 | pat: ditching tagsoup because it's no longer used.
+Tue Sep 13 17:46:18 2011 +0100 | pat: tidying up dependencies.
+Tue Sep 13 17:37:45 2011 +0100 | pat: ditching junit because it's not used.
+Tue Sep 13 17:21:16 2011 +0100 | Marc #661 Refactoring: Don't use search for simple queries over multiple documents.
+Tue Sep 13 17:27:52 2011 +0100 | Karl: adjusted margins on the home page
+Tue Sep 13 17:24:29 2011 +0100 | Suzuki/Alex/Jose #778 Tidy up steps
+Tue Sep 13 17:12:57 2011 +0100 | Alex/Jose/Suzuki #778 - added new always-run steps for build
+Tue Sep 13 17:03:20 2011 +0100 | Chris/Duncan #277 Fixed journal link from volumes and issues page
+Tue Sep 13 16:53:14 2011 +0100 | pat: removing unused files.
+Tue Sep 13 16:44:50 2011 +0100 | chris/duncan - #792 - fix URL encoding of dodgy DOIs with semicolons
+Wed Sep 14 16:45:31 2011 +0100 | ken/steffen passing domain name to openam-mock
+Tue Sep 13 16:39:50 2011 +0100 | Karl: changed the js notice (moved it down in the html because of SEO reasons, new design and german text)
+Tue Sep 13 16:36:54 2011 +0100 | Karl: adjusted some margins in content item lists (like search results)
+Tue Sep 13 16:31:53 2011 +0100 | pat: making methods private.
+Tue Sep 13 16:31:53 2011 +0100 | pat: reformatting.
+Tue Sep 13 16:31:52 2011 +0100 | pat: removing unused class.
+Tue Sep 13 16:31:52 2011 +0100 | pat: moving system:compile a bit back.
+Tue Sep 13 16:31:52 2011 +0100 | pat: removing build doctor.
+Tue Sep 13 16:31:52 2011 +0100 | pat: ignoring textmate projects.
+Tue Sep 13 16:31:52 2011 +0100 | pat: removing unused deploy script.
+Tue Sep 13 16:31:52 2011 +0100 | pat: removing duplicated script to stop server.
+Tue Sep 13 16:31:16 2011 +0100 | Karl: fixed no-js version of the disciplines nav
+Wed Sep 14 16:12:17 2011 +0100 | steffen/ken should fix authentication service issues in PERF
+Tue Sep 13 16:29:50 2011 +0100 | Alex #devops - added BookDOI range index for the Book Chapter page
+Tue Sep 13 16:20:55 2011 +0100 | uday/mark #689 changing date formatting to use '-' instead of 'to' to avoid evil language stuff
+Tue Sep 13 16:07:57 2011 +0100 | uday/mark #689 putting in the translation stuff into german
+Tue Sep 13 16:02:29 2011 +0100 | Revert "Suzuki/Jose #778 PharmaCorp rename to CarCorp"
+Tue Sep 13 15:18:45 2011 +0100 | uday/mark #689 cleaning up the BrowserUrlParameters API
+Tue Sep 13 15:04:41 2011 +0100 | Marc/Alinoor #661 completing functional tests.
+Tue Sep 13 15:09:49 2011 +0100 | Suzuki/Jose #778 PharmaCorp rename to CarCorp
+Wed Sep 14 15:02:34 2011 +0100 | Revert "steffen/ken should fix authentication service issues in PERF (fingers crossed)"
+Wed Sep 14 14:52:35 2011 +0100 | steffen/ken should fix authentication service issues in PERF (fingers crossed)
+Tue Sep 13 13:03:35 2011 +0100 | Tom/Liz #782: revert to js 1.6.1
+Tue Sep 13 13:03:35 2011 +0100 | Liz/Tom #782: Get jquery and jquery-ui from CDN
+Tue Sep 13 12:45:00 2011 +0100 | Marc/Alinoor #661 Story is complete. Need to add some tests.
+Tue Sep 13 12:45:00 2011 +0100 | Marc/Alinoor #661 UnitTest for BookParts.
+Tue Sep 13 12:49:03 2011 +0100 | Tom/Liz #713: updating the path in the init script
+Tue Sep 13 12:37:44 2011 +0100 | Tom/Liz #715: Adding execute permissions on the script
+Tue Sep 13 12:29:43 2011 +0100 | uday/mark #689 moved the final method out of BrowserUrlParameters into Facets
+Tue Sep 13 12:31:43 2011 +0100 | Suzuki/Jose Tidy and restructure mathjax js structure
+Tue Sep 13 12:13:03 2011 +0100 | Karl: added monster button (for #771)
+Tue Sep 13 11:57:19 2011 +0100 | uday/mark #689 refactoring BrowserUrlParameters - pulling out with/withoutFacet methods into their own object. Logic doesn't belong in BUP
+Tue Sep 13 11:55:25 2011 +0100 | Alex #677 - fixed discrepency between OpenAM user and the XML user info in ML
+Tue Sep 13 11:55:24 2011 +0100 | Alex #677 - added a further non-de eBook user with access to two legacy packages
+Tue Sep 13 11:55:24 2011 +0100 | Alex #677 - added significantly more testing around eBook packages
+Tue Sep 13 11:47:21 2011 +0100 | Duncan/Chris #277 Fixed bug with issue ordering with double digit dates.
+Tue Sep 13 11:47:33 2011 +0100 | Suzuki/Jose amend typo to js
+Tue Sep 13 11:16:30 2011 +0100 | uday/mark #689 simplifying the logic a bit
+Tue Sep 13 10:30:32 2011 +0100 | Tom/Liz #715: Adding a shell script to start/stop/restart the stub identity hub server. Also removing some unneccessary file/folder creation from the casper start script.
+Tue Sep 13 10:22:35 2011 +0100 | Karl: corrected the styling of autosuggest #77
+Tue Sep 13 10:08:47 2011 +0100 | Karl: changed the search box in the actions bar to the new design
+Wed Sep 14 09:33:18 2011 +0100 | ken/steffen/pat should fix dev and qa envs
+Tue Sep 13 10:05:25 2011 +0100 | uday/mark #689 making it possible to remove the date published facet from the right hand side
+Tue Sep 13 08:48:57 2011 +0100 | Marc #661 Add additional Tests for displaying parts.
+Wed Sep 14 08:56:59 2011 +0100 | ken/steffen: fixing performance env
+Mon Sep 12 19:38:06 2011 +0100 | Uday/Mark #689 Made remove facet link in publication facet section work
+Mon Sep 12 19:37:19 2011 +0100 | Karl: added style for a++ markup "stack"
+Mon Sep 12 18:47:45 2011 +0100 | Uday #689 Fixed dates coming in right order. values(0) is not always the start year
+Mon Sep 12 18:10:31 2011 +0100 | Marc/Alinoor #661 First implementation for displaying parts on book page.
+Mon Sep 12 18:10:30 2011 +0100 | Marc/Alinoor #661 Improving code, add helper function for Matter creation.
+Mon Sep 12 18:10:15 2011 +0100 | Alex/Michael-H #677 - First major commit for the new eBook functionality
+Mon Sep 12 18:07:45 2011 +0100 | Uday #689 Removed unneccessary methods
+Mon Sep 12 18:04:57 2011 +0100 | Tom/Liz - adding properties to allow us to run casper on the book fair backup laptop.
+Mon Sep 12 17:57:06 2011 +0100 | Uday/Mark #689 Made BrowserUrlParameters to use a list of tuples instead of a map
+Mon Sep 12 17:57:05 2011 +0100 | uday/mark #689 refactoring BrowserUrlParameters so we can deal with a List of tuples instead of a Map. Initial change done
+Mon Sep 12 17:53:07 2011 +0100 | Duncan/Chris #277 Updated issue page to retrieve page range from the issue node rather than calculating it manually
+Mon Sep 12 17:54:55 2011 +0100 | mark: didn't know ie8 doesn't have trim() on string. We'll use the jquery one
+Mon Sep 12 17:43:40 2011 +0100 | Suzuki/Jose ansi colours for supported terminals by default.
+Mon Sep 12 17:43:40 2011 +0100 | Suzuki/Jose MathJax CDN done.
+Mon Sep 12 17:43:40 2011 +0100 | Suzuzki/Jose remove local version of math jax and use CDN version
+Mon Sep 12 17:41:08 2011 +0100 | Karl: corrected an id and class on the journal issue page, changes on the link for all volumes and issues to match the design
+Mon Sep 12 17:14:02 2011 +0100 | Michael : #183 - changed logos
+Mon Sep 12 16:22:11 2011 +0100 | uday/mark #689 uncommenting the rest of the acceptance test
+Mon Sep 12 16:17:35 2011 +0100 | Michael : #77 - match the last word and ignore leading and trailing spaces
+Mon Sep 12 15:51:15 2011 +0100 | Marc/Alinoor #661 fixing download link for book front and back matter.
+Mon Sep 12 15:52:03 2011 +0100 | uday/mark #689 totally changed BrowserUrlParameters to work properly when adding/removing date facet
+Mon Sep 12 15:52:03 2011 +0100 | uday/mark - renaming method that wasn't compiling
+Mon Sep 12 15:52:02 2011 +0100 | uday/mark #689 removing the unused constraints method on FacetItem
+Mon Sep 12 15:52:02 2011 +0100 | uday/mark: #689 ensuring left hand side menu urls are built using all query parameters and not only facets as before
+Mon Sep 12 15:52:02 2011 +0100 | uday/mark take a copy of system properties before we use it inside Status so we're not using the same properties that might be used elsewhere
+Mon Sep 12 15:52:02 2011 +0100 | uday/mark #689 removing SelectedFacetItem from each of the methods since we're not using it anymore
+Mon Sep 12 15:55:59 2011 +0100 | Michael : #77 - changed search to only match the beginning of words. Discussed using element-word-query but Lee advised on or-query solution
+Mon Sep 12 15:37:59 2011 +0100 | Tom/Liz - adding a init script. Shamelessly borrowed from the Go-Server :)
+Mon Sep 12 14:33:39 2011 +0100 | Marc/Alinoor #661 fixed ignored test.
+Mon Sep 12 14:12:47 2011 +0100 | Marc/Alinoor #661 fixed ignored test.
+Mon Sep 12 12:55:40 2011 +0100 | Karl: wrapped language selector in list, fixed positioning of company logo and url of "Corporate Edition" #183
+Mon Sep 12 11:40:55 2011 +0100 | uday/mark #689 now using facets from the query string on the left menu
+Mon Sep 12 11:27:50 2011 +0100 | Marc/Alinoor #661 Removed BookDoi helper class.
+Mon Sep 12 11:38:30 2011 +0100 | Suzuki/Jose Suzuki is back
+Mon Sep 12 11:26:51 2011 +0100 | uday/mark: #689 only pass SingleValueFacets to the code that constructs left menu. We only ever show these types of constraints from the left menu
+Mon Sep 12 11:15:28 2011 +0100 | Marc/Alinoor #661 fixing pdf download link
+Mon Sep 12 11:11:08 2011 +0100 | uday/mark #689 now using SelectedFacet from query string to determine whether facet is highlighted on left menu
+Mon Sep 12 10:48:58 2011 +0100 | uday/mark: #689 push the selected facets from query string down to FacetItem so we can use them there
+Mon Sep 12 10:40:54 2011 +0100 | uday/mark #689 changing the API of SearchResults to accept selected facets coming from query string.
+Mon Sep 12 10:30:04 2011 +0100 | uday/mark #689 pushing the creation of SelectedFacetItem out so we can eventually replace it with SelectedFacet
+Mon Sep 12 09:17:39 2011 +0100 | Marc #661 Cleanup and refactoring for BookFrontMatter and BookBackMatter.
+Fri Sep 9 20:00:25 2011 +0100 | mark: #windowfixing reducing the number of parameters passed to SEARCH as per the SIG recommendation
+Fri Sep 9 19:32:15 2011 +0100 | uday/mark #689 game over for MultiLingualString
+Fri Sep 9 19:23:40 2011 +0100 | mushtaq/mark #689 getting rid of verbose scala code for mushtaqified code
+Fri Sep 9 19:23:40 2011 +0100 | Uday #689 Removed displayName from FacetItem instead doing translation in jade
 Fri Sep 9 18:35:26 2011 +0100 | Mushtaq/Marc #661 big refactoring to allow multiple backmatters and frontmatters.
 Fri Sep 9 18:35:26 2011 +0100 | Marc/Mushtaq #661 Created relationship between book-mattters and book/part/subpart etc
 Fri Sep 9 18:03:40 2011 +0100 | Mike/Chris/Harinee: Refactored to run system tests with temporary solution. Needs further refactoring.

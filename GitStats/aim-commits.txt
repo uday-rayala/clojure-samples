@@ -1,3 +1,16 @@
+Thu Sep 15 11:50:02 2011 +0100 | Uday/Mushtaq #362 Book will not be treated as Protocols even when MediaType is such
+Wed Sep 14 17:34:31 2011 +0100 | Uday/Mushtaq #362 Add protocols into seacheable collection during ingestion
+Wed Sep 14 16:16:05 2011 +0100 | mark: [noop] change to make ingestion work
+Wed Sep 14 11:41:45 2011 +0100 | Uday/Mushtaq #362 Explicit trait for Protocol
+Wed Sep 14 11:24:40 2011 +0100 | Uday/Mushtaq #362 protocol content type is recognised
+Wed Sep 14 10:54:48 2011 +0100 | Uday/Mushtaq #362 chapter builder can set appropriate media type
+Tue Sep 13 17:58:40 2011 +0100 | Jose no ansi colour for pipeline log.
+Mon Sep 12 05:33:57 2011 +0100 | Better toString for OrXPath so that error log output is less confusing
+Mon Sep 12 15:45:54 2011 +0100 | Duncan/Chris #277 Issue page ranges are now updated on import
+Mon Sep 12 14:19:24 2011 +0100 | Duncan/Chris #277 Refactored journal integration tests
+Mon Sep 12 12:15:27 2011 +0100 | chris/duncan #277 Added pub title test for journal import
+Mon Sep 12 12:01:58 2011 +0100 | chris/duncan #277 added some extra testing around Journal import basic data
+Mon Sep 12 10:32:43 2011 +0100 | duncan/charles #277 make scala article builder more like the xquery builder
 Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 language codes validation for books, chapters and articles
 Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 Springer language codes validation rule.
 Fri Sep 9 16:15:00 2011 +0100 | charles/duncan #277 integration tests for article to journal vols, issues and dates
