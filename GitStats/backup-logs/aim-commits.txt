@@ -1,0 +1,387 @@
+Thu Sep 15 11:50:02 2011 +0100 | Uday/Mushtaq #362 Book will not be treated as Protocols even when MediaType is such
+Wed Sep 14 17:34:31 2011 +0100 | Uday/Mushtaq #362 Add protocols into seacheable collection during ingestion
+Wed Sep 14 16:16:05 2011 +0100 | mark: [noop] change to make ingestion work
+Wed Sep 14 11:41:45 2011 +0100 | Uday/Mushtaq #362 Explicit trait for Protocol
+Wed Sep 14 11:24:40 2011 +0100 | Uday/Mushtaq #362 protocol content type is recognised
+Wed Sep 14 10:54:48 2011 +0100 | Uday/Mushtaq #362 chapter builder can set appropriate media type
+Tue Sep 13 17:58:40 2011 +0100 | Jose no ansi colour for pipeline log.
+Mon Sep 12 05:33:57 2011 +0100 | Better toString for OrXPath so that error log output is less confusing
+Mon Sep 12 15:45:54 2011 +0100 | Duncan/Chris #277 Issue page ranges are now updated on import
+Mon Sep 12 14:19:24 2011 +0100 | Duncan/Chris #277 Refactored journal integration tests
+Mon Sep 12 12:15:27 2011 +0100 | chris/duncan #277 Added pub title test for journal import
+Mon Sep 12 12:01:58 2011 +0100 | chris/duncan #277 added some extra testing around Journal import basic data
+Mon Sep 12 10:32:43 2011 +0100 | duncan/charles #277 make scala article builder more like the xquery builder
+Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 language codes validation for books, chapters and articles
+Fri Sep 9 17:33:27 2011 +0100 | Alinoor/Jose #111 Springer language codes validation rule.
+Fri Sep 9 16:15:00 2011 +0100 | charles/duncan #277 integration tests for article to journal vols, issues and dates
+Fri Sep 9 16:03:16 2011 +0100 | charles/duncan #277 integration tests for article to journal vols, issues and dates
+Fri Sep 9 12:00:43 2011 +0100 | Alinoor/Jose #111 Article, Chapter and Book language validation rules.
+Fri Sep 9 10:50:41 2011 +0100 | Marc/Mushtaq #661 Correct content type for book matters
+Fri Sep 9 09:15:42 2011 +0100 | Alinoor/Jose #111 language facet
+Thu Sep 8 22:05:06 2011 +0100 | pat: fixing roles
+Thu Sep 8 22:03:34 2011 +0100 | pat: adding ml role.
+Thu Sep 8 21:54:08 2011 +0100 | pat: using 3 ingestors.
+Thu Sep 8 18:46:52 2011 +0100 | Marc/Mushtaq: #661 Cleaned up the code in importable document
+Thu Sep 8 18:23:44 2011 +0100 | Marc/Mushtaq: #661 Updated aim to ingest all types of BFM and BBM
+Thu Sep 8 17:47:52 2011 +0100 | Tom/Liz/Pat - using shorter host name.
+Thu Sep 8 17:25:39 2011 +0100 | Tom/Liz/Pat - updating to use the dns entry which resolves to all three ML servers.
+Thu Sep 8 14:49:19 2011 +0100 | charles/duncan #277 ensure metadata from the latest article overwrites previous journal metadata
+Thu Sep 8 12:31:49 2011 +0100 | Alinoor/Jose #660 remove appending of matter type description from matter PDFs only BFM or BBM is appended
+Thu Sep 8 12:15:00 2011 +0100 | charles/duncan #277 journal.xqy now scans volumes and issues fully
+Wed Sep 7 17:46:46 2011 +0100 | pat: using consistent directories on perf.
+Wed Sep 7 14:53:33 2011 +0100 | pat: giving role a better name.
+Wed Sep 7 14:51:45 2011 +0100 | pat: tidyied up capfile in anticipation of upcoming changes.
+Wed Sep 7 14:00:05 2011 +0100 | Chris/Mushtaq Cleaned up XPath classes
+Wed Sep 7 13:50:46 2011 +0100 | Chris/Mushtaq Fixing the OrXPath behaviour
+Tue Sep 6 16:25:02 2011 +0100 | marc/duncan #277 added start and end pages to issue in Journal
+Tue Sep 6 16:15:45 2011 +0100 | charles/alinoor #660 set front and backmatter meta IDs to be unique instead of using the same DOI as the book
+Mon Sep 5 17:52:33 2011 +0100 | duncan/marc #277 change id to startid and add endId in volume metadata.
+Mon Sep 5 16:06:59 2011 +0100 | mark/marc/duncan #277 make Issue Title and Date Optional in the meta
+Mon Sep 5 15:03:46 2011 +0100 | Charles/Joze #660 include journals in searchable collection on insertion
+Mon Sep 5 14:11:30 2011 +0100 | Alinoor/Mushtaq #646 Fixing the build
+Mon Sep 5 13:03:15 2011 +0100 | Alinoor/Mushtaq #646 journal taTaxonomiesx
+Fri Sep 2 17:40:38 2011 +0100 | Charles/Jose #660 Searchable collection for searchable items.
+Fri Sep 2 15:33:12 2011 +0100 | Charles/Jose #660 Backmatter and Frontmatter content type refactor as map.
+Fri Sep 2 14:59:19 2011 +0100 | Charles/Jose #660 Backmatter and Frontmatter builder refactor.
+Fri Sep 2 14:16:06 2011 +0100 | charles/jose #660 support backmatter during ingestion - store back/front matter with generated marklogic uri if necessary
+Thu Sep 1 17:52:24 2011 +0100 | Suzuki/Jose #660 BookBackmatter as valid document.
+Thu Sep 1 17:22:34 2011 +0100 | Suzuki/Jose #660 BookBackmatter suffix for PDFs.
+Thu Sep 1 17:11:23 2011 +0100 | Suzuki/Jose #660 BookFrontMatter pdf copied.
+Thu Sep 1 16:35:57 2011 +0100 | Ken: skipping ingestion if unnecessary
+Thu Sep 1 15:45:43 2011 +0100 | Uday/Rob #139 Changed the pre computed discipline, sub-discipline, vertical mapping
+Thu Sep 1 15:45:42 2011 +0100 | Rob/Uday #597 refactored meta:Taxonomy element
+Thu Sep 1 15:25:09 2011 +0100 | Suzuki/Jose #660 Removed invalid test. Implemented Frontmatter validation rules.
+Thu Sep 1 15:25:09 2011 +0100 | Suzuki/Jose #660 Book front matter.
+Thu Sep 1 15:25:08 2011 +0100 | Suzuki/Jose #660 Book with front and backmatter file.
+Thu Sep 1 14:15:51 2011 +0100 | mark: #157 we need to have the volume in journal now
+Thu Sep 1 11:33:54 2011 +0100 | Charles/Mushtaq: Added few tests for XPath class
+Wed Aug 31 15:34:08 2011 +0100 | charles/mushtaq windowFixing added by-name parameters to Logger
+Wed Aug 31 12:30:32 2011 +0100 | Uday/Chris #157 Added issue information to journal xml
+Wed Aug 31 11:16:35 2011 +0100 | Mark/Marc #597 Changes on how to add taxonomies to articles.
+Wed Aug 31 10:57:57 2011 +0100 | Uday/Chris - #157 - Refactored tests to have shared builders.
+Tue Aug 30 17:46:12 2011 +0100 | Charles/Duncan #650 support all A++ markup in book title and subtitle
+Tue Aug 30 16:36:07 2011 +0100 | Michael: changed capfile to remove artifact
+Tue Aug 30 15:19:34 2011 +0100 | pat/mushtaq: fixed module installation.
+Tue Aug 30 14:23:37 2011 +0100 | pat/mushtaq: putting xquery modules in same place as core.
+Tue Aug 30 14:09:29 2011 +0100 | pat, mushtaq: removing whitespace.
+Tue Aug 30 14:01:29 2011 +0100 | pat, mushtaq: removed unnecessary libs; added required libs (i.e. scala).
+Tue Aug 30 13:38:33 2011 +0100 | Mushtaq: Unbreaking the build
+Tue Aug 30 12:27:05 2011 +0100 | Mushtaq: Fixing the broken window: - Removed jars not required for deployment from the zip - Changed "compile" folder to "lib" in the zip.
+Fri Aug 26 16:06:18 2011 +0100 | Charles/Suzuki #650 removed A++ markup in publication title meta info
+Fri Aug 26 16:01:48 2011 +0100 | eevert "mushtaq/mark: adding meta verticals into the journal"
+Fri Aug 26 15:48:37 2011 +0100 | mushtaq/mark: adding meta verticals into the journal
+Fri Aug 26 12:56:21 2011 +0100 | Alex/Jose - #611 added fix for broken authors facet on QA dataset
+Fri Aug 26 11:52:12 2011 +0100 | Alex/Jose #611 swap operators order to deal with non printable characters.
+Fri Aug 26 11:06:55 2011 +0100 | Alex/Jose #611 - stripping 'non-printable' characters from the author names
+Thu Aug 25 11:58:56 2011 +0100 | Uday/Alex #611 More logging with doi and authornames
+Thu Aug 25 11:07:13 2011 +0100 | Uday/Alex #611 Added log message to check what is happeneing in QA machine
+Wed Aug 24 18:48:57 2011 +0100 | Mushtaq: Cleaned up Dependencies trait
+Wed Aug 24 18:00:35 2011 +0100 | Uday/Alex #597 Changed the xml structure of vertical information in meta data
+Wed Aug 24 16:06:46 2011 +0100 | Mushtaq/Alinoor modified deployment directory to /opt/casper/aim
+Wed Aug 24 15:51:04 2011 +0100 | Liz/Jose #windowfixing check folders exist before delete them.
+Wed Aug 24 10:21:06 2011 +0100 | Alex/Uday #611 - fixed a defect where authors with empty names were being added to the metadata - these have been removed from the metadata (but not the document) so they can no longer be faceted
+Tue Aug 23 12:31:48 2011 +0100 | suzuki/mushtaq/mark: #623 -> adding verticals meta data during ingestion
+Fri Aug 19 17:58:42 2011 +0100 | Rob #509 add rule to check VolumeID is an integer
+Fri Aug 19 17:54:54 2011 +0100 | pat: fixing tidy_up method so that it cleans all bar the latest 5 releases after deployment.
+Fri Aug 19 17:03:22 2011 +0100 | Rob/Mark #509 add volume info to journal xml
+Fri Aug 19 15:50:52 2011 +0100 | rob/mark #509 adding volumes dynamically on article ingestion
+Fri Aug 19 15:34:08 2011 +0100 | Charles/Pat #532 added support for book titles and book series titles.
+Fri Aug 19 14:51:47 2011 +0100 | Rob/Mark #509 added volume to journal xml
+Fri Aug 19 11:08:40 2011 +0100 | mark: forgot to add these test fixes
+Fri Aug 19 10:42:59 2011 +0100 | rob/mark #509 creating a stub journal entry for journal articles
+Fri Aug 19 10:04:55 2011 +0100 | Charles #532 marking documents invalid if they contain A++ in the author names
+Thu Aug 18 18:42:08 2011 +0100 | pat/charles: #532 removing 'no bibliography heading' rules because bibliography heading is not used in core.
+Thu Aug 18 18:29:24 2011 +0100 | pat/charles: #532 removing 'no markup in bibliography heading' rules because bibliography heading is not used in core.
+Thu Aug 18 18:27:37 2011 +0100 | pat/charles: #532 fixing invalid tests.
+Thu Aug 18 18:12:44 2011 +0100 | pat/charles: #532 relaxed rules around rejecting a++ markup because the functionality to deal with a++ markup has been implemented in core.
+Thu Aug 18 12:22:51 2011 +0100 | Charles/Mark #532 relaxed DDS import rules to allow markup in references/bibliographies
+Thu Aug 18 11:20:01 2011 +0100 | pat: removed old sbt artifact.
+Thu Aug 18 10:27:11 2011 +0100 | Alinoor/Mushtaq #575 AIM prepends DOI onto all FileRef attributes of ImageObjects
+Wed Aug 17 18:03:40 2011 +0100 | pat/charles: upping log level from debug to info.
+Wed Aug 17 17:48:34 2011 +0100 | Chris/Mark #509 Added functional test to check for journal insertion and started code in ImportManager (commented out)
+Wed Aug 17 17:31:50 2011 +0100 | Rob/Suzuki #629 set document quality based on content type
+Wed Aug 17 16:34:42 2011 +0100 | pat/charles #532: Relaxing rules for Book|Journal Abstract Heading (See core commit 334c8fe); and a bit of rule reshuffling.
+Wed Aug 17 10:17:30 2011 +0100 | pat/charles #532 mark up in journal title marked as invalid
+Wed Aug 17 10:06:15 2011 +0100 | pat/charles #532 mark up in some elements set to invalid
+Wed Aug 17 09:30:30 2011 +0100 | pat/charles: #532 documents with markup in DOIs are invalid (as per A++ DTD) - not unsupported.
+Tue Aug 16 19:45:55 2011 +0100 | Uday Fixing build
+Tue Aug 16 19:23:34 2011 +0100 | pat/charles: #532 added a++ support for book sub titles; also removed journal subtitle rule because we're not displaying them anywhere in core. See core commit 2024ff5.
+Tue Aug 16 18:06:04 2011 +0100 | Alinoor/Jose #575 AIM preserves paths of images in manifest
+Tue Aug 16 16:30:40 2011 +0100 | Alinoor/Jose #575 AIM preserves paths of images in manifest
+Tue Aug 16 13:20:15 2011 +0100 | Rob/Chris #339 updated import to check object type in manifest
+Tue Aug 16 13:12:45 2011 +0100 | Alinoor/Jose #575 renamed PDFHelper to FileHelper
+Tue Aug 16 12:54:21 2011 +0100 | Alinoor/Jose #575 Images folder under content.
+Tue Aug 16 12:37:12 2011 +0100 | Alinoor/Jose #575 Valid document which lacks images invalidates document.
+Tue Aug 16 11:36:11 2011 +0100 | Rob/Chris #339 added support for books in series. removed rule that blocks all books
+Tue Aug 16 11:29:48 2011 +0100 | Alinoor/Jose #575 - fix broken build
+Tue Aug 16 11:01:41 2011 +0100 | Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+Tue Aug 16 10:55:25 2011 +0100 | Alinoor/Jose #575 - AIM now extracts images within a zip file into the content dir
+Tue Aug 16 10:48:28 2011 +0100 | Charles/Pat #532 reverting DDS rules back so Aplusplus is only supported in abstract para
+Mon Aug 15 18:55:31 2011 +0100 | Mushtaq: trying to unbreak the build
+Mon Aug 15 18:41:36 2011 +0100 | Charles/Mushtaq: #532 Allow ingestion of documents with markup in BookSubTitle
+Mon Aug 15 17:08:06 2011 +0100 | pat: tidyied up / added logging; removed time class because it's not thread-safe; moved parallelisation from inner to outer loop.
+Mon Aug 15 14:51:19 2011 +0100 | Alinoor/Jose #575 - removed most of the validation rules for MediaObject and InlineMediaObject
+Mon Aug 15 14:27:48 2011 +0100 | Rob/Chris removed log message
+Mon Aug 15 10:31:41 2011 +0100 | Rob/Chris #339 added book pdf validation
+Mon Aug 15 09:13:36 2011 +0100 | Mushtaq: #609 Fixing the log spurious log message "Manifest file is empty"
+Sat Aug 13 14:47:45 2011 +0100 | pat: recursing down into input directory and following symlinks. (tripped over dot in extension in earlier commit.)
+Sat Aug 13 14:23:56 2011 +0100 | pat: simplifying classpath (printf doesn't work on macs...)
+Sat Aug 13 13:59:47 2011 +0100 | Revert "pat: recursing down into input directory and following symlinks."
+Sat Aug 13 13:54:12 2011 +0100 | pat: recursing down into input directory and following symlinks.
+Fri Aug 12 17:30:05 2011 +0100 | pat: removing unused file.
+Fri Aug 12 13:51:12 2011 +0100 | Ken/Mushtaq #609 Story finished
+Fri Aug 12 11:06:53 2011 +0100 | Ken/Mushtaq #609 added manifest file name and DOI to error messages
+Fri Aug 12 10:57:19 2011 +0100 | Marc/Charles #532 updating validation rules after merge - reverting some additions
+Fri Aug 12 10:45:18 2011 +0100 | Charles/Marc #532 rollback markup rules and ignoring tests in preparation for push of a++ support in core
+Thu Aug 11 19:29:17 2011 +0100 | Ken/Mushtaq #609 Wrapping up the story
+Thu Aug 11 18:28:29 2011 +0100 | Ken/Mushtaq #609 refactored DeliveryManager class
+Thu Aug 11 16:57:56 2011 +0100 | Ken/Mushtaq #609 Added integration test for UnzippedFiles trait
+Thu Aug 11 16:34:22 2011 +0100 | Ken/Mushtaq #609 added logging when manifest and associated zip file don't match
+Thu Aug 11 12:37:21 2011 +0100 | Alinoor/Michael #380 adding starting with rule for inline equations
+Thu Aug 11 10:11:24 2011 +0100 | Mushtaq: cleanup of tests for Manifest and DeliveriesValidator
+Wed Aug 10 19:31:42 2011 +0100 | Mushtaq: optimizing nested for loop to get delivery list. given that there are 20K zips and 20K manifests in perf env, the nested loop would be very inefficient
+Wed Aug 10 16:32:00 2011 +0100 | Suzuki/Michael/Mushtaq compelete story #547
+Wed Aug 10 16:18:56 2011 +0100 | pat/mushtaq: no longer deleting zips in workspace; no longer failing if corrupt zip file; no longer unzipping in parallel (number of threads exploded on perf).
+Wed Aug 10 16:11:15 2011 +0100 | pat, mushtaq: pointing perf to 1m dds delivery.
+Wed Aug 10 16:11:15 2011 +0100 | pat/mushtaq: giving aim a bit more heap space.
+Wed Aug 10 16:11:15 2011 +0100 | pat/alex: remove ml step, because it never got executed and it's in core (supposedly).
+Wed Aug 10 15:49:43 2011 +0100 | Charles/Rob #339 ignored test failing build
+Wed Aug 10 15:41:29 2011 +0100 | alinoor/mark #380 fixing the title ingestion rules
+Wed Aug 10 15:40:17 2011 +0100 | Rob/Charles #339 made books invalid temporarily until core supports them
+Wed Aug 10 15:34:12 2011 +0100 | Rob/Charles #339 import book xml
+Wed Aug 10 15:24:48 2011 +0100 | Charles/Rob #339 support books in ingestion
+Wed Aug 10 14:22:24 2011 +0100 | Suzuki/Michael small naming refactor of app to aPlusPlus
+Wed Aug 10 12:53:17 2011 +0100 | Michael/Suzuki dev task to clean forests in xml db
+Tue Aug 9 16:28:09 2011 +0100 | Chris/Mushtaq #608 Fixing the build
+Tue Aug 9 15:43:28 2011 +0100 | Chris/Mushtaq #608 Finished story
+Tue Aug 9 11:54:57 2011 +0100 | Chris/Mushtaq: #608 XML files are now gettting loaded via manifest. We also have access to PDF files via the manifest. Remaining bit is to load the PDF. Created the new test data which is a pair of manifest and zip files
+Tue Aug 9 11:54:56 2011 +0100 | Chris/Mushtaq: #608 Only zips with corresponding manifest will get digested. capfile will download manifest during deploy
+Mon Aug 8 17:06:48 2011 +0100 | Ken/Pat #612 deploy and run AIM on MarkLogic node and pick up zip files from /aim_transfers folder
+Mon Aug 8 16:54:55 2011 +0100 | charles/mark: #380 - update ingestion to reject (Inline)MediaObject only if it's not inside (Inline)Equation
+Mon Aug 8 15:49:13 2011 +0100 | Ken/Alinoor #612 updated capistrano script to ingest into PERF environment
+Mon Aug 8 15:33:05 2011 +0100 | pat/michael: fixing whitespace issue around author names.
+Sun Aug 7 17:06:08 2011 +0100 | Mushtaq: cleaned up code for git push with minor changes
+Sun Aug 7 16:12:39 2011 +0100 | Mushtaq: fixing merge issues
+Sun Aug 7 16:07:35 2011 +0100 | Mike/Mushtaq #608 Work in progress
+Sun Aug 7 15:32:43 2011 +0100 | Mushtaq: Minor changes to CasperDocument class
+Sun Aug 7 15:32:19 2011 +0100 | Mushtaq: Refactoring of CasperDocument class and related changes
+Fri Aug 5 18:58:11 2011 +0100 | Uday Changed web server url
+Fri Aug 5 15:45:43 2011 +0100 | Mike/Mushtaq: #607 Changed the input directory back to where it was for qa invironment
+Fri Aug 5 12:28:04 2011 +0100 | Mike/Mushtaq #607 Modified QA properties to ingest 13GB of data in new format
+Fri Aug 5 12:01:34 2011 +0100 | Mike/Mushtaq #607 Copy multiple zip files to the input directory using wget
+Fri Aug 5 10:43:01 2011 +0100 | Mike/Mushtaq: #607 Rectifying the forest name in app.dev.properties. All this time we were deleting from Documents db and inserting into CasperDocuments db!
+Thu Aug 4 14:32:46 2011 +0100 | Liz/Alinoor #532 - refactoring tests to be more specific in thier asserts
+Thu Aug 4 13:10:34 2011 +0100 | Alinoor #532 - refactoring test
+Thu Aug 4 12:50:51 2011 +0100 | Alinoor #532 - updated valid chapter to include valid markup
+Thu Aug 4 12:30:10 2011 +0100 | Liz/Alinoor #532 - fixed failing test
+Wed Aug 3 17:18:08 2011 +0100 | Alinoor #532 updated tests to check for only certain types of markup
+Wed Aug 3 17:10:06 2011 +0100 | Alinoor #532 updated tests to check for only certain types of markup
+Wed Aug 3 15:55:42 2011 +0100 | Alinoor/Duncan #532 update validation rules to support some markup
+Wed Aug 3 15:11:38 2011 +0100 | Alinoor/Duncan #532 refactoring validation rules
+Wed Aug 3 14:18:47 2011 +0100 | Uday/Alex #94 Added a zip file with search releavece documents in dev environment
+Wed Aug 3 09:02:00 2011 +0100 | Uday/Mushtaq: Allow parallel unzip when more than one zip file is present in the source directory. required separating cleaning and unzipping tasks.
+Tue Aug 2 18:21:24 2011 +0100 | Mushtaq/Ken: Fixed ignored tests. Based on feedback from Mark and Uday, rolled back reordering of rules as it is a functional change and not just refactoring
+Mon Aug 1 19:05:23 2011 +0100 | pat: explicitely adding resource directory to coverage config.
+Mon Aug 1 19:01:57 2011 +0100 | pat: getting rid of jetty targets, which were inadvertently checked in.
+Mon Aug 1 17:01:55 2011 +0100 | pat: cleaning up build file
+Mon Aug 1 10:50:35 2011 +0100 | Mushtaq: enabled a commented test and removed comments from fully qualified path for journal article
+Mon Aug 1 10:41:46 2011 +0100 | Mark/Mushtaq fully qualified paths for book chapter
+Mon Aug 1 09:16:19 2011 +0100 | separate rules for journal articles and book chapters, rearranged the rules after analyzing the logs
+Sat Jul 30 11:30:07 2011 +0100 | pat: added scct coverage plugin.
+Sat Jul 30 11:27:38 2011 +0100 | pat: upgraded to sbt 0.10.1 so that we can use scct coverage plugin.
+Fri Jul 29 17:54:27 2011 +0100 | mark/mushtaq now par works with adapter for local dtds
+Fri Jul 29 17:11:43 2011 +0100 | mushtaq/mark: bringing in the fully qualified paths for articles
+Fri Jul 29 17:01:17 2011 +0100 | mushtaq/mark: some reason par is hanging so will take it out for the minute
+Fri Jul 29 16:57:04 2011 +0100 | Mark/Mushtaq Local dtd resolution
+Fri Jul 29 16:21:32 2011 +0100 | Mark/Mushtaq made file iterations parallel
+Fri Jul 29 11:46:12 2011 +0100 | mark: changed this url to fix some other problem locally. Will put it back for the moment
+Fri Jul 29 11:31:08 2011 +0100 | Mark/Mushtaq fixing build by correcting classpath
+Fri Jul 29 10:55:31 2011 +0100 | Mark/Mushtaq removed performance related code
+Fri Jul 29 10:40:42 2011 +0100 | Mark/Mushtaq aim build with scala 2.9
+Thu Jul 28 14:17:19 2011 +0100 | scala 2.9
+Thu Jul 28 12:52:41 2011 +0100 | mushtaq/mark: putting the dtds locally so we can replicate what happens on qa
+Wed Jul 27 20:20:36 2011 +0100 | liz/mark: let's try it on QA with dtd on
+Wed Jul 27 19:54:07 2011 +0100 | mark: spelt that name wrong
+Wed Jul 27 19:52:05 2011 +0100 | liz/mark: putting in some more logging to profile qa ingestion
+Wed Jul 27 18:07:13 2011 +0100 | Uday: Adding command to download dds_articles to dev env
+Wed Jul 27 17:25:16 2011 +0100 | Ken/Mushtaq #100 added functional test for setting meta:Date tags
+Wed Jul 27 16:40:49 2011 +0100 | Uday/Micheal #environment added task to create directories for dds_articles in dev
+Wed Jul 27 16:18:13 2011 +0100 | Ken/Mushtaq #100 replaced multiple mockPDFHelpers with a single def
+Wed Jul 27 16:15:10 2011 +0100 | Uday/Micheal #495 added rules to invalidate documents with non-integers in month and year fields
+Wed Jul 27 16:08:05 2011 +0100 | Ken/Mushtaq #100 removed duplicate year xpaths
+Wed Jul 27 15:58:28 2011 +0100 | Ken/Mushtaq #100 removing mark's silliness
+Wed Jul 27 15:55:54 2011 +0100 | Ken/Mushtaq #100 adds date metatag for articles
+Wed Jul 27 15:40:20 2011 +0100 | Uday / Michael #495 : Change validation to require Year element for articles.
+Tue Jul 26 19:10:48 2011 +0100 | uday/mark: putting dtd back on to see if it goes faster
+Tue Jul 26 11:43:11 2011 +0100 | alex/mark - putting in some extra logging to try and see why it's running so slow
+Tue Jul 26 11:34:54 2011 +0100 | Alex/Mark - #devops - trimming white space on Subject facets to avoid overlapping facet items
+Mon Jul 25 17:11:48 2011 +0100 | Alinoor - singleton SAX Parser
+Mon Jul 25 10:00:03 2011 +0100 | uday/mark: turning off the dtd validation for ingestion
+Fri Jul 22 16:57:40 2011 +0100 | Uday/Alinoor #560 Removed spaces from the elements in metadata
+Fri Jul 22 12:31:35 2011 +0100 | Uday/Alinoor - replacing log4j with logback
+Fri Jul 22 11:51:32 2011 +0100 | Uday/Alinoor - split tests into integration and functional
+Fri Jul 22 09:17:00 2011 +0100 | Alex #admin - added timer to aim build
+Thu Jul 21 17:21:47 2011 +0100 | Ken #154 changed marklogic qa url so that it points to senldogo0425 instead of localhost since we move AIM to senldogo0424
+Thu Jul 21 14:42:50 2011 +0100 | Alinoor/Ken #154 - in QA AIM now runs on senldogo0424
+Thu Jul 21 14:20:37 2011 +0100 | Ken, Alinoor #154 AIM prepares content directory on file system before ingesting documents
+Thu Jul 21 12:36:03 2011 +0100 | Ken/Alinoor #154 - set content dir property for dev
+Wed Jul 20 18:13:49 2011 +0100 | Uday Rob #Build Fixing dev build as it needs the scala libs
+Wed Jul 20 17:52:28 2011 +0100 | Uday Moving to sbt 0.10.0 !!!
+Wed Jul 20 14:15:54 2011 +0100 | Charles,Chris #458 tidy up
+Wed Jul 20 14:15:54 2011 +0100 | Charles,Chris #458 fiexd rule for checking for the existance of elements a given xpath
+Tue Jul 19 18:19:52 2011 +0100 | pat, suzuki, alex, uday, michael: changed dev server ip.
+Tue Jul 19 18:07:04 2011 +0100 | pat, suzuki: updating forest name
+Tue Jul 19 16:47:30 2011 +0100 | Ken, Rob #154 adjusted config properties so that pdfs can be written to the file system
+Tue Jul 19 16:36:28 2011 +0100 | Ken, Rob #154 removes PDF validation
+Tue Jul 19 15:58:22 2011 +0100 | Ken, Rob #154 merged test data
+Tue Jul 19 15:37:21 2011 +0100 | liz/mark: need to delete stuff in this forest
+Tue Jul 19 15:05:09 2011 +0100 | Mark/Liz: Updating the port for xdbc aim
+Tue Jul 19 14:07:49 2011 +0100 | Uday/Alex/Charles #Commenting Ignoring and commenting some rules which will be fixed later by Charles/Chris
+Tue Jul 19 10:47:23 2011 +0100 | Chris,Charles #458 Refactored contains elements rule
+Mon Jul 18 17:05:38 2011 +0100 | Charles/Alex #458 added rules for elements not supported in chapter and article abstract
+Mon Jul 18 16:42:51 2011 +0100 | Ken Uday #342 modified xpaths for volume Id and issue ID
+Mon Jul 18 16:22:28 2011 +0100 | Uday Ken Refactored to use xpaths
+Mon Jul 18 16:06:13 2011 +0100 | Ken Uday #342 Changed chapter xpath and made boot title and journal title optional
+Mon Jul 18 14:25:53 2011 +0100 | Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured - refactored to move the dds XML resources into the functional test area
+Mon Jul 18 14:24:04 2011 +0100 | Alex/Charles #458 - first of the A++ rules implemented for allowing more Abstracts containing markup to be featured
+Mon Jul 18 10:37:50 2011 +0100 | charles, Alex #458 movded file and ignored delivery_articles
+Fri Jul 15 16:40:57 2011 +0100 | Rob/Uday #154 added content directory property and method to copy PDFs
+Fri Jul 15 16:19:32 2011 +0100 | Rob/Uday #154 added pdf size to meta:Info
+Fri Jul 15 09:31:55 2011 +0100 | Uday: Changing the tostring of not rule
+Thu Jul 14 17:53:34 2011 +0100 | Uday: Pulling Mustaque's changes - Made document matcher return a status instead of the Document
+Thu Jul 14 17:35:44 2011 +0100 | Uday Moving Mustaque's changes from github
+Thu Jul 14 15:55:14 2011 +0100 | Ken/Alex - #admin - fixed the aim small import script after some files were moved
+Thu Jul 14 15:54:43 2011 +0100 | Ken/Alex - #admin - fixed the aim small import script after some files were moved
+Thu Jul 14 15:44:25 2011 +0100 | Alex, Ken #113 appends author name metadata for chapters
+Thu Jul 14 15:26:22 2011 +0100 | Alex, Ken #113 appends author name metadata for articles
+Thu Jul 14 10:56:01 2011 +0100 | Ken/Alex - updated step 01 to document the changed module script locations
+Tue Jul 12 18:01:51 2011 +0100 | Ken, Rob #524 moved shell scripts to ops/deploy
+Tue Jul 12 14:24:31 2011 +0100 | pat: changing working directory to drive with more space
+Mon Jul 11 18:23:43 2011 +0100 | pat, jeremy: changing input and working dirs.
+Mon Jul 11 16:37:44 2011 +0100 | Alex/Uday - #admintask bigger test set for development added
+Mon Jul 11 11:28:42 2011 +0100 | Alex / Uday #112 - Added code to AIM (and tests) to add Publication title metadata to book chapters and journal articles
+Fri Jul 8 10:46:27 2011 +0100 | Alex/Alinoor #110 tests for primary subject type
+Thu Jul 7 18:04:09 2011 +0100 | Alinoor #110 subjects for chapters
+Thu Jul 7 17:51:56 2011 +0100 | Alinoor #110 subjects for article
+Thu Jul 7 11:02:12 2011 +0100 | Duncan/Alinoor - removed unecessary xqy files
+Thu Jul 7 10:52:20 2011 +0100 | alinoor - removing unecessary java files and organised IDEA file
+Wed Jul 6 16:59:23 2011 +0100 | Uday/Suzuki: #240 Added ingestion rules for handling bibilography
+Wed Jul 6 16:19:10 2011 +0100 | Uday/Suzuki #240 added ingestion test and rules
+Tue Jul 5 19:07:51 2011 +0100 | Uday: Fixed script by handling first argument
+Tue Jul 5 18:38:30 2011 +0100 | Uday Fixing cap file
+Tue Jul 5 18:20:58 2011 +0100 | Uday Fixing cap file on cruise
+Tue Jul 5 17:51:28 2011 +0100 | Uday: Moved from core project checked in by mistake
+Tue Jul 5 17:50:06 2011 +0100 | Uday/Harinee: Changed log file location
+Tue Jul 5 14:50:12 2011 +0100 | Uday: Modified ingestion summary shell script
+Tue Jul 5 12:53:22 2011 +0100 | Uday: added cap target to download artifacts
+Tue Jul 5 12:09:37 2011 +0100 | Harinee #315 Adding functional test for validating only articles and chapters are supported
+Tue Jul 5 11:52:36 2011 +0100 | Harinee #315 Adding functional tests for Unsupported Articles (for DOI, Author given anme, subtitle and volume ID)
+Tue Jul 5 11:26:25 2011 +0100 | Harinee #315 Adding functional tests for Unsupported Chapter (for authorname, chapter title, Chapter DOI)
+Tue Jul 5 10:59:51 2011 +0100 | Harinee #315 Adding functional test for Unsupported Chapter (for Series Title)
+Tue Jul 5 10:37:17 2011 +0100 | Harinee Refactored tests for unique tests for xpaths in DocumentMatcherTest. Also added a test for invalid Volume number for Book Chapter
+Mon Jul 4 19:19:32 2011 +0100 | Uday/Mark: changing dev box ip address
+Mon Jul 4 18:20:14 2011 +0100 | Uday: Create working directory if doesnot exists
+Mon Jul 4 17:35:10 2011 +0100 | Harinee Adding functional test for Unsupported Article (with Markup in Abstract Heading)
+Mon Jul 4 17:17:30 2011 +0100 | Uday/Alinoor: Added summary csv file script
+Mon Jul 4 16:59:17 2011 +0100 | Uday/Alinoor - script to package up unsupported and invalid documents from ingestion
+Fri Jul 1 14:11:41 2011 +0100 | pat: removing unused folder
+Fri Jul 1 11:02:29 2011 +0100 | Uday/Alex: #315 some more refactoring
+Thu Jun 30 18:16:53 2011 +0100 | Uday: #315 Added more meaningful messages to the loggers
+Thu Jun 30 17:45:18 2011 +0100 | Uday: #351 Added document name to the log messages
+Thu Jun 30 17:18:50 2011 +0100 | Uday/Alex: #315 Added more validation rules for unsupported book tags
+Thu Jun 30 17:09:50 2011 +0100 | Uday/Alex #315 More validation rules
+Thu Jun 30 15:55:49 2011 +0100 | Uday/Alex: #315 Added rule to check for markup
+Thu Jun 30 14:49:12 2011 +0100 | Uday/Alex: #315 Added more validation rules for article xml
+Thu Jun 30 13:01:33 2011 +0100 | Uday/Alex: #315 Added validation rules for invalid chapter/article contents
+Thu Jun 30 12:26:23 2011 +0100 | Uday/Alex: #351 Added validation for no book chapter doi
+Thu Jun 30 12:21:03 2011 +0100 | Uday: #315 Loggers showing more information about what rule failed
+Thu Jun 30 11:20:09 2011 +0100 | Uday Added rule to check if author names exists
+Thu Jun 30 10:22:05 2011 +0100 | Uday: #315 Refactored to make rules more readable
+Wed Jun 29 18:35:27 2011 +0100 | Uday: Refacorting of rules
+Wed Jun 29 18:16:53 2011 +0100 | Uday: Refactored to remove chained rulesets instead have a list of rulesets
+Wed Jun 29 17:53:29 2011 +0100 | Uday/Suzuki: #315 Added chapter title rule validation
+Wed Jun 29 17:33:09 2011 +0100 | duncan/alex task for non-admin user: fix cp in script for dev box
+Wed Jun 29 17:12:43 2011 +0100 | alex/duncan non-admin user task: adding the read permission to AIM content ingestion and stuff to allow AIM build to run locally
+Wed Jun 29 16:34:19 2011 +0100 | Uday/Suzuki #315 Added rules framework
+Wed Jun 29 12:19:45 2011 +0100 | Uday/Alinoor: functional test for invalid document and Introduced the concept of importable documents. Need to add more validation rules
+Tue Jun 28 10:39:00 2011 +0100 | Alinoor/Uday : Added qa properties to capfile
+Tue Jun 28 10:33:58 2011 +0100 | Alinoor/Uday Added aim qa properties
+Mon Jun 27 18:32:46 2011 +0100 | mark screwed up the imports
+Mon Jun 27 18:31:26 2011 +0100 | uday/pat/mark: try/catch around the import so we can see it actually import some stuff
+Mon Jun 27 18:11:31 2011 +0100 | uday/mark: doi being put in the wrong place in the document
+Fri Jun 24 17:38:53 2011 +0100 | Uday/Mark reverting meta data namespace to meta from facet
+Fri Jun 24 16:25:22 2011 +0100 | Uday/Mark Added facet namespace to metadata
+Fri Jun 24 13:14:30 2011 +0100 | Uday: Finxing dev server url
+Fri Jun 24 13:10:50 2011 +0100 | Uday/Mark Made MarkLogicClientTest more robust and updated import script for ci
+Fri Jun 24 12:04:21 2011 +0100 | Uday/Mark inlined clean script in tests
+Fri Jun 24 11:57:54 2011 +0100 | Uday/Mark: gonna try it with a different variable name - maybe it's a reserved name?
+Fri Jun 24 11:34:19 2011 +0100 | Uday/Mark Added build label to zip files
+Fri Jun 24 11:07:47 2011 +0100 | Uday/Mark: using Alex's magic forest document deleting script so we don't take out the modules that we need
+Fri Jun 24 10:50:26 2011 +0100 | Uday/Mark: put some logging around the creation of modules
+Fri Jun 24 10:47:23 2011 +0100 | Uday/Mark: put some logging around the creation of modules
+Fri Jun 24 10:34:37 2011 +0100 | Uday/Mark Changing dev properties for running aim
+Thu Jun 23 17:41:51 2011 +0100 | Uday/Mark #471 added dev properties
+Thu Jun 23 17:32:14 2011 +0100 | Uday/Mark #471 Added capability to load different properties in different environments
+Thu Jun 23 17:19:41 2011 +0100 | Uday/Mark: introducing the property loader #471
+Thu Jun 23 17:11:02 2011 +0100 | Uday/Mark: had the classpath incorrect #471
+Thu Jun 23 17:06:19 2011 +0100 | Uday/Mark: deploy the aim modules first #417
+Thu Jun 23 17:03:11 2011 +0100 | Uday/MarK: #471 - call the existing xdbc server with our aim modules sb
+Thu Jun 23 16:57:28 2011 +0100 | Uday/Mark #471 fixing capfile
+Thu Jun 23 16:54:23 2011 +0100 | Uday/Mark #471 changed port
+Thu Jun 23 16:52:27 2011 +0100 | Uday/Mark #471 added script to upload xquery to Mark logic
+Thu Jun 23 16:27:21 2011 +0100 | uday/Mark: #471 => port 9999
+Thu Jun 23 16:18:17 2011 +0100 | Uday/Mark #471 adding jar dependecies to zip file
+Thu Jun 23 15:35:41 2011 +0100 | Uday/Mark #471 added lib dependencies to zip file
+Thu Jun 23 15:22:54 2011 +0100 | uday/mark: deploy to /opt/casper
+Thu Jun 23 15:18:49 2011 +0100 | Uday/Mark renamed cap target
+Thu Jun 23 15:14:17 2011 +0100 | Uday/Mark #471 made ci to run zip task
+Thu Jun 23 15:02:05 2011 +0100 | Uday/Mark #471 added target to create zip file
+Thu Jun 23 14:45:36 2011 +0100 | uday/mark: #471 => filling in cap file
+Thu Jun 23 14:31:29 2011 +0100 | uday/mark - empty capfile to get us started
+Thu Jun 23 12:52:06 2011 +0100 | uday/mark: adding meta data assertion to the end to end test
+Thu Jun 23 12:34:10 2011 +0100 | Uday/Mark #471 Added metadata to the content xml
+Thu Jun 23 09:53:50 2011 +0100 | Uday/Alinoor #471 refactoring
+Thu Jun 23 09:44:29 2011 +0100 | Uday/Alinoor #471 functional test for MarkLogicClient cleanDb function
+Thu Jun 23 09:30:17 2011 +0100 | Uday/Alinoor #471 refactored tests
+Wed Jun 22 18:44:58 2011 +0100 | Uday : #471 Some more refactoring
+Wed Jun 22 18:10:35 2011 +0100 | Uday : #471 Some more refactoring
+Wed Jun 22 18:07:06 2011 +0100 | Uday : #471 Some more refactoring
+Wed Jun 22 17:32:49 2011 +0100 | Uday/Alinoor #471 Some more cleanup
+Wed Jun 22 17:27:11 2011 +0100 | Uday/Alinoor #471 refactoring code
+Wed Jun 22 17:19:05 2011 +0100 | Uday/Alinoor #471 removed unecessary code
+Wed Jun 22 17:09:42 2011 +0100 | Uday/Alinoor #471 introduced new ML client
+Wed Jun 22 11:44:56 2011 +0100 | Uday/Alinoor #471 recatored code
+Wed Jun 22 11:14:36 2011 +0100 | Alinoor/Uday #471 Cleaning up of articles before ingesting them
+Tue Jun 21 15:43:36 2011 +0100 | Uday/Alinoor #471 functional test content ingestion on an empty database
+Mon Jun 20 17:20:00 2011 +0100 | Duncan/Alinoor #471 refactored code
+Mon Jun 20 17:17:18 2011 +0100 | Duncan/Alinoor #471 refactored code
+Mon Jun 20 15:41:58 2011 +0100 | Duncan/Alinoor #471 All XmlUtilityTest unit tests
+Mon Jun 20 15:17:16 2011 +0100 | Duncan/Alinoor #471 All ManifestInformation unit tests
+Mon Jun 20 14:16:56 2011 +0100 | Duncan/Alinoor #471 fixed unit tests
+Mon Jun 20 13:02:18 2011 +0100 | Duncan/Alinoor - #471 put functional tests into standard dir
+Mon Jun 20 12:01:19 2011 +0100 | duncan/alinoor #471 rename properties tags
+Mon Jun 20 11:34:19 2011 +0100 | alinoor/duncan #471 dont move delivery files
+Mon Jun 20 11:27:28 2011 +0100 | alinoor/duncan #471 put the zip file back..
+Mon Jun 20 11:17:06 2011 +0100 | alinoor/duncan #471 refactor properties files
+Fri Jun 17 17:54:18 2011 +0100 | Alinoor/Duncan #471 zip file got deleted
+Fri Jun 17 17:42:31 2011 +0100 | Alinoor/Duncan #471 test port fix
+Fri Jun 17 16:58:43 2011 +0100 | Duncan/Alinoor #471 modified AIM marklogic db name
+Fri Jun 17 16:43:52 2011 +0100 | Duncan/Alinoor #471 modified AIM marklogic db url
+Fri Jun 17 16:12:45 2011 +0100 | Duncan/Alinoor #471 - modified marklogic db url to temporarily point to working database
+Fri Jun 17 16:08:21 2011 +0100 | Duncan/Alinoor #471 - added mkdir to script to ensure directories AIM needs are there
+Fri Jun 17 16:01:04 2011 +0100 | Duncan/Alinoor #471 - modified article import manager test to output details of script failure
+Fri Jun 17 13:02:11 2011 +0100 | pat, duncan: #471 adding default build file
+Fri Jun 17 12:22:13 2011 +0100 | Duncan/Alinoor #471 some .gitignoring
+Fri Jun 17 12:19:23 2011 +0100 | Duncan/Charles #471 added small_delivery.zip
+Fri Jun 17 12:16:18 2011 +0100 | Duncan/Charles #471 replacing sort
+Thu Jun 16 17:35:43 2011 +0100 | Duncan/Charles #471 First Functional test passing
+Thu Jun 16 17:34:38 2011 +0100 | Duncan/Charles #471 First Functional test passing
+Wed Jun 15 17:54:30 2011 +0100 | Charles/Duncan #471 initial commit, test for AIM import script
+Thu Jun 9 12:29:53 2011 +0100 | Better also add the build and dist directories...
+Thu Jun 9 12:26:42 2011 +0100 | added .gitignore so that the workspace.xml is not added again
+Thu Jun 9 12:21:16 2011 +0100 | removed workspace.xml
+Thu Jun 9 12:11:36 2011 +0100 | Added tools/ant so the project can be built
+Thu Jun 9 11:31:27 2011 +0100 | Added initial AIM files from SVN.
+Fri Jun 3 10:42:09 2011 +0100 | rob: adding files
+Fri Jun 3 10:39:27 2011 +0100 | rob: adding files
+Fri Jun 3 10:30:24 2011 +0100 | rob: new aim repo
