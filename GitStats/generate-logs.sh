@@ -3,7 +3,8 @@ pushd .
 LOGS_DIR=/Users/rudayaku/Projects/clojure-samples/GitStats/logs
 REPOS_DIR=/Users/rudayaku/repos
 
-rm $LOGS_DIR/today-commits.txt
+rm -rf $LOGS_DIR
+mkdir $LOGS_DIR
 
 echo "Getting core logs from $REPOS_DIR/core"
 cd $REPOS_DIR/core
