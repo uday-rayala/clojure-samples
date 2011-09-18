@@ -1,11 +1,15 @@
 pushd .
 
-LOGS_DIR=/Users/rudayaku/Projects/clojure-samples/GitStats/logs/
+LOGS_DIR=/Users/rudayaku/Projects/clojure-samples/GitStats/logs
 REPOS_DIR=/Users/rudayaku/repos
+
+rm $LOGS_DIR/today-commits.txt
 
 echo "Getting core logs from $REPOS_DIR/core"
 cd $REPOS_DIR/core
 git pull --rebase
+
+git log --no-merges --ignore-all-space --pretty="format:%s" --since="3 days ago" >> $LOGS_DIR/today-commits.txt
 git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $LOGS_DIR/core-commits.txt
 git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $LOGS_DIR/core-code-change-commits.txt
 git log -l30000 --no-merges --ignore-all-space --pretty="format:%s" --numstat --find-copies > $LOGS_DIR/core-message-and-changes.txt
@@ -13,6 +17,8 @@ git log -l30000 --no-merges --ignore-all-space --pretty="format:%s" --numstat --
 echo "Getting core logs from $REPOS_DIR/aim"
 cd $REPOS_DIR/aim
 git pull --rebase
+
+git log --no-merges --ignore-all-space --pretty="format:%s" --since="3 days ago" >> $LOGS_DIR/today-commits.txt
 git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $LOGS_DIR/aim-commits.txt
 git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $LOGS_DIR/aim-code-change-commits.txt
 

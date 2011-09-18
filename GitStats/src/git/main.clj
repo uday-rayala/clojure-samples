@@ -16,6 +16,7 @@
                              read-lines
                              (map (fn [line] (clojure.string/split line #":")))
                              (filter #(= 2 (count %)))))
+(defn today-commits [] (read-lines "logs/today-commits.txt"))
 (defn core-lines [] (read-lines "logs/core-commits.txt"))
 (defn core-code-change-lines [] (read-lines "logs/core-code-change-commits.txt"))
 (defn aim-code-change-lines [] (read-lines "logs/aim-code-change-commits.txt"))
@@ -42,6 +43,11 @@
 (defn top-git-json [caspers aims] (json-str (sort-by (fn [x] (+ (:core x) (:aim x))) #(compare %2 %1) (merge-count-maps caspers aims :name))))
 
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
+
+(defn today-commit-mixed-count [] (apply (partial merge-with (fn [x y] (str x "/" y))) (map #(apply hash-map (reverse %)) (top-counts (today-commits)))))
+(defn today-commits-sorted [] (sort #(compare %2 %1) (today-commit-mixed-count)))
+(defn top-names [] (take 3 (today-commits-sorted)))
+(defn top-git-today [] (json-str {:total (count (today-commits)) :top (top-names)}))
 
 (defn all-words-json [pairs] (json-str (count-maps pairs :word :count)))
 (defn all-words [] (all-words-json (top-unused-words (core-lines))))
@@ -141,6 +147,7 @@
 (defroutes main-routes
   (GET "/" [] (home-links))
   (GET "/top-git.json" [] (top-git))
+  (GET "/top-git-today.json" [] (top-git-today))
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
   (GET "/pair-counts-seperate.json" [] (pair-counts-seperate))

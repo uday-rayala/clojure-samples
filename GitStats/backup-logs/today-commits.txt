@@ -1,0 +1,36 @@
+Alinoor/Suzuki #662: clean up book parts
+Chris/Jose #771 #december Refactored controller method for issue vol jumper
+Chris/Jose #771 #december Fixed validation redirection so it stays on the journal page url
+Alinoor/Suzuki #662: clean up book matter
+pat/harinee: putting separate logger for com.springer back.
+Alinoor/Suzuki #662: book subparts
+Alinoor/Suzuki #662: book subparts xquery
+Alinoor/Suzuki #662: book subparts xquery
+Chris/Jose #771 #december Added defaults for journal enumerations when volume info isn't present.
+Jose/Chris #771 #december Added more info for journal page
+Jose/Chris #771 #december Extracting more info for issue jumper
+Chris/Jose #771 #december volume counter message.
+Uday/Mushtaq #362 Made protocol pages show correct section title
+ken: [tech task] PDFs and cover images no longer served from WebApp --> resource handler
+Tom/Pat/Mark setting GC back to Parallel cos ConcurrentMarkSweep was rubbish with large articles.
+Uday/Mustaq #bug Fixed the section links title
+Uday/Mushtaq #builder fixed the bug in new builder framework.
+Duncan/Liz #695: Refactored the SearchView and error highlighting on date ranges.
+Tom - fixing the capfile. It's refering to a start script which was removed
+Chris #771 #december Refactored vol/iss checking to not do >1 check every request
+Chris/Jose #771 #december Volume and Issue independent validation.
+Chris/Jose #771 #december Refactored checker
+Uday/Mushtaq #362 Made related items of a chapter show protocols also
+Liz/Duncan #695: Only able to enter additional numeric characters in the year fields when there is capacity/space.
+Uday/Mushtaq #362 Allowing protocols appear in TOC of a book
+Chris/Jose #771 #december Refactored test to check for hidden error rather than empty text
+Jose/Chris #771 #december Added server side val for volume on issue jumper
+Uday/Mushtaq #362 hanlde protocol urls for full text page
+Uday/Mushtaq #362 "download all chapters" to be used for both chapters and protocols
+Alinoor/Suzuki #662: fixing test
+Alinoor/Suzuki #662: Refactor and tidy builders of Book and bookmatters
+Uday/Mushtaq #builder a new approach to creating builders
+liz/duncan - #695 - test for empty year in start or end range facet
+duncan/mark - fixing up code around showing error messages on wrong date range
+Tom/Pat - setting JMX on all machines. 4GB heap on perf only. Server mode for all
+Jose/Chris #december #771 Added string validation on issue/vol check
