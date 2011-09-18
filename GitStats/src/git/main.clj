@@ -16,12 +16,12 @@
                              read-lines
                              (map (fn [line] (clojure.string/split line #":")))
                              (filter #(= 2 (count %)))))
-(defn core-lines [] (read-lines "core-commits.txt"))
-(defn core-code-change-lines [] (read-lines "core-code-change-commits.txt"))
-(defn aim-code-change-lines [] (read-lines "aim-code-change-commits.txt"))
-(defn aim-lines [] (read-lines "aim-commits.txt"))
-(defn failed-build-numbers [] (read-lines "failed-builds.txt"))
-(defn core-message-and-changes [] (read-lines "core-message-and-changes.txt"))
+(defn core-lines [] (read-lines "logs/core-commits.txt"))
+(defn core-code-change-lines [] (read-lines "logs/core-code-change-commits.txt"))
+(defn aim-code-change-lines [] (read-lines "logs/aim-code-change-commits.txt"))
+(defn aim-lines [] (read-lines "logs/aim-commits.txt"))
+(defn failed-build-numbers [] (read-lines "logs/failed-builds.txt"))
+(defn core-message-and-changes [] (read-lines "logs/core-message-and-changes.txt"))
 
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))

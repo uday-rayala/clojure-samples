@@ -1,20 +1,24 @@
 pushd .
 
-cd /Users/rudayaku/Projects/core
-git checkout master
-git pull --rebase
-git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/core-commits.txt
-git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-code-change-commits.txt
-git log -l30000 --no-merges --ignore-all-space --pretty="format:%s" --numstat --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/core-message-and-changes.txt
+LOGS_DIR=/Users/rudayaku/Projects/clojure-samples/GitStats/logs/
+REPOS_DIR=/Users/rudayaku/repos
 
-cd /Users/rudayaku/Projects/casper-aim
-git checkout springer
+echo "Getting core logs from $REPOS_DIR/core"
+cd $REPOS_DIR/core
 git pull --rebase
-git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > /Users/rudayaku/Projects/clojure-samples/GitStats/aim-commits.txt
-git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > /Users/rudayaku/Projects/clojure-samples/GitStats/aim-code-change-commits.txt
+git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $LOGS_DIR/core-commits.txt
+git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $LOGS_DIR/core-code-change-commits.txt
+git log -l30000 --no-merges --ignore-all-space --pretty="format:%s" --numstat --find-copies > $LOGS_DIR/core-message-and-changes.txt
+
+echo "Getting core logs from $REPOS_DIR/aim"
+cd $REPOS_DIR/aim
+git pull --rebase
+git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $LOGS_DIR/aim-commits.txt
+git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $LOGS_DIR/aim-code-change-commits.txt
 
 
 popd
 
-curl "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=build&jobName=build&limitCount=10000" -o build.csv
-grep "Failed" build.csv | awk -F ',' '{print $8}' > failed-builds.txt
+echo "Getting cruise logs"
+curl "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=build&jobName=build&limitCount=10000" -o $LOGS_DIR/build.csv
+grep "Failed" $LOGS_DIR/build.csv | awk -F ',' '{print $8}' > $LOGS_DIR/failed-builds.txt
