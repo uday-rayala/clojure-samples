@@ -6,7 +6,10 @@
     [ring.adapter.jetty]
     [git.parsers]
   )
-  (:require [compojure.route :as route] [git.people :as people])
+  (:require
+    [compojure.route :as route]
+    [clojure.contrib.string :as string]
+    [git.people :as people])
 )
 
 (use '[clojure.string :only (join)])
@@ -44,7 +47,11 @@
 
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
 
-(defn today-commit-mixed-count [] (apply (partial merge-with (fn [x y] (str x "/" y))) (map #(apply hash-map (reverse %)) (top-counts (today-commits)))))
+(defn captalize-names [x] (map (fn [a] [(string/capitalize (first a)) (last a)]) x))
+(defn today-top-counts [] (captalize-names (top-counts (today-commits))))
+(defn today-top-counts-by-count [] (map #(apply hash-map (reverse %)) (today-top-counts)))
+(defn comma-seperated [x y] (str x ", " y))
+(defn today-commit-mixed-count [] (apply (partial merge-with comma-seperated) (today-top-counts-by-count)))
 (defn today-commits-sorted [] (sort #(compare %2 %1) (today-commit-mixed-count)))
 (defn top-names [] (take 3 (today-commits-sorted)))
 (defn top-git-today [] (json-str {:total (count (today-commits)) :top (top-names)}))
