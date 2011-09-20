@@ -8,6 +8,7 @@
   )
   (:require
     [compojure.route :as route]
+    [compojure.handler :as handler]
     [clojure.contrib.string :as string]
     [git.people :as people])
 )
@@ -164,6 +165,7 @@
   (GET "/code-area-worked.json" [] (code-area-worked))
   (GET "/stories-and-commiters.json" [] (stories-and-commiters-json))
   (GET "/functional-areas-and-commiters.json" [] (functional-areas-and-commiters-json))
+  (GET "/commiters.json" [message] (json-str (apply vector (people/commiters message))))
   (route/resources "/")
 )
 
@@ -173,5 +175,5 @@
 ;    (println (all-words))
 ;    (println (unused-words-starting "m" (core-lines)))
 ;    (println (pair-counts))
-    (run-jetty main-routes {:port 9876})
+    (run-jetty (handler/api main-routes) {:port 9876})
   ))
