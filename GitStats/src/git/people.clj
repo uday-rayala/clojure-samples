@@ -22,6 +22,7 @@
     {:name "kief"  :alias #{}},
     {:name "jose"  :alias #{}},
     {:name "harinee"  :alias #{}},
+    {:name "christine"  :alias #{}},
     {:name "michael" :alias #{"mike", "micheal"}},
     ]
 )
