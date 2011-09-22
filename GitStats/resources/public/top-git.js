@@ -1,26 +1,3 @@
-function drawChart(dataAsJson) {
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Name');
-  data.addColumn('number', 'Core');
-  data.addColumn('number', 'Aim');
-
-    var total = dataAsJson.length
-  data.addRows(total);
-
-    $j.each(dataAsJson, function(index, pair) {
-          data.setValue(index, 0, pair.name);
-          data.setValue(index, 1, parseInt(pair.core));
-          data.setValue(index, 2, parseInt(pair.aim));
-    });
-
-
-  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-  chart.draw(data, {width: 800, height: 480, title: 'Top Git',
-                    hAxis: {title: 'Name', titleTextStyle: {color: 'red'}},
-                    isStacked: true
-                   });
-}
-
 function drawPairChart(dataAsJson) {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Pair');
@@ -146,9 +123,53 @@ function drawStckedChart(dataAsJson) {
     });
 }
 
+function drawTopGitWithPairing(dataAsJson) {
+    console.log(dataAsJson);
+    dataAsJson.sort(function (a, b) { return a.all / (a.all - a.solo) - b.all / (b.all - b.solo)});
+    var names = $j.map(dataAsJson, function(d) { return d.name; });
+    var pairing = $j.map(dataAsJson, function(d) { return d.all - d.solo; });
+    var solo = $j.map(dataAsJson, function(d) { return d.solo; });
+    var data = [{name: 'Solo', data: solo}, {name: 'Pairing', data: pairing}];
+
+    console.log(data);
+
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'top-git-pairing',
+            defaultSeriesType: 'column'
+        },
+        title: {
+            text: 'Top Git Pairing'
+        },
+        xAxis: {
+            categories: names
+        },
+        yAxis: {
+            min: 0,
+            title: {
+            text: 'Number of commits'
+        }
+        },
+        tooltip: {
+            formatter: function() {
+                return ''+ this.series.name +': '+ this.y +' ('+ Math.round(this.percentage) +'%)';
+            }
+        },
+        plotOptions: {
+            column: {
+                stacking: 'percent'
+            }
+        },
+        series: data
+    });
+
+}
+
 
 function getDataAndDrawChart() {
+    console.log("Hello");
     $j.get('/top-git.json', drawStckedChart, "json");
+    $j.get('/top-git-with-pairing.json', drawTopGitWithPairing, "json");
     $j.get('/all-words.json', drawTagCloud, "json");
     $j.get('/pair-counts.json', drawPairChart, "json");
     $j.get('/pair-counts-seperate.json', drawHeatMap, "json");

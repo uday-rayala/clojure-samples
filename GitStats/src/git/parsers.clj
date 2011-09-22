@@ -34,6 +34,10 @@
   (let [commiters-collection (map people/commiters commits)]
     (frequencies-in-set-collection commiters-collection (people/people-names))))
 
+(defn top-counts-solo [commits]
+  (let [solo-commiters-collection (filter (fn [commiters] (= 1 (count commiters))) (map people/commiters commits))]
+    (frequencies-in-set-collection solo-commiters-collection (people/people-names))))
+
 (defn commiters-and-stories [commits]
   (map people/commiters-and-story commits))
 

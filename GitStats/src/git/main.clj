@@ -31,8 +31,6 @@
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
 
-(defn casper-maps [] (count-maps (top-counts (core-lines)) :name :core))
-(defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 
 (def stories (->> (story-mappings) (map (fn [story] {:story (first story) :area (last story)  } ))))
 (def commiters-stories
@@ -46,7 +44,14 @@
 
 (defn top-git-json [caspers aims] (json-str (sort-by (fn [x] (+ (:core x) (:aim x))) #(compare %2 %1) (merge-count-maps caspers aims :name))))
 
+(defn casper-maps [] (count-maps (top-counts (core-lines)) :name :core))
+(defn aim-maps [] (count-maps (top-counts (aim-lines)) :name :aim))
 (defn top-git [] (top-git-json (casper-maps) (aim-maps)))
+
+(defn all-lines [] (concat (core-lines) (aim-lines)))
+(defn top-git-with-pairing []
+  (let [all-counts (count-maps (top-counts (all-lines)) :name :all) solo-counts (count-maps (top-counts-solo (all-lines)) :name :solo)]
+    (json-str (merge-count-maps all-counts solo-counts :name))))
 
 (defn captalize-names [x] (map (fn [a] [(string/capitalize (first a)) (last a)]) x))
 (defn today-top-counts [] (captalize-names (top-counts (today-commits))))
@@ -155,6 +160,7 @@
 (defroutes main-routes
   (GET "/" [] (home-links))
   (GET "/top-git.json" [] (top-git))
+  (GET "/top-git-with-pairing.json" [] (top-git-with-pairing))
   (GET "/top-git-today.json" [] (top-git-today))
   (GET "/all-words.json" [] (all-words))
   (GET "/pair-counts.json" [] (pair-counts))
