@@ -1,3 +1,16 @@
+Thu Sep 22 12:44:47 2011 +0100 | Uday/Charles #363 Updating meta:date with the last book's date in book series
+Thu Sep 22 11:51:35 2011 +0100 | charles/uday #363 added taxonomy to book series on ingestion
+Wed Sep 21 15:28:51 2011 +0100 | Uday/Christine #363 Added AIM validation rules for book series
+Wed Sep 21 14:32:15 2011 +0100 | Uday/Christine #363 Adding the first book info so that we can get the first book's ISBN number
+Wed Sep 21 11:16:16 2011 +0100 | Uday/Christine #363 Returning series editors in the book series xml
+Wed Sep 21 11:00:07 2011 +0100 | Uday/Christine #363 Not adding end volume if it's the same as start volume
+Tue Sep 20 15:34:21 2011 +0100 | Uday/Christine #363 Added book series end volume and year
+Tue Sep 20 12:12:33 2011 +0100 | Uday/Christine #363 Added start volume number and year to book series
+Tue Sep 20 11:00:29 2011 +0100 | Uday/Christine #363 Added SeriesInfo to series XML
+Mon Sep 19 18:05:50 2011 +0100 | Uday: Deleting working dir before running tests. This was failing when the zip file is changed in tests
+Mon Sep 19 17:46:01 2011 +0100 | Uday/Christine #363 Added subjects, date and publication date to the meta of series
+Mon Sep 19 16:54:07 2011 +0100 | Uday/Christine #363 Added content type and meta: namespace
+Mon Sep 19 16:40:55 2011 +0100 | Uday/Christine #363 Uploading series xml if book belongs to a series
 Thu Sep 15 11:50:02 2011 +0100 | Uday/Mushtaq #362 Book will not be treated as Protocols even when MediaType is such
 Wed Sep 14 17:34:31 2011 +0100 | Uday/Mushtaq #362 Add protocols into seacheable collection during ingestion
 Wed Sep 14 16:16:05 2011 +0100 | mark: [noop] change to make ingestion work

@@ -1,3 +1,161 @@
+Thu Sep 22 18:53:49 2011 +0100 | Marc fix static content handling.
+Thu Sep 22 18:48:50 2011 +0100 | mark: more clearing up off logic although pat points out we should move CoverImage logic into CoverImageUrlBuilders and save the redirect
+Thu Sep 22 18:30:32 2011 +0100 | mark: removing the exception and trying to make cover image code clearer
+Thu Sep 22 18:21:02 2011 +0100 | duncan/chris/rob - amazing xqueray skillz all round to remove second call for available date range if redundant
+Thu Sep 22 06:24:11 2011 +0100 | Harinee: Commenting the failing step from system test.
+Thu Sep 22 18:13:51 2011 +0100 | charles/uday #brokenWindow using Paths to generate Urls
+Thu Sep 22 18:13:07 2011 -0400 | pat, marc: pulled out internal controller.
+Thu Sep 22 18:13:57 2011 +0100 | mark: getting rid of the evil exception throwing in CoverImage. It made Odersky sad :(
+Thu Sep 22 18:13:57 2011 +0100 | jose/mark #813 -> removing unnecessary asserts
+Thu Sep 22 17:55:20 2011 +0100 | Volker #767 +span.a-plus-plus.type-underline
+Thu Sep 22 17:38:18 2011 +0100 | ken/marc #windowfixing remove broken mathjax js and cleanup in bootstrap.
+Thu Sep 22 17:31:39 2011 +0100 | Christine/Liz #windowfix Added global placeholder Javascript
+Thu Sep 22 17:21:03 2011 +0100 | charles/uday #windowFixing build urls using Paths
+Thu Sep 22 17:18:21 2011 +0100 | jose/mark <huge>#813 more tidying up of tests</huge> <script type='text/javascript'> alert('hello uday');</script>
+Thu Sep 22 17:11:51 2011 +0100 | jose/mark #813 clean up of our test - was messy +1 commit
+Thu Sep 22 17:03:37 2011 +0100 | charles/uday #windowfixing using Paths instead of harcoded urls
+Thu Sep 22 17:06:27 2011 +0100 | jose/mark with help from charles/alex/chris: #813 fixing the ordering of the disciplines.
+Thu Sep 22 16:53:40 2011 +0100 | ken/marc [tech task] fixes regression with displaying online journal cover images
+Thu Sep 22 16:44:22 2011 +0100 | charles/uday #windowFixing build journal urls using Paths
+Thu Sep 22 16:33:42 2011 +0100 | Suzuki/Alinoor #688 continuing functional test
+Thu Sep 22 16:29:53 2011 +0100 | charles/uday #windowFixing build full text html link using Paths
+Thu Sep 22 16:06:36 2011 +0100 | charles/uday #windowfixing generate journal issue url in Paths
+Thu Sep 22 16:00:36 2011 +0100 | Marc Fixed some german translation typos.
+Thu Sep 22 15:54:04 2011 +0100 | charles/uday #windowFixing chapter and protocol urls from Paths
+Thu Sep 22 15:47:34 2011 +0100 | Liz/Christine #771 #december Moved numberField var creation into bootstrap
+Thu Sep 22 15:44:17 2011 +0100 | Christine/Liz #771 #december: adding tests for the JournalController js. Also refactoring out the NumberField.
+Thu Sep 22 15:44:17 2011 +0100 | Liz/Christine #771 #december Added test cases around volume/issue error handling, fixed problem with resetting errors
+Thu Sep 22 15:38:57 2011 +0100 | charles/uday #windowfixing moved url building to Paths
+Thu Sep 22 15:33:09 2011 +0100 | Ken/Marc #824 Serve static content with special resource handlers.
+Thu Sep 22 15:29:31 2011 +0100 | Suzuki/Alinoor #688 started functional test
+Thu Sep 22 15:04:34 2011 +0100 | Suzuki/Alinoor #688 add methods to display and hide date range years vs single year
+Thu Sep 22 14:51:25 2011 +0100 | Uday/Charles #windowFixing Moved url building to Paths
+Thu Sep 22 14:46:42 2011 +0100 | Mark/Jose #813 Javascript enabled test for springer user.
+Thu Sep 22 14:14:17 2011 +0100 | Chris/Duncan #695 Date years now have to be 4 digits long (server-side validation)
+Thu Sep 22 14:15:17 2011 +0100 | Suzuki/Alinoor #688 added javascript to handle single year search
+Thu Sep 22 14:15:17 2011 +0100 | Alinoor/Suzuki #688 showing in option in date facet and switching between 'in' and 'between'
+Thu Sep 22 14:15:17 2011 +0100 | Alinoor/Suzuki #688 showing in option in date facet with passing tests
+Thu Sep 22 14:15:17 2011 +0100 | Alinoor/Suzuki #688 showing in option in date facet
+Thu Sep 22 14:08:02 2011 +0100 | Mark/Jose #813 removed unnecessary tags.
+Thu Sep 22 13:57:53 2011 +0100 | Christine/Liz #771: #december: Adding placeholder text for the text boxes.
+Thu Sep 22 13:57:53 2011 +0100 | Christine/Liz #771: #december: Adding a new functional test for the issue error case.
+Thu Sep 22 13:57:53 2011 +0100 | Christine/Liz #771: #december. Shortened 2 error messages for invalid volumes and invalid issues. Added German translations for volume message and placeholder for issue message.
+Thu Sep 22 13:43:03 2011 +0100 | Marc #WindowFixing Cleanup ignored tests.
+Thu Sep 22 13:39:13 2011 +0100 | Tom removing the chef deploy from the main deployment
+Thu Sep 22 12:40:27 2011 +0100 | Mark/Jose #813 Remove log statements.
+Thu Sep 22 12:40:27 2011 +0100 | Mark/Jose #813 duplicated disciplines implementation.
+Thu Sep 22 00:31:23 2011 +0100 | Harinee: fixing system test
+Thu Sep 22 12:14:52 2011 +0100 | charles/uday #363	updated tests to verify disciplines are shown for book series
+Thu Sep 22 12:08:25 2011 +0100 | Duncan/Chris #695 in JS, set back to previous valid year not date available
+Wed Sep 21 06:37:05 2011 +0100 | Harinee: Added more steps to system test
+Wed Sep 21 18:11:18 2011 +0100 | Mark/Jose #813 test clean up.
+Wed Sep 21 18:11:18 2011 +0100 | Mark/Jose #813 functional test for acme-corp.
+Wed Sep 21 18:04:33 2011 +0100 | ken/andreas: removed identity-hub-stub / removed property files from zip / moved opensso-properties to /ops/deploy/authentication
+Wed Sep 21 17:57:02 2011 +0100 | Chris/Liz #771 #december Epic commit
+Wed Sep 21 17:57:02 2011 +0100 | Chris/Liz #771 #december Added some translations. Commit+1
+Wed Sep 21 17:54:38 2011 +0100 | Volker: introducing [placeholder]
+Wed Sep 21 17:44:49 2011 +0100 | Uday/Christine #363 fixing has access
+Wed Sep 21 17:38:26 2011 +0100 | Michael/Rob tidied up some code
+Wed Sep 21 17:26:15 2011 +0100 | Chris/Liz #771 #december Server side val on vol/iss jumper now correctly adds error class to fields
+Wed Sep 21 17:26:15 2011 +0100 | Chris/Liz #771 #december Fixed some more client side error gubbins
+Wed Sep 21 17:26:14 2011 +0100 | Liz/Chris #771 #december Vol/Iss jumper form correctly clears errors
+Wed Sep 21 17:19:05 2011 +0100 | Michael/Rob optimised available date range xquery
+Wed Sep 21 17:19:05 2011 +0100 | Michael/Rob #883 Refactored allowed content function
+Wed Sep 21 17:07:50 2011 +0100 | Mark/Jose #813 acme-corp two industries user.
+Wed Sep 21 05:04:37 2011 +0100 | Harinee: Adding new step to system test
+Wed Sep 21 05:04:37 2011 +0100 | Harinee: Adding more steps to system test
+Wed Sep 21 16:57:13 2011 +0100 | Chris/Liz #771 #decemeber Validation error message appears clientside
+Wed Sep 21 16:45:07 2011 +0100 | Chris/Liz #771 #december Added JS validation to vol/iss jumper fields
+Wed Sep 21 16:41:03 2011 +0100 | Uday/Christine #363 Added access control to book series documents
+Wed Sep 21 17:39:11 2011 +0200 | Karl: added :hover and :active for submit button in .browse, removed background from search button images (better for zooming)
+Wed Sep 21 16:11:21 2011 +0100 | marc/duncan #695 Cleanup/Refactoring of Controller.
+Wed Sep 21 15:59:34 2011 +0100 | charles/rob #816 fix bug where ampersands break facet discipline urls
+Wed Sep 21 15:51:35 2011 +0100 | Uday/Christine #363 Using the new builder pattern for BookSeriesBuilder
+Wed Sep 21 15:47:13 2011 +0100 | Michael #883 refactored book parts and subparts too
+Wed Sep 21 15:47:13 2011 +0100 | Michael #883 refactoring books XQuery to use cts:search
+Wed Sep 21 15:39:30 2011 +0100 | marc/duncan #695 refactor the HTML and JS to share the same error message structure as date ranges
+Wed Sep 21 15:39:33 2011 +0100 | Volker: #695 side-effect: getting rid of .pagination .error-message for generalized .error-message
+Wed Sep 21 15:36:24 2011 +0100 | Uday/Christine #363 Localisation for book series
+Wed Sep 21 15:19:40 2011 +0100 | ken/andreas: [tech task] renamed OpenAM properties
+Wed Sep 21 15:05:02 2011 +0100 | Uday/Christine #363 Showing cover image for book series
+Wed Sep 21 15:00:44 2011 +0100 | Liz/Chris #771 #december Small JS refactor and fixed a paths test
+Wed Sep 21 15:00:44 2011 +0100 | Liz/Chris #771 #december Selected volume now expands nicely with JS magic
+Wed Sep 21 14:47:26 2011 +0100 | Uday/Christine #363 Getting first book isbn number so that we can show it in the coverpage
+Wed Sep 21 15:46:44 2011 +0200 | Karl: adjusted no-js version of date facet, simplified btn-monster
+Wed Sep 21 14:43:44 2011 +0100 | Volker: Addressing issue in Webkit (Google Chrome, Saf)
+Wed Sep 21 14:26:20 2011 +0100 | charles/rob #869 added testk
+Wed Sep 21 12:24:51 2011 +0100 | Volker: .btn-monster with :active, :hover states
+Wed Sep 21 12:19:36 2011 +0100 | charles/rob #869 changed jade boolean attribute on show locked checkbox
+Wed Sep 21 12:06:01 2011 +0100 | charles/rob #869 show locked search results by default for anonymous user
+Wed Sep 21 11:50:48 2011 +0100 | duncan commit visible-js-test-driver
+Wed Sep 21 11:49:54 2011 +0100 | Uday/Christine #363 showing editors in bookseries search result
+Wed Sep 21 11:49:54 2011 +0100 | Uday/Christine #363 Added editors to book series search result xml
+Wed Sep 21 11:51:34 2011 +0100 | Suzuki/Alinoor #830 Fix search to look for blank instead of the label of the input
+Wed Sep 21 11:35:52 2011 +0100 | jose/mark: adding a condition to our end to end test #813
+Wed Sep 21 11:16:00 2011 +0100 | marc/duncan - refactor out the controller response code - template render, etc
+Wed Sep 21 10:57:20 2011 +0100 | Suzuki/Alinoor bugfix for #662 for subparts with matter
+Wed Sep 21 10:36:46 2011 +0100 | ken/andreas: [tech task] renamed identity.hub.url property to entitlement.service.url
+Wed Sep 21 10:36:46 2011 +0100 | ken/andreas: [tech task] added entitlement filter toggle, on by default (authentication filter toggle is off by default)
+Wed Sep 21 09:29:49 2011 +0100 | Charles,Volka #ui updated CSS and corresponing Jade and test files
+Tue Sep 20 19:04:10 2011 +0100 | Chris/Liz #771 #december Refactoring JournalTests.
+Tue Sep 20 19:04:25 2011 +0100 | Harinee: Removing unnecessary comment
+Tue Sep 20 18:58:24 2011 +0100 | Harinee: Adding new system test
+Tue Sep 20 18:24:35 2011 +0100 | Alinoor/Jose/Alex #813 CarCorp my disciplines test.
+Tue Sep 20 18:24:35 2011 +0100 | Alinoor/Jose/Alex #813 carcorp functional test.
+Tue Sep 20 18:12:52 2011 +0100 | Alinoor bugfix for #662 for subparts with matter
+Tue Sep 20 18:00:48 2011 +0100 | Duncan/Marc #826 Leave Date Facet open unless user decides to close it
+Tue Sep 20 18:00:57 2011 +0100 | Chris/Liz #771 #december Epic refactor
+Tue Sep 20 18:00:57 2011 +0100 | Liz/Chris #771 #december Updated issue error message to include counts of things
+Tue Sep 20 17:59:02 2011 +0100 | Volker: fixing A++ index terms
+Tue Sep 20 17:38:05 2011 +0100 | Michael : #857 added test for autosuggest JSON and fixed autosuggest bug
+Tue Sep 20 17:25:40 2011 +0100 | Liz/Chris #771 #december More refactoring of issue/vol checking into nice spec pattern.
+Tue Sep 20 17:16:48 2011 +0100 | Uday/Christine #363 Updated volume info and related tests for book series
+Tue Sep 20 16:59:34 2011 +0100 | Ken/Andreas Added entitlement toggle
+Tue Sep 20 16:59:34 2011 +0100 | ken/andreas: [tech task] renamed authentication an entitlement filters
+Tue Sep 20 16:43:46 2011 +0100 | Uday/Christine #363 Added new jade file to show title and subtitle of book series and also getting volumes from xquery
+Tue Sep 20 16:44:07 2011 +0100 | Volker: #806 + #634 refactored and adding .ranked
+Tue Sep 20 16:15:20 2011 +0100 | Volker: fixing typo
+Tue Sep 20 16:13:56 2011 +0100 | Volker: .browse label right margin
+Tue Sep 20 15:19:52 2011 +0100 | Duncan/Marc #695 Hidden fields for retaining previous dates.
+Tue Sep 20 16:15:34 2011 +0200 | Karl: refactored gradients (all in basic.css now, added fallback images for IE)
+Tue Sep 20 14:57:03 2011 +0100 | Tom #834 adding chef back after fixing the chef pathing issue
+Tue Sep 20 14:22:42 2011 +0100 | Liz/Chris #771 #december Only one error message appears at a time on iss/vol jumper, and more general refactoring
+Tue Sep 20 14:22:42 2011 +0100 | Liz/Chris #771 #december Refactored lots of the controller stuff
+Tue Sep 20 14:16:12 2011 +0100 | pat: update marklogic hostname values (now uses new dns names).
+Tue Sep 20 14:13:17 2011 +0100 | Tom #834 removing the chef call. Seems to be interfering with something
+Tue Sep 20 11:50:13 2011 +0100 | Tom #834 re-enabling the chef run.
+Tue Sep 20 11:46:52 2011 +0100 | Volker: label on .browse
+Tue Sep 20 11:39:57 2011 +0100 | Uday/Christine #363 Showing subtitle in Book series search result
+Tue Sep 20 11:34:02 2011 +0100 | duncan/marc #695 refactor out untested code from Controllers class
+Tue Sep 20 11:33:30 2011 +0100 | Tom #834 separating the chef and casper deployment functionality since they are separate artifacts and we might separate the capfile too one day
+Tue Sep 20 11:10:58 2011 +0100 | Uday/Christine #363 Created BookSeriesBuilder and related tests
+Tue Sep 20 10:53:52 2011 +0100 | marc/duncan #695 refactor a bit
+Tue Sep 20 10:50:56 2011 +0100 | marc/duncan #695 rename Event to TestEvent to prevent clashing in global namespace
+Tue Sep 20 10:50:55 2011 +0100 | marc/duncan #695 fix some deutsch / englisch stuff
+Tue Sep 20 10:49:24 2011 +0100 | Tom #834 adding code to push the chef artifact out in a separate step
+Tue Sep 20 10:49:24 2011 +0100 | Tom #834 removing chef files and placing them in infra git repo
+Tue Sep 20 10:10:55 2011 +0100 | Uday/Mushtaq #362 Made protocol links in Table of contents of book work
+Mon Sep 19 18:18:25 2011 +0100 | Chris/Jose #771 #december If given volume id is valid but the issue id is invalid, the value is retained in the form
+Mon Sep 19 17:15:09 2011 +0100 | Chris/Jose #771 #december Refactored a lot of the parameter validation from the controllers
+Mon Sep 19 17:15:09 2011 +0100 | Chris/Jose #771 #december Checking existence of given values on issue/volume jumper
+Mon Sep 19 17:15:09 2011 +0100 | Chris/Jose #771 #december Volume and Issue jump page test refactor.
+Mon Sep 19 17:15:09 2011 +0100 | Chris/Jose #771 #december IssueIdEnd and VolumeIdEnd test - out of scope.
+Mon Sep 19 17:10:26 2011 +0100 | Suzuki #832 fix link to return Book facet
+Mon Sep 19 16:33:32 2011 +0100 | Suzuki/Alinoor #662 fix jade file from going into a loop
+Mon Sep 19 16:10:02 2011 +0100 | Andreas: Changed some OpenAM-Timeout-Settings
+Mon Sep 19 15:42:47 2011 +0100 | Suzuki/Alinoor #662 fix jade file from going into a loop
+Mon Sep 19 15:08:39 2011 +0100 | Uday: #362 Fixed the pdf url on the download link of search result
+Mon Sep 19 15:04:26 2011 +0100 | Volker: fixing :focus on .btn-monster
+Mon Sep 19 14:37:26 2011 +0100 | Alinoor/Suzuki #662 updated fucntional tests for sub parts and parts
+Mon Sep 19 14:35:21 2011 +0100 | Sangeeta/Harinee: Added step to verify publication title on System tests.
+Mon Sep 19 14:34:32 2011 +0200 | Karl: changed css selectors for authors to correct the styling on issue pages
+Mon Sep 19 12:52:00 2011 +0100 | Chris/Jose #771 #december Added anchors to volume on volume jumper
+Mon Sep 19 12:03:33 2011 +0100 | duncan/marc #695 refactor around js validation code and add more tests
+Mon Sep 19 11:55:46 2011 +0100 | Chris/Jose #771 #december Journal page now displays a count of articles
+Mon Sep 19 11:55:46 2011 +0100 | Chris/Jose #771 #december Integration test for journal article count
+Mon Sep 19 11:55:46 2011 +0100 | Chris/Jose #771 Refactored journal xqy to include article count
+Mon Sep 19 11:55:46 2011 +0100 | Chris/Jose #771 #december browse all issues and volumes link.
+Mon Sep 19 11:11:01 2011 +0100 | Alinoor/Suzuki #662: integration test for book subparts
 Fri Sep 16 17:28:29 2011 +0100 | Alinoor/Suzuki #662: clean up book parts
 Fri Sep 16 17:20:45 2011 +0100 | Chris/Jose #771 #december Refactored controller method for issue vol jumper
 Fri Sep 16 17:20:45 2011 +0100 | Chris/Jose #771 #december Fixed validation redirection so it stays on the journal page url

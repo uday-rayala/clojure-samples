@@ -1,3 +1,635 @@
+Thu Sep 22 18:53:49 2011 +0100
+Marc fix static content handling.
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Thu Sep 22 18:48:50 2011 +0100
+mark: more clearing up off logic although pat points out we should move CoverImage logic into CoverImageUrlBuilders and save the redirect
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+Thu Sep 22 18:30:32 2011 +0100
+mark: removing the exception and trying to make cover image code clearer
+ 1 files changed, 1 insertions(+), 6 deletions(-)
+
+Thu Sep 22 18:21:02 2011 +0100
+duncan/chris/rob - amazing xqueray skillz all round to remove second call for available date range if redundant
+ 1 files changed, 14 insertions(+), 9 deletions(-)
+
+Thu Sep 22 06:24:11 2011 +0100
+Harinee: Commenting the failing step from system test.
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Thu Sep 22 18:13:51 2011 +0100
+charles/uday #brokenWindow using Paths to generate Urls
+ 11 files changed, 23 insertions(+), 15 deletions(-)
+
+Thu Sep 22 18:13:07 2011 -0400
+pat, marc: pulled out internal controller.
+ 6 files changed, 27 insertions(+), 12 deletions(-)
+
+Thu Sep 22 18:13:57 2011 +0100
+mark: getting rid of the evil exception throwing in CoverImage. It made Odersky sad :(
+ 3 files changed, 13 insertions(+), 15 deletions(-)
+
+Thu Sep 22 18:13:57 2011 +0100
+jose/mark #813 -> removing unnecessary asserts
+ 1 files changed, 0 insertions(+), 3 deletions(-)
+
+Thu Sep 22 17:55:20 2011 +0100
+Volker #767 +span.a-plus-plus.type-underline
+ 1 files changed, 12 insertions(+), 3 deletions(-)
+
+Thu Sep 22 17:38:18 2011 +0100
+ken/marc #windowfixing remove broken mathjax js and cleanup in bootstrap.
+ 5 files changed, 28 insertions(+), 16 deletions(-)
+
+Thu Sep 22 17:31:39 2011 +0100
+Christine/Liz #windowfix Added global placeholder Javascript
+ 3 files changed, 37 insertions(+), 2 deletions(-)
+
+Thu Sep 22 17:21:03 2011 +0100
+charles/uday #windowFixing build urls using Paths
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+Thu Sep 22 17:18:21 2011 +0100
+jose/mark <huge>#813 more tidying up of tests</huge> <script type='text/javascript'> alert('hello uday');</script>
+ 2 files changed, 11 insertions(+), 9 deletions(-)
+
+Thu Sep 22 17:11:51 2011 +0100
+jose/mark #813 clean up of our test - was messy +1 commit
+ 2 files changed, 2 insertions(+), 8 deletions(-)
+
+Thu Sep 22 17:03:37 2011 +0100
+charles/uday #windowfixing using Paths instead of harcoded urls
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+Thu Sep 22 17:06:27 2011 +0100
+jose/mark with help from charles/alex/chris: #813 fixing the ordering of the disciplines.
+ 3 files changed, 24 insertions(+), 9 deletions(-)
+
+Thu Sep 22 16:53:40 2011 +0100
+ken/marc [tech task] fixes regression with displaying online journal cover images
+ 3 files changed, 13 insertions(+), 2 deletions(-)
+
+Thu Sep 22 16:44:22 2011 +0100
+charles/uday #windowFixing build journal urls using Paths
+ 5 files changed, 13 insertions(+), 8 deletions(-)
+
+Thu Sep 22 16:33:42 2011 +0100
+Suzuki/Alinoor #688 continuing functional test
+ 3 files changed, 30 insertions(+), 2 deletions(-)
+
+Thu Sep 22 16:29:53 2011 +0100
+charles/uday #windowFixing build full text html link using Paths
+ 4 files changed, 11 insertions(+), 2 deletions(-)
+
+Thu Sep 22 16:06:36 2011 +0100
+charles/uday #windowfixing generate journal issue url in Paths
+ 3 files changed, 11 insertions(+), 5 deletions(-)
+
+Thu Sep 22 16:00:36 2011 +0100
+Marc Fixed some german translation typos.
+ 1 files changed, 5 insertions(+), 5 deletions(-)
+
+Thu Sep 22 15:54:04 2011 +0100
+charles/uday #windowFixing chapter and protocol urls from Paths
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+Thu Sep 22 15:47:34 2011 +0100
+Liz/Christine #771 #december Moved numberField var creation into bootstrap
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+Thu Sep 22 15:44:17 2011 +0100
+Christine/Liz #771 #december: adding tests for the JournalController js. Also refactoring out the NumberField.
+ 4 files changed, 59 insertions(+), 4 deletions(-)
+
+Thu Sep 22 15:44:17 2011 +0100
+Liz/Christine #771 #december Added test cases around volume/issue error handling, fixed problem with resetting errors
+ 2 files changed, 80 insertions(+), 6 deletions(-)
+
+Thu Sep 22 15:38:57 2011 +0100
+charles/uday #windowfixing moved url building to Paths
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+Thu Sep 22 15:33:09 2011 +0100
+Ken/Marc #824 Serve static content with special resource handlers.
+ 7 files changed, 18 insertions(+), 77 deletions(-)
+
+Thu Sep 22 15:29:31 2011 +0100
+Suzuki/Alinoor #688 started functional test
+ 3 files changed, 51 insertions(+), 0 deletions(-)
+
+Thu Sep 22 15:04:34 2011 +0100
+Suzuki/Alinoor #688 add methods to display and hide date range years vs single year
+ 2 files changed, 32 insertions(+), 8 deletions(-)
+
+Thu Sep 22 14:51:25 2011 +0100
+Uday/Charles #windowFixing Moved url building to Paths
+ 3 files changed, 8 insertions(+), 1 deletions(-)
+
+Thu Sep 22 14:46:42 2011 +0100
+Mark/Jose #813 Javascript enabled test for springer user.
+ 1 files changed, 27 insertions(+), 8 deletions(-)
+
+Thu Sep 22 14:14:17 2011 +0100
+Chris/Duncan #695 Date years now have to be 4 digits long (server-side validation)
+ 2 files changed, 7 insertions(+), 1 deletions(-)
+
+Thu Sep 22 14:15:17 2011 +0100
+Suzuki/Alinoor #688 added javascript to handle single year search
+ 3 files changed, 14 insertions(+), 4 deletions(-)
+
+Thu Sep 22 14:15:17 2011 +0100
+Alinoor/Suzuki #688 showing in option in date facet and switching between 'in' and 'between'
+ 2 files changed, 4 insertions(+), 7 deletions(-)
+
+Thu Sep 22 14:15:17 2011 +0100
+Alinoor/Suzuki #688 showing in option in date facet with passing tests
+ 3 files changed, 11 insertions(+), 11 deletions(-)
+
+Thu Sep 22 14:15:17 2011 +0100
+Alinoor/Suzuki #688 showing in option in date facet
+ 5 files changed, 38 insertions(+), 5 deletions(-)
+
+Thu Sep 22 14:08:02 2011 +0100
+Mark/Jose #813 removed unnecessary tags.
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+Thu Sep 22 13:57:53 2011 +0100
+Christine/Liz #771: #december: Adding placeholder text for the text boxes.
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+Thu Sep 22 13:57:53 2011 +0100
+Christine/Liz #771: #december: Adding a new functional test for the issue error case.
+ 2 files changed, 4 insertions(+), 1 deletions(-)
+
+Thu Sep 22 13:57:53 2011 +0100
+Christine/Liz #771: #december. Shortened 2 error messages for invalid volumes and invalid issues. Added German translations for volume message and placeholder for issue message.
+ 4 files changed, 10 insertions(+), 5 deletions(-)
+
+Thu Sep 22 13:43:03 2011 +0100
+Marc #WindowFixing Cleanup ignored tests.
+ 2 files changed, 7 insertions(+), 27 deletions(-)
+
+Thu Sep 22 13:39:13 2011 +0100
+Tom removing the chef deploy from the main deployment
+ 1 files changed, 0 insertions(+), 42 deletions(-)
+
+Thu Sep 22 12:40:27 2011 +0100
+Mark/Jose #813 Remove log statements.
+ 1 files changed, 1 insertions(+), 7 deletions(-)
+
+Thu Sep 22 12:40:27 2011 +0100
+Mark/Jose #813 duplicated disciplines implementation.
+ 2 files changed, 17 insertions(+), 3 deletions(-)
+
+Thu Sep 22 00:31:23 2011 +0100
+Harinee: fixing system test
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Thu Sep 22 12:14:52 2011 +0100
+charles/uday #363	updated tests to verify disciplines are shown for book series
+ 3 files changed, 10 insertions(+), 2 deletions(-)
+
+Thu Sep 22 12:08:25 2011 +0100
+Duncan/Chris #695 in JS, set back to previous valid year not date available
+ 2 files changed, 45 insertions(+), 32 deletions(-)
+
+Wed Sep 21 06:37:05 2011 +0100
+Harinee: Added more steps to system test
+ 2 files changed, 27 insertions(+), 3 deletions(-)
+
+Wed Sep 21 18:11:18 2011 +0100
+Mark/Jose #813 test clean up.
+ 2 files changed, 8 insertions(+), 51 deletions(-)
+
+Wed Sep 21 18:11:18 2011 +0100
+Mark/Jose #813 functional test for acme-corp.
+ 3 files changed, 80 insertions(+), 2 deletions(-)
+
+Wed Sep 21 18:04:33 2011 +0100
+ken/andreas: removed identity-hub-stub / removed property files from zip / moved opensso-properties to /ops/deploy/authentication
+ 34 files changed, 5 insertions(+), 4004 deletions(-)
+
+Wed Sep 21 17:57:02 2011 +0100
+Chris/Liz #771 #december Epic commit
+ 2 files changed, 1 insertions(+), 4 deletions(-)
+
+Wed Sep 21 17:57:02 2011 +0100
+Chris/Liz #771 #december Added some translations. Commit+1
+ 3 files changed, 11 insertions(+), 5 deletions(-)
+
+Wed Sep 21 17:54:38 2011 +0100
+Volker: introducing [placeholder]
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+Wed Sep 21 17:44:49 2011 +0100
+Uday/Christine #363 fixing has access
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Wed Sep 21 17:38:26 2011 +0100
+Michael/Rob tidied up some code
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+Wed Sep 21 17:26:15 2011 +0100
+Chris/Liz #771 #december Server side val on vol/iss jumper now correctly adds error class to fields
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Wed Sep 21 17:26:15 2011 +0100
+Chris/Liz #771 #december Fixed some more client side error gubbins
+ 1 files changed, 14 insertions(+), 4 deletions(-)
+
+Wed Sep 21 17:26:14 2011 +0100
+Liz/Chris #771 #december Vol/Iss jumper form correctly clears errors
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+Wed Sep 21 17:19:05 2011 +0100
+Michael/Rob optimised available date range xquery
+ 3 files changed, 33 insertions(+), 5 deletions(-)
+
+Wed Sep 21 17:19:05 2011 +0100
+Michael/Rob #883 Refactored allowed content function
+ 1 files changed, 8 insertions(+), 17 deletions(-)
+
+Wed Sep 21 17:07:50 2011 +0100
+Mark/Jose #813 acme-corp two industries user.
+ 6 files changed, 79 insertions(+), 9 deletions(-)
+
+Wed Sep 21 05:04:37 2011 +0100
+Harinee: Adding new step to system test
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+Wed Sep 21 05:04:37 2011 +0100
+Harinee: Adding more steps to system test
+ 1 files changed, 8 insertions(+), 1 deletions(-)
+
+Wed Sep 21 16:57:13 2011 +0100
+Chris/Liz #771 #decemeber Validation error message appears clientside
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+
+Wed Sep 21 16:45:07 2011 +0100
+Chris/Liz #771 #december Added JS validation to vol/iss jumper fields
+ 9 files changed, 159 insertions(+), 47 deletions(-)
+
+Wed Sep 21 16:41:03 2011 +0100
+Uday/Christine #363 Added access control to book series documents
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Wed Sep 21 17:39:11 2011 +0200
+Karl: added :hover and :active for submit button in .browse, removed background from search button images (better for zooming)
+ 3 files changed, 13 insertions(+), 0 deletions(-)
+
+Wed Sep 21 16:11:21 2011 +0100
+marc/duncan #695 Cleanup/Refactoring of Controller.
+ 4 files changed, 30 insertions(+), 34 deletions(-)
+
+Wed Sep 21 15:59:34 2011 +0100
+charles/rob #816 fix bug where ampersands break facet discipline urls
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+Wed Sep 21 15:51:35 2011 +0100
+Uday/Christine #363 Using the new builder pattern for BookSeriesBuilder
+ 4 files changed, 37 insertions(+), 22 deletions(-)
+
+Wed Sep 21 15:47:13 2011 +0100
+Michael #883 refactored book parts and subparts too
+ 1 files changed, 23 insertions(+), 25 deletions(-)
+
+Wed Sep 21 15:47:13 2011 +0100
+Michael #883 refactoring books XQuery to use cts:search
+ 1 files changed, 29 insertions(+), 7 deletions(-)
+
+Wed Sep 21 15:39:30 2011 +0100
+marc/duncan #695 refactor the HTML and JS to share the same error message structure as date ranges
+ 4 files changed, 52 insertions(+), 24 deletions(-)
+
+Wed Sep 21 15:39:33 2011 +0100
+Volker: #695 side-effect: getting rid of .pagination .error-message for generalized .error-message
+ 1 files changed, 0 insertions(+), 35 deletions(-)
+
+Wed Sep 21 15:36:24 2011 +0100
+Uday/Christine #363 Localisation for book series
+ 2 files changed, 2 insertions(+), 0 deletions(-)
+
+Wed Sep 21 15:19:40 2011 +0100
+ken/andreas: [tech task] renamed OpenAM properties
+ 7 files changed, 24 insertions(+), 10 deletions(-)
+
+Wed Sep 21 15:05:02 2011 +0100
+Uday/Christine #363 Showing cover image for book series
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+
+Wed Sep 21 15:00:44 2011 +0100
+Liz/Chris #771 #december Small JS refactor and fixed a paths test
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+Wed Sep 21 15:00:44 2011 +0100
+Liz/Chris #771 #december Selected volume now expands nicely with JS magic
+ 13 files changed, 119 insertions(+), 35 deletions(-)
+
+Wed Sep 21 14:47:26 2011 +0100
+Uday/Christine #363 Getting first book isbn number so that we can show it in the coverpage
+ 4 files changed, 16 insertions(+), 2 deletions(-)
+
+Wed Sep 21 15:46:44 2011 +0200
+Karl: adjusted no-js version of date facet, simplified btn-monster
+ 4 files changed, 19 insertions(+), 45 deletions(-)
+
+Wed Sep 21 14:43:44 2011 +0100
+Volker: Addressing issue in Webkit (Google Chrome, Saf)
+ 2 files changed, 2 insertions(+), 0 deletions(-)
+
+Wed Sep 21 14:26:20 2011 +0100
+charles/rob #869 added testk
+ 1 files changed, 9 insertions(+), 0 deletions(-)
+
+Wed Sep 21 12:24:51 2011 +0100
+Volker: .btn-monster with :active, :hover states
+ 2 files changed, 48 insertions(+), 4 deletions(-)
+
+Wed Sep 21 12:19:36 2011 +0100
+charles/rob #869 changed jade boolean attribute on show locked checkbox
+ 1 files changed, 1 insertions(+), 4 deletions(-)
+
+Wed Sep 21 12:06:01 2011 +0100
+charles/rob #869 show locked search results by default for anonymous user
+ 6 files changed, 35 insertions(+), 12 deletions(-)
+
+Wed Sep 21 11:50:48 2011 +0100
+duncan commit visible-js-test-driver
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+Wed Sep 21 11:49:54 2011 +0100
+Uday/Christine #363 showing editors in bookseries search result
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+Wed Sep 21 11:49:54 2011 +0100
+Uday/Christine #363 Added editors to book series search result xml
+ 4 files changed, 10 insertions(+), 2 deletions(-)
+
+Wed Sep 21 11:51:34 2011 +0100
+Suzuki/Alinoor #830 Fix search to look for blank instead of the label of the input
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+Wed Sep 21 11:35:52 2011 +0100
+jose/mark: adding a condition to our end to end test #813
+ 2 files changed, 2 insertions(+), 0 deletions(-)
+
+Wed Sep 21 11:16:00 2011 +0100
+marc/duncan - refactor out the controller response code - template render, etc
+ 6 files changed, 96 insertions(+), 80 deletions(-)
+
+Wed Sep 21 10:57:20 2011 +0100
+Suzuki/Alinoor bugfix for #662 for subparts with matter
+ 3 files changed, 31 insertions(+), 21 deletions(-)
+
+Wed Sep 21 10:36:46 2011 +0100
+ken/andreas: [tech task] renamed identity.hub.url property to entitlement.service.url
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+Wed Sep 21 10:36:46 2011 +0100
+ken/andreas: [tech task] added entitlement filter toggle, on by default (authentication filter toggle is off by default)
+ 30 files changed, 101 insertions(+), 404 deletions(-)
+
+Wed Sep 21 09:29:49 2011 +0100
+Charles,Volka #ui updated CSS and corresponing Jade and test files
+ 4 files changed, 6 insertions(+), 10 deletions(-)
+
+Tue Sep 20 19:04:10 2011 +0100
+Chris/Liz #771 #december Refactoring JournalTests.
+ 1 files changed, 7 insertions(+), 24 deletions(-)
+
+Tue Sep 20 19:04:25 2011 +0100
+Harinee: Removing unnecessary comment
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+Tue Sep 20 18:58:24 2011 +0100
+Harinee: Adding new system test
+ 4 files changed, 42 insertions(+), 3 deletions(-)
+
+Tue Sep 20 18:24:35 2011 +0100
+Alinoor/Jose/Alex #813 CarCorp my disciplines test.
+ 4 files changed, 43 insertions(+), 30 deletions(-)
+
+Tue Sep 20 18:24:35 2011 +0100
+Alinoor/Jose/Alex #813 carcorp functional test.
+ 1 files changed, 25 insertions(+), 0 deletions(-)
+
+Tue Sep 20 18:12:52 2011 +0100
+Alinoor bugfix for #662 for subparts with matter
+ 3 files changed, 27 insertions(+), 4 deletions(-)
+
+Tue Sep 20 18:00:48 2011 +0100
+Duncan/Marc #826 Leave Date Facet open unless user decides to close it
+ 7 files changed, 27 insertions(+), 22 deletions(-)
+
+Tue Sep 20 18:00:57 2011 +0100
+Chris/Liz #771 #december Epic refactor
+ 1 files changed, 7 insertions(+), 19 deletions(-)
+
+Tue Sep 20 18:00:57 2011 +0100
+Liz/Chris #771 #december Updated issue error message to include counts of things
+ 5 files changed, 39 insertions(+), 7 deletions(-)
+
+Tue Sep 20 17:59:02 2011 +0100
+Volker: fixing A++ index terms
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+Tue Sep 20 17:38:05 2011 +0100
+Michael : #857 added test for autosuggest JSON and fixed autosuggest bug
+ 5 files changed, 36 insertions(+), 2 deletions(-)
+
+Tue Sep 20 17:25:40 2011 +0100
+Liz/Chris #771 #december More refactoring of issue/vol checking into nice spec pattern.
+ 10 files changed, 153 insertions(+), 134 deletions(-)
+
+Tue Sep 20 17:16:48 2011 +0100
+Uday/Christine #363 Updated volume info and related tests for book series
+ 2 files changed, 13 insertions(+), 4 deletions(-)
+
+Tue Sep 20 16:59:34 2011 +0100
+Ken/Andreas Added entitlement toggle
+ 11 files changed, 105 insertions(+), 17 deletions(-)
+
+Tue Sep 20 16:59:34 2011 +0100
+ken/andreas: [tech task] renamed authentication an entitlement filters
+ 4 files changed, 72 insertions(+), 8 deletions(-)
+
+Tue Sep 20 16:43:46 2011 +0100
+Uday/Christine #363 Added new jade file to show title and subtitle of book series and also getting volumes from xquery
+ 7 files changed, 66 insertions(+), 8 deletions(-)
+
+Tue Sep 20 16:44:07 2011 +0100
+Volker: #806 + #634 refactored and adding .ranked
+ 3 files changed, 17 insertions(+), 13 deletions(-)
+
+Tue Sep 20 16:15:20 2011 +0100
+Volker: fixing typo
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 20 16:13:56 2011 +0100
+Volker: .browse label right margin
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 20 15:19:52 2011 +0100
+Duncan/Marc #695 Hidden fields for retaining previous dates.
+ 7 files changed, 74 insertions(+), 64 deletions(-)
+
+Tue Sep 20 16:15:34 2011 +0200
+Karl: refactored gradients (all in basic.css now, added fallback images for IE)
+ 10 files changed, 112 insertions(+), 129 deletions(-)
+
+Tue Sep 20 14:57:03 2011 +0100
+Tom #834 adding chef back after fixing the chef pathing issue
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 20 14:22:42 2011 +0100
+Liz/Chris #771 #december Only one error message appears at a time on iss/vol jumper, and more general refactoring
+ 3 files changed, 13 insertions(+), 14 deletions(-)
+
+Tue Sep 20 14:22:42 2011 +0100
+Liz/Chris #771 #december Refactored lots of the controller stuff
+ 8 files changed, 87 insertions(+), 52 deletions(-)
+
+Tue Sep 20 14:16:12 2011 +0100
+pat: update marklogic hostname values (now uses new dns names).
+ 3 files changed, 2 insertions(+), 3 deletions(-)
+
+Tue Sep 20 14:13:17 2011 +0100
+Tom #834 removing the chef call. Seems to be interfering with something
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Tue Sep 20 11:50:13 2011 +0100
+Tom #834 re-enabling the chef run.
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Tue Sep 20 11:46:52 2011 +0100
+Volker: label on .browse
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+Tue Sep 20 11:39:57 2011 +0100
+Uday/Christine #363 Showing subtitle in Book series search result
+ 3 files changed, 13 insertions(+), 2 deletions(-)
+
+Tue Sep 20 11:34:02 2011 +0100
+duncan/marc #695 refactor out untested code from Controllers class
+ 7 files changed, 165 insertions(+), 149 deletions(-)
+
+Tue Sep 20 11:33:30 2011 +0100
+Tom #834 separating the chef and casper deployment functionality since they are separate artifacts and we might separate the capfile too one day
+ 1 files changed, 34 insertions(+), 27 deletions(-)
+
+Tue Sep 20 11:10:58 2011 +0100
+Uday/Christine #363 Created BookSeriesBuilder and related tests
+ 4 files changed, 94 insertions(+), 0 deletions(-)
+
+Tue Sep 20 10:53:52 2011 +0100
+marc/duncan #695 refactor a bit
+ 8 files changed, 107 insertions(+), 35 deletions(-)
+
+Tue Sep 20 10:50:56 2011 +0100
+marc/duncan #695 rename Event to TestEvent to prevent clashing in global namespace
+ 1 files changed, 9 insertions(+), 9 deletions(-)
+
+Tue Sep 20 10:50:55 2011 +0100
+marc/duncan #695 fix some deutsch / englisch stuff
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+Tue Sep 20 10:49:24 2011 +0100
+Tom #834 adding code to push the chef artifact out in a separate step
+ 1 files changed, 46 insertions(+), 30 deletions(-)
+
+Tue Sep 20 10:49:24 2011 +0100
+Tom #834 removing chef files and placing them in infra git repo
+ 118 files changed, 0 insertions(+), 5720 deletions(-)
+
+Tue Sep 20 10:10:55 2011 +0100
+Uday/Mushtaq #362 Made protocol links in Table of contents of book work
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+Mon Sep 19 18:18:25 2011 +0100
+Chris/Jose #771 #december If given volume id is valid but the issue id is invalid, the value is retained in the form
+ 7 files changed, 50 insertions(+), 16 deletions(-)
+
+Mon Sep 19 17:15:09 2011 +0100
+Chris/Jose #771 #december Refactored a lot of the parameter validation from the controllers
+ 3 files changed, 39 insertions(+), 33 deletions(-)
+
+Mon Sep 19 17:15:09 2011 +0100
+Chris/Jose #771 #december Checking existence of given values on issue/volume jumper
+ 5 files changed, 62 insertions(+), 24 deletions(-)
+
+Mon Sep 19 17:15:09 2011 +0100
+Chris/Jose #771 #december Volume and Issue jump page test refactor.
+ 2 files changed, 85 insertions(+), 101 deletions(-)
+
+Mon Sep 19 17:15:09 2011 +0100
+Chris/Jose #771 #december IssueIdEnd and VolumeIdEnd test - out of scope.
+ 3 files changed, 46 insertions(+), 7 deletions(-)
+
+Mon Sep 19 17:10:26 2011 +0100
+Suzuki #832 fix link to return Book facet
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Mon Sep 19 16:33:32 2011 +0100
+Suzuki/Alinoor #662 fix jade file from going into a loop
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+Mon Sep 19 16:10:02 2011 +0100
+Andreas: Changed some OpenAM-Timeout-Settings
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Mon Sep 19 15:42:47 2011 +0100
+Suzuki/Alinoor #662 fix jade file from going into a loop
+ 1 files changed, 6 insertions(+), 1 deletions(-)
+
+Mon Sep 19 15:08:39 2011 +0100
+Uday: #362 Fixed the pdf url on the download link of search result
+ 2 files changed, 6 insertions(+), 0 deletions(-)
+
+Mon Sep 19 15:04:26 2011 +0100
+Volker: fixing :focus on .btn-monster
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+Mon Sep 19 14:37:26 2011 +0100
+Alinoor/Suzuki #662 updated fucntional tests for sub parts and parts
+ 4 files changed, 40 insertions(+), 8 deletions(-)
+
+Mon Sep 19 14:35:21 2011 +0100
+Sangeeta/Harinee: Added step to verify publication title on System tests.
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+
+Mon Sep 19 14:34:32 2011 +0200
+Karl: changed css selectors for authors to correct the styling on issue pages
+ 2 files changed, 9 insertions(+), 11 deletions(-)
+
+Mon Sep 19 12:52:00 2011 +0100
+Chris/Jose #771 #december Added anchors to volume on volume jumper
+ 6 files changed, 50 insertions(+), 4 deletions(-)
+
+Mon Sep 19 12:03:33 2011 +0100
+duncan/marc #695 refactor around js validation code and add more tests
+ 3 files changed, 115 insertions(+), 40 deletions(-)
+
+Mon Sep 19 11:55:46 2011 +0100
+Chris/Jose #771 #december Journal page now displays a count of articles
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+Mon Sep 19 11:55:46 2011 +0100
+Chris/Jose #771 #december Integration test for journal article count
+ 1 files changed, 11 insertions(+), 4 deletions(-)
+
+Mon Sep 19 11:55:46 2011 +0100
+Chris/Jose #771 Refactored journal xqy to include article count
+ 3 files changed, 20 insertions(+), 5 deletions(-)
+
+Mon Sep 19 11:55:46 2011 +0100
+Chris/Jose #771 #december browse all issues and volumes link.
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+Mon Sep 19 11:11:01 2011 +0100
+Alinoor/Suzuki #662: integration test for book subparts
+ 2 files changed, 18 insertions(+), 1 deletions(-)
+
 Fri Sep 16 17:28:29 2011 +0100
 Alinoor/Suzuki #662: clean up book parts
  2 files changed, 12 insertions(+), 13 deletions(-)
