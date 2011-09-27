@@ -1,1 +1,10 @@
-
+ken/sebastian changing authentication service base url back to senldogo0424 until we can change the fqdn in openam as well
+Alinoor/Liz #688: Added tests for toggle between date range facet bug discovered.
+Chris/John #858 link from chapter page to series
+Chris/John #858 link from book page to series
+Chris/John #858 link from protocol to book in search results
+Chris/John #858 link from chapter to book in search results
+charles/uday #880 re-added mathjax and test
+Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
+Alex/Jose #795 removed obsolete rule.
+Alex/Jose #795 Valid JournalOnlineFirst document with no ArticleFirstPage integration test.

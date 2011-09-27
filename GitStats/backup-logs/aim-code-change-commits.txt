@@ -1,3 +1,39 @@
+Tue Sep 27 11:36:17 2011 +0100
+Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
+ 3 files changed, 133 insertions(+), 1 deletions(-)
+
+Tue Sep 27 11:11:32 2011 +0100
+Alex/Jose #795 removed obsolete rule.
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+Tue Sep 27 11:05:27 2011 +0100
+Alex/Jose #795 Valid JournalOnlineFirst document with no ArticleFirstPage integration test.
+ 5 files changed, 352 insertions(+), 2 deletions(-)
+
+Mon Sep 26 17:09:55 2011 +0100
+alex/duncan #795 make sure we can see chapter language if it's present and then ignore chapter info language
+ 4 files changed, 30 insertions(+), 6 deletions(-)
+
+Mon Sep 26 15:45:15 2011 +0100
+alex/duncan - #795 - fix chapters to allow language attribute in chapter instead of chapterinfo
+ 9 files changed, 71 insertions(+), 62 deletions(-)
+
+Mon Sep 26 14:29:13 2011 +0100
+alex/duncan - bug #796 - add rule to reject coverdate months out of 1-12 range
+ 5 files changed, 394 insertions(+), 1 deletions(-)
+
+Mon Sep 26 12:23:29 2011 +0100
+alex/duncan - bugfix - #796 ingestion of Journal IDs with CRs fixed by adding a trimmer
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+Fri Sep 23 17:44:50 2011 +0100
+Charles/Christine #880 removed code which modified FileRef in A++ on ingestion
+ 3 files changed, 11 insertions(+), 23 deletions(-)
+
+Fri Sep 23 16:40:30 2011 +0100
+chris/mark #146 #december - fixing SeriesId element was inside Id in meta section
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
 Thu Sep 22 12:44:47 2011 +0100
 Uday/Charles #363 Updating meta:date with the last book's date in book series
  2 files changed, 18 insertions(+), 1 deletions(-)

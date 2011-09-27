@@ -1,3 +1,12 @@
+Tue Sep 27 11:36:17 2011 +0100 | Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
+Tue Sep 27 11:11:32 2011 +0100 | Alex/Jose #795 removed obsolete rule.
+Tue Sep 27 11:05:27 2011 +0100 | Alex/Jose #795 Valid JournalOnlineFirst document with no ArticleFirstPage integration test.
+Mon Sep 26 17:09:55 2011 +0100 | alex/duncan #795 make sure we can see chapter language if it's present and then ignore chapter info language
+Mon Sep 26 15:45:15 2011 +0100 | alex/duncan - #795 - fix chapters to allow language attribute in chapter instead of chapterinfo
+Mon Sep 26 14:29:13 2011 +0100 | alex/duncan - bug #796 - add rule to reject coverdate months out of 1-12 range
+Mon Sep 26 12:23:29 2011 +0100 | alex/duncan - bugfix - #796 ingestion of Journal IDs with CRs fixed by adding a trimmer
+Fri Sep 23 17:44:50 2011 +0100 | Charles/Christine #880 removed code which modified FileRef in A++ on ingestion
+Fri Sep 23 16:40:30 2011 +0100 | chris/mark #146 #december - fixing SeriesId element was inside Id in meta section
 Thu Sep 22 12:44:47 2011 +0100 | Uday/Charles #363 Updating meta:date with the last book's date in book series
 Thu Sep 22 11:51:35 2011 +0100 | charles/uday #363 added taxonomy to book series on ingestion
 Wed Sep 21 15:28:51 2011 +0100 | Uday/Christine #363 Added AIM validation rules for book series

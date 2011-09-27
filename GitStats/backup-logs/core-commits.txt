@@ -1,3 +1,83 @@
+Tue Sep 27 12:06:35 2011 +0100 | ken/sebastian changing authentication service base url back to senldogo0424 until we can change the fqdn in openam as well
+Tue Sep 27 11:59:40 2011 +0100 | Alinoor/Liz #688: Added tests for toggle between date range facet bug discovered.
+Tue Sep 27 11:54:32 2011 +0100 | Chris/John #858 link from chapter page to series
+Tue Sep 27 11:38:13 2011 +0100 | Chris/John #858 link from book page to series
+Tue Sep 27 11:07:50 2011 +0100 | Chris/John #858 link from protocol to book in search results
+Tue Sep 27 10:56:14 2011 +0100 | Chris/John #858 link from chapter to book in search results
+Tue Sep 27 10:39:56 2011 +0100 | charles/uday #880 re-added mathjax and test
+Mon Sep 26 19:19:08 2011 +0100 | Liz #688: removing the date-facet-mode from the get request to avoid duplicates
+Mon Sep 26 18:34:19 2011 +0100 | Liz: #688: keeping the facets in their original formats in JS
+Mon Sep 26 18:34:19 2011 +0100 | Suzuki/Liz #688: moving the disabled to the select level for non-js users
+Mon Sep 26 18:34:19 2011 +0100 | Suzuki/Liz window fixing tidy mvc
+Mon Sep 26 18:15:42 2011 +0100 | ken: [window fix] logs class names properly
+Mon Sep 26 18:14:24 2011 -0400 | Tom - using the init script to start and stop the server
+Mon Sep 26 17:53:31 2011 +0100 | Karl: css changes because of #836
+Mon Sep 26 17:16:04 2011 +0100 | charles/christine #880 added content type and doi to A++ renderer
+Mon Sep 26 17:10:21 2011 +0100 | chris/john #858 added link to book series in a book result
+Mon Sep 26 16:54:02 2011 +0100 | Ken/Jose #windowfixing move build url unit test.
+Mon Sep 26 16:54:02 2011 +0100 | Ken/Jose #windowfixing move show title unit test.
+Mon Sep 26 16:40:49 2011 +0100 | Rob/Mark #772 moved pdfPath into content repository, created TrackingContentRepository to wrap MarkLogicContentRepository
+Mon Sep 26 16:40:49 2011 +0100 | Rob/Marc #772 modified start/stop servers to include fake track server
+Mon Sep 26 16:40:49 2011 +0100 | Rob/Marc #772 create fake track server
+Mon Sep 26 16:38:02 2011 +0100 | ken/jose #791 QA environment now uses real entitlement service
+Mon Sep 26 16:30:23 2011 +0100 | Suzuki/Liz #688: Finished functional test. Clearing errors on selector change in date facet.
+Mon Sep 26 15:05:03 2011 +0100 | Chris/John #858 Added test for book series search result hyperlink
+Mon Sep 26 14:20:17 2011 +0100 | Suzuki/Liz #688 Improve on test for js to capture loading of the page with correct option selected and test error messages
+Mon Sep 26 12:38:26 2011 +0100 | Liz/Suzuki #688 Fix and added test to verify loading of single year mode via js
+Mon Sep 26 12:38:26 2011 +0100 | Suzuki/Liz #688 amend to verify if in option is selecte in js
+Mon Sep 26 12:38:26 2011 +0100 | Suzuki/Liz #688 Added js test to new functionality which disables drop down option of in
+Mon Sep 26 12:23:39 2011 +0100 | chris/mark #146 were accidentally overriding hasAccess so you always have access. Don't think Brian would be too happy about that!
+Mon Sep 26 11:59:55 2011 +0100 | Pat/Chris/Mark Fixed capfile so in the healthcheck it doesn't get it's knickers in a twist (redirect loop)
+Mon Sep 26 10:32:58 2011 +0100 | chris/mark: accidentally checked in app.local.properties #not #bestpractice but commit++
+Mon Sep 26 10:29:19 2011 +0100 | chris/mark: #146 fixing up the translation for the rest of the words
+Mon Sep 26 10:20:39 2011 +0100 | Chris/Mark #146 Fixed editors show/hide-ness translation
+Mon Sep 26 09:07:23 2011 +0100 | pat: removed unnecessary steps in ml install script.
+Mon Sep 26 09:02:02 2011 +0100 | pat: removing unused file.
+Sun Sep 25 19:52:12 2011 +0100 | pat: only making application properties editable.
+Sun Sep 25 19:49:06 2011 +0100 | pat: implemented skeleton for updating properties.
+Sun Sep 25 19:27:32 2011 +0100 | pat: added status page title.
+Sun Sep 25 19:13:34 2011 +0100 | pat: inline editing on status page
+Fri Sep 23 18:12:35 2011 +0100 | ken: changed anonymous user ID to 1 instead of SpringerAnonymous
+Fri Sep 23 18:12:35 2011 +0100 | ken/jose [tech task] renaming all identity-hub with fake-identity-service to be consistent with names
+Fri Sep 23 18:09:27 2011 +0100 | Suzuki/Liz #688 Amend error for js to display single year range correctly
+Fri Sep 23 18:01:45 2011 +0100 | Rob/Alex optimise user package query
+Fri Sep 23 17:50:58 2011 +0100 | uday/duncan #695 more tests
+Fri Sep 23 17:45:17 2011 +0100 | Charles/Christine #880 Adding path info for images in core rather than aim when rendering HTML
+Fri Sep 23 17:40:56 2011 +0100 | chris/mark #146 #december getting rid of 'german cheese' from search menu. Putting proper text
+Fri Sep 23 17:36:18 2011 +0100 | Rob/Alex #777 - added extra privilege for xslt eval
+Fri Sep 23 17:25:09 2011 +0100 | chris/mark #sillyrandombuildfailure trying to fix build 0.1512 failure with a waiting latch
+Fri Sep 23 17:21:55 2011 +0100 | Rob/Alex #777 fix bug so documents in any language are returned in search results
+Fri Sep 23 17:16:10 2011 +0100 | Chris/Mark #146 Cover image on book series page
+Fri Sep 23 17:16:10 2011 +0100 | Chris/Mark #146 #december Print and Online ISSNs added to book series page
+Fri Sep 23 17:03:32 2011 +0100 | uday/duncan #695 JS validation resets both start and end years if both wrong
+Fri Sep 23 17:03:29 2011 +0100 | Suzuki/Liz #688 adding error messages
+Fri Sep 23 04:52:06 2011 +0100 | Darius: Amended css to remove highlighting boxes on errors
+Fri Sep 23 16:42:51 2011 +0100 | Suzuki/Liz #688 fixing js setting end year same as start year
+Fri Sep 23 16:22:32 2011 +0100 | Liz/Suzuki #688: setting the end year to the start year if in single year mode.
+Fri Sep 23 16:06:17 2011 +0100 | uday/duncan #695 fix redundant search query due to failing query equality plus regression test
+Fri Sep 23 16:01:30 2011 +0100 | Ken/Jose #wf acme corp logo to distinguish from anonymous or springer link users.
+Fri Sep 23 15:51:30 2011 +0100 | Chris/Mark #146 #december fixed jade positioning
+Fri Sep 23 15:51:30 2011 +0100 | chris/mark #146 adding the editors to the book series page
+Fri Sep 23 15:51:30 2011 +0100 | chris/mark #146 #december Book series page handles empty sub titles
+Fri Sep 23 15:41:59 2011 +0100 | ken/jose #791 renamed company-user-id to company-name
+Fri Sep 23 15:41:14 2011 +0100 | Suzuki/Liz #688 Fixing func test to work
+Fri Sep 23 15:41:14 2011 +0100 | Liz/Suzuki #688 Adding addtional unit test against date range facet
+Fri Sep 23 15:41:14 2011 +0100 | Liz/Suzuki #688 Added unit test for Search and fixed functional test to return correct range date
+Fri Sep 23 15:41:14 2011 +0100 | Suzuki/Alinoor #688 Adding functional test for single year selection on date range facet
+Fri Sep 23 15:19:34 2011 +0100 | Ken/Jose #791 Functional test for hidden company info.
+Fri Sep 23 15:19:34 2011 +0100 | Ken/Jose #791 Functional test for hidden user id info.
+Fri Sep 23 02:46:10 2011 +0100 | Harinee/Andreas: Fixing system test to disable authentication before running system tests, and enable authentication after running them.
+Fri Sep 23 13:01:36 2011 +0100 | Ken/Jose #791 package-id replaced by first material id item.
+Fri Sep 23 13:01:36 2011 +0100 | Ken/Jose #791 entitlement stub service json implementation to match new representation (material-ids as array of package-ids).
+Fri Sep 23 13:01:36 2011 +0100 | Ken/Jose #791 Unit test for entitlement system user.
+Fri Sep 23 12:51:51 2011 +0100 | Chris/Mark #146 #december Book series page now handles sub titles
+Fri Sep 23 12:28:14 2011 +0100 | Chris/Mark #146 #december Updated jades and refactored sharing links into seperate jade
+Fri Sep 23 12:28:14 2011 +0100 | Chris/Mark #bestpractice #146 xquery now correctly pulls the title
+Fri Sep 23 12:28:14 2011 +0100 | Chris/Mark #146 #likeaboss #december #lol Wired up hard-coded xquery for the book series page summary
+Fri Sep 23 12:28:14 2011 +0100 | chris/mark #146 hard coding the title - now end to end wired up #december
+Fri Sep 23 12:28:14 2011 +0100 | chris/mark #146 adding our functional test. #likeasanta #december
+Fri Sep 23 12:19:07 2011 +0100 | uday/duncan #695 bug - apply all facet contraints to available date range query to pick up facets in query
+Fri Sep 23 10:35:58 2011 +0100 | chris/mark #813 fixing the sort order of disciplines #likeaboss
 Thu Sep 22 18:53:49 2011 +0100 | Marc fix static content handling.
 Thu Sep 22 18:48:50 2011 +0100 | mark: more clearing up off logic although pat points out we should move CoverImage logic into CoverImageUrlBuilders and save the redirect
 Thu Sep 22 18:30:32 2011 +0100 | mark: removing the exception and trying to make cover image code clearer
