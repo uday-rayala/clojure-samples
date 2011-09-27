@@ -1,3 +1,27 @@
+charles/uday #631 Handlling cases when there are no journals and books in DB
+charles/uday #631 Getting featured publications from ML instead of hardcoding
+charles/uday #631 Removed facets from the search response for featured publications in home page
+charles/uday #631 return book for featured publications in xquery
+Karl/Alinoor: added missing class .no-access for correct style of the actions bar
+charles/uday #631 refine featured search options
+charles/uday #631 removed unecessary search options
+charles/uday #631 added feature search options
+charles/uday #631 initial xquery for featured publications
+Chris/John Linking from chapter's about section to it's parent book
+Suzuki/Christine #766 Made test for zero results work, refactored
+Suzuki/Christine #766 Displaying static no-results message if zero search results
+Suzuki/Christine #766 Added no results message to search results page
+charles/uday #631 obtain featured publication data from Home object
+charles/uday #631 tests for featured article on homepage
+Chris/John #858 Link from about chapter to book series
+Chris/John #858 Refactored URIs in tests to not be magical
+Chris/John #858 Added test for protocols page with series links
+Alinoor/Liz #649 bugfix starting a new search was not working
+Rob/Marc #772 fix pdf redirection
+Rob/Marc #772 moved start-servers before integration tests because they require mock track server to be running
+Rob/Marc #772 refactoring on PageSteps for browsertitle.
+Rob/Marc #772 added tracking to fulltext html and pdf
+Rob/Marc #772 Add dynamic proxy for ContentRepository to allow counting/logging.
 ken/sebastian changing authentication service base url back to senldogo0424 until we can change the fqdn in openam as well
 Alinoor/Liz #688: Added tests for toggle between date range facet bug discovered.
 Chris/John #858 link from chapter page to series
@@ -5,6 +29,17 @@ Chris/John #858 link from book page to series
 Chris/John #858 link from protocol to book in search results
 Chris/John #858 link from chapter to book in search results
 charles/uday #880 re-added mathjax and test
+Alex/Jose #795 BookOnlineFirst are children of Books.
+Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage or ChapterLastPage element as valid.
+Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage element as valid.
+Alex/Jose #795 OnlineFirst must be BookOnlineFirst according to A++ divine documentation.
 Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
 Alex/Jose #795 removed obsolete rule.
 Alex/Jose #795 Valid JournalOnlineFirst document with no ArticleFirstPage integration test.
+ken/sebastian fixed install script so that anonymous user has ID = 1
+Tom - adjusting the user under which track runs
+Rob/Marc #772 default environment variable to local
+Rob/Marc #772 added environment to /internal/status
+Rob/Marc #772 changed environment properties
+Tom removing parts of the deployment script which are not needed for Track and indeed cause it to fail
+Tom fixing the status page so that it gets the buildVersion from the systme properties and not the properties file

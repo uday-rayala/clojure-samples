@@ -1,3 +1,27 @@
+Tue Sep 27 17:40:11 2011 +0100 | charles/uday #631 Handlling cases when there are no journals and books in DB
+Tue Sep 27 17:05:48 2011 +0100 | charles/uday #631 Getting featured publications from ML instead of hardcoding
+Tue Sep 27 16:28:56 2011 +0100 | charles/uday #631 Removed facets from the search response for featured publications in home page
+Tue Sep 27 16:23:29 2011 +0100 | charles/uday #631 return book for featured publications in xquery
+Tue Sep 27 16:12:35 2011 +0100 | Karl/Alinoor: added missing class .no-access for correct style of the actions bar
+Tue Sep 27 16:09:15 2011 +0100 | charles/uday #631 refine featured search options
+Tue Sep 27 16:05:24 2011 +0100 | charles/uday #631 removed unecessary search options
+Tue Sep 27 16:02:13 2011 +0100 | charles/uday #631 added feature search options
+Tue Sep 27 16:02:13 2011 +0100 | charles/uday #631 initial xquery for featured publications
+Tue Sep 27 15:55:04 2011 +0100 | Chris/John Linking from chapter's about section to it's parent book
+Tue Sep 27 15:28:37 2011 +0100 | Suzuki/Christine #766 Made test for zero results work, refactored
+Tue Sep 27 15:28:37 2011 +0100 | Suzuki/Christine #766 Displaying static no-results message if zero search results
+Tue Sep 27 15:28:37 2011 +0100 | Suzuki/Christine #766 Added no results message to search results page
+Tue Sep 27 15:19:49 2011 +0100 | charles/uday #631 obtain featured publication data from Home object
+Tue Sep 27 15:02:35 2011 +0100 | charles/uday #631 tests for featured article on homepage
+Tue Sep 27 14:55:13 2011 +0100 | Chris/John #858 Link from about chapter to book series
+Tue Sep 27 14:55:13 2011 +0100 | Chris/John #858 Refactored URIs in tests to not be magical
+Tue Sep 27 14:55:12 2011 +0100 | Chris/John #858 Added test for protocols page with series links
+Tue Sep 27 14:48:44 2011 +0100 | Alinoor/Liz #649 bugfix starting a new search was not working
+Tue Sep 27 14:11:32 2011 +0100 | Rob/Marc #772 fix pdf redirection
+Tue Sep 27 13:29:13 2011 +0100 | Rob/Marc #772 moved start-servers before integration tests because they require mock track server to be running
+Tue Sep 27 12:08:01 2011 +0100 | Rob/Marc #772 refactoring on PageSteps for browsertitle.
+Tue Sep 27 12:08:01 2011 +0100 | Rob/Marc #772 added tracking to fulltext html and pdf
+Tue Sep 27 12:08:01 2011 +0100 | Rob/Marc #772 Add dynamic proxy for ContentRepository to allow counting/logging.
 Tue Sep 27 12:06:35 2011 +0100 | ken/sebastian changing authentication service base url back to senldogo0424 until we can change the fqdn in openam as well
 Tue Sep 27 11:59:40 2011 +0100 | Alinoor/Liz #688: Added tests for toggle between date range facet bug discovered.
 Tue Sep 27 11:54:32 2011 +0100 | Chris/John #858 link from chapter page to series

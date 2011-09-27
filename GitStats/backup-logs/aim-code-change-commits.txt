@@ -1,3 +1,19 @@
+Tue Sep 27 14:12:51 2011 +0100
+Alex/Jose #795 BookOnlineFirst are children of Books.
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+Tue Sep 27 13:55:15 2011 +0100
+Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage or ChapterLastPage element as valid.
+ 4 files changed, 94 insertions(+), 2 deletions(-)
+
+Tue Sep 27 13:45:03 2011 +0100
+Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage element as valid.
+ 5 files changed, 215 insertions(+), 2 deletions(-)
+
+Tue Sep 27 12:17:28 2011 +0100
+Alex/Jose #795 OnlineFirst must be BookOnlineFirst according to A++ divine documentation.
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 Tue Sep 27 11:36:17 2011 +0100
 Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
  3 files changed, 133 insertions(+), 1 deletions(-)

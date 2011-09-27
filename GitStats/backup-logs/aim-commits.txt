@@ -1,3 +1,7 @@
+Tue Sep 27 14:12:51 2011 +0100 | Alex/Jose #795 BookOnlineFirst are children of Books.
+Tue Sep 27 13:55:15 2011 +0100 | Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage or ChapterLastPage element as valid.
+Tue Sep 27 13:45:03 2011 +0100 | Alex/Jose #795 should recognise a book chapter containing a BookOnlineFirst element and no ChapterFirstPage element as valid.
+Tue Sep 27 12:17:28 2011 +0100 | Alex/Jose #795 OnlineFirst must be BookOnlineFirst according to A++ divine documentation.
 Tue Sep 27 11:36:17 2011 +0100 | Alex/Jose #795 JournalOnlineFirst with no ArticleLastPage is valid.
 Tue Sep 27 11:11:32 2011 +0100 | Alex/Jose #795 removed obsolete rule.
 Tue Sep 27 11:05:27 2011 +0100 | Alex/Jose #795 Valid JournalOnlineFirst document with no ArticleFirstPage integration test.
