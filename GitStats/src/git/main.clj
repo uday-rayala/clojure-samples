@@ -59,7 +59,7 @@
 (defn comma-seperated [x y] (str x ", " y))
 (defn today-commit-mixed-count [] (apply (partial merge-with comma-seperated) (today-top-counts-by-count)))
 (defn today-commits-sorted [] (sort #(compare %2 %1) (today-commit-mixed-count)))
-(defn top-names [] (take 3 (today-commits-sorted)))
+(defn top-names [] (take 5 (today-commits-sorted)))
 (defn top-git-today [] (json-str {:total (count (today-commits)) :top (top-names)}))
 
 (defn all-words-json [pairs] (json-str (count-maps pairs :word :count)))
