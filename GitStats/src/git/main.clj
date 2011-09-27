@@ -20,7 +20,7 @@
                              read-lines
                              (map (fn [line] (clojure.string/split line #":")))
                              (filter #(= 2 (count %)))))
-(defn today-commits [] (read-lines "logs/today-commits.txt"))
+(defn today-commits [] (remove (fn [line] (string/blank? line)) (read-lines "logs/today-commits.txt")))
 (defn core-lines [] (read-lines "logs/core-commits.txt"))
 (defn core-code-change-lines [] (read-lines "logs/core-code-change-commits.txt"))
 (defn aim-code-change-lines [] (read-lines "logs/aim-code-change-commits.txt"))
