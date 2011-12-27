@@ -48,5 +48,11 @@ echo "Getting cruise logs"
 curl "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=build&jobName=build&limitCount=10000" -o $TMP_LOGS_DIR/build.csv
 grep "Failed" $TMP_LOGS_DIR/build.csv | awk -F ',' '{print $8}' > $TMP_LOGS_DIR/failed-builds.txt
 
+echo "Getting completion times for System tests"
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=dev-system-tests&stageName=system-tests&jobName=run-system-tests&limitCount=1000" | grep Passed | awk -F ',' '{print $6, $13}' > $TMP_LOGS_DIR/system-tests-complete-times
+
+echo "Getting start times for Core"
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageName=build&jobName=build&limitCount=1000" | grep Passed | awk -F ',' '{print $6, $8}' > $TMP_LOGS_DIR/core-start-times
+
 rm -rf $LOGS_DIR
-cp -R $TMP_LOGS_DIR $LOGS_DIR
+mv $TMP_LOGS_DIR $LOGS_DIR
