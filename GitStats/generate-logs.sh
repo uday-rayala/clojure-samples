@@ -49,10 +49,13 @@ curl "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=
 grep "Failed" $TMP_LOGS_DIR/build.csv | awk -F ',' '{print $8}' > $TMP_LOGS_DIR/failed-builds.txt
 
 echo "Getting completion times for System tests"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=dev-system-tests&stageName=system-tests&jobName=run-system-tests&limitCount=1000" | grep Passed | awk -F ',' '{print $6, $13}' > $TMP_LOGS_DIR/system-tests-complete-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=dev-system-tests&stageName=system-tests&jobName=run-system-tests&limitCount=100" | grep Passed | awk -F ',' '{print $6, $13}' > $TMP_LOGS_DIR/system-tests-complete-times
 
 echo "Getting start times for Core"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageName=build&jobName=build&limitCount=1000" | grep Passed | awk -F ',' '{print $6, $8}' > $TMP_LOGS_DIR/core-start-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}' | grep "Z$"  > $TMP_LOGS_DIR/core-start-times
+
+echo "Getting start times for Aim"
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=aim&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/aim-start-times
 
 rm -rf $LOGS_DIR
 mv $TMP_LOGS_DIR $LOGS_DIR

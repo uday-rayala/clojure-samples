@@ -10,7 +10,8 @@
     [compojure.route :as route]
     [compojure.handler :as handler]
     [clojure.contrib.string :as string]
-    [git.people :as people])
+    [git.people :as people]
+    [git.go-analyzers :as go])
 )
 
 (use '[clojure.string :only (join)])
@@ -27,6 +28,9 @@
 (defn aim-lines [] (read-lines "logs/aim-commits.txt"))
 (defn failed-build-numbers [] (read-lines "logs/failed-builds.txt"))
 (defn core-message-and-changes [] (read-lines "logs/core-message-and-changes.txt"))
+(defn system-tests-complete-times [] (read-lines "logs/system-tests-complete-times"))
+(defn core-start-times [] (read-lines "logs/core-start-times"))
+(defn aim-start-times [] (read-lines "logs/aim-start-times"))
 
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
@@ -157,6 +161,10 @@
 
 (defn code-area-worked [] (json-str (map (fn [name] {:name name :changes (code-area-worked-by name)}) (people/people-who-can-pair))))
 
+(defn all-end-to-end-times []
+  {:core (go/latest-fastest-times (go/end-to-end-times (core-start-times) (system-tests-complete-times) go/parse-lines-for-core))
+   :aim (go/latest-fastest-times (go/end-to-end-times (aim-start-times) (system-tests-complete-times) go/parse-lines-for-aim))})
+
 (defroutes main-routes
   (GET "/" [] (home-links))
   (GET "/top-git.json" [] (top-git))
@@ -172,6 +180,7 @@
   (GET "/stories-and-commiters.json" [] (stories-and-commiters-json))
   (GET "/functional-areas-and-commiters.json" [] (functional-areas-and-commiters-json))
   (GET "/commiters.json" [message] (json-str (apply vector (people/commiters message))))
+  (GET "/end-to-end-times.json" [] (json-str (all-end-to-end-times)))
   (route/resources "/")
 )
 
