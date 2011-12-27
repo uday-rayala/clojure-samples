@@ -1,7 +1,6 @@
 pushd .
 
 TODAY=`date "+%b %d 00:00:00 %Y"`
-TMP_LOGS_DIR=/tmp/logs
 
 rm -rf $TMP_LOGS_DIR
 mkdir $TMP_LOGS_DIR
