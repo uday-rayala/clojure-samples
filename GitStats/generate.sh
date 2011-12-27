@@ -1,15 +1,13 @@
 pushd .
 
-LOGS_DIR=/Users/rudayaku/Projects/clojure-samples/GitStats/logs
-TMP_LOGS_DIR=/tmp/logs
-REPOS_DIR=/Users/rudayaku/repos
 TODAY=`date "+%b %d 00:00:00 %Y"`
+TMP_LOGS_DIR=/tmp/logs
 
 rm -rf $TMP_LOGS_DIR
 mkdir $TMP_LOGS_DIR
 
-echo "Getting core logs from $REPOS_DIR/core"
-cd $REPOS_DIR/core
+echo "Getting core logs from $GIT_REPOS_DIR/core"
+cd $GIT_REPOS_DIR/core
 git pull --rebase
 
 git log --no-merges --ignore-all-space --pretty="format:%s" --after="$TODAY" >> $TMP_LOGS_DIR/today-commits.txt
@@ -18,8 +16,8 @@ git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $TMP_LOGS_DI
 git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $TMP_LOGS_DIR/core-code-change-commits.txt
 git log -l30000 --no-merges --ignore-all-space --pretty="format:%s" --numstat --find-copies > $TMP_LOGS_DIR/core-message-and-changes.txt
 
-echo "Getting aim logs from $REPOS_DIR/aim"
-cd $REPOS_DIR/aim
+echo "Getting aim logs from $GIT_REPOS_DIR/aim"
+cd $GIT_REPOS_DIR/aim
 git pull --rebase
 
 echo >> $TMP_LOGS_DIR/today-commits.txt
@@ -28,15 +26,15 @@ git log --no-merges --ignore-all-space --pretty="format:%s" --after="$TODAY" >> 
 git log --no-merges --ignore-all-space --pretty="format:%cd | %s" > $TMP_LOGS_DIR/aim-commits.txt
 git log -l30000 --no-merges --ignore-all-space --shortstat --ignore-all-space --pretty="format:%cd%n%s" --find-copies > $TMP_LOGS_DIR/aim-code-change-commits.txt
 
-echo "Getting identity logs from $REPOS_DIR/identity"
-cd $REPOS_DIR/identity
+echo "Getting identity logs from $GIT_REPOS_DIR/identity"
+cd $GIT_REPOS_DIR/identity
 git pull --rebase
 
 echo >> $TMP_LOGS_DIR/today-commits.txt
 git log --no-merges --ignore-all-space --pretty="format:%s" --after="$TODAY" >> $TMP_LOGS_DIR/today-commits.txt
 
-echo "Getting track logs from $REPOS_DIR/track"
-cd $REPOS_DIR/track
+echo "Getting track logs from $GIT_REPOS_DIR/track"
+cd $GIT_REPOS_DIR/track
 git pull --rebase
 
 echo >> $TMP_LOGS_DIR/today-commits.txt
@@ -57,5 +55,5 @@ curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageNa
 echo "Getting start times for Aim"
 curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=aim&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/aim-start-times
 
-rm -rf $LOGS_DIR
-mv $TMP_LOGS_DIR $LOGS_DIR
+rm -rf $GIT_LOGS_DIR
+mv $TMP_LOGS_DIR $GIT_LOGS_DIR
