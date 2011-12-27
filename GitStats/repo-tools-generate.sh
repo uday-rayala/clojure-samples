@@ -6,5 +6,5 @@ export TMP_LOGS_DIR=/home/casper/graphs/tmplogs
 while [ true ]
 do
   ./generate.sh
-  sleep 120
+  sleep 300
 done

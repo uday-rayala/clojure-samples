@@ -42,7 +42,7 @@ git log --no-merges --ignore-all-space --pretty="format:%s" --after="$TODAY" >> 
 popd
 
 echo "Getting cruise logs"
-curl "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=build&jobName=build&limitCount=10000" -o $TMP_LOGS_DIR/build.csv
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=main&stageName=build&jobName=build&limitCount=10000" -o $TMP_LOGS_DIR/build.csv
 grep "Failed" $TMP_LOGS_DIR/build.csv | awk -F ',' '{print $8}' > $TMP_LOGS_DIR/failed-builds.txt
 
 echo "Getting completion times for System tests"
