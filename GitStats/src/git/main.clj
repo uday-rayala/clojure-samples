@@ -31,6 +31,8 @@
 (defn system-tests-complete-times [] (read-lines "logs/system-tests-complete-times"))
 (defn core-start-times [] (read-lines "logs/core-start-times"))
 (defn aim-start-times [] (read-lines "logs/aim-start-times"))
+(defn identity-start-times [] (read-lines "logs/identity-start-times"))
+(defn track-start-times [] (read-lines "logs/track-start-times"))
 
 (defn count-maps [pairs first-key second-key] (map (fn [pair] { first-key (first pair) second-key (last pair) }) pairs))
 (defn merge-count-maps [map1 map2 key] (map #(merge %1 %2) (sort-by key map1) (sort-by key map2)))
@@ -161,9 +163,12 @@
 
 (defn code-area-worked [] (json-str (map (fn [name] {:name name :changes (code-area-worked-by name)}) (people/people-who-can-pair))))
 
-(defn all-end-to-end-times []
-  {:core (go/latest-fastest-times (go/end-to-end-times (core-start-times) (system-tests-complete-times) go/parse-lines-for-core))
-   :aim (go/latest-fastest-times (go/end-to-end-times (aim-start-times) (system-tests-complete-times) go/parse-lines-for-aim))})
+(defn all-end-to-end-times [] {
+   :core (go/latest-fastest-times (go/end-to-end-times (core-start-times) (system-tests-complete-times) go/parse-lines-for-core))
+   :aim (go/latest-fastest-times (go/end-to-end-times (aim-start-times) (system-tests-complete-times) go/parse-lines-for-aim))
+   :identity (go/latest-fastest-times (go/end-to-end-times (identity-start-times) (system-tests-complete-times) go/parse-lines-for-identity))
+   :track (go/latest-fastest-times (go/end-to-end-times (track-start-times) (system-tests-complete-times) go/parse-lines-for-track))
+   })
 
 (defroutes main-routes
   (GET "/" [] (home-links))

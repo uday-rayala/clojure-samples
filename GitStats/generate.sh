@@ -54,5 +54,11 @@ curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageNa
 echo "Getting start times for Aim"
 curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=aim&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/aim-start-times
 
+echo "Getting start times for Identity"
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=identity&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/identity-start-times
+
+echo "Getting start times for Track"
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=track&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/track-start-times
+
 rm -rf $GIT_LOGS_DIR
 mv $TMP_LOGS_DIR $GIT_LOGS_DIR

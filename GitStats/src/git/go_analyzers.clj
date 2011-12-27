@@ -12,6 +12,8 @@
 (defn parse-lines [line] {(first (string/split #"-" (build line))) (timestamp line)})
 (defn parse-lines-for-core [line] {(first (string/split #"-" (build line))) (timestamp line)})
 (defn parse-lines-for-aim [line] {(nth (string/split #"-" (build line)) 4) (timestamp line)})
+(defn parse-lines-for-identity [line] {(nth (string/split #"-" (build line)) 5) (timestamp line)})
+(defn parse-lines-for-track [line] {(nth (string/split #"-" (build line)) 2) (timestamp line)})
 
 (defn time-take [start-map end-entry]
   (let [build (key end-entry) end-time (val end-entry)]
@@ -22,7 +24,7 @@
 (defn end-to-end-times [start-lines system-tests-lines parse-fn]
   (let [start-map (to-map start-lines parse-lines)
         system-tests-map (to-map system-tests-lines parse-fn)]
-    (take-last 5 (sort-by :build (remove #(>= 0 (%1 :time)) (map (partial time-take start-map) system-tests-map))))))
+    (vec (take-last 3 (sort-by :build (remove #(>= 0 (%1 :time)) (map (partial time-take start-map) system-tests-map)))))))
 
 (defn latest-fastest-times [ build-times]
   {:fastest (first (sort-by :time build-times))
