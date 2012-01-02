@@ -24,7 +24,7 @@
 (defn end-to-end-times [start-lines system-tests-lines parse-fn]
   (let [start-map (to-map start-lines parse-lines)
         system-tests-map (to-map system-tests-lines parse-fn)]
-    (vec (take-last 3 (sort-by :build (remove #(>= 0 (%1 :time)) (map (partial time-take start-map) system-tests-map)))))))
+    (vec (take-last 5 (sort-by :build (remove #(>= 0 (%1 :time)) (map (partial time-take start-map) system-tests-map)))))))
 
 (defn latest-fastest-times [ build-times]
   {:fastest (first (sort-by :time build-times))
