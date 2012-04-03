@@ -20,6 +20,10 @@
   (is (= 1322096461000 (timestamp "0.2508 2011-11-24T01:01:01Z")))
   )
 
+(deftest test-time
+  (is (= 1332845810000 (timestamp "0.2508 2012-03-27T11:56:50+01:00")))
+  )
+
 (deftest test-end-to-end-times-unmatched
   (let [
          start-times ["1 2011-11-18T16:06:59Z"]

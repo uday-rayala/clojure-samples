@@ -3,7 +3,7 @@
 )
 
 (defn get-seconds [date-time] (let
-                                     [input-formatter (new java.text.SimpleDateFormat "yyyy-MM-dd'T'HH:mm:ss'Z'")]
+                                     [input-formatter (new java.text.SimpleDateFormat "yyyy-MM-dd'T'HH:mm:ss")]
                                      (.getTime (.parse input-formatter date-time))))
 
 (defn build [line] (first (string/split #"\s+" line)))
