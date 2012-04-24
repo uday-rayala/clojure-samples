@@ -49,16 +49,16 @@ echo "Getting completion times for System tests"
 curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=dev-system-tests&stageName=system-tests&jobName=run-system-tests&limitCount=100" | grep Passed | awk -F ',' '{print $6, $13}' > $TMP_LOGS_DIR/system-tests-complete-times
 
 echo "Getting start times for Core"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}' | grep "Z$"  > $TMP_LOGS_DIR/core-start-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=core&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}' > $TMP_LOGS_DIR/core-start-times
 
 echo "Getting start times for Aim"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=aim&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/aim-start-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=aim&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  > $TMP_LOGS_DIR/aim-start-times
 
 echo "Getting start times for Identity"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=identity&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/identity-start-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=identity&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  > $TMP_LOGS_DIR/identity-start-times
 
 echo "Getting start times for Track"
-curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=track&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  | grep "Z$"  > $TMP_LOGS_DIR/track-start-times
+curl -s "http://172.18.20.31:8153/go/properties/search?pipelineName=track&stageName=build&jobName=build&limitCount=300" | grep Passed | awk -F ',' '{print $6, $8}'  > $TMP_LOGS_DIR/track-start-times
 
 rm -rf $GIT_LOGS_DIR
 mv $TMP_LOGS_DIR $GIT_LOGS_DIR
